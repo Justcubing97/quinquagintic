@@ -218,7 +218,7 @@ function updateScreen(){
   //=========================================================================
   //DECILLIONTHS
   du1_id_amt.textContent = "ID: DU1 || x" + du1amt;
-  du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision) + " || Scaling: x" + du1scaling.toString();
+  du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.toString();
   
   //=========================================================================
   //NONILLIONTHS
@@ -366,6 +366,7 @@ function saveGame() {
     npscaling: npscaling.toString(),
     npbase: npbase.toString(),
     npthreshold: npthreshold.toString(),
+    no_reset_boost_check: no_reset_boost_check.toString(),
 
     nu1boost: nu1boost.toString(),
     nu1amt: nu1amt.toString(),
@@ -396,6 +397,7 @@ function loadGame() {
   npscaling1 = new Decimal(data.npscaling);
   npbase = new Decimal(data.npbase);
   npthreshold = new Decimal(data.npthreshold);
+  no_reset_boost_check = data.no_reset_boost_check === 'true';
 
   nu1boost = new Decimal(data.nu1boost);
   nu1amt = new Decimal(data.nu1amt);
