@@ -100,7 +100,7 @@ function nonillionthResetInitiate(){
   du1amt = new Decimal(0);
   du1cost = new Decimal(10);
   du1scaling = new Decimal(2); 
-  number = new Decimal(1000);
+  number = new Decimal(1);
   
   if (nu2amt.eq(new Decimal(1))){
     du1cost = new Decimal(8);
