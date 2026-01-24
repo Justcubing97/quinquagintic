@@ -136,7 +136,7 @@ function calculateGain(){
   }
   
   if (no_reset_boost_check){
-    numberGain = numberGain.mul(new Decimal(2));
+    numberGain = numberGain.mul(new Decimal(5));
   }
 }
 
@@ -192,7 +192,7 @@ function calculateBoostsStrings(){
   }
   
   if (no_reset_boost_check){
-    boostsString += "Nonillionth: x2, ";
+    boostsString += "Nonillionth: x5, ";
   }
   
   //=========================================================================
