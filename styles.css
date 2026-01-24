@@ -1,10 +1,10 @@
 h1 {
   font-size: 80px;
-  font-family: "Exo", sans-serif;
+  font-family: "Share Tech Mono", monospace;
 }
 
 .just-apply-font {
-  font-family: "Exo", sans-serif;
+  font-family: "Share Tech Mono", monospace;
 }
 
 /* TITLE GRADIENTS */
@@ -48,7 +48,7 @@ h1 {
 /* BUTTONS */
 
 .button {
-  font-family: "Exo", sans-serif;;
+  font-family: "Share Tech Mono", monospace;;
   color: white;
   font-weight: 666;
   border: 2px solid black;
@@ -106,34 +106,34 @@ div.number1 {
   outline-color: #FFFFFF;
   outline-width: 4px;
   outline-style: solid;
-  font-family: "Exo", sans-serif
+  font-family: "Share Tech Mono", monospace;
 }
 
 div.softcaps {
   outline-color: #FF0000;
   outline-width: 4px;
   outline-style: solid;
-  font-family: "Exo", sans-serif
+  font-family: "Share Tech Mono", monospace;
 }
 
 div.decillionth {
   outline-color: #70FF70;
   outline-width: 4px;
   outline-style: solid;
-  font-family: "Exo", sans-serif
+  font-family: "Share Tech Mono", monospace;
 }
 
 div.nonillionth {
   outline-color: #80D0FF;
   outline-width: 4px;
   outline-style: solid;
-  font-family: "Exo", sans-serif
+  font-family: "Share Tech Mono", monospace;
 }
 
 /* EXTRAS BELOW */
 
 .exo-supertext {
-  font-family: "Exo", sans-serif;
+  font-family: "Share Tech Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
@@ -144,21 +144,21 @@ div.nonillionth {
 }
 
 p.numberp {
-  font-family: "Exo", sans-serif;
+  font-family: "Share Tech Mono", monospace;
   font-size: 65px;
   font-weight:666;
   margin: 10px;
 }
 
 p.numbergain {
-  font-family: "Exo", sans-serif;
+  font-family: "Share Tech Mono", monospace;
   font-weight:666;
   text-align:center;
   margin: 0
 }
 
 p.individ-softcaps {
-  font-family: "Exo", sans-serif;
+  font-family: "Share Tech Mono", monospace;
   font-weight:666;
   text-align:center;
   font-size:40px;
@@ -166,7 +166,7 @@ p.individ-softcaps {
 }
 
 .standard-upg {
-  font-family: "Exo", sans-serif;
+  font-family: "Share Tech Mono", monospace;
   font-size: 40px;
   font-weight:666;
   margin: 0px;
@@ -174,7 +174,7 @@ p.individ-softcaps {
 }
 
 .standard-reset {
-  font-family: "Exo", sans-serif;
+  font-family: "Share Tech Mono", monospace;
   font-size: 70px;
   font-weight:666;
   margin: 0px;

@@ -34,6 +34,11 @@ var nu1scaling = new Decimal(5);
 var nu2amt = new Decimal(0);
 var nu2cost = new Decimal(3);
 
+var nu3boost = new Decimal(1);
+var nu3amt = new Decimal(0);
+var nu3cost = new Decimal(10);
+var nu3scaling = new Decimal(10);
+
 //=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
@@ -84,6 +89,11 @@ nu2.disabled = true;
 const nu2_id_amt = document.getElementById("nu2-id-amt");
 const nu2_cost_scale = document.getElementById("nu2-cost-scale");
 
+const nu3 = document.getElementById("nu3");
+nu3.disabled = true;
+
+const nu3_id_amt = document.getElementById("nu3-id-amt");
+const nu3_cost_scale = document.getElementById("nu3-cost-scale");
 //=========================================================================
 //RESET BOOSTS
 var no_reset_boost_check = false;
@@ -233,6 +243,9 @@ function updateScreen(){
   if (nu2amt.eq(new Decimal(1))){
     nu2_cost_scale.textContent = "Purchased!";
   }
+
+  nu3_id_amt.textContent = "ID: NU3 || x" + nu3amt;
+  nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling;
 }
 
 //=========================================================================
@@ -311,6 +324,12 @@ function nonillionthUpgrades(){
   } else {
     nu2.disabled = true;
   }
+
+  if (nonillionthPoints.gte(nu3cost)) {
+    nu3.disabled = false;
+  } else {
+    nu3.disabled = true;
+  }
 }
 
 //=========================================================================
@@ -329,6 +348,15 @@ nu2.addEventListener("click", function(){
   nu2amt = nu2amt.add(new Decimal(1));
   
   nu2ImpactIteration();
+});
+
+nu3.addEventListener("click", function(){
+  nonillionthPoints = nonillionthPoints.sub(nu3cost);
+  nu3boost = nu3boost.mul(new Decimal(3));
+  nu3amt = nu3amt.add(new Decimal(1));
+  nu3cost = nu3cost.mul(nu3scaling);
+  
+  checkPendingNonillionth();
 });
 
 //=========================================================================
