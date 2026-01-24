@@ -20,7 +20,7 @@ var du1scaling = new Decimal(2);
 //=========================================================================
 //NONILLIONTH
 var npscaling = new Decimal(2);
-var npthreshold = new Decimal(1);
+var npthreshold = new Decimal(1000);
 var nppending = new Decimal(0);
 var npbase = new Decimal(0);
 
