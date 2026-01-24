@@ -342,3 +342,65 @@ function nu2ImpactIteration(){
     du1amt = du1amt.add(new Decimal(1));
   }
 }
+
+//=========================================================================
+//=========================================================================
+//SAVING AND LOADING
+setInterval(saveGame, 10000);
+
+window.onload = function(){
+  loadGame();
+}
+
+function saveGame() {
+  const saveData = {
+    number: number.toString(),
+    numberGain: numberGain.toString(),
+
+    du1boost: du1boost.toString(),
+    du1amt: du1amt.toString(),
+    du1cost: du1cost.toString(),
+    du1scaling: du1scaling.toString(),
+
+    nonillionthPoints: nonillionthPoints.toString(),
+    npscaling: npscaling.toString(),
+    npbase: npbase.toString(),
+    npthreshold: npthreshold.toString(),
+
+    nu1boost: nu1boost.toString(),
+    nu1amt: nu1amt.toString(),
+    nu1cost: nu1cost.toString(),
+    nu1scaling: nu1scaling.toString(),
+    nu2amt: nu2amt.toString(),
+    nu2cost: nu2cost.toString(),
+  };
+  
+  localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
+}
+
+function loadGame() {
+  const saved = localStorage.getItem("quinquaginticSave");
+  if (!saved) return;
+
+  const data = JSON.parse(saved);
+
+  number = new Decimal(data.number);
+  numberGain = new Decimal(data.numberGain);
+
+  du1boost = new Decimal(data.du1boost);
+  du1amt = new Decimal(data.du1amt);
+  du1cost = new Decimal(data.du1cost);
+  du1scaling = new Decimal(data.du1scaling);
+
+  nonillionthPoints = new Decimal(data.nonillionthPoints);
+  npscaling1 = new Decimal(data.npscaling);
+  npbase = new Decimal(data.npbase);
+  npthreshold = new Decimal(data.npthreshold);
+
+  nu1boost = new Decimal(data.nu1boost);
+  nu1amt = new Decimal(data.nu1amt);
+  nu1cost = new Decimal(data.nu1cost);
+  nu1scaling = new Decimal(data.nu1scaling);
+  nu2amt = new Decimal(data.nu2amt);
+  nu2cost = new Decimal(data.nu2cost);
+}
