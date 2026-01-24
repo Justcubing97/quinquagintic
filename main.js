@@ -226,7 +226,7 @@ function updateScreen(){
   nonBoostsDisplay.textContent = nonBoostsString;
   
   nu1_id_amt.textContent = "ID: NU1 || x" + nu1amt;
-  nu1_cost_scale.textContent = "Require: " + nu1cost.toExponential(3) + " NP || Scaling: x" + nu1scaling;
+  nu1_cost_scale.textContent = "Cost: " + nu1cost.toExponential(3) + " NP || Scaling: x" + nu1scaling;
   
   nu2_id_amt.textContent = "ID: NU2 || " + nu2amt + "/1";
   if (nu2amt.eq(new Decimal(1))){
