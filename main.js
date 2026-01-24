@@ -223,6 +223,7 @@ function updateScreen(){
   //=========================================================================
   //NONILLIONTHS
   no_point_pending.textContent = "+" + nppending.toExponential(3) + " NP";
+  no-next-point.textContent = "(next NP at " + npthreshold.div(decillionthDivision).toExponential(3) + " N)";
   nonBoostsDisplay.textContent = nonBoostsString;
   
   nu1_id_amt.textContent = "ID: NU1 || x" + nu1amt;
