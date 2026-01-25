@@ -245,6 +245,34 @@ p.individ-softcaps {
   padding: 10px 200px;
 }
 
+.info-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 240px;
+  background-color: #8b5a32;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.info-box-header {
+  background-color: #df843a;
+  color: #000000;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  border-bottom: 1px solid #ffa45a;
+}
+
+.info-box-content {
+  padding: 10px 12px;
+  color: #ffffff;
+}
+
+
 .top-bar {
   position: fixed;
   top: 0;
