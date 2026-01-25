@@ -207,9 +207,10 @@ div.octillionth {
 
 p.numberp {
   font-family: "Share Tech Mono", monospace;
-  font-size: 65px;
+  font-size: 60px;
   font-weight:666;
   margin: 10px;
+  text-align:center;
 }
 
 p.numbergain {

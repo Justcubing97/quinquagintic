@@ -352,8 +352,8 @@ function automation(){
       du1.click();
     }
 
-    if (!nu1.disabled && nonillionthPoints.gte(nu1cost)){
-      nu1.click();
+    if (!nu4.disabled && nonillionthPoints.gte(nu4cost)){
+      nu4.click();
     }
     if (!nu2.disabled && nonillionthPoints.gte(nu2cost)){
       nu2.click();
@@ -361,8 +361,8 @@ function automation(){
     if (!nu3.disabled && nonillionthPoints.gte(nu3cost)){
       nu3.click();
     }
-    if (!nu4.disabled && nonillionthPoints.gte(nu4cost)){
-      nu4.click();
+    if (!nu1.disabled && nonillionthPoints.gte(nu1cost)){
+      nu1.click();
     }
   }
 }
