@@ -239,7 +239,7 @@ function updateScreen(){
   //=========================================================================
   //NUMBER
   numberDisplay.textContent = numberStringFinal;
-  numberGainDisplay.textContent = "Number gain is +" + numberGain.div(decillionthDivision) + "/s"
+  numberGainDisplay.textContent = "Number gain is +" + numberGain.div(decillionthDivision).toExponential(3) + "/s";
   boostsDisplay.textContent = boostsString;
   
   //=========================================================================
