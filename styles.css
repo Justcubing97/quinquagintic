@@ -245,7 +245,7 @@ p.individ-softcaps {
   padding: 10px 200px;
 }
 
-.info-box {
+.standard-infobox {
   outline-style: solid;
   outline-color: #ffa45a;
   position: absolute;
@@ -259,7 +259,7 @@ p.individ-softcaps {
   overflow: hidden;
 }
 
-.info-box-header {
+.standard-infobox-header {
   background-color: #df843a;
   color: #000000;
   padding: 8px 12px;
@@ -269,7 +269,7 @@ p.individ-softcaps {
   border-bottom: 1px solid #ffa45a;
 }
 
-.info-box-content {
+.standard-infobox-content {
   padding: 10px 12px;
   color: #ffffff;
 }
