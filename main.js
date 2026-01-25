@@ -1,5 +1,3 @@
-//=========================================================================
-//=========================================================================
 //NUMERICAL VARIABLES
 var number = new Decimal(1);
 var numberGain;
@@ -9,6 +7,7 @@ var numberStringFinal = "";
 
 var boostsString = "";
 var nonBoostsString = "";
+var octBoostsString = "";
 
 //=========================================================================
 //DECILLIONTH
@@ -43,12 +42,22 @@ var nu4amt = new Decimal(0);
 var nu4cost = new Decimal(25);
 
 //=========================================================================
+//OCTILLIONTH
+var opscaling = new Decimal(3);
+var opthreshold = new Decimal.pow(10, 6);
+var oppending = new Decimal(0);
+var opbase = new Decimal(0);
+
+var octillionthPoints = new Decimal(0);
+
+//=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
 const numberRounding = new Decimal(100);
 const numberDecimalPlaces = new Decimal(3);
 const decillionthDivision = new Decimal.pow(10, 33);
 
+//=========================================================================
 //=========================================================================
 //=========================================================================
 //ID VARIABLES
@@ -58,6 +67,7 @@ const decillionthDivision = new Decimal.pow(10, 33);
 const topNumber = document.getElementById("top-number");
 const topNP = document.getElementById("top-np");
 const topOP = document.getElementById("top-op");
+const topSP = document.getElementById("top-sp");
 
 //=========================================================================
 //NUMBER
@@ -103,9 +113,19 @@ nu4.disabled = true;
 
 const nu4_id_amt = document.getElementById("nu4-id-amt");
 const nu4_cost_scale = document.getElementById("nu4-cost-scale");
+
+//=========================================================================
+//OCTILLIONTH
+const oreset = document.getElementById("oreset");
+const op_point_pending = document.getElementById("op-point-pending");
+const op_next_point = document.getElementById("op-next-point");
+const octBoostsDisplay = document.getElementById("octBoostsDisplay");
+oreset.disabled = true;
+
 //=========================================================================
 //RESET BOOSTS
-var no_reset_boost_check = false;
+var non_reset_boost_check = false;
+var oct_reset_boost_check = false;
 
 //=========================================================================
 //RESET FUNCTIONS
@@ -113,7 +133,7 @@ function nonillionthResetInitiate(){
   npthreshold = new Decimal(1000);
   nonillionthPoints = nonillionthPoints.add(nppending);
   npbase = new Decimal(0);
-  no_reset_boost_check = true;
+  non_reset_boost_check = true;
   
   du1boost = new Decimal(0);
   du1amt = new Decimal(0);
@@ -126,6 +146,45 @@ function nonillionthResetInitiate(){
   }
 }
 
+function octillionthResetInitiate(){
+  opthreshold = new Decimal.pow(10, 6);
+  octillionthPoints = octillionthPoints.add(oppending);
+  opbase = new Decimal(0);
+  oct_reset_boost_check = true;
+  
+  npscaling = new Decimal(2);
+  npthreshold = new Decimal(1000);
+  nppending = new Decimal(0);
+  npbase = new Decimal(0);
+
+  nonillionthPoints = new Decimal(0);
+  non_reset_boost_check = false;
+
+  nu1boost = new Decimal(1);
+  nu1amt = new Decimal(0);
+  nu1cost = new Decimal(1);
+  nu1scaling = new Decimal(5);
+
+  nu2amt = new Decimal(0);
+  nu2cost = new Decimal(3);
+
+  nu3boost = new Decimal(1);
+  nu3amt = new Decimal(0);
+  nu3cost = new Decimal(10);
+  nu3scaling = new Decimal(10);
+
+  nu4amt = new Decimal(0);
+  nu4cost = new Decimal(25);
+  
+  du1boost = new Decimal(0);
+  du1amt = new Decimal(0);
+  du1cost = new Decimal(10);
+  du1scaling = new Decimal(2); 
+  number = new Decimal(1);
+}
+
+//=========================================================================
+//=========================================================================
 //=========================================================================
 //GAME LOOP
 
@@ -141,8 +200,14 @@ setInterval(function(){
   checkNonillionthReset();
   checkPendingNonillionth();
   nonillionthUpgrades();
+
+  checkOctillionthReset();
+  checkPendingOctillionth();
+
+  automation();
 }, 50);
 
+//=========================================================================
 //=========================================================================
 //=========================================================================
 //MAIN FUNCTIONS
@@ -154,7 +219,7 @@ function calculateGain(){
     numberGain = numberGain.mul(du1boost);
   }
   
-  if (no_reset_boost_check){
+  if (non_reset_boost_check){
     numberGain = numberGain.mul(new Decimal(5));
   }
 
@@ -214,7 +279,7 @@ function calculateBoostsStrings(){
     boostsString += "DU1: x" + du1boost + ", ";
   }
   
-  if (no_reset_boost_check){
+  if (non_reset_boost_check){
     boostsString += "Nonillionth: x5, ";
   }
 
@@ -228,6 +293,10 @@ function calculateBoostsStrings(){
   if (nu1amt.gte(1)){
     nonBoostsString += "NU1: x" + nu1boost + ", ";
   }
+
+  if (oct_reset_boost_check){
+    octBoostsString += "Octillionth: x2, ";
+  }
 }
 
 function updateScreen(){
@@ -235,6 +304,7 @@ function updateScreen(){
   //TOP
   topNumber.textContent = "N: " + number.div(decillionthDivision).toExponential(3) + " (+" + numberGain.div(decillionthDivision).toExponential(3) + "/s)";
   topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
+  topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
   
   //=========================================================================
   //NUMBER
@@ -268,8 +338,36 @@ function updateScreen(){
   if (nu4amt.eq(new Decimal(1))){
     nu4_cost_scale.textContent = "Purchased!";
   }
+
+  //=========================================================================
+  //OCTILLIONTHS
+  op_point_pending.textContent = "+" + oppending.toExponential(3) + " OP";
+  op_next_point.textContent = "(next OP at " + opthreshold.div(decillionthDivision).toExponential(3) + " N)";
+  octBoostsDisplay.textContent = octBoostsString;
 }
 
+function automation(){
+  if (oct_reset_boost_check){
+    if (!du1.disabled){
+      du1.click();
+    }
+
+    if (!nu1.disabled){
+      nu1.click();
+    }
+    if (!nu2.disabled){
+      nu2.click();
+    }
+    if (!nu3.disabled){
+      nu3.click();
+    }
+    if (!nu4.disabled){
+      nu4.click();
+    }
+  }
+}
+
+//=========================================================================
 //=========================================================================
 //=========================================================================
 //DECILLIONTH
@@ -277,7 +375,7 @@ function updateScreen(){
 //=========================================================================
 //AFFORD DETECTION
 function decillionthUpgrades(){
-  if (no_reset_boost_check){
+  if (non_reset_boost_check){
     du1.textContent = "Increase N multi" + "\n by +1.5"
   }
   
@@ -291,7 +389,7 @@ function decillionthUpgrades(){
 //=========================================================================
 //CLICK
 du1.addEventListener("click", function(){
-  if (no_reset_boost_check){
+  if (non_reset_boost_check){
     du1boost = du1boost.add(new Decimal(1.5));
   } else {
     du1boost = du1boost.add(new Decimal(1.25));
@@ -300,6 +398,7 @@ du1.addEventListener("click", function(){
   du1cost = du1cost.mul(du1scaling);
 });
 
+//=========================================================================
 //=========================================================================
 //=========================================================================
 //NONILLIONTH
@@ -428,6 +527,38 @@ function nu4ImpactIteration(){
 
 //=========================================================================
 //=========================================================================
+//=========================================================================
+//OCTILLIONTH
+
+//=========================================================================
+//RESET DETECTION
+function checkOctillionthReset(){
+  if (number.gte(new Decimal.pow(10, 6))) {
+    oreset.disabled = false;
+  } else {
+    oreset.disabled = true;
+  }
+}
+
+//=========================================================================
+//PENDING
+function checkPendingOctillionth(){
+  if (number.gte(opthreshold)){
+    opthreshold = opthreshold.mul(opscaling);
+    opbase = opbase.add(new Decimal(1));
+    checkPendingOctillionth();
+  }
+}
+
+//=========================================================================
+//RESET CLICK
+oreset.addEventListener("click", function(){
+  octillionthResetInitiate();
+});
+
+//=========================================================================
+//=========================================================================
+//=========================================================================
 //SAVING AND LOADING
 setInterval(function(){
   saveGame();
@@ -452,7 +583,7 @@ function saveGame() {
     npscaling: npscaling.toString(),
     npbase: npbase.toString(),
     npthreshold: npthreshold.toString(),
-    no_reset_boost_check: no_reset_boost_check.toString(),
+    non_reset_boost_check: non_reset_boost_check.toString(),
 
     nu1boost: nu1boost.toString(),
     nu1amt: nu1amt.toString(),
@@ -465,7 +596,13 @@ function saveGame() {
     nu3cost: nu3cost.toString(),
     nu3scaling: nu3scaling.toString(),
     nu4amt: nu4amt.toString(),
-    nu4cost: nu4cost.toString()
+    nu4cost: nu4cost.toString(),
+
+    octillionthPoints: octillionthPoints.toString(),
+    opscaling: opscaling.toString(),
+    opbase: opbase.toString(),
+    opthreshold: opthreshold.toString(),
+    oct_reset_boost_check: oct_reset_boost_check.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -489,7 +626,7 @@ function loadGame() {
   npscaling1 = new Decimal(data.npscaling);
   npbase = new Decimal(data.npbase);
   npthreshold = new Decimal(data.npthreshold);
-  no_reset_boost_check = data.no_reset_boost_check === 'true';
+  non_reset_boost_check = data.non_reset_boost_check === 'true';
 
   nu1boost = new Decimal(data.nu1boost);
   nu1amt = new Decimal(data.nu1amt);
@@ -503,6 +640,12 @@ function loadGame() {
   nu3scaling = new Decimal(data.nu3scaling);
   nu4amt = new Decimal(data.nu4amt);
   nu4cost = new Decimal(data.nu4cost);
+
+  octillionthPoints = new Decimal(data.octillionthPoints);
+  opscaling = new Decimal(data.opscaling);
+  opbase = new Decimal(data.opbase);
+  opthreshold = new Decimal(data.opthreshold);
+  oct_reset_boost_check = data.oct_reset_boost_check === 'true';
 }
 
 //=========================================================================

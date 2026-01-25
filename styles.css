@@ -7,6 +7,9 @@ h1 {
   font-family: "Share Tech Mono", monospace;
 }
 
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
 /* TITLE GRADIENTS */
 
 .title-gradient {
@@ -37,7 +40,7 @@ h1 {
 }
 
 .nonillionth-section {
-  color: #00E000;
+  color: #80D0FF;
   background-image: linear-gradient(180deg, #AAAAAA, #80D0FF);
   -webkit-background-clip: text;
   background-clip: text;
@@ -45,6 +48,18 @@ h1 {
   display: inline-block;
 }
 
+.octillionth-section {
+  color: #ffa45a;
+  background-image: linear-gradient(180deg, #AAAAAA, #ffa45a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
 /* BUTTONS */
 
 .button {
@@ -53,6 +68,8 @@ h1 {
   font-weight: 666;
   border: 2px solid black;
 }
+
+/* ==================================================================================================== */
 
 .decillionth-button {
   background: linear-gradient(180deg, #AAAAAA, #00D000);
@@ -66,6 +83,8 @@ h1 {
   cursor: not-allowed;
   background: linear-gradient(180deg, #AAAAAA, #00D000);
 }
+
+/* ==================================================================================================== */
 
 .non-dark {
   background: linear-gradient(180deg, #888888, #60B0E0);
@@ -93,6 +112,37 @@ h1 {
   background: linear-gradient(180deg, #AAAAAA, #80D0FF);
 }
 
+/* ==================================================================================================== */
+
+.oct-dark {
+  background: linear-gradient(180deg, #888888, #df843a);
+}
+
+.oct-dark:hover {
+  background: linear-gradient(180deg, #989898, #ef944a);
+}
+
+.oct-dark:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #df843a);
+}
+
+.oct-light {
+  background: linear-gradient(180deg, #AAAAAA, #ffa45a);
+}
+
+.oct-light:hover {
+  background: linear-gradient(180deg, #BABABA, #ffb46a);
+}
+
+.oct-light:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #AAAAAA, #ffa45a);
+}
+
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
 /* MULTI-ROW BUTTONS */
 
 .upgrade-grid {
@@ -100,6 +150,9 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
 /* OUTLINES */
 
 div.number1 {
@@ -130,6 +183,16 @@ div.nonillionth {
   font-family: "Share Tech Mono", monospace;
 }
 
+div.octillionth {
+  outline-color: #ffa45a;
+  outline-width: 4px;
+  outline-style: solid;
+  font-family: "Share Tech Mono", monospace;
+}
+
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
 /* EXTRAS BELOW */
 
 .exo-supertext {
