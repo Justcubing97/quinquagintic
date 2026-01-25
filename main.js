@@ -548,11 +548,23 @@ function nu4ImpactIteration(){
 oct_infobox_tab_button.addEventListener("click", function(){
   oct_challenge_tab.style.display = "none";
   oct_infobox_tab.style.display = "block";
+  
+  oct_challenge_tab_button.classList.add("oct-dark")
+  oct_challenge_tab_button.classList.remove("oct-light");
+  
+  oct_infobox_tab_button.classList.add("oct-light");
+  oct_infobox_tab_button.classList.remove("oct-dark");
 });
 
 oct_challenge_tab_button.addEventListener("click", function(){
   oct_infobox_tab.style.display = "none";
   oct_challenge_tab.style.display = "block";
+  
+  oct_infobox_tab_button.classList.add("oct-dark")
+  oct_infobox_tab_button.classList.remove("oct-light");
+  
+  oct_challenge_tab_button.classList.add("oct-light");
+  oct_challenge_tab_button.classList.remove("oct-dark"); 
 });
 
 //=========================================================================
