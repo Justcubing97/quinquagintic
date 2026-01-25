@@ -601,7 +601,7 @@ function saveGame() {
     nu4cost: nu4cost.toString(),
 
     octillionthPoints: octillionthPoints.toString(),
-    opscaling: opscaling.toString(),
+    opscaling: new Decimal(3).toString(),
     opbase: opbase.toString(),
     opthreshold: opthreshold.toString(),
     oct_reset_boost_check: oct_reset_boost_check.toString(),
