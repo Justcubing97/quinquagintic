@@ -416,9 +416,10 @@ function checkNonillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingNonillionth(){
-  while (number.gte(npthreshold)){
+  if (number.gte(npthreshold)){
     npthreshold = npthreshold.mul(npscaling);
-    npbase = npbase.add(new Decimal(1));  
+    npbase = npbase.add(new Decimal(1));
+    checkPendingNonillionth();
   }
   
   nppending = npbase.mul(nu1boost);
@@ -541,10 +542,11 @@ function checkOctillionthReset(){
 
 //=========================================================================
 //PENDING
-function checkPendingOctillionth(){
-  while (number.gte(opthreshold)){
+function checkPendingOctillionth(){ 
+  if (number.gte(opthreshold)){
     opthreshold = opthreshold.mul(opscaling);
-    opbase = opbase.add(new Decimal(1));  
+    opbase = opbase.add(new Decimal(1));
+    checkPendingOctillionth();
   }
 
   oppending = opbase;
