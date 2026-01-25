@@ -625,7 +625,7 @@ function loadGame() {
   du1scaling = new Decimal(data.du1scaling);
 
   nonillionthPoints = new Decimal(data.nonillionthPoints);
-  npscaling1 = new Decimal(data.npscaling);
+  npscaling = new Decimal(data.npscaling);
   npbase = new Decimal(data.npbase);
   npthreshold = new Decimal(data.npthreshold);
   non_reset_boost_check = data.non_reset_boost_check === 'true';
@@ -642,7 +642,7 @@ function loadGame() {
   nu3scaling = new Decimal(data.nu3scaling);
   nu4amt = new Decimal(data.nu4amt);
   nu4cost = new Decimal(data.nu4cost);
-
+  
   octillionthPoints = new Decimal(data.octillionthPoints);
   opscaling = new Decimal(data.opscaling);
   opbase = new Decimal(data.opbase);
