@@ -44,7 +44,7 @@ var nu4cost = new Decimal(25);
 //=========================================================================
 //OCTILLIONTH
 var opscaling = new Decimal(3);
-var opthreshold = new Decimal(1000000);
+var opthreshold = new Decimal.pow(10, 6);
 var oppending = new Decimal(0);
 var opbase = new Decimal(0);
 
@@ -295,7 +295,7 @@ function calculateBoostsStrings(){
   }
 
   if (oct_reset_boost_check){
-    octBoostsString += "Octillionth: x2, ";
+    nonBoostsString += "Octillionth: x2, ";
   }
 }
 
@@ -549,7 +549,7 @@ function checkPendingOctillionth(){
     checkPendingOctillionth();
   }
 
-  oppending = opbase;
+  oppending = new Decimal(opbase);
 }
 
 //=========================================================================
@@ -642,7 +642,7 @@ function loadGame() {
   nu3scaling = new Decimal(data.nu3scaling);
   nu4amt = new Decimal(data.nu4amt);
   nu4cost = new Decimal(data.nu4cost);
-  
+
   octillionthPoints = new Decimal(data.octillionthPoints);
   opscaling = new Decimal(data.opscaling);
   opbase = new Decimal(data.opbase);
