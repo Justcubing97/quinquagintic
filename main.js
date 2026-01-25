@@ -58,13 +58,27 @@ const numberDecimalPlaces = new Decimal(3);
 const decillionthDivision = new Decimal.pow(10, 33);
 
 //=========================================================================
-//TAB TOGGLES
-var octCurrentTab;
-
-//=========================================================================
 //=========================================================================
 //=========================================================================
 //ID VARIABLES
+
+//=========================================================================
+//TABS
+const main_tab = document.getElementById("main-tab");
+const caps_tab = document.getElementById("caps-tab");
+const decillionth_tab = document.getElementById("decillionth-tab");
+const nonillionth_tab = document.getElementById("nonillionth-tab");
+const octillionth_tab = document.getElementById("octillionth-tab");
+const main_number_tab_button = document.getElementById("main-number-tab-button");
+const main_caps_tab_button = document.getElementById("main-caps-tab-button");
+const main_decillionth_tab_button = document.getElementById("main-decillionth-tab-button");
+const main_nonillionth_tab_button = document.getElementById("main-nonillionth-tab-button");
+const main_octillionth_tab_button = document.getElementById("main-octillionth-tab-button");
+
+const oct_infobox_tab = document.getElementById("oct-infobox-tab");
+const oct_challenge_tab = document.getElementById("oct-challenge-tab");
+const oct_infobox_tab_button = document.getElementById("oct-infobox-tab-button");
+const oct_challenge_tab_button = document.getElementById("oct-challenge-tab-button");
 
 //=========================================================================
 //TOP
@@ -125,11 +139,6 @@ const op_point_pending = document.getElementById("op-point-pending");
 const op_next_point = document.getElementById("op-next-point");
 const octBoostsDisplay = document.getElementById("octBoostsDisplay");
 oreset.disabled = true;
-
-const oct_infobox_tab = document.getElementById("oct-infobox-tab");
-const oct_challenge_tab = document.getElementById("oct-challenge-tab");
-const oct_infobox_tab_button = document.getElementById("oct-infobox-tab-button");
-const oct_challenge_tab_button = document.getElementById("oct-challenge-tab-button");
 
 //=========================================================================
 //RESET BOOSTS
@@ -220,6 +229,72 @@ setInterval(function(){
 //=========================================================================
 //=========================================================================
 //MAIN FUNCTIONS
+
+//=========================================================================
+//TABS
+main_number_tab_button.addEventListener("click", function(){
+  if (main_number_tab_button.classList.contains("mil-dark")){
+    main_number_tab_button.classList.remove("mil-dark");
+    main_number_tab_button.classList.add("mil-light");
+    main_tab.style.display = "block";
+  } else {
+    main_number_tab_button.classList.add("mil-dark");
+    main_number_tab_button.classList.remove("mil-light");
+    main_tab.style.display = "none";
+  }
+});
+
+main_caps_tab_button.addEventListener("click", function(){
+  if (main_caps_tab_button.classList.contains("soft-dark")){
+    main_caps_tab_button.classList.remove("soft-dark");
+    main_caps_tab_button.classList.add("soft-light");
+    caps_tab.style.display = "block";
+  } else {
+    main_caps_tab_button.classList.add("soft-dark");
+    main_caps_tab_button.classList.remove("soft-light");
+    caps_tab.style.display = "none";
+  }
+});
+
+main_decillionth_tab_button.addEventListener("click", function(){
+  if (main_decillionth_tab_button.classList.contains("decillionth-dark-button")){
+    main_decillionth_tab_button.classList.remove("decillionth-dark-button");
+    main_decillionth_tab_button.classList.add("decillionth-button");
+    decillionth_tab.style.display = "block";
+  } else {
+    main_decillionth_tab_button.classList.add("decillionth-dark-button");
+    main_decillionth_tab_button.classList.remove("decillionth-button");
+    decillionth_tab.style.display = "none";
+  }
+});
+
+main_nonillionth_tab_button.addEventListener("click", function(){
+  if (main_nonillionth_tab_button.classList.contains("non-dark")){
+    main_nonillionth_tab_button.classList.remove("non-dark");
+    main_nonillionth_tab_button.classList.add("non-light");
+    nonillionth_tab.style.display = "block";
+  } else {
+    main_nonillionth_tab_button.classList.add("non-dark");
+    main_nonillionth_tab_button.classList.remove("non-light");
+    nonillionth_tab.style.display = "none";
+  }
+});
+
+main_octillionth_tab_button.addEventListener("click", function(){
+  if (main_octillionth_tab_button.classList.contains("oct-dark")){
+    main_octillionth_tab_button.classList.remove("oct-dark");
+    main_octillionth_tab_button.classList.add("oct-light");
+    octillionth_tab.style.display = "block";
+  } else {
+    main_octillionth_tab_button.classList.add("oct-dark");
+    main_octillionth_tab_button.classList.remove("oct-light");
+    octillionth_tab.style.display = "none";
+  }
+});
+
+//=========================================================================
+//ACTUAL FUNCTIONS
+
 function calculateGain(){
   numberGain = new Decimal(1);
   

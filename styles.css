@@ -71,6 +71,24 @@ h1 {
 
 /* ==================================================================================================== */
 
+.soft-dark {
+  background: linear-gradient(180deg, #888888, #bf0000);
+}
+
+.soft-dark:hover {
+  background: linear-gradient(180deg, #989898, #df0000);
+}
+
+.soft-light {
+  background: linear-gradient(180deg, #AAAAAA, #ff0000);
+}
+
+.soft-light:hover {
+  background: linear-gradient(180deg, #BABABA, #ff2020);
+}
+
+/* ==================================================================================================== */
+
 .decillionth-button {
   background: linear-gradient(180deg, #AAAAAA, #00D000);
 }
@@ -82,6 +100,19 @@ h1 {
 .decillionth-button:disabled {
   cursor: not-allowed;
   background: linear-gradient(180deg, #AAAAAA, #00D000);
+}
+
+.decillionth-dark-button {
+  background: linear-gradient(180deg, #888888, #009000);
+}
+
+.decillionth-dark-button:hover {
+  background: linear-gradient(180deg, #989898, #00B000);
+}
+
+.decillionth-dark-button:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #009000);
 }
 
 /* ==================================================================================================== */
@@ -138,6 +169,62 @@ h1 {
 .oct-light:disabled {
   cursor: not-allowed;
   background: linear-gradient(180deg, #AAAAAA, #ffa45a);
+}
+
+/* ==================================================================================================== */
+
+.sep-dark {
+  background: linear-gradient(180deg, #888888, #a860e0);
+}
+
+.sep-dark:hover {
+  background: linear-gradient(180deg, #989898, #b870f0);
+}
+
+.sep-dark:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #a860e0);
+}
+
+.sep-light {
+  background: linear-gradient(180deg, #AAAAAA, #c880ff);
+}
+
+.sep-light:hover {
+  background: linear-gradient(180deg, #BABABA, #d890ff);
+}
+
+.sep-light:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #AAAAAA, #c880ff);
+}
+
+/* ==================================================================================================== */
+
+.mil-dark {
+  background: linear-gradient(180deg, #888888, #999999);
+}
+
+.mil-dark:hover {
+  background: linear-gradient(180deg, #989898, #bbbbbb);
+}
+
+.mil-dark:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #999999);
+}
+
+.mil-light {
+  background: linear-gradient(180deg, #AAAAAA, #dddddd);
+}
+
+.mil-light:hover {
+  background: linear-gradient(180deg, #BABABA, #ffffff);
+}
+
+.mil-light:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #AAAAAA, #dddddd);
 }
 
 /* ==================================================================================================== */
