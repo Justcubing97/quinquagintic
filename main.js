@@ -58,6 +58,10 @@ const numberDecimalPlaces = new Decimal(3);
 const decillionthDivision = new Decimal.pow(10, 33);
 
 //=========================================================================
+//TAB TOGGLES
+var octCurrentTab;
+
+//=========================================================================
 //=========================================================================
 //=========================================================================
 //ID VARIABLES
@@ -121,6 +125,11 @@ const op_point_pending = document.getElementById("op-point-pending");
 const op_next_point = document.getElementById("op-next-point");
 const octBoostsDisplay = document.getElementById("octBoostsDisplay");
 oreset.disabled = true;
+
+const oct_infobox_tab = document.getElementById("oct-infobox-tab");
+const oct_challenge_tab = document.getElementById("oct-challenge-tab");
+const oct_infobox_tab_button = document.getElementById("oct-infobox-tab-button");
+const oct_challenge_tab_button = document.getElementById("oct-challenge-tab-button");
 
 //=========================================================================
 //RESET BOOSTS
@@ -533,6 +542,18 @@ function nu4ImpactIteration(){
 //=========================================================================
 //=========================================================================
 //OCTILLIONTH
+
+//=========================================================================
+//TABS
+oct_infobox_tab_button.addEventListener("click", function(){
+  oct_challenge_tab.style.display = "none";
+  oct_infobox_tab.style.display = "block";
+});
+
+oct_challenge_tab_button.addEventListener("click", function(){
+  oct_infobox_tab.style.display = "none";
+  oct_challenge_tab.style.display = "block";
+});
 
 //=========================================================================
 //RESET DETECTION

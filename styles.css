@@ -275,8 +275,6 @@ p.individ-softcaps {
   line-height: 1.5;
 }
 
-
-
 .top-bar {
   position: fixed;
   top: 0;
@@ -302,4 +300,19 @@ body {
 
 .because-html-doesnt-do-js-newlines {
   white-space: pre-line;
+}
+
+.standard-tabs button {
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+}
+
+.standard-tabs-button {
+  font-size: 30px;
+  width: 200px;
+}
+
+.oct-challenge-tab {
+  display: none;
 }
