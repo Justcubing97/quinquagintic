@@ -148,6 +148,10 @@ function calculateGain(){
   if (no_reset_boost_check){
     numberGain = numberGain.mul(new Decimal(5));
   }
+
+  if (nu3amt.gte(new Decimal(1))){
+    numberGain = numberGain.mul(nu3boost);
+  }
 }
 
 function updateCurrencies(){
@@ -203,6 +207,10 @@ function calculateBoostsStrings(){
   
   if (no_reset_boost_check){
     boostsString += "Nonillionth: x5, ";
+  }
+
+  if (nu3amt.gte(1)){
+    boostsString += "NU3: x" + nu3boost + ", ";
   }
   
   //=========================================================================
@@ -374,7 +382,10 @@ function nu2ImpactIteration(){
 //=========================================================================
 //=========================================================================
 //SAVING AND LOADING
-setInterval(saveGame, 10000);
+setInterval(function(){
+  saveGame();
+  backgroundColorChange();
+}, 10000);
 
 window.onload = function(){
   loadGame();
@@ -433,4 +444,18 @@ function loadGame() {
   nu1scaling = new Decimal(data.nu1scaling);
   nu2amt = new Decimal(data.nu2amt);
   nu2cost = new Decimal(data.nu2cost);
+}
+
+//=========================================================================
+//=========================================================================
+//BACKGROUND SAVE FLASHING
+function backgroundColorChange() {
+  let colorStep = 0;
+  let loop = setInterval(function() {
+    colorStep += 1;
+    document.body.style.backgroundColor = "rgb(" + colorStep + "," + colorStep + "," + colorStep + ")";
+    if (colorStep >= 48) {
+      clearInterval(loop);
+    }
+  }, 50);
 }
