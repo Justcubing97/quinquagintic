@@ -39,6 +39,9 @@ var nu3amt = new Decimal(0);
 var nu3cost = new Decimal(10);
 var nu3scaling = new Decimal(10);
 
+var nu4amt = new Decimal(0);
+var nu4cost = new Decimal(25);
+
 //=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
@@ -94,6 +97,12 @@ nu3.disabled = true;
 
 const nu3_id_amt = document.getElementById("nu3-id-amt");
 const nu3_cost_scale = document.getElementById("nu3-cost-scale");
+
+const nu4 = document.getElementById("nu4");
+nu4.disabled = true;
+
+const nu4_id_amt = document.getElementById("nu4-id-amt");
+const nu4_cost_scale = document.getElementById("nu4-cost-scale");
 //=========================================================================
 //RESET BOOSTS
 var no_reset_boost_check = false;
@@ -254,6 +263,11 @@ function updateScreen(){
 
   nu3_id_amt.textContent = "ID: NU3 || x" + nu3amt;
   nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling;
+
+  nu4_id_amt.textContent = "ID: NU4 || " + nu4amt + "/1";
+  if (nu4amt.eq(new Decimal(1))){
+    nu4_cost_scale.textContent = "Purchased!";
+  }
 }
 
 //=========================================================================
@@ -338,6 +352,12 @@ function nonillionthUpgrades(){
   } else {
     nu3.disabled = true;
   }
+
+  if (nonillionthPoints.gte(nu4cost) && !nu4amt.eq(new Decimal(1))) {
+    nu4.disabled = false;
+  } else {
+    nu4.disabled = true;
+  }
 }
 
 //=========================================================================
@@ -367,8 +387,17 @@ nu3.addEventListener("click", function(){
   checkPendingNonillionth();
 });
 
+nu4.addEventListener("click", function(){
+  nonillionthPoints = nonillionthPoints.sub(nu4cost);
+  nu4amt = nu4amt.add(new Decimal(1));
+  
+  nu1scaling = new Decimal(3);
+  nu3scaling = new Decimal(6);
+  nu4ImpactIteration();
+});
+
 //=========================================================================
-//NU2 SPECIFIC
+//NU# SPECIFIC
 function nu2ImpactIteration(){
   let savedValue = du1amt;
   du1amt = new Decimal(0);
@@ -376,6 +405,24 @@ function nu2ImpactIteration(){
   for (var nu2IICounter = new Decimal(0); nu2IICounter.lt(savedValue); nu2IICounter = nu2IICounter.add(new Decimal(1))){
     du1cost = du1cost.mul(du1scaling);
     du1amt = du1amt.add(new Decimal(1));
+  }
+}
+
+function nu4ImpactIteration(){
+  let savedNu1Value = nu1amt;
+  nu1amt = new Decimal(0);
+  nu1cost = new Decimal(1);
+  for (var nu4IICounter = new Decimal(0); nu4IICounter.lt(savedNu1Value); nu4IICounter = nu4IICounter.add(new Decimal(1))){
+    nu1cost = nu1cost.mul(nu1scaling);
+    nu1amt = nu1amt.add(new Decimal(1));
+  }
+
+  let savedNu3Value = nu3amt;
+  nu3amt = new Decimal(0);
+  nu3cost = new Decimal(10);
+  for (var nu4IICounter = new Decimal(0); nu4IICounter.lt(savedNu3Value); nu4IICounter = nu4IICounter.add(new Decimal(1))){
+    nu3cost = nu3cost.mul(nu3scaling);
+    nu3amt = nu3amt.add(new Decimal(1));
   }
 }
 
@@ -413,6 +460,12 @@ function saveGame() {
     nu1scaling: nu1scaling.toString(),
     nu2amt: nu2amt.toString(),
     nu2cost: nu2cost.toString(),
+    nu3boost: nu3boost.toString(),
+    nu3amt: nu3amt.toString(),
+    nu3cost: nu3cost.toString(),
+    nu3scaling: nu3scaling.toString(),
+    nu4amt: nu4amt.toString(),
+    nu4cost: nu4cost.toString()
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -444,6 +497,12 @@ function loadGame() {
   nu1scaling = new Decimal(data.nu1scaling);
   nu2amt = new Decimal(data.nu2amt);
   nu2cost = new Decimal(data.nu2cost);
+  nu3boost = new Decimal(data.nu3boost);
+  nu3amt = new Decimal(data.nu3amt);
+  nu3cost = new Decimal(data.nu3cost);
+  nu3scaling = new Decimal(data.nu3scaling);
+  nu4amt = new Decimal(data.nu4amt);
+  nu4cost = new Decimal(data.nu4cost);
 }
 
 //=========================================================================
