@@ -233,7 +233,7 @@ function calculateBoostsStrings(){
 function updateScreen(){
   //=========================================================================
   //TOP
-  topNumber.textContent = "N: " + number.div(decillionthDivision).toExponential(3) + " (+" + numberGain.div(decillionthDivision) + "/s)";
+  topNumber.textContent = "N: " + number.div(decillionthDivision).toExponential(3) + " (+" + numberGain.div(decillionthDivision).toExponential(3) + "/s)";
   topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
   
   //=========================================================================
