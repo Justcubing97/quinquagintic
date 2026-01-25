@@ -247,8 +247,8 @@ p.individ-softcaps {
 }
 
 .standard-infobox {
-  outline: 2px solid #ffa45a;
-  width: 300px;
+  outline: 4px solid #ffa45a;
+  width: 1000px;
   background-color: #8b5a32;
   font-family: 'Share Tech Mono', monospace;
   font-size: 18px;
@@ -256,9 +256,9 @@ p.individ-softcaps {
   overflow: hidden;
   z-index: 999;
   position: absolute;
-  top: 50%;
+  bottom: 20px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   margin: auto;
 }
 
