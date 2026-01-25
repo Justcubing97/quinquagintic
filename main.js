@@ -548,6 +548,8 @@ function checkPendingOctillionth(){
     opbase = opbase.add(new Decimal(1));
     checkPendingOctillionth();
   }
+
+  oppending = opbase;
 }
 
 //=========================================================================
