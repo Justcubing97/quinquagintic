@@ -252,15 +252,10 @@ p.individ-softcaps {
   width: 1000px;
   background-color: #8b5a32;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 18px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-size: 30px;
   overflow: hidden;
   z-index: 999;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: auto;
+  margin: 20px auto 0;
 }
 
 .standard-infobox-header {
@@ -268,9 +263,9 @@ p.individ-softcaps {
   color: #000000;
   padding: 8px 12px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 40px;
   text-align: center;
-  border-bottom: 1px solid #ffa45a;
+  border-bottom: 4px solid #ffa45a;
 }
 
 .standard-infobox-content {
