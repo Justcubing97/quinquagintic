@@ -189,6 +189,7 @@ div.octillionth {
   outline-style: solid;
   font-family: "Share Tech Mono", monospace;
   position: relative;
+  padding-bottom: 20px;
 }
 
 /* ==================================================================================================== */
@@ -208,7 +209,7 @@ div.octillionth {
 
 p.numberp {
   font-family: "Share Tech Mono", monospace;
-  font-size: 60px;
+  font-size: 50px;
   font-weight:666;
   margin: 10px;
   text-align:center;
