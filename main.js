@@ -297,6 +297,10 @@ function calculateBoostsStrings(){
   if (oct_reset_boost_check){
     nonBoostsString += "Octillionth: x2, ";
   }
+
+  //=========================================================================
+  //NONILLIONTHS
+  octBoostsString = "Boosts: ";
 }
 
 function updateScreen(){
