@@ -44,7 +44,7 @@ var nu4cost = new Decimal(25);
 //=========================================================================
 //OCTILLIONTH
 var opscaling = new Decimal(3);
-var opthreshold = new Decimal.pow(10, 6);
+var opthreshold = new Decimal(1000000);
 var oppending = new Decimal(0);
 var opbase = new Decimal(0);
 
@@ -416,10 +416,9 @@ function checkNonillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingNonillionth(){
-  if (number.gte(npthreshold)){
+  while (number.gte(npthreshold)){
     npthreshold = npthreshold.mul(npscaling);
-    npbase = npbase.add(new Decimal(1));
-    checkPendingNonillionth();
+    npbase = npbase.add(new Decimal(1));  
   }
   
   nppending = npbase.mul(nu1boost);
@@ -543,10 +542,9 @@ function checkOctillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingOctillionth(){
-  if (number.gte(opthreshold)){
+  while (number.gte(opthreshold)){
     opthreshold = opthreshold.mul(opscaling);
-    opbase = opbase.add(new Decimal(1));
-    checkPendingOctillionth();
+    opbase = opbase.add(new Decimal(1));  
   }
 
   oppending = opbase;
