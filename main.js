@@ -644,7 +644,7 @@ function loadGame() {
   nu4cost = new Decimal(data.nu4cost);
 
   octillionthPoints = new Decimal(data.octillionthPoints);
-  opscaling = new Decimal(data.opscaling);
+  opscaling = new Decimal(3);
   opbase = new Decimal(data.opbase);
   opthreshold = new Decimal(data.opthreshold);
   oct_reset_boost_check = data.oct_reset_boost_check === 'true';
