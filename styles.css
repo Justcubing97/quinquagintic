@@ -250,7 +250,7 @@ p.individ-softcaps {
 
 .standard-infobox {
   outline: 4px solid #ffa45a;
-  width: 1000px;
+  width: 1500px;
   background-color: #8b5a32;
   font-family: 'Share Tech Mono', monospace;
   font-size: 30px;
@@ -272,6 +272,7 @@ p.individ-softcaps {
 .standard-infobox-content {
   padding: 10px 12px;
   color: #ffffff;
+  line-height: 1.5;
 }
 
 
