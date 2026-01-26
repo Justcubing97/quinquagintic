@@ -527,6 +527,7 @@ nreset.addEventListener("click", function(){
   nonillionth_grid.style.display = "grid";
   main_nonillionth_tab_button.style.display = "inline-block";
   nonillionth_unlocked = true;
+  octillionth_tab.style.display = "block";
 });
 
 //=========================================================================
