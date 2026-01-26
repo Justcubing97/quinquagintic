@@ -58,6 +58,11 @@ const numberDecimalPlaces = new Decimal(3);
 const decillionthDivision = new Decimal.pow(10, 33);
 
 //=========================================================================
+//UNLOCK CHECKS
+var nonillionth_unlocked = false;
+var octillionth_unlocked = false;
+
+//=========================================================================
 //=========================================================================
 //=========================================================================
 //ID VARIABLES
@@ -521,6 +526,7 @@ nreset.addEventListener("click", function(){
   nonillionthResetInitiate();
   nonillionth_grid.style.display = "grid";
   main_nonillionth_tab_button.style.display = "inline-block";
+  nonillionth_unlocked = true;
 });
 
 //=========================================================================
@@ -674,6 +680,7 @@ oreset.addEventListener("click", function(){
   octillionthResetInitiate();
   octillionth_main_section.style.display = "grid";
   main_octillionth_tab_button.style.display = "inline-block";
+  octillionth_unlocked = true;
 });
 
 //=========================================================================
@@ -704,6 +711,7 @@ function saveGame() {
     npbase: npbase.toString(),
     npthreshold: npthreshold.toString(),
     non_reset_boost_check: non_reset_boost_check.toString(),
+    nonillionth_unlocked: nonillionth_unlocked.toString(),
 
     nu1boost: nu1boost.toString(),
     nu1amt: nu1amt.toString(),
@@ -723,6 +731,7 @@ function saveGame() {
     opbase: opbase.toString(),
     opthreshold: opthreshold.toString(),
     oct_reset_boost_check: oct_reset_boost_check.toString(),
+    octillionth_unlocked: octillionth_unlocked.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -747,6 +756,7 @@ function loadGame() {
   npbase = new Decimal(data.npbase);
   npthreshold = new Decimal(data.npthreshold);
   non_reset_boost_check = data.non_reset_boost_check === 'true';
+  nonillionth_unlocked = data.nonillionth_unlocked === 'true';
 
   nu1boost = new Decimal(data.nu1boost);
   nu1amt = new Decimal(data.nu1amt);
@@ -766,6 +776,16 @@ function loadGame() {
   opbase = new Decimal(data.opbase);
   opthreshold = new Decimal(data.opthreshold);
   oct_reset_boost_check = data.oct_reset_boost_check === 'true';
+  octillionth_unlocked = data.octillionth_unlocked === 'true';
+
+  if (nonillionth_unlocked){
+    nonillionth_grid.style.display = "grid";
+    main_nonillionth_tab_button.style.display = "inline-block";
+  }
+  if (octillionth_unlocked){
+    octillionth_main_section.style.display = "grid";
+    main_octillionth_tab_button.style.display = "inline-block";
+  }
 }
 
 //=========================================================================
