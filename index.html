@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Quinquagintic (v0.2.1.3)</title>
+  <title>Quinquagintic (v0.2.1.4)</title>
   
   <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 
   <div class="center" style="color: white; -webkit-text-stroke: 0.8px black;">
     <h1 class="title-gradient">Quinquagintic</h1>
-    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.8px black;">Version: 0.2.1.3 (Jan. 25 2026)</p>
+    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.8px black;">Version: 0.2.1.4 (Jan. 25 2026)</p>
   </div>
     
   <div class="standard-tabs" style="-webkit-text-stroke: 0.8px black;">
@@ -34,6 +34,16 @@
   <div id="main-tab" class="number1" style="color: white; -webkit-text-stroke: 0.8px black;">
     <h1 style="margin: 0px;">N =</h1>
     <p id="numberDisplay" class="numberp">0.000,000,000,000,000,000,000,000,000,000,000,000</p>
+    <div style="text-align: center">
+      <label for="fontSlider" style="font-size: 30px">Font size:</label>
+      <input
+        type="range"
+        id="fontSlider"
+        min="20"
+        max="70"
+        value="45"
+      />
+    </div>
     <p id="numberGainDisplay" class="numbergain" style="font-size: 55px;">Number gain is +1/s</p>
     <p class="numbergain" style="font-size: 35px;">Boost application order: Additions, Multiplications, then Exponents.</p>
     <p id="boostsDisplay" class="numbergain" style="font-size: 45px;">Boosts:</p>

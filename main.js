@@ -153,6 +153,11 @@ var non_reset_boost_check = false;
 var oct_reset_boost_check = false;
 
 //=========================================================================
+//OTHER
+const slider = document.getElementById("fontSlider");
+var sliderPos = 45;
+
+//=========================================================================
 //RESET FUNCTIONS
 function nonillionthResetInitiate(){
   npthreshold = new Decimal(1000);
@@ -699,6 +704,8 @@ window.onload = function(){
 
 function saveGame() {
   const saveData = {
+    sliderPos: sliderPos.toString(),
+
     number: number.toString(),
     numberGain: numberGain.toString(),
 
@@ -743,6 +750,10 @@ function loadGame() {
   if (!saved) return;
 
   const data = JSON.parse(saved);
+
+  sliderPos = data.sliderPos;
+  slider.value = sliderPos;
+  numberDisplay.style.fontSize = sliderPos + "px";
 
   number = new Decimal(data.number);
   numberGain = new Decimal(data.numberGain);
@@ -814,4 +825,11 @@ window.addEventListener("keydown", function(event) {
     number = number.mul(new Decimal(1000));
     updateScreen();
   }
+});
+
+//=========================================================================
+//SLIDER
+slider.addEventListener("input", () => {
+  sliderPos = slider.value;
+  numberDisplay.style.fontSize = sliderPos + "px";
 });
