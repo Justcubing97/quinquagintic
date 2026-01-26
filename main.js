@@ -784,6 +784,7 @@ function loadGame() {
     main_nonillionth_tab_button.style.display = "inline-block";
   }
   if (octillionth_unlocked){
+    octillionth_tab.style.display = "block";
     octillionth_main_section.style.display = "grid";
     main_octillionth_tab_button.style.display = "inline-block";
   }
