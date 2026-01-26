@@ -233,7 +233,7 @@ h1 {
 /* MULTI-ROW BUTTONS */
 
 .upgrade-grid {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(2, 1fr);
 }
 

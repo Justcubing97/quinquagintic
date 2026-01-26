@@ -106,6 +106,7 @@ const nreset = document.getElementById("nreset");
 const no_point_pending = document.getElementById("no-point-pending");
 const no_next_point = document.getElementById("no-next-point");
 const nonBoostsDisplay = document.getElementById("nonBoostsDisplay");
+const nonillionth_grid = document.getElementById("nonillionth-grid");
 nreset.disabled = true;
 
 const nu1 = document.getElementById("nu1");
@@ -138,6 +139,7 @@ const oreset = document.getElementById("oreset");
 const op_point_pending = document.getElementById("op-point-pending");
 const op_next_point = document.getElementById("op-next-point");
 const octBoostsDisplay = document.getElementById("octBoostsDisplay");
+const octillionth_main_section = document.getElementById("octillionth-main-section");
 oreset.disabled = true;
 
 //=========================================================================
@@ -517,6 +519,8 @@ function checkPendingNonillionth(){
 //RESET CLICK
 nreset.addEventListener("click", function(){
   nonillionthResetInitiate();
+  nonillionth_grid.style.display = "grid";
+  main_nonillionth_tab_button.style.display = "inline-block";
 });
 
 //=========================================================================
@@ -668,6 +672,8 @@ function checkPendingOctillionth(){
 //RESET CLICK
 oreset.addEventListener("click", function(){
   octillionthResetInitiate();
+  octillionth_main_section.style.display = "grid";
+  main_octillionth_tab_button.style.display = "inline-block";
 });
 
 //=========================================================================
