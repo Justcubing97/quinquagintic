@@ -158,6 +158,7 @@ const octillionth_main_section = document.getElementById("octillionth-main-secti
 oreset.disabled = true;
 
 const chal1 = document.getElementById("chal1");
+const chal1_title = document.getElementById("chal1-title");
 const chal1_goal_scale = document.getElementById("chal1-goal-scale");
 const chal1_reward = document.getElementById("chal1-reward");
 const chal1_completions = document.getElementById("chal1-completions");
@@ -466,7 +467,7 @@ function updateScreen(){
   }
   
   chal1_goal_scale.textContent = "Goal: " + chal1goal.div(decillionthDivision) + "|| Scaling: x" + chal1scaling
-  chal1_completions = chal1completions + "/100"
+  chal1_completions.textContent = chal1completions + "/100"
 }
 
 function automation(){
@@ -718,8 +719,10 @@ chal1.addEventListener("click", function(){
   octillionthResetInitiate();
   
   if (challengeModifier != 1){
+    chal1_title.textContent = "Challenge I (ACTIVE)";
     challengeModifier = 1;
   } else {
+    chal1_title.textContent = "Challenge I";
     challengeModifier = 0;
   }
 });
