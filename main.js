@@ -253,7 +253,7 @@ setInterval(function(){
 
   checkOctillionthReset();
   checkPendingOctillionth();
-  chal1234GoalChecking();
+  chal1GoalChecking();
 
   automation();
 }, 50);
@@ -345,7 +345,11 @@ function calculateGain(){
   }
   
   if (octillionthPoints.gte(new Decimal(1))){
-    numberGain = numberGain.mul(octillionthPoints.add(new Decimal(1)).div(new Decimal(10)));
+    if (chal1completions.gte(new Decimal(1))){
+      numberGain = numberGain.mul(octillionthPoints.div(new Decimal(2)).add(new Decimal(1))).add(chal1completions.div(new Decimal(2)));
+    } else {
+      numberGain = numberGain.mul(octillionthPoints.div(new Decimal(2)).add(new Decimal(1)));
+    }
   }
 }
 
@@ -409,7 +413,7 @@ function calculateBoostsStrings(){
   }
   
   if (octillionthPoints.gte(new Decimal(1))){
-    boostsString += "OP: x" + octillionthPoints.add(new Decimal(1)).div(new Decimal(10)) + ", ";
+    boostsString += "OP: x" + octillionthPoints.div(new Decimal(2)).add(new Decimal(1)) + "+" + chal1completions.div(new Decimal(2)) + ", ";
   }
   
   //=========================================================================
@@ -473,15 +477,15 @@ function updateScreen(){
   op_point_pending.textContent = "+" + oppending.toExponential(3) + " OP";
   op_next_point.textContent = "(next OP at " + opthreshold.div(decillionthDivision).toExponential(3) + " N)";
   octBoostsDisplay.textContent = octBoostsString;
-  op_effect.textContent = "Your " + octillionthPoints.toString() + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).div(new Decimal(10)).toString();
+  op_effect.textContent = "Your " + octillionthPoints.toString() + " OP is boosting Number gain by x" + octillionthPoints.div(new Decimal(2)).add(new Decimal(1)).toString() + "+" + chal1completions.div(new Decimal(2));
   
   bottomModifiers.textContent = "Modifiers: None";
   if (challengeModifier == 1){
     bottomModifiers.textContent = "Modifiers: Challenge 1";
   }
   
-  chal1_goal_scale.textContent = "Goal: " + chal1goal.div(decillionthDivision) + "|| Scaling: x" + chal1scaling;
-  chal1_completions.textContent = chal1completions + "/100";
+  chal1_goal_scale.textContent = "Goal: " + chal1goal.div(decillionthDivision).toExponential(3) + "|| Scaling: x" + chal1scaling;
+  chal1_completions.textContent = chal1completions.toString() + "/100";
   
   if (challengeModifier == 1){
     chal1_title.textContent = "Challenge I (ACTIVE)";
@@ -777,8 +781,11 @@ chal1.addEventListener("click", function(){
 
 //=========================================================================
 //CHALLENGE GOAL CHECKING
-function chal1234GoalChecking(){
-  
+function chal1GoalChecking(){
+  if (number.gte(chal1goal) && challengeModifier == 1 && chal1completions.lt(new Decimal(100))){
+    chal1goal = chal1goal.mul(chal1scaling);
+    chal1completions = chal1completions.add(new Decimal(1));
+  }
 }
 
 //=========================================================================
@@ -795,7 +802,6 @@ window.onload = function(){
 }
 
 function saveGame() {
-  console.log(challengeModifier);
   const saveData = {
     sliderPos: sliderPos.toString(),
     challengeModifier: challengeModifier.toString(),
@@ -834,6 +840,10 @@ function saveGame() {
     opthreshold: opthreshold.toString(),
     oct_reset_boost_check: oct_reset_boost_check.toString(),
     octillionth_unlocked: octillionth_unlocked.toString(),
+
+    chal1completions: chal1completions.toString(),
+    chal1scaling: chal1scaling.toString(),
+    chal1goal: chal1goal.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -849,7 +859,6 @@ function loadGame() {
   slider.value = sliderPos;
   numberDisplay.style.fontSize = sliderPos + "px";
   challengeModifier = Number(data.challengeModifier);
-  console.log(challengeModifier);
 
   number = new Decimal(data.number);
   numberGain = new Decimal(data.numberGain);
@@ -885,6 +894,10 @@ function loadGame() {
   opthreshold = new Decimal(data.opthreshold);
   oct_reset_boost_check = data.oct_reset_boost_check === 'true';
   octillionth_unlocked = data.octillionth_unlocked === 'true';
+
+  chal1completions = new Decimal(data.chal1completions);
+  chal1scaling = new Decimal(data.chal1scaling);
+  chal1goal = new Decimal(data.chal1goal);
 
   if (nonillionth_unlocked){
     nonillionth_grid.style.display = "grid";
@@ -922,6 +935,9 @@ window.addEventListener("keydown", function(event) {
     updateScreen();
   }
 });
+
+//DO NOT USE THE FOLLOWING PIECE OF CODE:
+//localStorage.removeItem("quinquaginticSave");
 
 //=========================================================================
 //SLIDER
