@@ -1,4 +1,4 @@
-//NUMERICAL VARIABLES
+//VARYING VARIABLES
 var number = new Decimal(1);
 var numberGain;
 
@@ -8,6 +8,8 @@ var numberStringFinal = "";
 var boostsString = "";
 var nonBoostsString = "";
 var octBoostsString = "";
+
+var challengeModifier = 0
 
 //=========================================================================
 //DECILLIONTH
@@ -50,6 +52,10 @@ var opbase = new Decimal(0);
 
 var octillionthPoints = new Decimal(0);
 
+var chal1completions = new Decimal(0);
+var chal1scaling = new Decimal(1.3);
+var chal1goal = new Decimal(1000);
+
 //=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
@@ -91,6 +97,10 @@ const topNumber = document.getElementById("top-number");
 const topNP = document.getElementById("top-np");
 const topOP = document.getElementById("top-op");
 const topSP = document.getElementById("top-sp");
+
+//=========================================================================
+//BOTTOM
+const bottomModifiers = document.getElementById("bottom-modifiers");
 
 //=========================================================================
 //NUMBER
@@ -146,6 +156,11 @@ const op_next_point = document.getElementById("op-next-point");
 const octBoostsDisplay = document.getElementById("octBoostsDisplay");
 const octillionth_main_section = document.getElementById("octillionth-main-section");
 oreset.disabled = true;
+
+const chal1 = document.getElementById("chal1");
+const chal1_goal_scale = document.getElementById("chal1-goal-scale");
+const chal1_reward = document.getElementById("chal1-reward");
+const chal1_completions = document.getElementById("chal1-completions");
 
 //=========================================================================
 //RESET BOOSTS
@@ -444,6 +459,14 @@ function updateScreen(){
   op_point_pending.textContent = "+" + oppending.toExponential(3) + " OP";
   op_next_point.textContent = "(next OP at " + opthreshold.div(decillionthDivision).toExponential(3) + " N)";
   octBoostsDisplay.textContent = octBoostsString;
+  
+  bottomModifiers.textContent = "Modifiers: None";
+  if (challengeModifier == 1){
+    bottomModifiers.textContent = "Modifiers: Challenge 1";
+  }
+  
+  chal1_goal_scale.textContent = "Goal: " + chal1goal.div(decillionthDivision) + "|| Scaling: x" + chal1scaling
+  chal1_completions = chal1completions + "/100"
 }
 
 function automation(){
@@ -687,6 +710,18 @@ oreset.addEventListener("click", function(){
   octillionth_main_section.style.display = "grid";
   main_octillionth_tab_button.style.display = "inline-block";
   octillionth_unlocked = true;
+});
+
+//=========================================================================
+//CHALLENGE ACTIVATION
+chal1.addEventListener("click", function(){
+  octillionthResetInitiate();
+  
+  if (challengeModifier != 1){
+    challengeModifier = 1;
+  } else {
+    challengeModifier = 0;
+  }
 });
 
 //=========================================================================
