@@ -53,7 +53,7 @@ var opbase = new Decimal(0);
 var octillionthPoints = new Decimal(0);
 
 var chal1completions = new Decimal(0);
-var chal1scaling = new Decimal(1.3);
+var chal1scaling = new Decimal(1.5);
 var chal1goal = new Decimal(1000);
 
 //=========================================================================
@@ -812,10 +812,8 @@ function saveGame() {
     du1boost: du1boost.toString(),
     du1amt: du1amt.toString(),
     du1cost: du1cost.toString(),
-    du1scaling: du1scaling.toString(),
 
     nonillionthPoints: nonillionthPoints.toString(),
-    npscaling: npscaling.toString(),
     npbase: npbase.toString(),
     npthreshold: npthreshold.toString(),
     non_reset_boost_check: non_reset_boost_check.toString(),
@@ -824,25 +822,21 @@ function saveGame() {
     nu1boost: nu1boost.toString(),
     nu1amt: nu1amt.toString(),
     nu1cost: nu1cost.toString(),
-    nu1scaling: nu1scaling.toString(),
     nu2amt: nu2amt.toString(),
     nu2cost: nu2cost.toString(),
     nu3boost: nu3boost.toString(),
     nu3amt: nu3amt.toString(),
     nu3cost: nu3cost.toString(),
-    nu3scaling: nu3scaling.toString(),
     nu4amt: nu4amt.toString(),
     nu4cost: nu4cost.toString(),
 
     octillionthPoints: octillionthPoints.toString(),
-    opscaling: new Decimal(3).toString(),
     opbase: opbase.toString(),
     opthreshold: opthreshold.toString(),
     oct_reset_boost_check: oct_reset_boost_check.toString(),
     octillionth_unlocked: octillionth_unlocked.toString(),
 
     chal1completions: chal1completions.toString(),
-    chal1scaling: chal1scaling.toString(),
     chal1goal: chal1goal.toString(),
   };
   
@@ -866,10 +860,8 @@ function loadGame() {
   du1boost = new Decimal(data.du1boost);
   du1amt = new Decimal(data.du1amt);
   du1cost = new Decimal(data.du1cost);
-  du1scaling = new Decimal(data.du1scaling);
 
   nonillionthPoints = new Decimal(data.nonillionthPoints);
-  npscaling = new Decimal(data.npscaling);
   npbase = new Decimal(data.npbase);
   npthreshold = new Decimal(data.npthreshold);
   non_reset_boost_check = data.non_reset_boost_check === 'true';
@@ -878,25 +870,21 @@ function loadGame() {
   nu1boost = new Decimal(data.nu1boost);
   nu1amt = new Decimal(data.nu1amt);
   nu1cost = new Decimal(data.nu1cost);
-  nu1scaling = new Decimal(data.nu1scaling);
   nu2amt = new Decimal(data.nu2amt);
   nu2cost = new Decimal(data.nu2cost);
   nu3boost = new Decimal(data.nu3boost);
   nu3amt = new Decimal(data.nu3amt);
   nu3cost = new Decimal(data.nu3cost);
-  nu3scaling = new Decimal(data.nu3scaling);
   nu4amt = new Decimal(data.nu4amt);
   nu4cost = new Decimal(data.nu4cost);
 
   octillionthPoints = new Decimal(data.octillionthPoints);
-  opscaling = new Decimal(3);
   opbase = new Decimal(data.opbase);
   opthreshold = new Decimal(data.opthreshold);
   oct_reset_boost_check = data.oct_reset_boost_check === 'true';
   octillionth_unlocked = data.octillionth_unlocked === 'true';
 
   chal1completions = new Decimal(data.chal1completions);
-  chal1scaling = new Decimal(data.chal1scaling);
   chal1goal = new Decimal(data.chal1goal);
 
   if (nonillionth_unlocked){
