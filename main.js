@@ -53,8 +53,20 @@ var opbase = new Decimal(0);
 var octillionthPoints = new Decimal(0);
 
 var chal1completions = new Decimal(0);
-var chal1scaling = new Decimal(1.5);
+var chal1scaling = new Decimal(1.15); //EXPONENT!
 var chal1goal = new Decimal(1000);
+
+var chal2completions = new Decimal(0);
+var chal2scaling = new Decimal(3);
+var chal2goal = new Decimal(5000);
+
+var chal3completions = new Decimal(0);
+var chal3scaling = new Decimal(2.8);
+var chal3goal = new Decimal(10000);
+
+var chal4completions = new Decimal(0);
+var chal4scaling = new Decimal(5);
+var chal4goal = new Decimal(10000000);
 
 //=========================================================================
 //NON MAGIC CONSTS
@@ -165,6 +177,24 @@ const chal1_goal_scale = document.getElementById("chal1-goal-scale");
 const chal1_reward = document.getElementById("chal1-reward");
 const chal1_completions = document.getElementById("chal1-completions");
 
+const chal2 = document.getElementById("chal2");
+const chal2_title = document.getElementById("chal2-title");
+const chal2_goal_scale = document.getElementById("chal2-goal-scale");
+const chal2_reward = document.getElementById("chal2-reward");
+const chal2_completions = document.getElementById("chal2-completions");
+
+const chal3 = document.getElementById("chal3");
+const chal3_title = document.getElementById("chal3-title");
+const chal3_goal_scale = document.getElementById("chal3-goal-scale");
+const chal3_reward = document.getElementById("chal3-reward");
+const chal3_completions = document.getElementById("chal3-completions");
+
+const chal4 = document.getElementById("chal4");
+const chal4_title = document.getElementById("chal4-title");
+const chal4_goal_scale = document.getElementById("chal4-goal-scale");
+const chal4_reward = document.getElementById("chal4-reward");
+const chal4_completions = document.getElementById("chal4-completions");
+
 //=========================================================================
 //RESET BOOSTS
 var non_reset_boost_check = false;
@@ -178,6 +208,9 @@ var sliderPos = 45;
 //=========================================================================
 //RESET FUNCTIONS
 function nonillionthResetInitiate(){
+  opthreshold = new Decimal.pow(10, 6);
+  opbase = new Decimal(0);
+
   npthreshold = new Decimal(1000);
   nonillionthPoints = nonillionthPoints.add(nppending);
   npbase = new Decimal(0);
@@ -254,6 +287,7 @@ setInterval(function(){
   checkOctillionthReset();
   checkPendingOctillionth();
   chal1GoalChecking();
+  chal2GoalChecking();
 
   automation();
 }, 50);
@@ -350,6 +384,10 @@ function calculateGain(){
     } else {
       numberGain = numberGain.mul(octillionthPoints.div(new Decimal(2)).add(new Decimal(1)));
     }
+  }
+
+  if (challengeModifier == 2){
+    numberGain = numberGain.pow(new Decimal(1).div(number.pow(new Decimal(0.06))));
   }
 }
 
@@ -482,15 +520,26 @@ function updateScreen(){
   bottomModifiers.textContent = "Modifiers: None";
   if (challengeModifier == 1){
     bottomModifiers.textContent = "Modifiers: Challenge 1";
+  } else if (challengeModifier == 2){
+    bottomModifiers.textContent = "Modifiers: Challenge 2";
   }
   
-  chal1_goal_scale.textContent = "Goal: " + chal1goal.div(decillionthDivision).toExponential(3) + "|| Scaling: x" + chal1scaling;
+  chal1_goal_scale.textContent = "Goal: " + chal1goal.div(decillionthDivision).toExponential(3) + "|| Scaling: ^" + chal1scaling;
   chal1_completions.textContent = chal1completions.toString() + "/100";
+
+  chal2_goal_scale.textContent = "Goal: " + chal2goal.div(decillionthDivision).toExponential(3) + "|| Scaling: x" + chal2scaling;
+  chal2_completions.textContent = chal2completions.toString() + "/100";
   
   if (challengeModifier == 1){
     chal1_title.textContent = "Challenge I (ACTIVE)";
   } else {
     chal1_title.textContent = "Challenge I";
+  }
+
+  if (challengeModifier == 2){
+    chal2_title.textContent = "Challenge II (ACTIVE)";
+  } else {
+    chal2_title.textContent = "Challenge II";
   }
 }
 
@@ -592,6 +641,7 @@ function checkPendingNonillionth(){
 nreset.addEventListener("click", function(){
   nonillionthResetInitiate();
   nonillionth_grid.style.display = "grid";
+  nonillionth_grid.classList.remove("hidden");
   main_nonillionth_tab_button.style.display = "inline-block";
   nonillionth_unlocked = true;
   octillionth_tab.style.display = "block";
@@ -727,7 +777,7 @@ oct_infobox_tab_button.addEventListener("click", function(){
 
 oct_challenge_tab_button.addEventListener("click", function(){
   oct_infobox_tab.style.display = "none";
-  oct_challenge_tab.style.display = "block";
+  oct_challenge_tab.style.display = "grid";
   
   oct_infobox_tab_button.classList.add("oct-dark")
   oct_infobox_tab_button.classList.remove("oct-light");
@@ -779,12 +829,29 @@ chal1.addEventListener("click", function(){
   }
 });
 
+chal2.addEventListener("click", function(){
+  octillionthResetInitiate();
+  
+  if (challengeModifier != 2){
+    challengeModifier = 2;
+  } else {
+    challengeModifier = 0;
+  }
+});
+
 //=========================================================================
 //CHALLENGE GOAL CHECKING
 function chal1GoalChecking(){
   if (number.gte(chal1goal) && challengeModifier == 1 && chal1completions.lt(new Decimal(100))){
-    chal1goal = chal1goal.mul(chal1scaling);
+    chal1goal = chal1goal.pow(chal1scaling);
     chal1completions = chal1completions.add(new Decimal(1));
+  }
+}
+
+function chal2GoalChecking(){
+  if (number.gte(chal2goal) && challengeModifier == 2 && chal2completions.lt(new Decimal(100))){
+    chal2goal = chal2goal.mul(chal2scaling);
+    chal2completions = chal2completions.add(new Decimal(1));
   }
 }
 
