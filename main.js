@@ -87,6 +87,8 @@ var octillionth_unlocked = false;
 
 //=========================================================================
 //TABS
+const reset_button = document.getElementById("reset-button");
+
 const main_tab = document.getElementById("main-tab");
 const caps_tab = document.getElementById("caps-tab");
 const decillionth_tab = document.getElementById("decillionth-tab");
@@ -999,4 +1001,11 @@ window.addEventListener("keydown", function(event) {
 slider.addEventListener("input", () => {
   sliderPos = slider.value;
   numberDisplay.style.fontSize = sliderPos + "px";
+});
+
+//=========================================================================
+//RESET BUTTON
+reset_button.addEventListener("click", function(){
+  localStorage.removeItem("quinquaginticSave");
+  location.reload();
 });
