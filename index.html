@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Quinquagintic (v0.2.3.1)</title>
+  <title>Quinquagintic (v0.2.3.2)</title>
   
   <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,18 +24,18 @@
     <span id="bottom-modifiers" class="just-apply-font" style="font-size: 20px; color: white">Modifiers: None</span>
   </div>
 
-  <div class="center" style="color: white; -webkit-text-stroke: 0.8px black;">
+  <div class="center" style="color: white; -webkit-text-stroke: 0.6px black;">
     <h1 class="title-gradient">Quinquagintic</h1>
-    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.8px black;">Version: 0.2.3.1 (Jan. 25 2026)</p>
+    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Version: 0.2.3.2 (Jan. 25 2026)</p>
   </div>
     
-  <div class="standard-tabs" style="-webkit-text-stroke: 0.8px black;">
+  <div class="standard-tabs" style="-webkit-text-stroke: 0.6px black;">
     <button id="main-number-tab-button" class="button mil-light standard-tabs-button">Main</button><button id="main-caps-tab-button" class="button soft-light standard-tabs-button">Caps</button><button id="main-decillionth-tab-button" class="button decillionth-button standard-tabs-button">Decillionth</button><button id="main-nonillionth-tab-button" class="button non-light standard-tabs-button" style="display: none;">Nonillionth</button><button id="main-octillionth-tab-button" class="button oct-light standard-tabs-button" style="display: none;">Octillionth</button>
   </div>
     
   <br>
 
-  <div id="main-tab" class="number1" style="color: white; -webkit-text-stroke: 0.8px black;">
+  <div id="main-tab" class="number1" style="color: white; -webkit-text-stroke: 0.6px black;">
     <h1 style="margin: 0px;">N =</h1>
     <p id="numberDisplay" class="numberp">0.000,000,000,000,000,000,000,000,000,000,000,000</p>
     <div style="text-align: center">
@@ -55,7 +55,7 @@
 
   <br>
 
-  <div id="caps-tab" class="center softcaps" style="color: red; -webkit-text-stroke: 0.8px black;">
+  <div id="caps-tab" class="center softcaps" style="color: red; -webkit-text-stroke: 0.6px black;">
     <h1 class="softcap-gradient" style="margin: 0;">Currency Caps:</h1>
     <p class="individ-softcaps" style="color:black;">HARDCAP AT N = 1</p>
     <p class="individ-softcaps" style="color:red;">Softcap (N gain) starts at 1e-25: /1</p>
@@ -72,7 +72,7 @@
 
   <br>
 
-  <div id="decillionth-tab" class="center decillionth" style="color: white; -webkit-text-stroke: 0.8px black;">
+  <div id="decillionth-tab" class="center decillionth" style="color: white; -webkit-text-stroke: 0.6px black;">
     <h1 class="decillionth-section" style="margin: 0px;">Decillionth Section</h1>
 
     <br>
@@ -84,7 +84,7 @@
   
   <br>
     
-  <div id="nonillionth-tab" class="center nonillionth" style="color: white; -webkit-text-stroke: 0.8px black;">
+  <div id="nonillionth-tab" class="center nonillionth" style="color: white; -webkit-text-stroke: 0.6px black;">
     <h1 class="nonillionth-section" style="margin: 0px;">Nonillionth Section</h1>
 
     <br>
@@ -135,7 +135,7 @@
 
   <br>
 
-  <div id="octillionth-tab" class="center octillionth" style="color: white; -webkit-text-stroke: 0.8px black; display: none;">
+  <div id="octillionth-tab" class="center octillionth" style="color: white; -webkit-text-stroke: 0.6px black; display: none;">
     <h1 class="octillionth-section" style="margin: 0px;">Octillionth Section</h1>
 
     <br>
@@ -216,7 +216,14 @@
 
   </div>
 
-<button id="reset-button" class="soft-dark button standard-upg">RESET ALL DATA (NO GOING BACK)</button>
+  <br>
+  
+  <div class="center number1" style="padding: 20px">
+    <h1 class="title-gradient" style="-webkit-text-stroke: 0.6px black">Settings + Dangerous Buttons</h1>
+    <button id="reset-button" class="soft-dark button standard-upg" style="display: block; margin: 0 auto;">RESET ALL DATA<br>(NO GOING BACK)</button>
+    <p id="reset-activation" class="softcap-gradient" style="font-size: 50px; -webkit-text-stroke: 0.6px black">Status:</p>
+  </div>
+
 </body>
 
 <script src="main.js"></script>

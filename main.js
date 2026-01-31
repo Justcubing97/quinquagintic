@@ -449,7 +449,7 @@ function calculateBoostsStrings(){
   }
 
   if (nu3amt.gte(1)){
-    boostsString += "NU3: x" + nu3boost + ", ";
+    boostsString += "NU3: x" + nu3boost.toExponential(3) + ", ";
   }
   
   if (octillionthPoints.gte(new Decimal(1))){
@@ -460,7 +460,7 @@ function calculateBoostsStrings(){
   //NONILLIONTHS
   nonBoostsString = "Boosts: ";
   if (nu1amt.gte(1)){
-    nonBoostsString += "NU1: x" + nu1boost + ", ";
+    nonBoostsString += "NU1: x" + nu1boost.toExponential(3) + ", ";
   }
 
   if (oct_reset_boost_check){
@@ -477,7 +477,12 @@ function updateScreen(){
   //TOP
   topNumber.textContent = "N: " + number.div(decillionthDivision).toExponential(3) + " (+" + numberGain.div(decillionthDivision).toExponential(3) + "/s)";
   topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
-  topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
+
+  if (octillionth_tab.style.display == "block"){
+    topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
+  } else {
+    topOP.textContent = "";
+  }
   
   //=========================================================================
   //NUMBER
@@ -1005,7 +1010,8 @@ slider.addEventListener("input", () => {
 
 //=========================================================================
 //RESET BUTTON
+const reset_activation = document.getElementById("reset-activation");
 reset_button.addEventListener("click", function(){
   localStorage.removeItem("quinquaginticSave");
-  location.reload();
+  reset_activation.textContent = "Status: RESET INITIATED. REFRESH TO FULLY RESET. WAIT UNTIL SAVE TO CANCEL RESET."
 });
