@@ -1,4 +1,14 @@
-//VARYING VARIABLES
+//=========================================================================
+
+//  ==          ==       ==        ========    ========
+//   ==        ==       ====       ==     ==  ==
+//    ==      ==       ==  ==      ==     ==  ==
+//     ==    ==       ==    ==     ========    ========
+//      ==  ==       ==========    == ==              ==
+//       ====       ==        ==   ==   ==            ==
+//        ==       ==          ==  ==     ==   ========
+
+//=========================================================================
 var number = new Decimal(1);
 var numberGain;
 
@@ -81,9 +91,26 @@ var nonillionth_unlocked = false;
 var octillionth_unlocked = false;
 
 //=========================================================================
+//RESET BOOSTS
+var non_reset_boost_check = false;
+var oct_reset_boost_check = false;
+
 //=========================================================================
+//OTHER
+const slider = document.getElementById("fontSlider");
+var sliderPos = 45;
+
 //=========================================================================
-//ID VARIABLES
+
+//  ==========  =======     ========
+//      ==      ==     ==  ==
+//      ==      ==     ==  ==
+//      ==      ==     ==   ========
+//      ==      ==     ==          ==
+//      ==      ==     ==          ==
+//  ==========  =======     ========
+
+//=========================================================================
 
 //=========================================================================
 //TABS
@@ -198,17 +225,16 @@ const chal4_reward = document.getElementById("chal4-reward");
 const chal4_completions = document.getElementById("chal4-completions");
 
 //=========================================================================
-//RESET BOOSTS
-var non_reset_boost_check = false;
-var oct_reset_boost_check = false;
+
+//  ========   ========   ========   ========  ========
+//  ==     ==  ==        ==          ==           ==
+//  ==     ==  ==        ==          ==           ==
+//  ========   ========   ========   ========     ==
+//  == ==      ==                ==  ==           ==
+//  ==   ==    ==                ==  ==           ==
+//  ==     ==  ========   ========   ========     ==
 
 //=========================================================================
-//OTHER
-const slider = document.getElementById("fontSlider");
-var sliderPos = 45;
-
-//=========================================================================
-//RESET FUNCTIONS
 function nonillionthResetInitiate(){
   opthreshold = new Decimal.pow(10, 6);
   opbase = new Decimal(0);
@@ -269,9 +295,16 @@ function octillionthResetInitiate(){
 }
 
 //=========================================================================
+
+//  ==         ========    ========   ========
+//  ==        ==      ==  ==      ==  ==     ==
+//  ==        ==      ==  ==      ==  ==     ==
+//  ==        ==      ==  ==      ==  ========
+//  ==        ==      ==  ==      ==  ==
+//  ==        ==      ==  ==      ==  ==
+//  ========   ========    ========   ==
+
 //=========================================================================
-//=========================================================================
-//GAME LOOP
 
 setInterval(function(){
   calculateGain();
@@ -290,17 +323,26 @@ setInterval(function(){
   checkPendingOctillionth();
   chal1GoalChecking();
   chal2GoalChecking();
+  chal3GoalChecking();
 
   automation();
 }, 50);
 
 //=========================================================================
-//=========================================================================
-//=========================================================================
-//MAIN FUNCTIONS
+
+//  ========  ==      ==  ==    ==   ========   =========
+//  ==        ==      ==  ===   ==  ==         ==
+//  ==        ==      ==  ====  ==  ==         ==
+//  ========  ==      ==  == == ==  ==          =========
+//  ==        ==      ==  ==  ====  ==                  ==
+//  ==        ==      ==  ==   ===  ==                  ==
+//  ==         ========   ==    ==   ========   =========
 
 //=========================================================================
-//TABS
+
+//=========================================================================
+//MAIN TAB CLICK THINGS
+
 main_number_tab_button.addEventListener("click", function(){
   if (main_number_tab_button.classList.contains("mil-dark")){
     main_number_tab_button.classList.remove("mil-dark");
@@ -468,15 +510,24 @@ function calculateBoostsStrings(){
   }
 
   //=========================================================================
-  //NONILLIONTHS
+  //OCTILLIONTHS
   octBoostsString = "Boosts: ";
+
+  if (chal2completions.gte(1)){
+    octBoostsString += "C2: x" + chal2completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
+  }
 }
 
 function updateScreen(){
   //=========================================================================
   //TOP
   topNumber.textContent = "N: " + number.div(decillionthDivision).toExponential(3) + " (+" + numberGain.div(decillionthDivision).toExponential(3) + "/s)";
-  topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
+
+  if (challengeModifier == 3){
+    topNP.textContent = "NP: DISABLED IN C3";
+  } else {
+    topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
+  }
 
   if (octillionth_tab.style.display == "block"){
     topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
@@ -493,16 +544,34 @@ function updateScreen(){
   //=========================================================================
   //DECILLIONTHS
   du1_id_amt.textContent = "ID: DU1 || x" + du1amt;
-  du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.toString();
-  
+  if (challengeModifier == 1){
+    du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.pow(new Decimal(2)).toString() + "(C1)";
+  } else {
+    du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.toString();
+  }
+
   //=========================================================================
   //NONILLIONTHS
-  no_point_pending.textContent = "+" + nppending.toExponential(3) + " NP";
-  no_next_point.textContent = "(next NP at " + npthreshold.div(decillionthDivision).toExponential(3) + " N)";
+  if (challengeModifier == 3){
+    no_point_pending.textContent = "DISABLED IN C3";
+  } else {
+    no_point_pending.textContent = "+" + nppending.toExponential(3) + " NP";
+  }
+  
+  if (challengeModifier == 1){
+    no_next_point.textContent = "(next NP at " + npthreshold.pow(new Decimal(2)).div(decillionthDivision).toExponential(3) + " N) (C1)";
+  } else {
+    no_next_point.textContent = "(next NP at " + npthreshold.div(decillionthDivision).toExponential(3) + " N)";
+  }
+
   nonBoostsDisplay.textContent = nonBoostsString;
   
   nu1_id_amt.textContent = "ID: NU1 || x" + nu1amt;
-  nu1_cost_scale.textContent = "Cost: " + nu1cost.toExponential(3) + " NP || Scaling: x" + nu1scaling;
+  if (challengeModifier == 1){
+    nu1_cost_scale.textContent = "Cost: " + nu1cost.toExponential(3) + " NP || Scaling: x" + nu1scaling.pow(new Decimal(2)).toString() + "(C1)";
+  } else {
+    nu1_cost_scale.textContent = "Cost: " + nu1cost.toExponential(3) + " NP || Scaling: x" + nu1scaling;
+  }
   
   nu2_id_amt.textContent = "ID: NU2 || " + nu2amt + "/1";
   if (nu2amt.eq(new Decimal(1))){
@@ -510,7 +579,11 @@ function updateScreen(){
   }
 
   nu3_id_amt.textContent = "ID: NU3 || x" + nu3amt;
-  nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling;
+  if (challengeModifier == 1){
+    nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling.pow(new Decimal(2)).toString() + "(C1)";
+  } else {
+    nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling;
+  }
 
   nu4_id_amt.textContent = "ID: NU4 || " + nu4amt + "/1";
   if (nu4amt.eq(new Decimal(1))){
@@ -520,15 +593,26 @@ function updateScreen(){
   //=========================================================================
   //OCTILLIONTHS
   op_point_pending.textContent = "+" + oppending.toExponential(3) + " OP";
-  op_next_point.textContent = "(next OP at " + opthreshold.div(decillionthDivision).toExponential(3) + " N)";
+  
+  if (challengeModifier == 1){
+    op_next_point.textContent = "(next OP at " + opthreshold.pow(new Decimal(2)).div(decillionthDivision).toExponential(3) + " N) (C1)";
+  } else {
+    op_next_point.textContent = "(next OP at " + opthreshold.div(decillionthDivision).toExponential(3) + " N)";
+  }
+
   octBoostsDisplay.textContent = octBoostsString;
   op_effect.textContent = "Your " + octillionthPoints.toString() + " OP is boosting Number gain by x" + octillionthPoints.div(new Decimal(2)).add(new Decimal(1)).toString() + "+" + chal1completions.div(new Decimal(2));
   
   bottomModifiers.textContent = "Modifiers: None";
+
   if (challengeModifier == 1){
     bottomModifiers.textContent = "Modifiers: Challenge 1";
   } else if (challengeModifier == 2){
     bottomModifiers.textContent = "Modifiers: Challenge 2";
+  } else if (challengeModifier == 3){
+    bottomModifiers.textContent = "Modifiers: Challenge 3";
+  } else if (challengeModifier == 4){
+    bottomModifiers.textContent = "Modifiers: Challenge 4";
   }
   
   chal1_goal_scale.textContent = "Goal: " + chal1goal.div(decillionthDivision).toExponential(3) + "|| Scaling: ^" + chal1scaling;
@@ -536,6 +620,9 @@ function updateScreen(){
 
   chal2_goal_scale.textContent = "Goal: " + chal2goal.div(decillionthDivision).toExponential(3) + "|| Scaling: x" + chal2scaling;
   chal2_completions.textContent = chal2completions.toString() + "/100";
+
+  chal3_goal_scale.textContent = "Goal: " + chal3goal.div(decillionthDivision).toExponential(3) + "|| Scaling: x" + chal3scaling;
+  chal3_completions.textContent = chal3completions.toString() + "/100";
   
   if (challengeModifier == 1){
     chal1_title.textContent = "Challenge I (ACTIVE)";
@@ -547,6 +634,12 @@ function updateScreen(){
     chal2_title.textContent = "Challenge II (ACTIVE)";
   } else {
     chal2_title.textContent = "Challenge II";
+  }
+
+  if (challengeModifier == 3){
+    chal3_title.textContent = "Challenge III (ACTIVE)";
+  } else {
+    chal3_title.textContent = "Challenge III";
   }
 }
 
@@ -615,7 +708,7 @@ du1.addEventListener("click", function(){
 //=========================================================================
 //RESET DETECTION
 function checkNonillionthReset(){
-  if (number.gte(new Decimal(1000))) {
+  if (number.gte(new Decimal(1000)) && challengeModifier != 3){
     nreset.disabled = false;
   } else {
     nreset.disabled = true;
@@ -625,7 +718,7 @@ function checkNonillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingNonillionth(){
-  if (number.gte(npthreshold)){
+  if (number.gte(npthreshold) && challengeModifier != 3){
     if (challengeModifier == 1){
       npthreshold = npthreshold.mul(npscaling.pow(new Decimal(2)));
     } else {
@@ -813,6 +906,10 @@ function checkPendingOctillionth(){
   }
 
   oppending = new Decimal(opbase);
+
+  if (chal2completions.gte(new Decimal(1))){
+    oppending = oppending.mul(chal2completions.div(new Decimal(2)).add(new Decimal(1)));
+  }
 }
 
 //=========================================================================
@@ -846,6 +943,16 @@ chal2.addEventListener("click", function(){
   }
 });
 
+chal3.addEventListener("click", function(){
+  octillionthResetInitiate();
+  
+  if (challengeModifier != 3){
+    challengeModifier = 3;
+  } else {
+    challengeModifier = 0;
+  }
+});
+
 //=========================================================================
 //CHALLENGE GOAL CHECKING
 function chal1GoalChecking(){
@@ -859,6 +966,13 @@ function chal2GoalChecking(){
   if (number.gte(chal2goal) && challengeModifier == 2 && chal2completions.lt(new Decimal(100))){
     chal2goal = chal2goal.mul(chal2scaling);
     chal2completions = chal2completions.add(new Decimal(1));
+  }
+}
+
+function chal3GoalChecking(){
+  if (number.gte(chal3goal) && challengeModifier == 3 && chal3completions.lt(new Decimal(100))){
+    chal3goal = chal3goal.mul(chal3scaling);
+    chal3completions = chal3completions.add(new Decimal(1));
   }
 }
 
@@ -912,6 +1026,9 @@ function saveGame() {
 
     chal1completions: chal1completions.toString(),
     chal1goal: chal1goal.toString(),
+
+    chal2completions: chal2completions.toString(),
+    chal2goal: chal2goal.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -960,6 +1077,9 @@ function loadGame() {
 
   chal1completions = new Decimal(data.chal1completions);
   chal1goal = new Decimal(data.chal1goal);
+
+  chal2completions = new Decimal(data.chal2completions);
+  chal2goal = new Decimal(data.chal2goal);
 
   if (nonillionth_unlocked){
     nonillionth_grid.style.display = "grid";
