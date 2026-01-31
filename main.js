@@ -1,12 +1,12 @@
 //=========================================================================
 
-//  ==          ==       ==        ========    ========
-//   ==        ==       ====       ==     ==  ==
-//    ==      ==       ==  ==      ==     ==  ==
-//     ==    ==       ==    ==     ========    ========
-//      ==  ==       ==========    == ==              ==
-//       ====       ==        ==   ==   ==            ==
-//        ==       ==          ==  ==     ==   ========
+//  ==          ==        ==        ========    ========
+//   ==        ==        ====       ==     ==  ==
+//    ==      ==        ==  ==      ==     ==  ==
+//     ==    ==        ==    ==     ========    ========
+//      ==  ==        ==========    == ==              ==
+//       ====        ==        ==   ==   ==            ==
+//        ==        ==          ==  ==     ==   ========
 
 //=========================================================================
 var number = new Decimal(1);
@@ -102,13 +102,13 @@ var sliderPos = 45;
 
 //=========================================================================
 
-//  ==========  =======     ========
-//      ==      ==     ==  ==
-//      ==      ==     ==  ==
-//      ==      ==     ==   ========
-//      ==      ==     ==          ==
-//      ==      ==     ==          ==
-//  ==========  =======     ========
+//  ==========  ========     ========
+//      ==      ==      ==  ==
+//      ==      ==      ==  ==
+//      ==      ==      ==   ========
+//      ==      ==      ==          ==
+//      ==      ==      ==          ==
+//  ==========  ========     ========
 
 //=========================================================================
 
@@ -518,6 +518,18 @@ function calculateBoostsStrings(){
   }
 }
 
+//=========================================================================
+
+//   =========     ========  ========   ========  ========  ==    ==
+//  ==           ==          ==     ==  ==        ==        ===   ==
+//  ==           ==          ==     ==  ==        ==        ====  ==
+//   =========   ==          ========   ========  ========  == == ==
+//           ==  ==          == ==      ==        ==        ==  ====
+//           ==  ==          ==   ==    ==        ==        ==   ===
+//   =========     ========  ==     ==  ========  ========  ==    ==
+
+//=========================================================================
+
 function updateScreen(){
   //=========================================================================
   //TOP
@@ -545,7 +557,7 @@ function updateScreen(){
   //DECILLIONTHS
   du1_id_amt.textContent = "ID: DU1 || x" + du1amt;
   if (challengeModifier == 1){
-    du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.pow(new Decimal(2)).toString() + "(C1)";
+    du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.pow(new Decimal(2)).toString() + " (C1)";
   } else {
     du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.toString();
   }
@@ -558,17 +570,13 @@ function updateScreen(){
     no_point_pending.textContent = "+" + nppending.toExponential(3) + " NP";
   }
   
-  if (challengeModifier == 1){
-    no_next_point.textContent = "(next NP at " + npthreshold.pow(new Decimal(2)).div(decillionthDivision).toExponential(3) + " N) (C1)";
-  } else {
-    no_next_point.textContent = "(next NP at " + npthreshold.div(decillionthDivision).toExponential(3) + " N)";
-  }
+  no_next_point.textContent = "(next NP at " + npthreshold.div(decillionthDivision).toExponential(3) + " N)";
 
   nonBoostsDisplay.textContent = nonBoostsString;
   
   nu1_id_amt.textContent = "ID: NU1 || x" + nu1amt;
   if (challengeModifier == 1){
-    nu1_cost_scale.textContent = "Cost: " + nu1cost.toExponential(3) + " NP || Scaling: x" + nu1scaling.pow(new Decimal(2)).toString() + "(C1)";
+    nu1_cost_scale.textContent = "Cost: " + nu1cost.toExponential(3) + " NP || Scaling: x" + nu1scaling.pow(new Decimal(2)).toString() + " (C1)";
   } else {
     nu1_cost_scale.textContent = "Cost: " + nu1cost.toExponential(3) + " NP || Scaling: x" + nu1scaling;
   }
@@ -580,7 +588,7 @@ function updateScreen(){
 
   nu3_id_amt.textContent = "ID: NU3 || x" + nu3amt;
   if (challengeModifier == 1){
-    nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling.pow(new Decimal(2)).toString() + "(C1)";
+    nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling.pow(new Decimal(2)).toString() + " (C1)";
   } else {
     nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling;
   }
@@ -594,11 +602,7 @@ function updateScreen(){
   //OCTILLIONTHS
   op_point_pending.textContent = "+" + oppending.toExponential(3) + " OP";
   
-  if (challengeModifier == 1){
-    op_next_point.textContent = "(next OP at " + opthreshold.pow(new Decimal(2)).div(decillionthDivision).toExponential(3) + " N) (C1)";
-  } else {
-    op_next_point.textContent = "(next OP at " + opthreshold.div(decillionthDivision).toExponential(3) + " N)";
-  }
+  op_next_point.textContent = "(next OP at " + opthreshold.div(decillionthDivision).toExponential(3) + " N)";
 
   octBoostsDisplay.textContent = octBoostsString;
   op_effect.textContent = "Your " + octillionthPoints.toString() + " OP is boosting Number gain by x" + octillionthPoints.div(new Decimal(2)).add(new Decimal(1)).toString() + "+" + chal1completions.div(new Decimal(2));
@@ -643,6 +647,9 @@ function updateScreen(){
   }
 }
 
+//=========================================================================
+//AUTOMATION
+
 function automation(){
   if (oct_reset_boost_check){
     if (!du1.disabled){
@@ -665,9 +672,16 @@ function automation(){
 }
 
 //=========================================================================
+
+//  ========    ========    ========
+//  ==      ==  ==        ==
+//  ==      ==  ==        ==
+//  ==      ==  ========  ==
+//  ==      ==  ==        ==
+//  ==      ==  ==        ==
+//  ========    ========    ========
+
 //=========================================================================
-//=========================================================================
-//DECILLIONTH
 
 //=========================================================================
 //AFFORD DETECTION
@@ -701,9 +715,16 @@ du1.addEventListener("click", function(){
 });
 
 //=========================================================================
+
+//  ==    ==   ========   ==    ==
+//  ===   ==  ==      ==  ===   ==
+//  ====  ==  ==      ==  ====  ==
+//  == == ==  ==      ==  == == ==
+//  ==  ====  ==      ==  ==  ====
+//  ==   ===  ==      ==  ==   ===
+//  ==    ==   ========   ==    ==
+
 //=========================================================================
-//=========================================================================
-//NONILLIONTH
 
 //=========================================================================
 //RESET DETECTION
@@ -858,9 +879,16 @@ function nu4ImpactIteration(){
 }
 
 //=========================================================================
+
+//   ========     ========  ==========
+//  ==      ==  ==              ==
+//  ==      ==  ==              ==
+//  ==      ==  ==              ==
+//  ==      ==  ==              ==
+//  ==      ==  ==              ==
+//   ========     ========      ==
+
 //=========================================================================
-//=========================================================================
-//OCTILLIONTH
 
 //=========================================================================
 //TABS
@@ -900,7 +928,11 @@ function checkOctillionthReset(){
 //PENDING
 function checkPendingOctillionth(){ 
   if (number.gte(opthreshold)){
-    opthreshold = opthreshold.mul(opscaling);
+    if (challengeModifier == 1){
+      opthreshold = opthreshold.mul(opscaling.pow(new Decimal(2)));
+    } else {
+      opthreshold = opthreshold.mul(opscaling);
+    }
     opbase = opbase.add(new Decimal(1));
     checkPendingOctillionth();
   }
@@ -977,9 +1009,16 @@ function chal3GoalChecking(){
 }
 
 //=========================================================================
+
+//   ========         ==        ==          ==  ========
+//  ==               ====        ==        ==   ==
+//  ==              ==  ==        ==      ==    ==
+//   ========      ==    ==        ==    ==     ========
+//          ==    ==========        ==  ==      ==
+//          ==   ==        ==        ====       ==
+//   ========   ==          ==        ==        ========
+
 //=========================================================================
-//=========================================================================
-//SAVING AND LOADING
 setInterval(function(){
   saveGame();
   backgroundColorChange();
@@ -1092,10 +1131,6 @@ function loadGame() {
   }
 }
 
-//=========================================================================
-//=========================================================================
-//=========================================================================
-//BACKGROUND SAVE FLASHING
 function backgroundColorChange() {
   let colorStep = 0;
   let loop = setInterval(function() {
@@ -1108,9 +1143,17 @@ function backgroundColorChange() {
 }
 
 //=========================================================================
+
+//        ==        ========    ==    ==  ==========  ==    ==
+//       ====       ==      ==  ===  ===      ==      ===   ==
+//      ==  ==      ==      ==  ========      ==      ====  ==
+//     ==    ==     ==      ==  == == ==      ==      == == ==
+//    ==========    ==      ==  ==    ==      ==      ==  ====
+//   ==        ==   ==      ==  ==    ==      ==      ==   ===
+//  ==          ==  ========    ==    ==  ==========  ==    ==
+
 //=========================================================================
-//=========================================================================
-//ADMIN
+
 window.addEventListener("keydown", function(event) {
   if (event.key === "J"){
     number = number.mul(new Decimal(1000));
