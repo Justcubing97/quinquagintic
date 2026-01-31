@@ -509,6 +509,10 @@ function calculateBoostsStrings(){
     nonBoostsString += "Octillionth: x2, ";
   }
 
+  if (chal3completions.gte(1)){
+    nonBoostsString += "C3: x" + chal3completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
+  }
+
   //=========================================================================
   //OCTILLIONTHS
   octBoostsString = "Boosts: ";
@@ -754,6 +758,10 @@ function checkPendingNonillionth(){
   
   if (oct_reset_boost_check){
     nppending = nppending.mul(new Decimal(2));
+  }
+
+  if (chal3completions.gte(new Decimal(1))){
+    nppending = nppending.mul(chal3completions.div(new Decimal(2)).add(new Decimal(1)));
   }
 }
 
