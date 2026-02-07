@@ -510,7 +510,7 @@ function calculateBoostsStrings(){
     boostsString += "DU1: x" + du1boost + ", ";
   }
   if (du2amt.gte(1)){
-    boostsString += "DU2: x" + du2boost + ", ";
+    boostsString += "DU2: x" + du2boost.toExponential(3) + ", ";
   }
   
   if (non_reset_boost_check){
@@ -780,14 +780,16 @@ du1.addEventListener("click", function(){
 });
 
 du2.addEventListener("click", function(){
-  du2boost = du2boost.mul(new Decimal(1.4));
-  du2amt = du2amt.add(new Decimal(1));
-  number = number.sub(du2cost);
+  if (du2amt.lt(new Decimal(5))){
+    du2boost = du2boost.mul(new Decimal(1.4));
+    du2amt = du2amt.add(new Decimal(1));
+    number = number.sub(du2cost);
   
-  if (challengeModifier == 1){
-    du2cost = du2cost.mul(du2scaling.pow(new Decimal(2)));
-  } else {
-    du2cost = du2cost.mul(du2scaling);
+    if (challengeModifier == 1){
+      du2cost = du2cost.mul(du2scaling.pow(new Decimal(2)));
+    } else {
+      du2cost = du2cost.mul(du2scaling);
+    }
   }
 });
 
@@ -825,6 +827,8 @@ function checkPendingNonillionth(){
     
     npbase = npbase.add(new Decimal(1));
     checkPendingNonillionth();
+  } else if (number.lt(new Decimal(1000))){ //If you're broke then you can't get NP HAHA
+    npbase = new Decimal(0);
   }
   
   nppending = npbase.mul(nu1boost);
@@ -1008,7 +1012,7 @@ function checkOctillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingOctillionth(){ 
-  if (number.gte(opthreshold)){
+  if (number.gte(opthreshold)){ //Check if number meets the NEW requirement for pending OP
     if (challengeModifier == 1){
       opthreshold = opthreshold.mul(opscaling.pow(new Decimal(2)));
     } else {
@@ -1016,6 +1020,8 @@ function checkPendingOctillionth(){
     }
     opbase = opbase.add(new Decimal(1));
     checkPendingOctillionth();
+  } else if (number.lt(new Decimal(1000000))) { //Check if number even meets the base requirement
+    opbase = new Decimal(0);
   }
 
   oppending = new Decimal(opbase);
@@ -1170,6 +1176,12 @@ function saveGame() {
 
     chal2completions: chal2completions.toString(),
     chal2goal: chal2goal.toString(),
+
+    chal3completions: chal3completions.toString(),
+    chal3goal: chal3goal.toString(),
+
+    chal4completions: chal4completions.toString(),
+    chal4goal: chal4goal.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
