@@ -595,7 +595,7 @@ function updateScreen(){
     du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.toString();
   }
 
-  du2_id_amt.textContent = "ID: DU2 || x" + du2amt;
+  du2_id_amt.textContent = "ID: DU2 || " + du2amt + "/5";
   if (challengeModifier == 1){
     du2_cost_scale.textContent = "Cost: " + du2cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du2scaling.pow(new Decimal(2)).toString() + " (C1)";
   } else {
@@ -755,7 +755,7 @@ function decillionthUpgrades(){
     du1.disabled = true;
   }
 
-  if (number.gte(du2cost)) {
+  if (number.gte(du2cost) && du2amt.lt(new Decimal(5))) {
     du2.disabled = false;
   } else {
     du2.disabled = true;
@@ -926,7 +926,7 @@ nu4.addEventListener("click", function(){
 function nu2ImpactIteration(){
   let savedValue = du1amt;
   du1amt = new Decimal(0);
-  du1cost = new Decimal(8);
+  du1cost = new Decimal(4);
   for (var nu2IICounter = new Decimal(0); nu2IICounter.lt(savedValue); nu2IICounter = nu2IICounter.add(new Decimal(1))){
     du1cost = du1cost.mul(du1scaling);
     du1amt = du1amt.add(new Decimal(1));
