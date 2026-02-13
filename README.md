@@ -7,4 +7,6 @@ Integer: Intricate reset layers, often having more than one mechanic (almost lik
 
 Infinity: Mechanics and progression are confusing, only a few reset layers
 
+HOWEVER, these three Domains will be released as separate games. The Decimal Domain can be found here, but the other two are unreleased and can be found in other repositories.
+
 That's about it for this README!
