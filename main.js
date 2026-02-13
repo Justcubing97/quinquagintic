@@ -826,9 +826,15 @@ function checkPendingNonillionth(){
     }
     
     npbase = npbase.add(new Decimal(1));
-    checkPendingNonillionth();
-  } else if (number.lt(new Decimal(1000))){ //If you're broke then you can't get NP HAHA
+  } else if (number.lt(npthreshold.div(npscaling)) && number.gte(new Decimal(1000)) && challengeModifier != 1){ //If you're broke then you can't get NP HAHA
+    npbase = npbase.sub(new Decimal(1));
+    npthreshold = npthreshold.div(npscaling);
+  } else if (number.lt(npthreshold.div(npscaling.pow(new Decimal(2)))) && number.gte(new Decimal(1000)) && challengeModifier == 1){ //If you're broke then you can't get NP HAHA (challenge 1 version)
+    npbase = npbase.sub(new Decimal(1));
+    npthreshold = npthreshold.div(npscaling.pow(new Decimal(2)));
+  } else if (number.lt(new Decimal(1000))){
     npbase = new Decimal(0);
+    npthreshold = new Decimal(1000);
   }
   
   nppending = npbase.mul(nu1boost);
@@ -1020,8 +1026,15 @@ function checkPendingOctillionth(){
     }
     opbase = opbase.add(new Decimal(1));
     checkPendingOctillionth();
-  } else if (number.lt(new Decimal(1000000))) { //Check if number even meets the base requirement
+  } else if (number.lt(opthreshold.div(opscaling)) && number.gte(new Decimal(1000000)) && challengeModifier != 1){ //If you're broke then you can't get OP HAHA
+    opbase = opbase.sub(new Decimal(1));
+    opthreshold = opthreshold.div(opscaling);
+  } else if (number.lt(opthreshold.div(opscaling.pow(new Decimal(2)))) && number.gte(new Decimal(1000000)) && challengeModifier == 1){ //If you're broke then you can't get OP HAHA (challenge 1 version)
+    opbase = opbase.sub(new Decimal(1));
+    opthreshold = opthreshold.div(opscaling.pow(new Decimal(2)));
+  } else if (number.lt(new Decimal(1000000))){
     opbase = new Decimal(0);
+    opthreshold = new Decimal(1000000);
   }
 
   oppending = new Decimal(opbase);
