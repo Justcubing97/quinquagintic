@@ -21,6 +21,8 @@ var octBoostsString = "";
 
 var challengeModifier = 0;
 
+var offlineTime = 0;
+
 //=========================================================================
 //DECILLIONTH
 var du1boost = new Decimal(0);
@@ -101,6 +103,11 @@ var non_reset_boost_check = false;
 var oct_reset_boost_check = false;
 
 //=========================================================================
+//SOFTCAP EFFECTS
+var minicap = new Decimal(1);
+var softcap = new Decimal(1);
+
+//=========================================================================
 //OTHER
 const slider = document.getElementById("fontSlider");
 var sliderPos = 45;
@@ -147,6 +154,20 @@ const topSP = document.getElementById("top-sp");
 //=========================================================================
 //BOTTOM
 const bottomModifiers = document.getElementById("bottom-modifiers");
+
+//=========================================================================
+//CAPS
+const minicapDisplay = document.getElementById("minicap-display");
+const softcapDisplay = document.getElementById("softcap-display");
+const supercapDisplay = document.getElementById("supercap-display");
+const hypercapDisplay = document.getElementById("hypercap-display");
+const ultracapDisplay = document.getElementById("ultracap-display");
+const omegacapDisplay = document.getElementById("omegacap-display");
+const absolutecapDisplay = document.getElementById("absolutecap-display");
+const forevercapDisplay = document.getElementById("forevercap-display");
+const eternalcapDisplay = document.getElementById("eternalcap-display");
+const insanitycapDisplay = document.getElementById("insanitycap-display");
+const transcendentcapDisplay = document.getElementById("transcendentcap-display");
 
 //=========================================================================
 //NUMBER
@@ -332,6 +353,7 @@ setInterval(function(){
   formatNumber();
   calculateBoostsStrings();
   updateScreen();
+  updateSoftcaps();
   
   decillionthUpgrades();
   
@@ -452,6 +474,10 @@ function calculateGain(){
     } else {
       numberGain = numberGain.mul(octillionthPoints.add(new Decimal(1)));
     }
+  }
+
+  if (minicap.neq(new Decimal(1))){
+    numberGain = numberGain.div(minicap);
   }
 
   if (challengeModifier == 2){
@@ -595,7 +621,7 @@ function updateScreen(){
     du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.toString();
   }
 
-  du2_id_amt.textContent = "ID: DU2 || " + du2amt + "/5";
+  du2_id_amt.textContent = "ID: DU2 || " + du2amt + "/10";
   if (challengeModifier == 1){
     du2_cost_scale.textContent = "Cost: " + du2cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du2scaling.pow(new Decimal(2)).toString() + " (C1)";
   } else {
@@ -702,6 +728,35 @@ function updateScreen(){
 }
 
 //=========================================================================
+
+//    ========         ==        ========
+//  ==                ====       ==     ==
+//  ==               ==  ==      ==     ==
+//  ==              ==    ==     ========
+//  ==             ==========    ==
+//  ==            ==        ==   ==
+//    =========  ==          ==  ==
+
+//=========================================================================
+
+function updateSoftcaps(){
+  if (number.gte(new Decimal(1e3))){
+    minicap = number.sub(new Decimal(1e3).sub(new Decimal(1))).pow(new Decimal(0.05));
+  } else {
+    minicap = new Decimal(1);
+  }
+
+  if (number.gte(new Decimal(1e8))){
+    softcap = number.sub(new Decimal(1e8).sub(new Decimal(1))).pow(new Decimal(0.1));
+  } else {
+    softcap = new Decimal(1);
+  }
+
+  minicapDisplay.textContent = "Minicap (N gain) starts at 1e-30: /" + minicap.toExponential(3);
+  softcapDisplay.textContent = "Softcap (N gain) starts at 1e-30: /" + softcap.toExponential(3);
+}
+
+//=========================================================================
 //AUTOMATION
 
 function automation(){
@@ -755,7 +810,7 @@ function decillionthUpgrades(){
     du1.disabled = true;
   }
 
-  if (number.gte(du2cost) && du2amt.lt(new Decimal(5))) {
+  if (number.gte(du2cost) && du2amt.lt(new Decimal(10))) {
     du2.disabled = false;
   } else {
     du2.disabled = true;
@@ -780,7 +835,7 @@ du1.addEventListener("click", function(){
 });
 
 du2.addEventListener("click", function(){
-  if (du2amt.lt(new Decimal(5))){
+  if (du2amt.lt(new Decimal(10))){
     du2boost = du2boost.mul(new Decimal(1.4));
     du2amt = du2amt.add(new Decimal(1));
     number = number.sub(du2cost);
