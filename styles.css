@@ -436,3 +436,15 @@ body {
 .oct-challenge-tab {
   display: none;
 }
+
+.standard-milestone {
+  outline: 2px solid black;
+  width: 1500px;
+  background-color: #8b5a32;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 35px;
+  overflow: hidden;
+  z-index: 999;
+  margin: auto 0;
+  line-height: 1;
+}

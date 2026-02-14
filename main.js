@@ -507,6 +507,11 @@ main_octillionth_tab_button.addEventListener("click", function(){
 
 function calculateGain(){
   numberGain = new Decimal(1);
+
+  //BASE CALCULATIONS
+  numberGain = numberGain.add(chal4completions.div(new Decimal(20)));
+
+  //ADDITIONS
   
   //MULTIPLICATIONS
   if (du1amt.gte(new Decimal(1))){
@@ -607,6 +612,10 @@ function calculateBoostsStrings(){
     boostsString += "OP: NULLIFIED IN C4, ";
   } else if (octillionthPoints.gte(new Decimal(1))){
     boostsString += "OP: x" + octillionthPoints.add(new Decimal(1)) + "+" + chal1completions.div(new Decimal(2)) + ", ";
+  }
+
+  if (chal4completions.gte(new Decimal(1))){
+    boostsString += "C4: +" + chal4completions.div(new Decimal(20)).toExponential(3) + " to base, ";
   }
   
   //=========================================================================
