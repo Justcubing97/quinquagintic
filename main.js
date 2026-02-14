@@ -9,6 +9,61 @@
 //        ==        ==          ==  ==     ==   ========
 
 //=========================================================================
+var normalTickers = [
+  "THE ENTITY IS WATCHING",
+  "What even is a Quinquagintic?",
+  "Distance, velocity, acceleration, jerk... what's the fourth derivative?",
+  "Are you a male, female, trans, non-binary, Walmart shopping cart, attack helicopter, 1x2 Lego tile, second derivative of a rational function, an omega ordinal, a cube of paper, a tetrahedron made of metal, a lump of tungsten, a computer with Quinquagintic, or something else?",
+  "Me? Oh, no, I'm in the third domain: Ordinals.",
+  "99% of people can’t get to pink level!1!!1!11!",
+  "HAHA RANDOMLY HARDCAP NUMBER GAIN",
+  "What does ineffable mean again?",
+  "Wait, what do you mean I can go below 1e-33?!",
+  "One guy sat on a math graph—HEY! WHO MESSED UP THE QUADRATIC?!",
+  "HARDSTYLE OVERLOAD!!!! WATCH OUT!!!!",
+  "You've seen this message at least once.",
+  "This message exists.",
+  "What's not a color, but is associated with a few? I... don't know. I don't experience it, so I can't tell.",
+  "i speak in lowercase.",
+  "I SPEAK IN UPPERCASE.",
+  "128√e980",
+  "I wonder if I can drink liquid astatine...",
+  "WHAT THE HELL IS UNOBTAINIUM??? WHAT IS ITS ELEMENT NUMBER???",
+  "This is the 31st- wait, no, 32nd ticker added to the game. I forgot I split that one in two.",
+  "The current year is 2027. If it's not, then I must be in the wrong timeline. If it is, congrats! You exist!",
+  "I am Justcubing97. Why am I called Justcubing97? I don’t actually know! Here’s what I do know: 97 is a prime number, and the largest one below 100. For me, it represents being just almost complete, but needing something more. Just one more thing to hit that 100% completion.",
+  "1 1 2 3 5 8 13 21 34 55 89",
+  "THERE ARE MORE HYDROGEN ATOMS IN A MOLECULE OF WATER THAN STARS IN THE SOLAR SYSTEM???",
+  "when undecillionth reset",
+  "googol",
+  "This news ticker, famously made public by the creator of Quinquagintic, Justcubing97, has been proudly presented at the top of your screen using the internet and the luck required to hit this specific news ticker, and for what purpose? To waste time so that other news tickers can’t appear. This is why! And now introducing: the News Ticker Upgraded! It can now display two news tickers at once, along with a curtain to block out the annoying ones!",
+  "A, B, and C from the Pythagorean Theorem, Delta is technically D, and Delta from infinitesimal amounts as in f(x+Δx), e from Euler’s Number, f, g, and h from function notation, i, j, and k from the quaternion system, L for length, M for 1000, N for the natural numbers, zero (0) for O, pi technically evolved into P, Q for the rationals, and likewise, R for real numbers. You can turn 5 into S, + into T, the union symbol into U, and flip the exponentiation symbol (^) to get V. W for the whole numbers, and famously, x, y, and z as the three most common variables.",
+  "OH MY GOD WHY ARE THERE 27 DELTAMATH PROBLEMS THIS TIME?????",
+  "1797693134862315907729305190789024733617976978942306572734300- ERROR: INFINITY",
+  "t̷̝̑͛ḧ̷̺̈́ę̸͍̄͌ ̵̹̈́̃e̶̻͌n̵̳͂t̷̞͘i̷̡̦̐̑ṫ̵̠͋y̸̯̋ ̷̛̮̙i̵͇̗̔ṡ̷̛̠ ̷̨͔́̀ẅ̸͓̰́̽a̸̪͊̑t̵̩̩̑c̵͈̀̃h̷̭͎̚i̵̢̅̆n̵̻͂̚g̴̹͉͐̓.̷̨̋ ̸̡͗̾î̶̗͖̋ ̵̧̝̎ḫ̴͐o̷̹̝̒̇p̵̖͂̓ẹ̷̖̚ ̵͈̎y̷̢̺̏͐ő̸͉̪ư̷̦̏r̴̛̤ẻ̶̠̲̏ ̷̥̥́̚ŏ̴̘̲̈́ṅ̶͚̭̍ ̸̦̥̉t̸̥͗ḩ̷͇͠ê̴̡̦ ̴̹̝͊̐t̵̤̰͊r̸̙͆̉į̷̖̈́́l̶̩̫̔̌l̸̘̀ĩ̷̟̟̕o̸̙̯̒̽n̵͈̊t̶͇̋h̸͈̾̚s̵̪̑̾.̷̦͂ ̸̫̉͘i̸̖̎͘͜f̷̳̂ ̴̨̣́̋y̶̘̌o̷̞̣͆͝ủ̵͎͝r̸̼͎͂͂ȩ̷̿ ̷̳͒n̸͎̎͐o̶͎̳͗̽t̶̳̝͑,̸̱̯͠ ̷̢̒̈́w̴̰̱͘e̷͇͛́l̸̺̟̑l̶͔̍̽.̶̛̼̂.̶̹̈́͝.̶̫̦̈́̕ ̸̓ͅu̶̯͌͠h̴̪͚̀ḣ̵̬͔.̶͚͕͛.̸̱̓ͅ.̶̗͗̍ ̸̫͍̀͠c̸̬̗͑r̷̰͌ä̵͇́p̵̱͎͑.̴̣̀ ̵̜͙̈́͌ỉ̴͇͘ ̸̼̰͗d̵̡̩͑ò̸͚́ͅn̵͕̐̊t̴͈̬̿̂ ̷͋͜͠ḳ̷͖͛n̵̗̹̂o̴̺̯̅͘w̷̱͛ ̵̠̽w̵͍͑̑ḧ̶̯̪̌ä̴̫́͝t̴̙͌̾ ̸̹̌͂ţ̶̌o̴̡̊̓ ̴̠̈́͑d̸̙̉õ̷͈͘ ̵̧͎̀̓h̸̳͘e̶̲͂r̸͇̟̐̂e̶̥̮͗̕.̷̢͕̄",
+  "This was a triumph...",
+  "2000 BPM GO!",
+  "Now introducing: Undecillionth Reset: Reset all progress after this, and gain +1 UDP! Also, unlock Compound Challenges! (none of this exists).",
+];
+
+var specialTickers = [
+  "It's been 347 days... I just wanna see her again...",
+  "I, Justcubing97, am lonely again...",
+  "Sometimes I play IMR. Other times I’m not. 50% I’m sleeping, 30% I’m in school, 20% I’m stuck doing DeltaMath, 0% I’m with a girl.",
+  "Today I asked out an incremental-game-lover girl, but she said her love gain is softcapped. Is that good?",
+  "A girl loved me at one point. Not anymore.",
+  "If you're reading this, I'm still alive. Maybe not emotionally, oh, no. I've lost my ability to feel emotions.",
+  "If you know me, then you know I’m not like most boys. Instead of recklessness and random meme mentions, I try to grasp what’s happening and stay focused, along with trying to get EVERYONE ELSE to stop saying “67.”",
+  "Every time I see a couple, it makes me kinda sad. They have someone that cares about them (which is true most of the time), but I don’t. Maybe… uhh… you could probably indirectly care about me by playing this game?",
+  "…I just want a girl to hug me. The next best thing is to hold something soft in bed, but it’s not as good as what I could be getting.",
+  "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. it just… feels empty.                                                                                                                           I ate 27 orange slices.",
+  "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. anyway, back to trying to solve the collatz conjecture.",
+];
+
+//Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
+//Billionth: "BPM1-6 WILL reset at some point. Not now."
+//Octillionth: "Apparently Challenge Completions are a currency now." "Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!"
+
 var number = new Decimal(1);
 var numberGain;
 
@@ -154,6 +209,7 @@ const topSP = document.getElementById("top-sp");
 //=========================================================================
 //BOTTOM
 const bottomModifiers = document.getElementById("bottom-modifiers");
+const news_tickers = document.getElementById("news-tickers");
 
 //=========================================================================
 //CAPS
@@ -782,6 +838,41 @@ function automation(){
     }
   }
 }
+
+//=========================================================================
+//NEWS TICKER
+
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var chosenTicker;
+var tickerTimer = 1;
+
+setInterval(function(){
+  tickerTimer += 1;
+
+  if (tickerTimer == 1){
+    chosenTicker = "";
+    
+    if (randomNumber(1, 10) == 1){
+      chosenTicker = specialTickers[randomNumber(0, specialTickers.length - 1)];
+    } else {
+      chosenTicker = normalTickers[randomNumber(0, normalTickers.length - 1)];
+    }
+
+    news_tickers.textContent = chosenTicker;
+  } else if (tickerTimer >= 30){
+    if (tickerTimer == 30){
+      news_tickers.textContent = "Loading...";
+    } else if (tickerTimer == 31){
+      news_tickers.textContent = "Loading..";
+    } else if (tickerTimer == 32){
+      news_tickers.textContent = "Loading.";
+      tickerTimer = 0;
+    }
+  }
+}, 500);
 
 //=========================================================================
 
