@@ -140,6 +140,11 @@ var chal4completions = new Decimal(0);
 var chal4scaling = new Decimal(5);
 var chal4goal = new Decimal(10000000);
 
+var challengeCompletions = new Decimal(0);
+var ccm1unlocked = false;
+var ccm2unlocked = false;
+var ccm3unlocked = false;
+
 //=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
@@ -311,6 +316,10 @@ const chal4_goal_scale = document.getElementById("chal4-goal-scale");
 const chal4_reward = document.getElementById("chal4-reward");
 const chal4_completions = document.getElementById("chal4-completions");
 
+const ccm1 = document.getElementById("ccm-1");
+const ccm2 = document.getElementById("ccm-2");
+const ccm3 = document.getElementById("ccm-3");
+
 //=========================================================================
 
 //  ========   ========   ========   ========  ========
@@ -423,6 +432,7 @@ setInterval(function(){
   chal2GoalChecking();
   chal3GoalChecking();
   chal4GoalChecking();
+  checkCCM();
 
   automation();
 }, 50);
@@ -537,10 +547,20 @@ function calculateGain(){
     }
   }
 
+  if (ccm2unlocked){
+    numberGain = numberGain.mul(challengeCompletions.div(new Decimal(4)).add(new Decimal(1)));
+  }
+
+  //SOFTCAPS
   if (minicap.neq(new Decimal(1))){
     numberGain = numberGain.div(minicap);
   }
 
+  if (softcap.neq(new Decimal(1))){
+    numberGain = numberGain.div(softcap);
+  }
+
+  //CHALLENGE 2
   if (challengeModifier == 2){
     numberGain = numberGain.pow(new Decimal(1).div(number.pow(new Decimal(0.06))));
   }
@@ -617,6 +637,10 @@ function calculateBoostsStrings(){
   if (chal4completions.gte(new Decimal(1))){
     boostsString += "C4: +" + chal4completions.div(new Decimal(20)).toExponential(3) + " to base, ";
   }
+
+  if (ccm2unlocked){
+    boostsString += "CCM2: x" + challengeCompletions.div(new Decimal(4)).add(new Decimal(1)) + ", ";
+  }
   
   //=========================================================================
   //NONILLIONTHS
@@ -639,6 +663,10 @@ function calculateBoostsStrings(){
 
   if (chal2completions.gte(1)){
     octBoostsString += "C2: x" + chal2completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
+  }
+
+  if (ccm1unlocked){
+    octBoostsString += "CCM1: x" + challengeCompletions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
   }
 }
 
@@ -806,19 +834,19 @@ function updateScreen(){
 
 function updateSoftcaps(){
   if (number.gte(new Decimal(1e3))){
-    minicap = number.sub(new Decimal(1e3).sub(new Decimal(1))).pow(new Decimal(0.05));
+    minicap = number.sub(new Decimal(1e3).sub(new Decimal(1))).pow(new Decimal(0.08));
   } else {
     minicap = new Decimal(1);
   }
 
   if (number.gte(new Decimal(1e8))){
-    softcap = number.sub(new Decimal(1e8).sub(new Decimal(1))).pow(new Decimal(0.1));
+    softcap = number.sub(new Decimal(1e8).sub(new Decimal(1))).pow(new Decimal(0.21));
   } else {
     softcap = new Decimal(1);
   }
 
   minicapDisplay.textContent = "Minicap (N gain) starts at 1e-30: /" + minicap.toExponential(3);
-  softcapDisplay.textContent = "Softcap (N gain) starts at 1e-30: /" + softcap.toExponential(3);
+  softcapDisplay.textContent = "Softcap (N gain) starts at 1e-25: /" + softcap.toExponential(3);
 }
 
 //=========================================================================
@@ -1197,6 +1225,10 @@ function checkPendingOctillionth(){
   if (chal2completions.gte(new Decimal(1))){
     oppending = oppending.mul(chal2completions.div(new Decimal(2)).add(new Decimal(1)));
   }
+
+  if (ccm1unlocked){
+    oppending = oppending.mul(challengeCompletions.div(new Decimal(2)).add(new Decimal(1)));
+  }
 }
 
 //=========================================================================
@@ -1256,6 +1288,7 @@ function chal1GoalChecking(){
   if (number.gte(chal1goal) && challengeModifier == 1 && chal1completions.lt(new Decimal(100))){
     chal1goal = chal1goal.pow(chal1scaling);
     chal1completions = chal1completions.add(new Decimal(1));
+    challengeCompletions = challengeCompletions.add(new Decimal(1));
   }
 }
 
@@ -1263,6 +1296,7 @@ function chal2GoalChecking(){
   if (number.gte(chal2goal) && challengeModifier == 2 && chal2completions.lt(new Decimal(100))){
     chal2goal = chal2goal.mul(chal2scaling);
     chal2completions = chal2completions.add(new Decimal(1));
+    challengeCompletions = challengeCompletions.add(new Decimal(1));
   }
 }
 
@@ -1270,6 +1304,7 @@ function chal3GoalChecking(){
   if (number.gte(chal3goal) && challengeModifier == 3 && chal3completions.lt(new Decimal(100))){
     chal3goal = chal3goal.mul(chal3scaling);
     chal3completions = chal3completions.add(new Decimal(1));
+    challengeCompletions = challengeCompletions.add(new Decimal(1));
   }
 }
 
@@ -1277,6 +1312,30 @@ function chal4GoalChecking(){
   if (number.gte(chal4goal) && challengeModifier == 4 && chal4completions.lt(new Decimal(100))){
     chal4goal = chal4goal.mul(chal4scaling);
     chal4completions = chal4completions.add(new Decimal(1));
+    challengeCompletions = challengeCompletions.add(new Decimal(1));
+  }
+}
+
+//=========================================================================
+//MILESTONES
+
+function checkCCM(){
+  if (challengeCompletions.gte(new Decimal(3))){
+    ccm1.classList.add("oct-light");
+    ccm1.classList.remove("oct-dark");
+    ccm1unlocked = true;
+  }
+
+  if (challengeCompletions.gte(new Decimal(10))){
+    ccm2.classList.add("oct-light");
+    ccm2.classList.remove("oct-dark");
+    ccm2unlocked = true;
+  }
+
+  if (challengeCompletions.gte(new Decimal(20))){
+    ccm3.classList.add("oct-light");
+    ccm3.classList.remove("oct-dark");
+    ccm3unlocked = true;
   }
 }
 
