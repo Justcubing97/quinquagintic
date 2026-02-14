@@ -445,6 +445,6 @@ body {
   font-size: 35px;
   overflow: hidden;
   z-index: 999;
-  margin: auto 0;
+  margin: 20px auto 0;
   line-height: 1;
 }
