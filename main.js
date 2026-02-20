@@ -1464,6 +1464,8 @@ function loadGame() {
   chal4completions = new Decimal(data.chal4completions);
   chal4goal = new Decimal(data.chal4goal);
 
+  challengeCompletions = chal1_completions.add(chal2_completions).add(chal3_completions).add(chal4_completions);
+
   if (nonillionth_unlocked){
     nonillionth_grid.style.display = "grid";
     main_nonillionth_tab_button.style.display = "inline-block";
