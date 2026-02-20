@@ -516,7 +516,7 @@ main_octillionth_tab_button.addEventListener("click", function(){
 //ACTUAL FUNCTIONS
 
 function calculateGain(){
-  challengeCompletions = chal1_completions.add(chal2_completions).add(chal3_completions).add(chal4_completions);
+  challengeCompletions = chal1completions.add(chal2completions).add(chal3completions).add(chal4completions);
 
   numberGain = new Decimal(1);
 
