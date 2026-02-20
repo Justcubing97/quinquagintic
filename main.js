@@ -214,7 +214,7 @@ const topSP = document.getElementById("top-sp");
 //=========================================================================
 //BOTTOM
 const bottomModifiers = document.getElementById("bottom-modifiers");
-const news_tickers = document.getElementById("news-tickers");
+const news_tickers = document.getElementById("news-ticker");
 
 //=========================================================================
 //CAPS
@@ -899,15 +899,8 @@ setInterval(function(){
     }
 
     news_tickers.textContent = chosenTicker;
-  } else if (tickerTimer >= 30){
-    if (tickerTimer == 30){
-      news_tickers.textContent = "Loading...";
-    } else if (tickerTimer == 31){
-      news_tickers.textContent = "Loading..";
-    } else if (tickerTimer == 32){
-      news_tickers.textContent = "Loading.";
-      tickerTimer = 0;
-    }
+  } else if (tickerTimer >= 40){
+    tickerTimer = 0;
   }
 }, 500);
 
