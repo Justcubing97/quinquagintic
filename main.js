@@ -51,7 +51,7 @@ var normalTickers = [
   "My friend told me to quinquagintillionth root a quinquagintic function... she wanted me to mentally implode.",
   "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15- wait is the sequence of natural numbers copyrighted?",
   "df/dx = f",
-  
+
 ];
 
 var specialTickers = [
@@ -203,11 +203,13 @@ const caps_tab = document.getElementById("caps-tab");
 const decillionth_tab = document.getElementById("decillionth-tab");
 const nonillionth_tab = document.getElementById("nonillionth-tab");
 const octillionth_tab = document.getElementById("octillionth-tab");
+const septillionth_tab = document.getElementById("septillionth-tab");
 const main_number_tab_button = document.getElementById("main-number-tab-button");
 const main_caps_tab_button = document.getElementById("main-caps-tab-button");
 const main_decillionth_tab_button = document.getElementById("main-decillionth-tab-button");
 const main_nonillionth_tab_button = document.getElementById("main-nonillionth-tab-button");
 const main_octillionth_tab_button = document.getElementById("main-octillionth-tab-button");
+const main_septillionth_tab_button = document.getElementById("main-septillionth-tab-button");
 
 const oct_infobox_tab = document.getElementById("oct-infobox-tab");
 const oct_challenge_tab = document.getElementById("oct-challenge-tab");
@@ -332,6 +334,15 @@ const cc_display = document.getElementById("cc-display");
 const ccm1 = document.getElementById("ccm-1");
 const ccm2 = document.getElementById("ccm-2");
 const ccm3 = document.getElementById("ccm-3");
+
+//=========================================================================
+//SEPTILLIONTH
+
+const spreset = document.getElementById("spreset");
+const sp_point_pending = document.getElementById("sp-point-pending");
+const sp_next_point = document.getElementById("sp-next-point");
+const sepBoostsDisplay = document.getElementById("sepBoostsDisplay");
+spreset.disabled = true;
 
 //=========================================================================
 
@@ -522,6 +533,18 @@ main_octillionth_tab_button.addEventListener("click", function(){
     main_octillionth_tab_button.classList.add("oct-dark");
     main_octillionth_tab_button.classList.remove("oct-light");
     octillionth_tab.style.display = "none";
+  }
+});
+
+main_septillionth_tab_button.addEventListener("click", function(){
+  if (main_septillionth_tab_button.classList.contains("sep-dark")){
+    main_septillionth_tab_button.classList.remove("sep-dark");
+    main_septillionth_tab_button.classList.add("sep-light");
+    septillionth_tab.style.display = "block";
+  } else {
+    main_septillionth_tab_button.classList.add("sep-dark");
+    main_septillionth_tab_button.classList.remove("sep-light");
+    septillionth_tab.style.display = "none";
   }
 });
 
@@ -783,7 +806,7 @@ function updateScreen(){
   if (challengeModifier == 4){
     op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + "+" + chal4completions.div(new Decimal(2)) + ", but Challenge 4 is active, so this is nullified.";
   } else {
-    op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + "+" + chal1completions.div(new Decimal(2));
+    op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + " (+" + chal1completions.div(new Decimal(2)) + ")";
   }
   
   bottomModifiers.textContent = "Modifiers: None";
@@ -1354,6 +1377,13 @@ function checkCCM(){
     ccm3.classList.add("oct-light");
     ccm3.classList.remove("oct-dark");
     ccm3unlocked = true;
+  }
+
+  if (ccm3unlocked){
+    if (main_septillionth_tab_button.classList.contains("sep-light")){
+      septillionth_tab.style.display = "block";
+    }
+    main_septillionth_tab_button.style.display = "inline-block";
   }
 }
 

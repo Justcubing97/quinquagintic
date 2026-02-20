@@ -72,6 +72,24 @@ h1 {
   display: inline-block;
 }
 
+.septillionth-section {
+  color: #c880ff;
+  background-image: linear-gradient(180deg, #AAAAAA, #c880ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.sextillionth-section{
+  color: #ff8080;
+  background-image: linear-gradient(180deg, #AAAAAA, #ff8080);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -280,6 +298,11 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.upgrade-grid-atom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -444,7 +467,7 @@ p.individ-softcaps {
 
 body {
   margin-top: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .because-html-doesnt-do-js-newlines {
@@ -459,7 +482,7 @@ body {
 
 .standard-tabs-button {
   font-size: 30px;
-  width: 200px;
+  width: 250px;
 }
 
 .oct-challenge-tab {
