@@ -44,6 +44,14 @@ var normalTickers = [
   "This was a triumph...",
   "2000 BPM GO!",
   "Now introducing: Undecillionth Reset: Reset all progress after this, and gain +1 UDP! Also, unlock Compound Challenges! (none of this exists).",
+  "I fell asleep in class.",
+  "If you're wondering why the news ticker changes speed... cool.",
+  "Why are the layers in reverse order?",
+  "e^iπ + 1 = 0",
+  "My friend told me to quinquagintillionth root a quinquagintic function... she wanted me to mentally implode.",
+  "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15- wait is the sequence of natural numbers copyrighted?",
+  "df/dx = f",
+  
 ];
 
 var specialTickers = [
@@ -56,8 +64,10 @@ var specialTickers = [
   "If you know me, then you know I’m not like most boys. Instead of recklessness and random meme mentions, I try to grasp what’s happening and stay focused, along with trying to get EVERYONE ELSE to stop saying “67.”",
   "Every time I see a couple, it makes me kinda sad. They have someone that cares about them (which is true most of the time), but I don’t. Maybe… uhh… you could probably indirectly care about me by playing this game?",
   "…I just want a girl to hug me. The next best thing is to hold something soft in bed, but it’s not as good as what I could be getting.",
-  "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. it just… feels empty.                                                                                                                           I ate 27 orange slices.",
+  "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. it just… feels empty....................................................................................I ate 27 orange slices.",
   "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. anyway, back to trying to solve the collatz conjecture.",
+  "This group chat decided to expose everything I did... I hope my crush doesn't hate me. Or do I? *vsauce music plays*",
+  "help me..."
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
@@ -214,7 +224,8 @@ const topSP = document.getElementById("top-sp");
 //=========================================================================
 //BOTTOM
 const bottomModifiers = document.getElementById("bottom-modifiers");
-const news_tickers = document.getElementById("news-ticker");
+const ticker = document.getElementById("news-ticker");
+const container = document.getElementById("news-ticker-container");
 
 //=========================================================================
 //CAPS
@@ -315,6 +326,8 @@ const chal4_title = document.getElementById("chal4-title");
 const chal4_goal_scale = document.getElementById("chal4-goal-scale");
 const chal4_reward = document.getElementById("chal4-reward");
 const chal4_completions = document.getElementById("chal4-completions");
+
+const cc_display = document.getElementById("cc-display");
 
 const ccm1 = document.getElementById("ccm-1");
 const ccm2 = document.getElementById("ccm-2");
@@ -768,12 +781,14 @@ function updateScreen(){
   octBoostsDisplay.textContent = octBoostsString;
 
   if (challengeModifier == 4){
-    op_effect.textContent = "Your " + octillionthPoints.toString() + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toString() + "+" + chal4completions.div(new Decimal(2)) + ", but Challenge 4 is active, so this is nullified.";
+    op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + "+" + chal4completions.div(new Decimal(2)) + ", but Challenge 4 is active, so this is nullified.";
   } else {
-    op_effect.textContent = "Your " + octillionthPoints.toString() + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toString() + "+" + chal1completions.div(new Decimal(2));
+    op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + "+" + chal1completions.div(new Decimal(2));
   }
   
   bottomModifiers.textContent = "Modifiers: None";
+
+  cc_display.textContent = "You have " + challengeCompletions + " Challenge Completions (CC).";
 
   if (challengeModifier == 1){
     bottomModifiers.textContent = "Modifiers: Challenge 1";
@@ -886,25 +901,37 @@ function randomNumber(min, max) {
 }
 
 var chosenTicker;
-var tickerTimer = 1;
 
-setInterval(function(){
-  tickerTimer += 1;
+function startTicker() {
+  const textWidth = ticker.offsetWidth;
+  const containerWidth = container.offsetWidth;
 
-  if (tickerTimer == 1){
-    chosenTicker = "";
-    
+  const totalDistance = textWidth + containerWidth;
+
+  const speed = 180;
+
+  const duration = totalDistance / speed;
+
+  ticker.style.transition = "none";
+  ticker.style.transform = `translateX(${containerWidth}px)`;
+
+  ticker.offsetHeight;
+
+  ticker.style.transition = `transform ${duration}s linear`;
+  ticker.style.transform = `translateX(-${textWidth}px)`;
+
+  ticker.addEventListener("transitionend", () => {
     if (randomNumber(1, 10) == 1){
       chosenTicker = specialTickers[randomNumber(0, specialTickers.length - 1)];
     } else {
       chosenTicker = normalTickers[randomNumber(0, normalTickers.length - 1)];
     }
+    ticker.textContent = chosenTicker;
+    startTicker();
+  }, { once: true });
+}
 
-    news_tickers.textContent = chosenTicker;
-  } else if (tickerTimer >= 40){
-    tickerTimer = 0;
-  }
-}, 500);
+startTicker();
 
 //=========================================================================
 
