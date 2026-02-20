@@ -516,6 +516,8 @@ main_octillionth_tab_button.addEventListener("click", function(){
 //ACTUAL FUNCTIONS
 
 function calculateGain(){
+  challengeCompletions = chal1_completions.add(chal2_completions).add(chal3_completions).add(chal4_completions);
+
   numberGain = new Decimal(1);
 
   //BASE CALCULATIONS
@@ -1281,7 +1283,6 @@ function chal1GoalChecking(){
   if (number.gte(chal1goal) && challengeModifier == 1 && chal1completions.lt(new Decimal(100))){
     chal1goal = chal1goal.pow(chal1scaling);
     chal1completions = chal1completions.add(new Decimal(1));
-    challengeCompletions = challengeCompletions.add(new Decimal(1));
   }
 }
 
@@ -1289,7 +1290,6 @@ function chal2GoalChecking(){
   if (number.gte(chal2goal) && challengeModifier == 2 && chal2completions.lt(new Decimal(100))){
     chal2goal = chal2goal.mul(chal2scaling);
     chal2completions = chal2completions.add(new Decimal(1));
-    challengeCompletions = challengeCompletions.add(new Decimal(1));
   }
 }
 
@@ -1297,7 +1297,6 @@ function chal3GoalChecking(){
   if (number.gte(chal3goal) && challengeModifier == 3 && chal3completions.lt(new Decimal(100))){
     chal3goal = chal3goal.mul(chal3scaling);
     chal3completions = chal3completions.add(new Decimal(1));
-    challengeCompletions = challengeCompletions.add(new Decimal(1));
   }
 }
 
@@ -1305,7 +1304,6 @@ function chal4GoalChecking(){
   if (number.gte(chal4goal) && challengeModifier == 4 && chal4completions.lt(new Decimal(100))){
     chal4goal = chal4goal.mul(chal4scaling);
     chal4completions = chal4completions.add(new Decimal(1));
-    challengeCompletions = challengeCompletions.add(new Decimal(1));
   }
 }
 
@@ -1463,8 +1461,6 @@ function loadGame() {
 
   chal4completions = new Decimal(data.chal4completions);
   chal4goal = new Decimal(data.chal4goal);
-
-  challengeCompletions = chal1_completions.add(chal2_completions).add(chal3_completions).add(chal4_completions);
 
   if (nonillionth_unlocked){
     nonillionth_grid.style.display = "grid";
