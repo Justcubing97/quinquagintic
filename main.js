@@ -51,7 +51,18 @@ var normalTickers = [
   "My friend told me to quinquagintillionth root a quinquagintic function... she wanted me to mentally implode.",
   "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15- wait is the sequence of natural numbers copyrighted?",
   "df/dx = f",
-
+  "The hell is tree(3)? What does it mean?",
+  "if you're reading this get back to grinding",
+  "asdfasf",
+  "The next update will be in a few days to a few months.",
+  "TRANSCENDENT CAP IS TRANSCENDENT",
+  "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034... (these are all my digits)",
+  "Is the answer to this question 'no'?",
+  "THIS SENTENCE IS FALSE.",
+  "Does a set of all sets contain itself?",
+  "If you travel back in time to kill your grandfather, are you alive or dead?",
+  "Check out my 2026 Math Clock. It's in Dr. Zye's VERY Hard clock stream, maybe around the middle (I was middle of the spreadsheet when he posted).",
+  "Find the integral of cos(x^2).",
 ];
 
 var specialTickers = [
@@ -67,14 +78,16 @@ var specialTickers = [
   "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. it just… feels empty....................................................................................I ate 27 orange slices.",
   "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. anyway, back to trying to solve the collatz conjecture.",
   "This group chat decided to expose everything I did... I hope my crush doesn't hate me. Or do I? *vsauce music plays*",
-  "help me..."
+  "help me...",
+  "atp i dont know if shes ignoring me on purpose, hope not, but hey, being single means i can work on this",
+  "Am I getting friendzoned?"
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
 //Billionth: "BPM1-6 WILL reset at some point. Not now."
 //Octillionth: "Apparently Challenge Completions are a currency now." "Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!"
 
-var number = new Decimal(1);
+var decimalNumber = new Decimal(1);
 var numberGain;
 
 var numberString = "";
@@ -156,6 +169,15 @@ var ccm2unlocked = false;
 var ccm3unlocked = false;
 
 //=========================================================================
+//SEPTILLIONTH
+var spscaling = new Decimal(10);
+var spthreshold = new Decimal.pow(10, 9);
+var sppending = new Decimal(0);
+var spbase = new Decimal(0);
+
+var septillionthPoints = new Decimal(0);
+
+//=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
 const numberRounding = new Decimal(100);
@@ -166,11 +188,13 @@ const decillionthDivision = new Decimal.pow(10, 33);
 //UNLOCK CHECKS
 var nonillionth_unlocked = false;
 var octillionth_unlocked = false;
+var septillionth_unlocked = false;
 
 //=========================================================================
 //RESET BOOSTS
 var non_reset_boost_check = false;
 var oct_reset_boost_check = false;
+var sep_reset_boost_check = false;
 
 //=========================================================================
 //SOFTCAP EFFECTS
@@ -373,7 +397,7 @@ function nonillionthResetInitiate(){
   du2amt = new Decimal(0);
   du2cost = new Decimal(25);
   du2scaling = new Decimal(4);
-  number = new Decimal(1);
+  decimalNumber = new Decimal(1);
   
   if (nu2amt.eq(new Decimal(1))){
     du1cost = new Decimal(8);
@@ -421,7 +445,79 @@ function octillionthResetInitiate(){
   du2amt = new Decimal(0);
   du2cost = new Decimal(25);
   du2scaling = new Decimal(4);
-  number = new Decimal(1);
+  decimalNumber = new Decimal(1);
+}
+
+function septillionthResetInitiate(){
+  spthreshold = new Decimal.pow(10, 9);
+  septillionthPoints = septillionthPoints.add(sppending);
+  spbase = new Decimal(0);
+  sep_reset_boost_check = true;
+
+  opscaling = new Decimal(3);
+  opthreshold = new Decimal.pow(10, 6);
+  oppending = new Decimal(0);
+  opbase = new Decimal(0);
+ 
+  octillionthPoints = new Decimal(0);
+ 
+  chal1completions = new Decimal(0);
+  chal1scaling = new Decimal(1.15); //EXPONENT!
+  chal1goal = new Decimal(1000);
+ 
+  chal2completions = new Decimal(0);
+  chal2scaling = new Decimal(3);
+  chal2goal = new Decimal(5000);
+ 
+  chal3completions = new Decimal(0);
+  chal3scaling = new Decimal(2.8);
+  chal3goal = new Decimal(10000);
+ 
+  chal4completions = new Decimal(0);
+  chal4scaling = new Decimal(5);
+  chal4goal = new Decimal(10000000);
+ 
+  challengeCompletions = new Decimal(0);
+  ccm1unlocked = false;
+  ccm2unlocked = false;
+  ccm3unlocked = false;
+  
+  npscaling = new Decimal(2);
+  npthreshold = new Decimal(1000);
+  nppending = new Decimal(0);
+  npbase = new Decimal(0);
+
+  nonillionthPoints = new Decimal(0);
+  non_reset_boost_check = false;
+
+  nu1boost = new Decimal(1);
+  nu1amt = new Decimal(0);
+  nu1cost = new Decimal(1);
+  nu1scaling = new Decimal(5);
+
+  nu2amt = new Decimal(0);
+  nu2cost = new Decimal(3);
+  nu2_cost_scale.textContent = "Cost: 3 NP";
+  
+  nu3boost = new Decimal(1);
+  nu3amt = new Decimal(0);
+  nu3cost = new Decimal(10);
+  nu3scaling = new Decimal(10);
+
+  nu4amt = new Decimal(0);
+  nu4cost = new Decimal(25);
+  nu4_cost_scale.textContent = "Cost: 25 NP";
+  
+  du1boost = new Decimal(0);
+  du1amt = new Decimal(0);
+  du1cost = new Decimal(10);
+  du1scaling = new Decimal(3); 
+
+  du2boost = new Decimal(1);
+  du2amt = new Decimal(0);
+  du2cost = new Decimal(25);
+  du2scaling = new Decimal(4);
+  decimalNumber = new Decimal(1);
 }
 
 //=========================================================================
@@ -600,18 +696,18 @@ function calculateGain(){
 
   //CHALLENGE 2
   if (challengeModifier == 2){
-    numberGain = numberGain.pow(new Decimal(1).div(number.pow(new Decimal(0.06))));
+    numberGain = numberGain.pow(new Decimal(1).div(decimalNumber.pow(new Decimal(0.06))));
   }
 }
 
 function updateCurrencies(){
   //=========================================================================
   //NUMBER
-  number = number.add(numberGain.div(numberTickspeedDivisor)); //CHANGE THIS BACK TO 20
-  number = number.mul(numberRounding);
-  number = number.round();
-  number = number.div(numberRounding);
-  numberString = number.toFixed(numberDecimalPlaces);
+  decimalNumber = decimalNumber.add(numberGain.div(numberTickspeedDivisor)); //CHANGE THIS BACK TO 20
+  decimalNumber = decimalNumber.mul(numberRounding);
+  decimalNumber = decimalNumber.round();
+  decimalNumber = decimalNumber.div(numberRounding);
+  numberString = decimalNumber.toFixed(numberDecimalPlaces);
   numberString = numberString.toString();
 }
 
@@ -723,7 +819,7 @@ function calculateBoostsStrings(){
 function updateScreen(){
   //=========================================================================
   //TOP
-  topNumber.textContent = "N: " + number.div(decillionthDivision).toExponential(3) + " (+" + numberGain.div(decillionthDivision).toExponential(3) + "/s)";
+  topNumber.textContent = "N: " + decimalNumber.div(decillionthDivision).toExponential(3) + " (+" + numberGain.div(decillionthDivision).toExponential(3) + "/s)";
 
   if (challengeModifier == 3){
     topNP.textContent = "NP: DISABLED IN C3";
@@ -735,6 +831,12 @@ function updateScreen(){
     topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
   } else {
     topOP.textContent = "";
+  }
+
+  if (septillionth_tab.style.display == "block"){
+    topSP.textContent = "SP: " + septillionthPoints.toExponential(3) + " (+" + sppending.toExponential(3) + ")";
+  } else {
+    topSP.textContent = "";
   }
   
   //=========================================================================
@@ -873,14 +975,14 @@ function updateScreen(){
 //=========================================================================
 
 function updateSoftcaps(){
-  if (number.gte(new Decimal(1e3))){
-    minicap = number.sub(new Decimal(1e3).sub(new Decimal(1))).pow(new Decimal(0.08));
+  if (decimalNumber.gte(new Decimal(1e3))){
+    minicap = decimalNumber.sub(new Decimal(1e3).sub(new Decimal(1))).pow(new Decimal(0.08));
   } else {
     minicap = new Decimal(1);
   }
 
-  if (number.gte(new Decimal(1e8))){
-    softcap = number.sub(new Decimal(1e8).sub(new Decimal(1))).pow(new Decimal(0.21));
+  if (decimalNumber.gte(new Decimal(1e8))){
+    softcap = decimalNumber.sub(new Decimal(1e8).sub(new Decimal(1))).pow(new Decimal(0.21));
   } else {
     softcap = new Decimal(1);
   }
@@ -977,13 +1079,13 @@ function decillionthUpgrades(){
     du1.textContent = "Increase N multi" + "\n by +2";
   }
   
-  if (number.gte(du1cost)) {
+  if (decimalNumber.gte(du1cost)) {
     du1.disabled = false;
   } else {
     du1.disabled = true;
   }
 
-  if (number.gte(du2cost) && du2amt.lt(new Decimal(10))) {
+  if (decimalNumber.gte(du2cost) && du2amt.lt(new Decimal(10))) {
     du2.disabled = false;
   } else {
     du2.disabled = true;
@@ -1011,7 +1113,7 @@ du2.addEventListener("click", function(){
   if (du2amt.lt(new Decimal(10))){
     du2boost = du2boost.mul(new Decimal(1.4));
     du2amt = du2amt.add(new Decimal(1));
-    number = number.sub(du2cost);
+    decimalNumber = decimalNumber.sub(du2cost);
   
     if (challengeModifier == 1){
       du2cost = du2cost.mul(du2scaling.pow(new Decimal(2)));
@@ -1036,7 +1138,7 @@ du2.addEventListener("click", function(){
 //=========================================================================
 //RESET DETECTION
 function checkNonillionthReset(){
-  if (number.gte(new Decimal(1000)) && challengeModifier != 3){
+  if (decimalNumber.gte(new Decimal(1000)) && challengeModifier != 3){
     nreset.disabled = false;
   } else {
     nreset.disabled = true;
@@ -1046,7 +1148,7 @@ function checkNonillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingNonillionth(){
-  if (number.gte(npthreshold) && challengeModifier != 3){
+  if (decimalNumber.gte(npthreshold) && challengeModifier != 3){
     if (challengeModifier == 1){
       npthreshold = npthreshold.mul(npscaling.pow(new Decimal(2)));
     } else {
@@ -1054,13 +1156,13 @@ function checkPendingNonillionth(){
     }
     
     npbase = npbase.add(new Decimal(1));
-  } else if (number.lt(npthreshold.div(npscaling)) && number.gte(new Decimal(1000)) && challengeModifier != 1){ //If you're broke then you can't get NP HAHA
+  } else if (decimalNumber.lt(npthreshold.div(npscaling)) && decimalNumber.gte(new Decimal(1000)) && challengeModifier != 1){ //If you're broke then you can't get NP HAHA
     npbase = npbase.sub(new Decimal(1));
     npthreshold = npthreshold.div(npscaling);
-  } else if (number.lt(npthreshold.div(npscaling.pow(new Decimal(2)))) && number.gte(new Decimal(1000)) && challengeModifier == 1){ //If you're broke then you can't get NP HAHA (challenge 1 version)
+  } else if (decimalNumber.lt(npthreshold.div(npscaling.pow(new Decimal(2)))) && decimalNumber.gte(new Decimal(1000)) && challengeModifier == 1){ //If you're broke then you can't get NP HAHA (challenge 1 version)
     npbase = npbase.sub(new Decimal(1));
     npthreshold = npthreshold.div(npscaling.pow(new Decimal(2)));
-  } else if (number.lt(new Decimal(1000))){
+  } else if (decimalNumber.lt(new Decimal(1000))){
     npbase = new Decimal(0);
     npthreshold = new Decimal(1000);
   }
@@ -1236,7 +1338,7 @@ oct_challenge_tab_button.addEventListener("click", function(){
 //=========================================================================
 //RESET DETECTION
 function checkOctillionthReset(){
-  if (number.gte(new Decimal.pow(10, 6))) {
+  if (decimalNumber.gte(new Decimal.pow(10, 6))) {
     oreset.disabled = false;
   } else {
     oreset.disabled = true;
@@ -1246,7 +1348,7 @@ function checkOctillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingOctillionth(){ 
-  if (number.gte(opthreshold)){ //Check if number meets the NEW requirement for pending OP
+  if (decimalNumber.gte(opthreshold)){ //Check if decimalNumber meets the NEW requirement for pending OP
     if (challengeModifier == 1){
       opthreshold = opthreshold.mul(opscaling.pow(new Decimal(2)));
     } else {
@@ -1254,13 +1356,13 @@ function checkPendingOctillionth(){
     }
     opbase = opbase.add(new Decimal(1));
     checkPendingOctillionth();
-  } else if (number.lt(opthreshold.div(opscaling)) && number.gte(new Decimal(1000000)) && challengeModifier != 1){ //If you're broke then you can't get OP HAHA
+  } else if (decimalNumber.lt(opthreshold.div(opscaling)) && decimalNumber.gte(new Decimal(1000000)) && challengeModifier != 1){ //If you're broke then you can't get OP HAHA
     opbase = opbase.sub(new Decimal(1));
     opthreshold = opthreshold.div(opscaling);
-  } else if (number.lt(opthreshold.div(opscaling.pow(new Decimal(2)))) && number.gte(new Decimal(1000000)) && challengeModifier == 1){ //If you're broke then you can't get OP HAHA (challenge 1 version)
+  } else if (decimalNumber.lt(opthreshold.div(opscaling.pow(new Decimal(2)))) && decimalNumber.gte(new Decimal(1000000)) && challengeModifier == 1){ //If you're broke then you can't get OP HAHA (challenge 1 version)
     opbase = opbase.sub(new Decimal(1));
     opthreshold = opthreshold.div(opscaling.pow(new Decimal(2)));
-  } else if (number.lt(new Decimal(1000000))){
+  } else if (decimalNumber.lt(new Decimal(1000000))){
     opbase = new Decimal(0);
     opthreshold = new Decimal(1000000);
   }
@@ -1330,28 +1432,28 @@ chal4.addEventListener("click", function(){
 //=========================================================================
 //CHALLENGE GOAL CHECKING
 function chal1GoalChecking(){
-  if (number.gte(chal1goal) && challengeModifier == 1 && chal1completions.lt(new Decimal(100))){
+  if (decimalNumber.gte(chal1goal) && challengeModifier == 1 && chal1completions.lt(new Decimal(100))){
     chal1goal = chal1goal.pow(chal1scaling);
     chal1completions = chal1completions.add(new Decimal(1));
   }
 }
 
 function chal2GoalChecking(){
-  if (number.gte(chal2goal) && challengeModifier == 2 && chal2completions.lt(new Decimal(100))){
+  if (decimalNumber.gte(chal2goal) && challengeModifier == 2 && chal2completions.lt(new Decimal(100))){
     chal2goal = chal2goal.mul(chal2scaling);
     chal2completions = chal2completions.add(new Decimal(1));
   }
 }
 
 function chal3GoalChecking(){
-  if (number.gte(chal3goal) && challengeModifier == 3 && chal3completions.lt(new Decimal(100))){
+  if (decimalNumber.gte(chal3goal) && challengeModifier == 3 && chal3completions.lt(new Decimal(100))){
     chal3goal = chal3goal.mul(chal3scaling);
     chal3completions = chal3completions.add(new Decimal(1));
   }
 }
 
 function chal4GoalChecking(){
-  if (number.gte(chal4goal) && challengeModifier == 4 && chal4completions.lt(new Decimal(100))){
+  if (decimalNumber.gte(chal4goal) && challengeModifier == 4 && chal4completions.lt(new Decimal(100))){
     chal4goal = chal4goal.mul(chal4scaling);
     chal4completions = chal4completions.add(new Decimal(1));
   }
@@ -1379,13 +1481,65 @@ function checkCCM(){
     ccm3unlocked = true;
   }
 
-  if (ccm3unlocked){
+  if (ccm3unlocked || main_septillionth_tab_button.style.display == "inline-block"){
     if (main_septillionth_tab_button.classList.contains("sep-light")){
       septillionth_tab.style.display = "block";
     }
     main_septillionth_tab_button.style.display = "inline-block";
   }
 }
+
+//=========================================================================
+
+//   ========   ========  ========
+//  ==          ==        ==     ==
+//  ==          ==        ==     ==
+//   ========   ========  ========
+//          ==  ==        ==
+//          ==  ==        ==
+//   ========   ========  ==
+
+//=========================================================================
+
+//=========================================================================
+//RESET DETECTION
+function checkSeptillionthReset(){
+  if (decimalNumber.gte(new Decimal.pow(10, 9))) {
+    spreset.disabled = false;
+  } else {
+    spreset.disabled = true;
+  }
+}
+
+//=========================================================================
+//PENDING
+function checkPendingSeptillionth(){ 
+
+  if (decimalNumber.gte(spthreshold)){
+    spbase = spbase.add(new Decimal(1));
+    checkPendingSeptillionth();
+
+  } else if (decimalNumber.lt(spthreshold.div(spscaling)) && decimalNumber.gte(new Decimal.pow(10, 9))){
+
+    spbase = spbase.sub(new Decimal(1));
+    spthreshold = spthreshold.div(spscaling);
+
+  } else if (decimalNumber.lt(new Decimal.pow(10, 9))){
+
+    spbase = new Decimal(0);
+    spthreshold = new Decimal.pow(10, 9);
+
+  }
+
+  sppending = new Decimal(spbase);
+}
+
+//=========================================================================
+//RESET CLICK
+spreset.addEventListener("click", function(){
+  septillionthResetInitiate();
+  septillionth_unlocked = true;
+});
 
 //=========================================================================
 
@@ -1412,7 +1566,7 @@ function saveGame() {
     sliderPos: sliderPos.toString(),
     challengeModifier: challengeModifier.toString(),
 
-    number: number.toString(),
+    decimalNumber: decimalNumber.toString(),
     numberGain: numberGain.toString(),
 
     du1boost: du1boost.toString(),
@@ -1473,7 +1627,7 @@ function loadGame() {
   numberDisplay.style.fontSize = sliderPos + "px";
   challengeModifier = Number(data.challengeModifier);
 
-  number = new Decimal(data.number);
+  decimalNumber = new Decimal(data.decimalNumber);
   numberGain = new Decimal(data.numberGain);
 
   du1boost = new Decimal(data.du1boost);
@@ -1555,7 +1709,7 @@ function backgroundColorChange() {
 
 window.addEventListener("keydown", function(event) {
   if (event.key === "J"){
-    number = number.mul(new Decimal(1000));
+    decimalNumber = decimalNumber.mul(new Decimal(1000));
     updateScreen();
   }
 });
