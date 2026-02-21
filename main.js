@@ -188,27 +188,27 @@ var au456boost = new Decimal(1);
 
 var au1amt = new Decimal(0);
 var au1cost = new Decimal(10);
-var au1scaling = new Decimal(1.5);
+var au1scaling = new Decimal(1.25);
 
 var au2amt = new Decimal(0);
-var au2cost = new Decimal(100);
-var au2scaling = new Decimal(2);
+var au2cost = new Decimal(50);
+var au2scaling = new Decimal(1.8);
 
 var au3amt = new Decimal(0);
-var au3cost = new Decimal(1000);
-var au3scaling = new Decimal(3);
+var au3cost = new Decimal(300);
+var au3scaling = new Decimal(2.5);
 
 var au4amt = new Decimal(0);
-var au4cost = new Decimal(50000);
-var au4scaling = new Decimal(5);
+var au4cost = new Decimal(10000);
+var au4scaling = new Decimal(4);
 
 var au5amt = new Decimal(0);
 var au5cost = new Decimal.pow(10, 6);
-var au5scaling = new Decimal(15);
+var au5scaling = new Decimal(7.5);
 
 var au6amt = new Decimal(0);
 var au6cost = new Decimal.pow(10, 10);
-var au6scaling = new Decimal(100);
+var au6scaling = new Decimal(15);
 
 //=========================================================================
 //NON MAGIC CONSTS
