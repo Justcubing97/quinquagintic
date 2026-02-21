@@ -181,8 +181,34 @@ var septillionthPoints = new Decimal(0);
 var atoms = new Decimal(0);
 var atomGain = new Decimal(0);
 
+var atomsBoost = new Decimal(1);
+
 var au123boost = new Decimal(0);
 var au456boost = new Decimal(1);
+
+var au1amt = new Decimal(0);
+var au1cost = new Decimal(10);
+var au1scaling = new Decimal(1.5);
+
+var au2amt = new Decimal(0);
+var au2cost = new Decimal(100);
+var au2scaling = new Decimal(2);
+
+var au3amt = new Decimal(0);
+var au3cost = new Decimal(1000);
+var au3scaling = new Decimal(3);
+
+var au4amt = new Decimal(0);
+var au4cost = new Decimal(50000);
+var au4scaling = new Decimal(5);
+
+var au5amt = new Decimal(0);
+var au5cost = new Decimal.pow(10, 6);
+var au5scaling = new Decimal(15);
+
+var au6amt = new Decimal(0);
+var au6cost = new Decimal.pow(10, 10);
+var au6scaling = new Decimal(100);
 
 //=========================================================================
 //NON MAGIC CONSTS
@@ -258,6 +284,7 @@ const topNumber = document.getElementById("top-number");
 const topNP = document.getElementById("top-np");
 const topOP = document.getElementById("top-op");
 const topSP = document.getElementById("top-sp");
+const topAtoms = document.getElementById("top-atoms");
 
 //=========================================================================
 //BOTTOM
@@ -382,6 +409,7 @@ const septillionth_main_section = document.getElementById("septillionth-main-sec
 spreset.disabled = true;
 
 const atoms_display = document.getElementById("atoms-display");
+const atoms_boost_display = document.getElementById("atoms-boost-display");
 
 const au1 = document.getElementById("au1");
 const au1_id_amt = document.getElementById("au1-id-amt");
@@ -735,6 +763,10 @@ function calculateGain(){
     numberGain = numberGain.mul(challengeCompletions.div(new Decimal(4)).add(new Decimal(1)));
   }
 
+  if (!atoms.eq(new Decimal(0))){
+    numberGain = numberGain.mul(atomsBoost);
+  }
+
   //SOFTCAPS
   if (minicap.neq(new Decimal(1))){
     numberGain = numberGain.div(minicap);
@@ -752,12 +784,15 @@ function calculateGain(){
   //=========================================================================
   //ATOMS
   if (septillionth_unlocked){
-    atomGain = new Decimal(1);
-
+    atomGain = septillionthPoints;
     atomGain = atomGain.add(au123boost);
+    atomGain = atomGain.pow(new Decimal(2));
     atomGain = atomGain.mul(au456boost);
 
+    atomsBoost = new Decimal(1);
+
     atoms = atoms.add(atomGain.div(new Decimal(20)));
+    atomsBoost = atomsBoost.add(atoms.log10());
   }
 }
 
@@ -836,7 +871,11 @@ function calculateBoostsStrings(){
   if (ccm2unlocked){
     boostsString += "CCM2: x" + challengeCompletions.div(new Decimal(4)).add(new Decimal(1)) + ", ";
   }
-  
+
+  if (!atoms.eq(new Decimal(0))){
+    boostsString += "Atoms: x" + atomsBoost.toExponential(3) + ", ";
+  }
+
   //=========================================================================
   //NONILLIONTHS
   nonBoostsString = "Boosts: ";
@@ -910,6 +949,12 @@ function updateScreen(){
     topSP.textContent = "SP: " + septillionthPoints.toExponential(3) + " (+" + sppending.toExponential(3) + ")";
   } else {
     topSP.textContent = "";
+  }
+
+  if (atoms.gt(new Decimal(0))){
+    topAtoms.textContent = "A: " + atoms.toExponential(3) + " (+" + atomGain.toExponential(3) + "/s)";
+  } else {
+    topAtoms.textContent = "";
   }
   
   //=========================================================================
@@ -1043,6 +1088,25 @@ function updateScreen(){
   sepBoostsDisplay.textContent = sepBoostsString;
 
   atoms_display.textContent = "You have " + atoms.toExponential(3) + " atoms (A). (" + atomGain.toExponential(3) + " A/s)";
+  atoms_boost_display.textContent = "Boost to N: " + atomsBoost.toExponential(3);
+
+  au1_id_amt.textContent = "ID: AU1 || x" + au1amt;
+  au1_cost_scale.textContent = "Cost: " + au1cost.toExponential(3) + " A || Scaling: x" + au1scaling;
+
+  au2_id_amt.textContent = "ID: AU2 || x" + au2amt;
+  au2_cost_scale.textContent = "Cost: " + au2cost.toExponential(3) + " A || Scaling: x" + au2scaling;
+
+  au3_id_amt.textContent = "ID: AU3 || x" + au3amt;
+  au3_cost_scale.textContent = "Cost: " + au3cost.toExponential(3) + " A || Scaling: x" + au3scaling;
+
+  au4_id_amt.textContent = "ID: AU4 || x" + au4amt;
+  au4_cost_scale.textContent = "Cost: " + au4cost.toExponential(3) + " A || Scaling: x" + au4scaling;
+
+  au5_id_amt.textContent = "ID: AU5 || x" + au5amt;
+  au5_cost_scale.textContent = "Cost: " + au5cost.toExponential(3) + " A || Scaling: x" + au5scaling;
+
+  au6_id_amt.textContent = "ID: AU6 || x" + au6amt;
+  au6_cost_scale.textContent = "Cost: " + au6cost.toExponential(3) + " A || Scaling: x" + au6scaling;
 }
 
 //=========================================================================
@@ -1276,6 +1340,17 @@ nreset.addEventListener("click", function(){
   octillionth_tab.style.display = "block";
 });
 
+topNP.addEventListener("click", function(){
+  if (nreset.disabled == false){
+    nonillionthResetInitiate();
+    nonillionth_grid.style.display = "grid";
+    nonillionth_grid.classList.remove("hidden");
+    main_nonillionth_tab_button.style.display = "inline-block";
+    nonillionth_unlocked = true;
+    octillionth_tab.style.display = "block";
+  }
+});
+
 //=========================================================================
 //AFFORD DETECTION
 function nonillionthUpgrades(){
@@ -1478,6 +1553,15 @@ oreset.addEventListener("click", function(){
   octillionth_unlocked = true;
 });
 
+topOP.addEventListener("click", function(){
+  if (oreset.disabled == false){
+    octillionthResetInitiate();
+    octillionth_main_section.style.display = "grid";
+    main_octillionth_tab_button.style.display = "inline-block";
+    octillionth_unlocked = true;
+  }
+});
+
 //=========================================================================
 //CHALLENGE ACTIVATION
 chal1.addEventListener("click", function(){
@@ -1558,18 +1642,30 @@ function checkCCM(){
     ccm1.classList.add("oct-light");
     ccm1.classList.remove("oct-dark");
     ccm1unlocked = true;
+  } else {
+    ccm1.classList.add("oct-dark");
+    ccm1.classList.remove("oct-light");
+    ccm1unlocked = false;
   }
 
   if (challengeCompletions.gte(new Decimal(10))){
     ccm2.classList.add("oct-light");
     ccm2.classList.remove("oct-dark");
     ccm2unlocked = true;
+  } else {
+    ccm2.classList.add("oct-dark");
+    ccm2.classList.remove("oct-light");
+    ccm2unlocked = false;
   }
 
   if (challengeCompletions.gte(new Decimal(20))){
     ccm3.classList.add("oct-light");
     ccm3.classList.remove("oct-dark");
     ccm3unlocked = true;
+  } else {
+    ccm3.classList.add("oct-dark");
+    ccm3.classList.remove("oct-light");
+    ccm3unlocked = false;
   }
 
   if (ccm3unlocked || main_septillionth_tab_button.style.display == "inline-block"){
@@ -1658,15 +1754,152 @@ spreset.addEventListener("click", function(){
   septillionth_main_section.style.display = "grid";
 });
 
+topSP.addEventListener("click", function(){
+  if (spreset.disabled == false){
+    septillionthResetInitiate();
+    septillionth_unlocked = true;
+    septillionth_main_section.style.display = "grid";
+  } 
+});
+
 //=========================================================================
 //IS ATOM UPGRADE AFFORDABLE
 function checkAU(){
-  if (decimalNumber.gte(new Decimal(1000)) && challengeModifier != 3){
-    nreset.disabled = false;
+  if (atoms.gte(new Decimal(au1cost))){
+    au1.disabled = false;
+    if (au1.classList.contains("sep-dark")){
+      au1.classList.remove("sep-dark");
+      au1.classList.add("sep-light");
+    }
   } else {
-    nreset.disabled = true;
+    au1.disabled = true;
+    if (au1.classList.contains("sep-light")){
+      au1.classList.remove("sep-light");
+      au1.classList.add("sep-dark");
+    }
+  }
+  
+  if (atoms.gte(new Decimal(au2cost))){
+    au2.disabled = false;
+    if (au2.classList.contains("sep-dark")){
+      au2.classList.remove("sep-dark");
+      au2.classList.add("sep-light");
+    }
+  } else {
+    au2.disabled = true;
+    if (au2.classList.contains("sep-light")){
+      au2.classList.remove("sep-light");
+      au2.classList.add("sep-dark");
+    }
+  }
+  
+  if (atoms.gte(new Decimal(au3cost))){
+    au3.disabled = false;
+    if (au3.classList.contains("sep-dark")){
+      au3.classList.remove("sep-dark");
+      au3.classList.add("sep-light");
+    }
+  } else {
+    au3.disabled = true;
+    if (au3.classList.contains("sep-light")){
+      au3.classList.remove("sep-light");
+      au3.classList.add("sep-dark");
+    }
+  }
+  
+  if (atoms.gte(new Decimal(au4cost))){
+    au4.disabled = false;
+    if (au4.classList.contains("sep-dark")){
+      au4.classList.remove("sep-dark");
+      au4.classList.add("sep-light");
+    }
+  } else {
+    au4.disabled = true;
+    if (au4.classList.contains("sep-light")){
+      au4.classList.remove("sep-light");
+      au4.classList.add("sep-dark");
+    }
+  }
+  
+  if (atoms.gte(new Decimal(au5cost))){
+    au5.disabled = false;
+    if (au5.classList.contains("sep-dark")){
+      au5.classList.remove("sep-dark");
+      au5.classList.add("sep-light");
+    }
+  } else {
+    au5.disabled = true;
+    if (au5.classList.contains("sep-light")){
+      au5.classList.remove("sep-light");
+      au5.classList.add("sep-dark");
+    }
+  }
+  
+  if (atoms.gte(new Decimal(au6cost))){
+    au6.disabled = false;
+    if (au6.classList.contains("sep-dark")){
+      au6.classList.remove("sep-dark");
+      au6.classList.add("sep-light");
+    }
+  } else {
+    au6.disabled = true;
+    if (au6.classList.contains("sep-light")){
+      au6.classList.remove("sep-light");
+      au6.classList.add("sep-dark");
+    }
   }
 }
+
+//=========================================================================
+//ATOM UPGRADE CLICKS
+
+au1.addEventListener("click", function(){
+  atoms = atoms.sub(au1cost);
+  au1amt = au1amt.add(new Decimal(1));
+  
+  au1cost = au1cost.mul(au1scaling);
+  au123boost = au123boost.add(new Decimal(0.5));
+});
+
+au2.addEventListener("click", function(){
+  atoms = atoms.sub(au2cost);
+  au2amt = au2amt.add(new Decimal(1));
+  
+  au2cost = au2cost.mul(au2scaling);
+  au123boost = au123boost.add(new Decimal(2));
+});
+
+au3.addEventListener("click", function(){
+  atoms = atoms.sub(au3cost);
+  au3amt = au3amt.add(new Decimal(1));
+  
+  au3cost = au3cost.mul(au3scaling);
+  au123boost = au123boost.add(new Decimal(5));
+});
+
+au4.addEventListener("click", function(){
+  atoms = atoms.sub(au4cost);
+  au4amt = au4amt.add(new Decimal(1));
+  
+  au4cost = au4cost.mul(au4scaling);
+  au456boost = au456boost.add(new Decimal(2));
+});
+
+au5.addEventListener("click", function(){
+  atoms = atoms.sub(au5cost);
+  au5amt = au5amt.add(new Decimal(1));
+  
+  au5cost = au5cost.mul(au5scaling);
+  au456boost = au456boost.add(new Decimal(10));
+});
+
+au6.addEventListener("click", function(){
+  atoms = atoms.sub(au6cost);
+  au6amt = au6amt.add(new Decimal(1));
+  
+  au6cost = au6cost.mul(au6scaling);
+  au456boost = au456boost.add(new Decimal(50));
+});
 
 //=========================================================================
 
@@ -1744,6 +1977,27 @@ function saveGame() {
     spthreshold: spthreshold.toString(),
     sep_reset_boost_check: sep_reset_boost_check.toString(),
     septillionth_unlocked: septillionth_unlocked.toString(),
+
+    au123boost: au123boost.toString(),
+    au456boost: au456boost.toString(),
+
+    au1amt: au1amt.toString(),
+    au1cost: au1cost.toString(),
+
+    au2amt: au2amt.toString(),
+    au2cost: au2cost.toString(),
+
+    au3amt: au3amt.toString(),
+    au3cost: au3cost.toString(),
+
+    au4amt: au4amt.toString(),
+    au4cost: au4cost.toString(),
+
+    au5amt: au5amt.toString(),
+    au5cost: au5cost.toString(),
+
+    au6amt: au6amt.toString(),
+    au6cost: au6cost.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -1811,6 +2065,27 @@ function loadGame() {
   spthreshold = new Decimal(data.spthreshold);
   sep_reset_boost_check = data.sep_reset_boost_check === 'true';
   septillionth_unlocked = data.septillionth_unlocked === 'true';
+
+  au123boost = new Decimal(data.au123boost);
+  au456boost = new Decimal(data.au456boost);
+
+  au1amt = new Decimal(data.au1amt);
+  au1cost = new Decimal(data.au1cost);
+
+  au2amt = new Decimal(data.au2amt);
+  au2cost = new Decimal(data.au2cost);
+
+  au3amt = new Decimal(data.au3amt);
+  au3cost = new Decimal(data.au3cost);
+
+  au4amt = new Decimal(data.au4amt);
+  au4cost = new Decimal(data.au4cost);
+
+  au5amt = new Decimal(data.au5amt);
+  au5cost = new Decimal(data.au5cost);
+
+  au6amt = new Decimal(data.au6amt);
+  au6cost = new Decimal(data.au6cost);
 
   if (nonillionth_unlocked){
     nonillionth_grid.style.display = "grid";
