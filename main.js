@@ -861,7 +861,7 @@ function calculateBoostsStrings(){
   if (challengeModifier == 4 && octillionthPoints.gte(new Decimal(1))){
     boostsString += "OP: NULLIFIED IN C4, ";
   } else if (octillionthPoints.gte(new Decimal(1))){
-    boostsString += "OP: x" + octillionthPoints.add(new Decimal(1)) + "+" + chal1completions.div(new Decimal(2)) + ", ";
+    boostsString += "OP: x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + "+" + chal1completions.div(new Decimal(2)).toExponential(3) + ", ";
   }
 
   if (chal4completions.gte(new Decimal(1))){
