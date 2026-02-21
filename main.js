@@ -96,6 +96,7 @@ var numberStringFinal = "";
 var boostsString = "";
 var nonBoostsString = "";
 var octBoostsString = "";
+var sepBoostsString = "";
 
 var challengeModifier = 0;
 
@@ -177,6 +178,12 @@ var spbase = new Decimal(0);
 
 var septillionthPoints = new Decimal(0);
 
+var atoms = new Decimal(0);
+var atomGain = new Decimal(0);
+
+var au123boost = new Decimal(0);
+var au456boost = new Decimal(1);
+
 //=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
@@ -239,6 +246,11 @@ const oct_infobox_tab = document.getElementById("oct-infobox-tab");
 const oct_challenge_tab = document.getElementById("oct-challenge-tab");
 const oct_infobox_tab_button = document.getElementById("oct-infobox-tab-button");
 const oct_challenge_tab_button = document.getElementById("oct-challenge-tab-button");
+
+const sep_infobox_tab = document.getElementById("sep-infobox-tab");
+const septillionthGrid = document.getElementById("septillionth-grid");
+const sep_infobox_tab_button = document.getElementById("sep-infobox-tab-button");
+const sep_atom_tab_button = document.getElementById("sep-atom-tab-button");
 
 //=========================================================================
 //TOP
@@ -366,7 +378,40 @@ const spreset = document.getElementById("spreset");
 const sp_point_pending = document.getElementById("sp-point-pending");
 const sp_next_point = document.getElementById("sp-next-point");
 const sepBoostsDisplay = document.getElementById("sepBoostsDisplay");
+const septillionth_main_section = document.getElementById("septillionth-main-section");
 spreset.disabled = true;
+
+const atoms_display = document.getElementById("atoms-display");
+
+const au1 = document.getElementById("au1");
+const au1_id_amt = document.getElementById("au1-id-amt");
+const au1_cost_scale = document.getElementById("au1-cost-scale");
+au1.disabled = true;
+
+const au2 = document.getElementById("au2");
+const au2_id_amt = document.getElementById("au2-id-amt");
+const au2_cost_scale = document.getElementById("au2-cost-scale");
+au2.disabled = true;
+
+const au3 = document.getElementById("au3");
+const au3_id_amt = document.getElementById("au3-id-amt");
+const au3_cost_scale = document.getElementById("au3-cost-scale");
+au3.disabled = true;
+
+const au4 = document.getElementById("au4");
+const au4_id_amt = document.getElementById("au4-id-amt");
+const au4_cost_scale = document.getElementById("au4-cost-scale");
+au4.disabled = true;
+
+const au5 = document.getElementById("au5");
+const au5_id_amt = document.getElementById("au5-id-amt");
+const au5_cost_scale = document.getElementById("au5-cost-scale");
+au5.disabled = true;
+
+const au6 = document.getElementById("au6");
+const au6_id_amt = document.getElementById("au6-id-amt");
+const au6_cost_scale = document.getElementById("au6-cost-scale");
+au6.disabled = true;
 
 //=========================================================================
 
@@ -454,6 +499,7 @@ function septillionthResetInitiate(){
   spbase = new Decimal(0);
   sep_reset_boost_check = true;
 
+  oct_reset_boost_check = false;
   opscaling = new Decimal(3);
   opthreshold = new Decimal.pow(10, 6);
   oppending = new Decimal(0);
@@ -553,6 +599,10 @@ setInterval(function(){
   chal3GoalChecking();
   chal4GoalChecking();
   checkCCM();
+
+  checkSeptillionthReset();
+  checkPendingSeptillionth();
+  checkAU();
 
   automation();
 }, 50);
@@ -698,6 +748,17 @@ function calculateGain(){
   if (challengeModifier == 2){
     numberGain = numberGain.pow(new Decimal(1).div(decimalNumber.pow(new Decimal(0.06))));
   }
+
+  //=========================================================================
+  //ATOMS
+  if (septillionth_unlocked){
+    atomGain = new Decimal(1);
+
+    atomGain = atomGain.add(au123boost);
+    atomGain = atomGain.mul(au456boost);
+
+    atoms = atoms.add(atomGain.div(new Decimal(20)));
+  }
 }
 
 function updateCurrencies(){
@@ -791,6 +852,10 @@ function calculateBoostsStrings(){
     nonBoostsString += "C3: x" + chal3completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
   }
 
+  if (sep_reset_boost_check){
+    nonBoostsString += "Septillionth: x2, ";
+  }
+
   //=========================================================================
   //OCTILLIONTHS
   octBoostsString = "Boosts: ";
@@ -802,6 +867,14 @@ function calculateBoostsStrings(){
   if (ccm1unlocked){
     octBoostsString += "CCM1: x" + challengeCompletions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
   }
+
+  if (sep_reset_boost_check){
+    octBoostsString += "Septillionth: x2, ";
+  }
+
+  //=========================================================================
+  //SEPTILLIONTHS
+  sepBoostsString = "Boosts: ";
 }
 
 //=========================================================================
@@ -960,6 +1033,16 @@ function updateScreen(){
   } else {
     chal4_title.textContent = "Challenge IV";
   }
+
+  //=========================================================================
+  //SEPTILLIONTHS
+  sp_point_pending.textContent = "+" + sppending.toExponential(3) + " SP";
+  
+  sp_next_point.textContent = "(next SP at " + spthreshold.div(decillionthDivision).toExponential(3) + " N)";
+
+  sepBoostsDisplay.textContent = sepBoostsString;
+
+  atoms_display.textContent = "You have " + atoms.toExponential(3) + " atoms (A). (" + atomGain.toExponential(3) + " A/s)";
 }
 
 //=========================================================================
@@ -1176,6 +1259,10 @@ function checkPendingNonillionth(){
   if (chal3completions.gte(new Decimal(1))){
     nppending = nppending.mul(chal3completions.div(new Decimal(2)).add(new Decimal(1)));
   }
+
+  if (sep_reset_boost_check){
+    nppending = nppending.mul(new Decimal(2));
+  }
 }
 
 //=========================================================================
@@ -1376,6 +1463,10 @@ function checkPendingOctillionth(){
   if (ccm1unlocked){
     oppending = oppending.mul(challengeCompletions.div(new Decimal(2)).add(new Decimal(1)));
   }
+
+  if (sep_reset_boost_check){
+    oppending = oppending.mul(new Decimal(2));
+  }
 }
 
 //=========================================================================
@@ -1502,6 +1593,30 @@ function checkCCM(){
 //=========================================================================
 
 //=========================================================================
+//TABS
+sep_infobox_tab_button.addEventListener("click", function(){
+  septillionthGrid.style.display = "none";
+  sep_infobox_tab.style.display = "block";
+  
+  sep_atom_tab_button.classList.add("sep-dark")
+  sep_atom_tab_button.classList.remove("sep-light");
+  
+  sep_infobox_tab_button.classList.add("sep-light");
+  sep_infobox_tab_button.classList.remove("sep-dark");
+});
+
+sep_atom_tab_button.addEventListener("click", function(){
+  sep_infobox_tab.style.display = "none";
+  septillionthGrid.style.display = "grid";
+  
+  sep_infobox_tab_button.classList.add("sep-dark")
+  sep_infobox_tab_button.classList.remove("sep-light");
+  
+  sep_atom_tab_button.classList.add("sep-light");
+  sep_atom_tab_button.classList.remove("sep-dark"); 
+});
+
+//=========================================================================
 //RESET DETECTION
 function checkSeptillionthReset(){
   if (decimalNumber.gte(new Decimal.pow(10, 9))) {
@@ -1517,6 +1632,7 @@ function checkPendingSeptillionth(){
 
   if (decimalNumber.gte(spthreshold)){
     spbase = spbase.add(new Decimal(1));
+    spthreshold = spthreshold.mul(spscaling);
     checkPendingSeptillionth();
 
   } else if (decimalNumber.lt(spthreshold.div(spscaling)) && decimalNumber.gte(new Decimal.pow(10, 9))){
@@ -1539,7 +1655,18 @@ function checkPendingSeptillionth(){
 spreset.addEventListener("click", function(){
   septillionthResetInitiate();
   septillionth_unlocked = true;
+  septillionth_main_section.style.display = "grid";
 });
+
+//=========================================================================
+//IS ATOM UPGRADE AFFORDABLE
+function checkAU(){
+  if (decimalNumber.gte(new Decimal(1000)) && challengeModifier != 3){
+    nreset.disabled = false;
+  } else {
+    nreset.disabled = true;
+  }
+}
 
 //=========================================================================
 
@@ -1611,6 +1738,12 @@ function saveGame() {
 
     chal4completions: chal4completions.toString(),
     chal4goal: chal4goal.toString(),
+
+    septillionthPoints: septillionthPoints.toString(),
+    spbase: spbase.toString(),
+    spthreshold: spthreshold.toString(),
+    sep_reset_boost_check: sep_reset_boost_check.toString(),
+    septillionth_unlocked: septillionth_unlocked.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -1673,6 +1806,12 @@ function loadGame() {
   chal4completions = new Decimal(data.chal4completions);
   chal4goal = new Decimal(data.chal4goal);
 
+  septillionthPoints = new Decimal(data.septillionthPoints);
+  spbase = new Decimal(data.spbase);
+  spthreshold = new Decimal(data.spthreshold);
+  sep_reset_boost_check = data.sep_reset_boost_check === 'true';
+  septillionth_unlocked = data.septillionth_unlocked === 'true';
+
   if (nonillionth_unlocked){
     nonillionth_grid.style.display = "grid";
     main_nonillionth_tab_button.style.display = "inline-block";
@@ -1681,6 +1820,11 @@ function loadGame() {
     octillionth_tab.style.display = "block";
     octillionth_main_section.style.display = "grid";
     main_octillionth_tab_button.style.display = "inline-block";
+  }
+  if (septillionth_unlocked){
+    septillionth_tab.style.display = "block";
+    septillionth_main_section.style.display = "grid";
+    main_septillionth_tab_button.style.display = "inline-block";
   }
 }
 
@@ -1709,7 +1853,12 @@ function backgroundColorChange() {
 
 window.addEventListener("keydown", function(event) {
   if (event.key === "J"){
-    decimalNumber = decimalNumber.mul(new Decimal(1000));
+    decimalNumber = decimalNumber.mul(new Decimal(1000)); //Skip to Octillionth.
+    updateScreen();
+  }
+  if (event.key === "L"){
+    chal3completions = chal3completions.add(new Decimal(20));
+    decimalNumber = decimalNumber.mul(new Decimal.pow(10, 9)); //Skip to Septillionth.
     updateScreen();
   }
 });

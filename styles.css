@@ -419,7 +419,11 @@ p.individ-softcaps {
   padding: 10px 200px;
 }
 
-.standard-infobox {
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+
+.standard-infobox-octillionth {
   outline: 4px solid #ffa45a;
   width: 1500px;
   background-color: #8b5a32;
@@ -430,7 +434,7 @@ p.individ-softcaps {
   margin: 20px auto 0;
 }
 
-.standard-infobox-header {
+.standard-infobox-header-octillionth {
   background-color: #df843a;
   color: #000000;
   padding: 8px 12px;
@@ -440,10 +444,37 @@ p.individ-softcaps {
   border-bottom: 4px solid #ffa45a;
 }
 
+/* ==================================================================================================== */
+
+.standard-infobox-septillionth {
+  outline: 4px solid #c880ff;
+  width: 1500px;
+  background-color: #8840c0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 30px;
+  overflow: hidden;
+  z-index: 999;
+  margin: 20px auto 0;
+}
+
+.standard-infobox-header-septillionth {
+  background-color: #a860e0;
+  color: #000000;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 4px solid #c880ff;
+}
+
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+
 .standard-infobox-content {
   padding: 10px 12px;
   color: #ffffff;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 .top-bar {
@@ -465,10 +496,14 @@ p.individ-softcaps {
   z-index: 1000;
 }
 
+/* ==================================================================================================== */
+
 body {
   margin-top: 20px;
   padding-bottom: 100px;
 }
+
+/* ==================================================================================================== */
 
 .because-html-doesnt-do-js-newlines {
   white-space: pre-line;
