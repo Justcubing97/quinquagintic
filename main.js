@@ -2095,11 +2095,21 @@ function loadGame() {
     octillionth_tab.style.display = "block";
     octillionth_main_section.style.display = "grid";
     main_octillionth_tab_button.style.display = "inline-block";
+
+    nonillionth_grid.style.display = "grid";
+    main_nonillionth_tab_button.style.display = "inline-block";
   }
   if (septillionth_unlocked){
     septillionth_tab.style.display = "block";
     septillionth_main_section.style.display = "grid";
     main_septillionth_tab_button.style.display = "inline-block";
+
+    octillionth_tab.style.display = "block";
+    octillionth_main_section.style.display = "grid";
+    main_octillionth_tab_button.style.display = "inline-block";
+
+    nonillionth_grid.style.display = "grid";
+    main_nonillionth_tab_button.style.display = "inline-block";
   }
 }
 
