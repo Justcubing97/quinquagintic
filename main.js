@@ -784,7 +784,7 @@ function calculateGain(){
   //=========================================================================
   //ATOMS
   if (septillionth_unlocked){
-    atomGain = septillionthPoints;
+    atomGain = septillionthPoints.mul(new Decimal(3));
     atomGain = atomGain.add(au123boost);
     atomGain = atomGain.pow(new Decimal(2));
     atomGain = atomGain.mul(au456boost);
