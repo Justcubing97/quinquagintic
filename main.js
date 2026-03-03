@@ -45,7 +45,7 @@ var normalTickers = [
   "2000 BPM GO!",
   "Now introducing: Undecillionth Reset: Reset all progress after this, and gain +1 UDP! Also, unlock Compound Challenges! (none of this exists).",
   "I fell asleep in class.",
-  "If you're wondering why the news ticker changes speed... cool.",
+  "If you're wondering why the news ticker changes speed... cool, you're hallucinating.",
   "Why are the layers in reverse order?",
   "e^iπ + 1 = 0",
   "My friend told me to quinquagintillionth root a quinquagintic function... she wanted me to mentally implode.",
@@ -63,6 +63,14 @@ var normalTickers = [
   "If you travel back in time to kill your grandfather, are you alive or dead?",
   "Check out my 2026 Math Clock. It's in Dr. Zye's VERY Hard clock stream, maybe around the middle (I was middle of the spreadsheet when he posted).",
   "Find the integral of cos(x^2).",
+  "What's the difference between C, C+, C++, and C#?",
+  "If you have 0.999... of a cookie, do you have a whole cookie?",
+  "WHY ARE ALL OF THE RESET LAYERS BASED ON A SINGLE CURRENCY???",
+  "If you've seen the message where my friend quinquagintillionth rooted a quinquagintic... yeah, I don't know if cares about my emotional state. Maybe she does. I don't know. I never will.",
+  "If you SOMEHOW survive the final reset layer... good luck in the second Domain. You’ll need it. Especially for the 4th and 6th layers. And 7th while I'm at it. I'm insane. And no one cares.",
+  "Two people are trapped in a bedroom. There are no doors, no windows, only a standard household air conditioning vent and the basic bedroom amenities like a bed, bathroom, and bookshelf. The boy is an insane math prodigy, and the other is a psychopathic girl. The math prodigy attempts to calm her down using stunning fractal art, but she doesn't approve of it and attempts to harm the prodigy. He manages to slip away, performing some calculated movement around her and- IS THAT AN INTEGRAL AS A SWORD??? -uses an integral weapon to threaten her. The girl picks him up and throws him against the bed, stealing his integral in the process. She threatens her again, but then he says, \"STOP! I can use that integral to get us out of here!\" ...she doesn't care, so she decides to throw his integral away, and gets a 700-page AP World History textbook from the bookshelf in an attempt to hit him. The prodigy, however, calculates the time based on her perceived strength and manages to pull out a derivative- IS THAT A DERIVATIVE SHIELD??? -which blocks the book attack. Stay tuned for part 2!",
+  "Wait... if you're stuck in a bedroom with a computer or laptop running Quinquagintic... does this imply the existence of other bedrooms with other events or people or games or activities? Do these imply clones of you, where they could be in relationships or be living a happier life?",
+  "If there are 11 people and the teacher asks to pair up into twos... yeah, no, I'm being the odd one out.",
 ];
 
 var specialTickers = [
@@ -74,13 +82,16 @@ var specialTickers = [
   "If you're reading this, I'm still alive. Maybe not emotionally, oh, no. I've lost my ability to feel emotions.",
   "If you know me, then you know I’m not like most boys. Instead of recklessness and random meme mentions, I try to grasp what’s happening and stay focused, along with trying to get EVERYONE ELSE to stop saying “67.”",
   "Every time I see a couple, it makes me kinda sad. They have someone that cares about them (which is true most of the time), but I don’t. Maybe… uhh… you could probably indirectly care about me by playing this game?",
-  "…I just want a girl to hug me. The next best thing is to hold something soft in bed, but it’s not as good as what I could be getting.",
+  "...I just want a girl to hug me. The next best thing is to hold something soft in bed, but it’s not as good as what I could be getting.",
   "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. it just… feels empty....................................................................................I ate 27 orange slices.",
   "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. anyway, back to trying to solve the collatz conjecture.",
   "This group chat decided to expose everything I did... I hope my crush doesn't hate me. Or do I? *vsauce music plays*",
   "help me...",
   "atp i dont know if shes ignoring me on purpose, hope not, but hey, being single means i can work on this",
-  "Am I getting friendzoned?"
+  "Am I getting friendzoned?",
+  "touch deprivation is real and its making me crazy",
+  "I don't want to be insignificant; I just want to be loved. Is that so much to ask for? I’m not asking for a lot, just someone to care about me and hug me. I don’t even need a relationship, just a friend who cares about me. But no, that’s too much to ask for apparently BECAUSE EVERYONE HATES ME.",
+  "I'm trying not to get too intimate. I don't want to risk being exposed again. But apparently everyone knows everything about you and the slightest mistake can lead to everyone absolutely hating you. I mean, I WANT to be someone's boyfriend, but also not at the same time. Apparently, I'm in a limbo state everywhere."
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
@@ -1295,23 +1306,16 @@ function checkNonillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingNonillionth(){
-  if (decimalNumber.gte(npthreshold) && challengeModifier != 3){
+  if (decimalNumber.gte(new Decimal(1000)) && challengeModifier != 3){
     if (challengeModifier == 1){
-      npthreshold = npthreshold.mul(npscaling.pow(new Decimal(2)));
+      npbase = new Decimal(decimalNumber.div(new Decimal(1000)).logarithm(4)).add(new Decimal(1)).floor();
+      npthreshold = npbase.ceil().pow_base(new Decimal(4)).mul(new Decimal(1000));
     } else {
-      npthreshold = npthreshold.mul(npscaling);
+      npbase = new Decimal(decimalNumber.div(new Decimal(1000)).logarithm(2)).add(new Decimal(1)).floor();
+      npthreshold = npbase.ceil().pow_base(new Decimal(2)).mul(new Decimal(1000));
     }
-    
-    npbase = npbase.add(new Decimal(1));
-  } else if (decimalNumber.lt(npthreshold.div(npscaling)) && decimalNumber.gte(new Decimal(1000)) && challengeModifier != 1){ //If you're broke then you can't get NP HAHA
-    npbase = npbase.sub(new Decimal(1));
-    npthreshold = npthreshold.div(npscaling);
-  } else if (decimalNumber.lt(npthreshold.div(npscaling.pow(new Decimal(2)))) && decimalNumber.gte(new Decimal(1000)) && challengeModifier == 1){ //If you're broke then you can't get NP HAHA (challenge 1 version)
-    npbase = npbase.sub(new Decimal(1));
-    npthreshold = npthreshold.div(npscaling.pow(new Decimal(2)));
   } else if (decimalNumber.lt(new Decimal(1000))){
     npbase = new Decimal(0);
-    npthreshold = new Decimal(1000);
   }
   
   nppending = npbase.mul(nu1boost);
@@ -1510,23 +1514,11 @@ function checkOctillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingOctillionth(){ 
-  if (decimalNumber.gte(opthreshold)){ //Check if decimalNumber meets the NEW requirement for pending OP
-    if (challengeModifier == 1){
-      opthreshold = opthreshold.mul(opscaling.pow(new Decimal(2)));
-    } else {
-      opthreshold = opthreshold.mul(opscaling);
-    }
-    opbase = opbase.add(new Decimal(1));
-    checkPendingOctillionth();
-  } else if (decimalNumber.lt(opthreshold.div(opscaling)) && decimalNumber.gte(new Decimal(1000000)) && challengeModifier != 1){ //If you're broke then you can't get OP HAHA
-    opbase = opbase.sub(new Decimal(1));
-    opthreshold = opthreshold.div(opscaling);
-  } else if (decimalNumber.lt(opthreshold.div(opscaling.pow(new Decimal(2)))) && decimalNumber.gte(new Decimal(1000000)) && challengeModifier == 1){ //If you're broke then you can't get OP HAHA (challenge 1 version)
-    opbase = opbase.sub(new Decimal(1));
-    opthreshold = opthreshold.div(opscaling.pow(new Decimal(2)));
-  } else if (decimalNumber.lt(new Decimal(1000000))){
+  if (decimalNumber.gte(new Decimal.pow(10, 6))){
+    opbase = new Decimal(decimalNumber.div(new Decimal(1000000)).logarithm(3)).add(new Decimal(1)).floor();
+    opthreshold = opbase.ceil().pow_base(new Decimal(3)).mul(new Decimal.pow(10, 6));
+  } else if (decimalNumber.lt(new Decimal.pow(10, 6))){
     opbase = new Decimal(0);
-    opthreshold = new Decimal(1000000);
   }
 
   oppending = new Decimal(opbase);
@@ -1725,22 +1717,11 @@ function checkSeptillionthReset(){
 //=========================================================================
 //PENDING
 function checkPendingSeptillionth(){ 
-
-  if (decimalNumber.gte(spthreshold)){
-    spbase = spbase.add(new Decimal(1));
-    spthreshold = spthreshold.mul(spscaling);
-    checkPendingSeptillionth();
-
-  } else if (decimalNumber.lt(spthreshold.div(spscaling)) && decimalNumber.gte(new Decimal.pow(10, 9))){
-
-    spbase = spbase.sub(new Decimal(1));
-    spthreshold = spthreshold.div(spscaling);
-
+  if (decimalNumber.gte(new Decimal.pow(10, 9))){
+    spbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 9)).logarithm(10)).add(new Decimal(1)).floor();
+    spthreshold = spbase.ceil().pow_base(new Decimal(10)).mul(new Decimal.pow(10, 9));
   } else if (decimalNumber.lt(new Decimal.pow(10, 9))){
-
     spbase = new Decimal(0);
-    spthreshold = new Decimal.pow(10, 9);
-
   }
 
   sppending = new Decimal(spbase);

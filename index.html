@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Quinquagintic (v0.3.1.2)</title>
+  <title>Quinquagintic (v0.3.2)</title>
   
   <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
 
   <div class="center" style="color: white; -webkit-text-stroke: 0.6px black;">
     <h1 class="title-gradient">Quinquagintic</h1>
-    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Version: 0.3.1.2 (Feb. 22 2026)</p>
+    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Version: 0.3.2 (Mar. 2 2026)</p>
   </div>
     
   <div class="standard-tabs" style="-webkit-text-stroke: 0.6px black;">
@@ -281,6 +281,80 @@
       </div>
 
       <br>
+
+      <p id="atoms-display" class="numbergain" style="font-size: 45px;">You have % Atoms (A). (+%/s)</p>
+
+      <p id="atoms-formula" class="numbergain" style="font-size: 45px;">Formula: ((SPx3)+AU1+AU2+AU3)^2 x (AU4+AU5+AU6)</p>
+
+      <p id="atoms-boost-display" class="numbergain" style="font-size: 45px;">Boost to N: %</p>
+
+      <br>
+    
+      <div id="septillionth-grid" class="upgrade-grid-atom" style="margin: 0px; display: none">
+
+        <div class="standard-upg">
+          <p id="au1-id-amt" class="standard-upg">ID: AU1 || x0</p>
+          <button id="au1" class="button sep-dark" style="font-size: 40px" disabled>+0.5 gain</button>
+          <p id="au1-cost-scale" class="standard-upg" style="font-size: 35px;">Cost: 10 A || Scaling: x1.5</p>
+        </div>
+
+        <div>
+          <p id="au2-id-amt" class="standard-upg">ID: AU2 || x0</p>
+          <button id="au2" class="button sep-dark" style="font-size: 40px" disabled>+2 gain</button>
+          <p id="au2-cost-scale" class="standard-upg" style="font-size: 35px;">Cost: 100 A || Scaling: x2</p>
+        </div>
+
+        <div>
+          <p id="au3-id-amt" class="standard-upg">ID: AU3 || x0</p>
+          <button id="au3" class="button sep-dark" style="font-size: 40px" disabled>+5 gain</button>
+          <p id="au3-cost-scale" class="standard-upg" style="font-size: 35px;">Cost: 1000 A || Scaling: x3</p>
+        </div>
+
+        <div class="standard-upg">
+          <p id="au4-id-amt" class="standard-upg">ID: AU4 || x0</p>
+          <button id="au4" class="button sep-dark" style="font-size: 40px" disabled>+x2 gain</button>
+          <p id="au4-cost-scale" class="standard-upg" style="font-size: 35px;">Cost: 5e4 A || Scaling: x5</p>
+        </div>
+
+        <div>
+          <p id="au5-id-amt" class="standard-upg">ID: AU5 || x0</p>
+          <button id="au5" class="button sep-dark" style="font-size: 40px" disabled>+x10 gain</button>
+          <p id="au5-cost-scale" class="standard-upg" style="font-size: 35px;">Cost: 1e8 A || Scaling: x20</p>
+        </div>
+
+        <div>
+          <p id="au6-id-amt" class="standard-upg">ID: AU6 || x0</p>
+          <button id="au6" class="button sep-dark" style="font-size: 40px" disabled>+x50 gain</button>
+          <p id="au6-cost-scale" class="standard-upg" style="font-size: 35px;">Cost: 1e12 A || Scaling: x100</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div id="sextillionth-tab" class="center sextillionth" style="color: white; -webkit-text-stroke: 0.6px black; display: none;">
+    <h1 class="sextillionth-section" style="margin: 0px;">Sextillionth Section</h1>
+    
+    <br>
+
+    <button id="sxpreset" class="button sx-dark standard-reset" disabled>
+      Sextillionth Reset
+      <br>
+      <span style="font-size: 50px; margin: 0px;">Reset everything up to this point for Sextillionth Points (SXP)!</span>
+      <br>
+      <span style="font-size: 50px; margin: 0px;">★ x10 NP, OP, SP <br> ★ x2 CC <br> ★ Improve Atoms formula <br> ★ SP scaling → x4 <br> ★ x5 Atoms <br> ★ C1 boost → +1 per completion <br> ★ Nerf C2 restriction <br> ★ Keep Challenges <br> ★ Unlock Sextillionth Upgrade Tree (SXUT)</span>
+      <br>
+      <span id="sxp-point-pending">+1 SXP</span>
+      <br>
+      <span id="sxp-next-point" style="font-size: 40px; margin: 0px;">(next SXP at 2e-21)</span>
+    </button>
+
+    <p id="sxpBoostsDisplay" class="numbergain" style="font-size: 45px;">Boosts:</p>
+
+    <br>
+
+    <div id="sextillionth-main-section" style="display: none;">
 
       <p id="atoms-display" class="numbergain" style="font-size: 45px;">You have % Atoms (A). (+%/s)</p>
 
