@@ -434,6 +434,8 @@ const sepBoostsDisplay = document.getElementById("sepBoostsDisplay");
 const septillionth_main_section = document.getElementById("septillionth-main-section");
 spreset.disabled = true;
 
+const atoms_formula = document.getElementById("atoms-formula");
+
 const atoms_display = document.getElementById("atoms-display");
 const atoms_boost_display = document.getElementById("atoms-boost-display");
 
@@ -566,26 +568,28 @@ function everythingFromSRI(){
  
   octillionthPoints = new Decimal(0);
  
-  chal1completions = new Decimal(0);
-  chal1scaling = new Decimal(1.15); //EXPONENT!
-  chal1goal = new Decimal(1000);
+  if (!sxp_reset_boost_check){
+    chal1completions = new Decimal(0);
+    chal1scaling = new Decimal(1.15); //EXPONENT!
+    chal1goal = new Decimal(1000);
  
-  chal2completions = new Decimal(0);
-  chal2scaling = new Decimal(3);
-  chal2goal = new Decimal(5000);
+    chal2completions = new Decimal(0);
+    chal2scaling = new Decimal(3);
+    chal2goal = new Decimal(5000);
  
-  chal3completions = new Decimal(0);
-  chal3scaling = new Decimal(2.8);
-  chal3goal = new Decimal(10000);
+    chal3completions = new Decimal(0);
+    chal3scaling = new Decimal(2.8);
+    chal3goal = new Decimal(10000);
  
-  chal4completions = new Decimal(0);
-  chal4scaling = new Decimal(5);
-  chal4goal = new Decimal(10000000);
+    chal4completions = new Decimal(0);
+    chal4scaling = new Decimal(5);
+    chal4goal = new Decimal(10000000);
  
-  challengeCompletions = new Decimal(0);
-  ccm1unlocked = false;
-  ccm2unlocked = false;
-  ccm3unlocked = false;
+    challengeCompletions = new Decimal(0);
+    ccm1unlocked = false;
+    ccm2unlocked = false;
+    ccm3unlocked = false;
+  }
   
   npscaling = new Decimal(2);
   npthreshold = new Decimal(1000);
@@ -639,26 +643,28 @@ function septillionthResetInitiate(){
  
   octillionthPoints = new Decimal(0);
  
-  chal1completions = new Decimal(0);
-  chal1scaling = new Decimal(1.15); //EXPONENT!
-  chal1goal = new Decimal(1000);
+  if (!sxp_reset_boost_check){
+    chal1completions = new Decimal(0);
+    chal1scaling = new Decimal(1.15); //EXPONENT!
+    chal1goal = new Decimal(1000);
  
-  chal2completions = new Decimal(0);
-  chal2scaling = new Decimal(3);
-  chal2goal = new Decimal(5000);
+    chal2completions = new Decimal(0);
+    chal2scaling = new Decimal(3);
+    chal2goal = new Decimal(5000);
  
-  chal3completions = new Decimal(0);
-  chal3scaling = new Decimal(2.8);
-  chal3goal = new Decimal(10000);
+    chal3completions = new Decimal(0);
+    chal3scaling = new Decimal(2.8);
+    chal3goal = new Decimal(10000);
  
-  chal4completions = new Decimal(0);
-  chal4scaling = new Decimal(5);
-  chal4goal = new Decimal(10000000);
+    chal4completions = new Decimal(0);
+    chal4scaling = new Decimal(5);
+    chal4goal = new Decimal(10000000);
  
-  challengeCompletions = new Decimal(0);
-  ccm1unlocked = false;
-  ccm2unlocked = false;
-  ccm3unlocked = false;
+    challengeCompletions = new Decimal(0);
+    ccm1unlocked = false;
+    ccm2unlocked = false;
+    ccm3unlocked = false;
+  }
   
   npscaling = new Decimal(2);
   npthreshold = new Decimal(1000);
@@ -896,6 +902,10 @@ main_sextillionth_tab_button.addEventListener("click", function(){
 function calculateGain(){
   challengeCompletions = chal1completions.add(chal2completions).add(chal3completions).add(chal4completions);
 
+  if (sxp_reset_boost_check){
+    challengeCompletions = challengeCompletions.mul(new Decimal(2));
+  }
+
   numberGain = new Decimal(1);
 
   //BASE CALCULATIONS
@@ -953,14 +963,28 @@ function calculateGain(){
   //ATOMS
   if (septillionth_unlocked){
     atomGain = new Decimal(1);
-    if (septillionthPoints.gte(new Decimal(1))){
-      atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(3)));
+
+    if (sxp_reset_boost_check){
+      if (septillionthPoints.gte(new Decimal(1))){
+        atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(5)));
+      }
+      atomGain = atomGain.add(au123boost);
+      atomGain = atomGain.pow(new Decimal(2.5));
+      atomGain = atomGain.mul(au456boost);
+    } else {
+      if (septillionthPoints.gte(new Decimal(1))){
+        atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(3)));
+      }
+      atomGain = atomGain.add(au123boost);
+      atomGain = atomGain.pow(new Decimal(2));
+      atomGain = atomGain.mul(au456boost);
     }
-    atomGain = atomGain.add(au123boost);
-    atomGain = atomGain.pow(new Decimal(2));
-    atomGain = atomGain.mul(au456boost);
 
     atomsBoost = new Decimal(1);
+
+    if (sxp_reset_boost_check){
+      atomGain = atomGain.mul(new Decimal(5));
+    }
 
     atoms = atoms.add(atomGain.div(new Decimal(20)));
     atomsBoost = atomsBoost.add(atoms.log10());
@@ -1066,6 +1090,10 @@ function calculateBoostsStrings(){
     nonBoostsString += "Septillionth: x2, ";
   }
 
+  if (sxp_reset_boost_check){
+    nonBoostsString += "Sextillionth: x10, ";
+  }
+
   //=========================================================================
   //OCTILLIONTHS
   octBoostsString = "Boosts: ";
@@ -1082,9 +1110,17 @@ function calculateBoostsStrings(){
     octBoostsString += "Septillionth: x2, ";
   }
 
+  if (sxp_reset_boost_check){
+    octBoostsString += "Sextillionth: x10, ";
+  }
+
   //=========================================================================
   //SEPTILLIONTHS
   sepBoostsString = "Boosts: ";
+
+  if (sxp_reset_boost_check){
+    sepBoostsString += "Sextillionth: x10, ";
+  }
 
   //=========================================================================
   //SEXTILLIONTHS
@@ -1212,7 +1248,11 @@ function updateScreen(){
   
   bottomModifiers.textContent = "Modifiers: None";
 
-  cc_display.textContent = "You have " + challengeCompletions + " Challenge Completions (CC).";
+  if (sxp_reset_boost_check){
+    cc_display.textContent = "You have " + challengeCompletions + " Challenge Completions (CC). (Sextillionth: x2)";
+  } else {
+    cc_display.textContent = "You have " + challengeCompletions + " Challenge Completions (CC).";
+  }
 
   if (challengeModifier == 1){
     bottomModifiers.textContent = "Modifiers: Challenge 1";
@@ -1267,6 +1307,10 @@ function updateScreen(){
   sp_next_point.textContent = "(next SP at " + spthreshold.div(decillionthDivision).toExponential(3) + " N)";
 
   sepBoostsDisplay.textContent = sepBoostsString;
+
+  if (sxp_reset_boost_check){
+    atoms_formula.textContent = "((SXPx5)+AU1+AU2+AU3)^2.5) x (AU4+AU5+AU6) (Sextillionth: x5)";
+  } 
 
   atoms_display.textContent = "You have " + atoms.toExponential(3) + " atoms (A). (" + atomGain.toExponential(3) + " A/s)";
   atoms_boost_display.textContent = "Boost to N: " + atomsBoost.toExponential(3);
@@ -1509,6 +1553,10 @@ function checkPendingNonillionth(){
   if (sep_reset_boost_check){
     nppending = nppending.mul(new Decimal(2));
   }
+
+  if (sxp_reset_boost_check){
+    nppending = nppending.mul(new Decimal(10));
+  }
 }
 
 //=========================================================================
@@ -1712,6 +1760,10 @@ function checkPendingOctillionth(){
   if (sep_reset_boost_check){
     oppending = oppending.mul(new Decimal(2));
   }
+
+  if (sxp_reset_boost_check){
+    oppending = oppending.mul(new Decimal(10));
+  }
 }
 
 //=========================================================================
@@ -1896,13 +1948,22 @@ function checkSeptillionthReset(){
 //PENDING
 function checkPendingSeptillionth(){ 
   if (decimalNumber.gte(new Decimal.pow(10, 9))){
-    spbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 9)).logarithm(10)).add(new Decimal(1)).floor();
-    spthreshold = spbase.ceil().pow_base(spscaling).mul(new Decimal.pow(10, 9));
+    if (sxp_reset_boost_check){
+      spbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 9)).logarithm(4)).add(new Decimal(1)).floor();
+      spthreshold = spbase.ceil().pow_base(new Decimal(4)).mul(new Decimal.pow(10, 9));
+    } else {
+      spbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 9)).logarithm(10)).add(new Decimal(1)).floor();
+      spthreshold = spbase.ceil().pow_base(spscaling).mul(new Decimal.pow(10, 9));
+    }
   } else if (decimalNumber.lt(new Decimal.pow(10, 9))){
     spbase = new Decimal(0);
   }
 
   sppending = new Decimal(spbase);
+
+  if (sxp_reset_boost_check){
+    sppending = sppending.mul(new Decimal(10));
+  }
 }
 
 //=========================================================================
