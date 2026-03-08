@@ -291,6 +291,7 @@ const main_decillionth_tab_button = document.getElementById("main-decillionth-ta
 const main_nonillionth_tab_button = document.getElementById("main-nonillionth-tab-button");
 const main_octillionth_tab_button = document.getElementById("main-octillionth-tab-button");
 const main_septillionth_tab_button = document.getElementById("main-septillionth-tab-button");
+const main_sextillionth_tab_button = document.getElementById("main-sextillionth-tab-button");
 
 const oct_infobox_tab = document.getElementById("oct-infobox-tab");
 const oct_challenge_tab = document.getElementById("oct-challenge-tab");
@@ -877,6 +878,18 @@ main_septillionth_tab_button.addEventListener("click", function(){
   }
 });
 
+main_sextillionth_tab_button.addEventListener("click", function(){
+  if (main_sextillionth_tab_button.classList.contains("sx-dark")){
+    main_sextillionth_tab_button.classList.remove("sx-dark");
+    main_sextillionth_tab_button.classList.add("sx-light");
+    sextillionth_tab.style.display = "block";
+  } else {
+    main_sextillionth_tab_button.classList.add("sx-dark");
+    main_sextillionth_tab_button.classList.remove("sx-light");
+    sextillionth_tab.style.display = "none";
+  }
+});
+
 //=========================================================================
 //ACTUAL FUNCTIONS
 
@@ -1101,13 +1114,13 @@ function updateScreen(){
     topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
   }
 
-  if (octillionth_tab.style.display == "block"){
+  if (octillionth_unlocked){
     topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
   } else {
     topOP.textContent = "";
   }
 
-  if (septillionth_tab.style.display == "block"){
+  if (septillionth_unlocked){
     topSP.textContent = "SP: " + septillionthPoints.toExponential(3) + " (+" + sppending.toExponential(3) + ")";
   } else {
     topSP.textContent = "";
@@ -1119,7 +1132,7 @@ function updateScreen(){
     topAtoms.textContent = "";
   }
 
-  if (sextillionth_tab.style.display == "block"){
+  if (sextillionth_unlocked){
     topSXP.textContent = "SXP: " + sextillionthPoints.toExponential(3) + " (+" + sxppending.toExponential(3) + ")";
   } else {
     topSXP.textContent = "";
@@ -1899,6 +1912,7 @@ spreset.addEventListener("click", function(){
   septillionth_unlocked = true;
   septillionth_main_section.style.display = "grid";
   sextillionth_tab.style.display = "block";
+  main_sextillionth_tab_button.style.display = "inline-block";
 });
 
 topSP.addEventListener("click", function(){
@@ -1907,6 +1921,7 @@ topSP.addEventListener("click", function(){
     septillionth_unlocked = true;
     septillionth_main_section.style.display = "grid";
     sextillionth_tab.style.display = "block";
+    main_sextillionth_tab_button.style.display = "inline-block";
   } 
 });
 
@@ -2197,6 +2212,15 @@ function saveGame() {
 
     au6amt: au6amt.toString(),
     au6cost: au6cost.toString(),
+
+    atoms: atoms.toString(),
+    atomGain: atomGain.toString(),
+
+    sextillionthPoints: sextillionthPoints.toString(),
+    sxpbase: sxpbase.toString(),
+    sxpthreshold: sxpthreshold.toString(),
+    sxp_reset_boost_check: sxp_reset_boost_check.toString(),
+    sextillionth_unlocked: sextillionth_unlocked.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -2286,6 +2310,15 @@ function loadGame() {
   au6amt = new Decimal(data.au6amt);
   au6cost = new Decimal(data.au6cost);
 
+  atoms = new Decimal(data.atoms || "0");
+  atomGain = new Decimal(data.atomGain || "0");
+
+  sextillionthPoints = new Decimal(data.sextillionthPoints || "0");
+  sxpbase = new Decimal(data.sxpbase || "0");
+  sxpthreshold = new Decimal(data.sxpthreshold || "1000000000000");
+  sxp_reset_boost_check = data.sxp_reset_boost_check === 'true';
+  sextillionth_unlocked = data.sextillionth_unlocked === 'true';
+
   if (nonillionth_unlocked){
     nonillionth_grid.style.display = "grid";
     main_nonillionth_tab_button.style.display = "inline-block";
@@ -2299,6 +2332,22 @@ function loadGame() {
     main_nonillionth_tab_button.style.display = "inline-block";
   }
   if (septillionth_unlocked){
+    septillionth_tab.style.display = "block";
+    septillionth_main_section.style.display = "grid";
+    main_septillionth_tab_button.style.display = "inline-block";
+
+    octillionth_tab.style.display = "block";
+    octillionth_main_section.style.display = "grid";
+    main_octillionth_tab_button.style.display = "inline-block";
+
+    nonillionth_grid.style.display = "grid";
+    main_nonillionth_tab_button.style.display = "inline-block";
+  }
+  if (sextillionth_unlocked){
+    sextillionth_tab.style.display = "block";
+    sextillionth_main_section.style.display = "grid";
+    main_sextillionth_tab_button.style.display = "inline-block";
+
     septillionth_tab.style.display = "block";
     septillionth_main_section.style.display = "grid";
     main_septillionth_tab_button.style.display = "inline-block";
