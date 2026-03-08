@@ -1367,15 +1367,13 @@ function updateSoftcaps(){
   }
 
   if (decimalNumber.gte(new Decimal(1e8))){
-    softcap = decimalNumber.sub(new Decimal(1e8).sub(new Decimal(1))).pow(new Decimal(0.21));
+    softcap = decimalNumber.sub(new Decimal(1e8).sub(new Decimal(1))).pow(new Decimal(0.16));
   } else {
     softcap = new Decimal(1);
   }
 
   if (decimalNumber.gte(new Decimal(1e13))){
-    supercap = decimalNumber.sub(new Decimal(1e13).sub(new Decimal(1))).pow(new Decimal(0.2));
-    supercap = supercap.add(new Decimal(nonillionthPoints.logarithm(new Decimal(10))).pow(new Decimal(0.99)));
-    supercap = supercap.add(new Decimal(octillionthPoints.logarithm(new Decimal(10))).pow(new Decimal(1.05)));
+    supercap = decimalNumber.sub(new Decimal(1e13).sub(new Decimal(1))).pow(new Decimal(0.24));
   } else {
     supercap = new Decimal(1);
   }
