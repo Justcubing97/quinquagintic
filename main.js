@@ -108,6 +108,7 @@ var boostsString = "";
 var nonBoostsString = "";
 var octBoostsString = "";
 var sepBoostsString = "";
+var sxpBoostsString = "";
 
 var challengeModifier = 0;
 
@@ -222,6 +223,15 @@ var au6cost = new Decimal.pow(10, 10);
 var au6scaling = new Decimal(15);
 
 //=========================================================================
+//SEXTILLIONTH
+var sxpscaling = new Decimal(2);
+var sxpthreshold = new Decimal.pow(10, 12);
+var sxppending = new Decimal(0);
+var sxpbase = new Decimal(0);
+
+var sextillionthPoints = new Decimal(0);
+
+//=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
 const numberRounding = new Decimal(100);
@@ -229,16 +239,18 @@ const numberDecimalPlaces = new Decimal(3);
 const decillionthDivision = new Decimal.pow(10, 33);
 
 //=========================================================================
-//UNLOCK CHECKS
+//UNLOCK CHECKS (these are for checking if layers are unlocked)
 var nonillionth_unlocked = false;
 var octillionth_unlocked = false;
 var septillionth_unlocked = false;
+var sextillionth_unlocked = false;
 
 //=========================================================================
-//RESET BOOSTS
+//RESET BOOSTS (these are for applying boosts)
 var non_reset_boost_check = false;
 var oct_reset_boost_check = false;
 var sep_reset_boost_check = false;
+var sxp_reset_boost_check = false;
 
 //=========================================================================
 //SOFTCAP EFFECTS
@@ -272,6 +284,7 @@ const decillionth_tab = document.getElementById("decillionth-tab");
 const nonillionth_tab = document.getElementById("nonillionth-tab");
 const octillionth_tab = document.getElementById("octillionth-tab");
 const septillionth_tab = document.getElementById("septillionth-tab");
+const sextillionth_tab = document.getElementById("sextillionth-tab");
 const main_number_tab_button = document.getElementById("main-number-tab-button");
 const main_caps_tab_button = document.getElementById("main-caps-tab-button");
 const main_decillionth_tab_button = document.getElementById("main-decillionth-tab-button");
@@ -296,6 +309,7 @@ const topNP = document.getElementById("top-np");
 const topOP = document.getElementById("top-op");
 const topSP = document.getElementById("top-sp");
 const topAtoms = document.getElementById("top-atoms");
+const topSXP = document.getElementById("top-sxp");
 
 //=========================================================================
 //BOTTOM
@@ -451,6 +465,16 @@ const au6 = document.getElementById("au6");
 const au6_id_amt = document.getElementById("au6-id-amt");
 const au6_cost_scale = document.getElementById("au6-cost-scale");
 au6.disabled = true;
+
+//=========================================================================
+//SEXTILLIONTH
+
+const sxpreset = document.getElementById("sxpreset");
+const sxp_point_pending = document.getElementById("sxp-point-pending");
+const sxp_next_point = document.getElementById("sxp-next-point");
+const sxpBoostsDisplay = document.getElementById("sxpBoostsDisplay");
+const sextillionth_main_section = document.getElementById("sextillionth-main-section");
+sxpreset.disabled = true;
 
 //=========================================================================
 
@@ -642,6 +666,9 @@ setInterval(function(){
   checkSeptillionthReset();
   checkPendingSeptillionth();
   checkAU();
+
+  checkSextillionthReset();
+  checkPendingSextillionth();
 
   automation();
 }, 50);
@@ -925,6 +952,10 @@ function calculateBoostsStrings(){
   //=========================================================================
   //SEPTILLIONTHS
   sepBoostsString = "Boosts: ";
+
+  //=========================================================================
+  //SEXTILLIONTHS
+  sxpBoostsString = "Boosts: ";
 }
 
 //=========================================================================
@@ -966,6 +997,12 @@ function updateScreen(){
     topAtoms.textContent = "A: " + atoms.toExponential(3) + " (+" + atomGain.toExponential(3) + "/s)";
   } else {
     topAtoms.textContent = "";
+  }
+
+  if (sextillionth_tab.style.display == "block"){
+    topSXP.textContent = "SXP: " + sextillionthPoints.toExponential(3) + " (+" + sxppending.toExponential(3) + ")";
+  } else {
+    topSXP.textContent = "";
   }
   
   //=========================================================================
@@ -1118,6 +1155,14 @@ function updateScreen(){
 
   au6_id_amt.textContent = "ID: AU6 || x" + au6amt;
   au6_cost_scale.textContent = "Cost: " + au6cost.toExponential(3) + " A || Scaling: x" + au6scaling;
+
+  //=========================================================================
+  //SEXTILLIONTHS
+  sxp_point_pending.textContent = "+" + sxppending.toExponential(3) + " SXP";
+  
+  sxp_next_point.textContent = "(next SXP at " + sxpthreshold.div(decillionthDivision).toExponential(3) + " N)";
+
+  sxpBoostsDisplay.textContent = sxpBoostsString;
 }
 
 //=========================================================================
@@ -1312,7 +1357,7 @@ function checkPendingNonillionth(){
       npthreshold = npbase.ceil().pow_base(new Decimal(4)).mul(new Decimal(1000));
     } else {
       npbase = new Decimal(decimalNumber.div(new Decimal(1000)).logarithm(2)).add(new Decimal(1)).floor();
-      npthreshold = npbase.ceil().pow_base(new Decimal(2)).mul(new Decimal(1000));
+      npthreshold = npbase.ceil().pow_base(npscaling).mul(new Decimal(1000));
     }
   } else if (decimalNumber.lt(new Decimal(1000))){
     npbase = new Decimal(0);
@@ -1516,7 +1561,7 @@ function checkOctillionthReset(){
 function checkPendingOctillionth(){ 
   if (decimalNumber.gte(new Decimal.pow(10, 6))){
     opbase = new Decimal(decimalNumber.div(new Decimal(1000000)).logarithm(3)).add(new Decimal(1)).floor();
-    opthreshold = opbase.ceil().pow_base(new Decimal(3)).mul(new Decimal.pow(10, 6));
+    opthreshold = opbase.ceil().pow_base(opscaling).mul(new Decimal.pow(10, 6));
   } else if (decimalNumber.lt(new Decimal.pow(10, 6))){
     opbase = new Decimal(0);
   }
@@ -1719,7 +1764,7 @@ function checkSeptillionthReset(){
 function checkPendingSeptillionth(){ 
   if (decimalNumber.gte(new Decimal.pow(10, 9))){
     spbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 9)).logarithm(10)).add(new Decimal(1)).floor();
-    spthreshold = spbase.ceil().pow_base(new Decimal(10)).mul(new Decimal.pow(10, 9));
+    spthreshold = spbase.ceil().pow_base(spscaling).mul(new Decimal.pow(10, 9));
   } else if (decimalNumber.lt(new Decimal.pow(10, 9))){
     spbase = new Decimal(0);
   }
@@ -1733,6 +1778,7 @@ spreset.addEventListener("click", function(){
   septillionthResetInitiate();
   septillionth_unlocked = true;
   septillionth_main_section.style.display = "grid";
+  sextillionth_tab.style.display = "block";
 });
 
 topSP.addEventListener("click", function(){
@@ -1740,6 +1786,7 @@ topSP.addEventListener("click", function(){
     septillionthResetInitiate();
     septillionth_unlocked = true;
     septillionth_main_section.style.display = "grid";
+    sextillionth_tab.style.display = "block";
   } 
 });
 
@@ -1880,6 +1927,57 @@ au6.addEventListener("click", function(){
   
   au6cost = au6cost.mul(au6scaling);
   au456boost = au456boost.add(new Decimal(50));
+});
+
+//=========================================================================
+
+//   ========   ==    ==  ========
+//  ==           ==  ==   ==     ==
+//  ==            ====    ==     ==
+//   ========      ==     ========
+//          ==    ====    ==
+//          ==   ==  ==   ==
+//   ========   ==    ==  ==
+
+//=========================================================================
+
+//=========================================================================
+//RESET DETECTION
+function checkSextillionthReset(){
+  if (decimalNumber.gte(new Decimal.pow(10, 12))) {
+    sxpreset.disabled = false;
+  } else {
+    sxpreset.disabled = true;
+  }
+}
+
+//=========================================================================
+//PENDING
+function checkPendingSextillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THRESHOLD AND THE .LOGARITHM IN BASE ARE THE SAME!!!!
+  if (decimalNumber.gte(new Decimal.pow(10, 12))){  //I RECOMMEND USING THE RESPECTIVE SCALING VARIABLE FOR POW_BASE!!!!
+    sxpbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 12)).logarithm(2)).add(new Decimal(1)).floor();
+    sxpthreshold = sxpbase.ceil().pow_base(sxpscaling).mul(new Decimal.pow(10, 12));
+  } else if (decimalNumber.lt(new Decimal.pow(10, 12))){
+    sxpbase = new Decimal(0);
+  }
+
+  sxppending = new Decimal(sxpbase);
+}
+
+//=========================================================================
+//RESET CLICK
+sxpreset.addEventListener("click", function(){
+  sextillionthResetInitiate();
+  sextillionth_unlocked = true;
+  sextillionth_main_section.style.display = "grid";
+});
+
+topSXP.addEventListener("click", function(){
+  if (sxpreset.disabled == false){
+    sextillionthResetInitiate();
+    sextillionth_unlocked = true;
+    sextillionth_main_section.style.display = "grid";
+  } 
 });
 
 //=========================================================================
