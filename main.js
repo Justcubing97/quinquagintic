@@ -556,6 +556,74 @@ function octillionthResetInitiate(){
   decimalNumber = new Decimal(1);
 }
 
+function everythingFromSRI(){
+  oct_reset_boost_check = false;
+  opscaling = new Decimal(3);
+  opthreshold = new Decimal.pow(10, 6);
+  oppending = new Decimal(0);
+  opbase = new Decimal(0);
+ 
+  octillionthPoints = new Decimal(0);
+ 
+  chal1completions = new Decimal(0);
+  chal1scaling = new Decimal(1.15); //EXPONENT!
+  chal1goal = new Decimal(1000);
+ 
+  chal2completions = new Decimal(0);
+  chal2scaling = new Decimal(3);
+  chal2goal = new Decimal(5000);
+ 
+  chal3completions = new Decimal(0);
+  chal3scaling = new Decimal(2.8);
+  chal3goal = new Decimal(10000);
+ 
+  chal4completions = new Decimal(0);
+  chal4scaling = new Decimal(5);
+  chal4goal = new Decimal(10000000);
+ 
+  challengeCompletions = new Decimal(0);
+  ccm1unlocked = false;
+  ccm2unlocked = false;
+  ccm3unlocked = false;
+  
+  npscaling = new Decimal(2);
+  npthreshold = new Decimal(1000);
+  nppending = new Decimal(0);
+  npbase = new Decimal(0);
+
+  nonillionthPoints = new Decimal(0);
+  non_reset_boost_check = false;
+
+  nu1boost = new Decimal(1);
+  nu1amt = new Decimal(0);
+  nu1cost = new Decimal(1);
+  nu1scaling = new Decimal(5);
+
+  nu2amt = new Decimal(0);
+  nu2cost = new Decimal(3);
+  nu2_cost_scale.textContent = "Cost: 3 NP";
+  
+  nu3boost = new Decimal(1);
+  nu3amt = new Decimal(0);
+  nu3cost = new Decimal(10);
+  nu3scaling = new Decimal(10);
+
+  nu4amt = new Decimal(0);
+  nu4cost = new Decimal(25);
+  nu4_cost_scale.textContent = "Cost: 25 NP";
+  
+  du1boost = new Decimal(0);
+  du1amt = new Decimal(0);
+  du1cost = new Decimal(10);
+  du1scaling = new Decimal(3); 
+
+  du2boost = new Decimal(1);
+  du2amt = new Decimal(0);
+  du2cost = new Decimal(25);
+  du2scaling = new Decimal(4);
+  decimalNumber = new Decimal(1);
+}
+
 function septillionthResetInitiate(){
   spthreshold = new Decimal.pow(10, 9);
   septillionthPoints = septillionthPoints.add(sppending);
@@ -627,6 +695,55 @@ function septillionthResetInitiate(){
   du2cost = new Decimal(25);
   du2scaling = new Decimal(4);
   decimalNumber = new Decimal(1);
+}
+
+function sextillionthResetInitiate(){
+  sxpthreshold = new Decimal.pow(10, 12);
+  sextillionthPoints = sextillionthPoints.add(sxppending);
+  sxpbase = new Decimal(0);
+  sxp_reset_boost_check = true;
+
+  sep_reset_boost_check = false;
+  spscaling = new Decimal(10);
+  spthreshold = new Decimal.pow(10, 9);
+  sppending = new Decimal(0);
+  spbase = new Decimal(0);
+
+  septillionthPoints = new Decimal(0);
+
+  atoms = new Decimal(0);
+  atomGain = new Decimal(0);
+
+  atomsBoost = new Decimal(1);
+
+  au123boost = new Decimal(0);
+  au456boost = new Decimal(1);
+
+  au1amt = new Decimal(0);
+  au1cost = new Decimal(10);
+  au1scaling = new Decimal(1.25);
+
+  au2amt = new Decimal(0);
+  au2cost = new Decimal(50);
+  au2scaling = new Decimal(1.8);
+
+  au3amt = new Decimal(0);
+  au3cost = new Decimal(300);
+  au3scaling = new Decimal(2.5);
+
+  au4amt = new Decimal(0);
+  au4cost = new Decimal(10000);
+  au4scaling = new Decimal(4);
+
+  au5amt = new Decimal(0);
+  au5cost = new Decimal.pow(10, 6);
+  au5scaling = new Decimal(7.5);
+
+  au6amt = new Decimal(0);
+  au6cost = new Decimal.pow(10, 10);
+  au6scaling = new Decimal(15);
+
+  everythingFromSRI();
 }
 
 //=========================================================================
@@ -822,7 +939,10 @@ function calculateGain(){
   //=========================================================================
   //ATOMS
   if (septillionth_unlocked){
-    atomGain = septillionthPoints.mul(new Decimal(3));
+    atomGain = new Decimal(1);
+    if (septillionthPoints.gte(new Decimal(1))){
+      atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(3)));
+    }
     atomGain = atomGain.add(au123boost);
     atomGain = atomGain.pow(new Decimal(2));
     atomGain = atomGain.mul(au456boost);
@@ -1198,7 +1318,7 @@ function updateSoftcaps(){
 //AUTOMATION
 
 function automation(){
-  if (oct_reset_boost_check){
+  if (oct_reset_boost_check || septillionth_unlocked){
     if (!du2.disabled){
       du2.click();
     }
@@ -2223,6 +2343,11 @@ window.addEventListener("keydown", function(event) {
   if (event.key === "L"){
     chal3completions = chal3completions.add(new Decimal(20));
     decimalNumber = decimalNumber.mul(new Decimal.pow(10, 9)); //Skip to Septillionth.
+    updateScreen();
+  }
+  if (event.key === ":"){
+    sextillionth_tab.style.display = "block";
+    decimalNumber = decimalNumber.mul(new Decimal.pow(10, 12)); //Skip to Sextillionth.
     updateScreen();
   }
 });
