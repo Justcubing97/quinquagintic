@@ -256,6 +256,7 @@ var sxp_reset_boost_check = false;
 //SOFTCAP EFFECTS
 var minicap = new Decimal(1);
 var softcap = new Decimal(1);
+var supercap = new Decimal(1);
 
 //=========================================================================
 //OTHER
@@ -954,6 +955,10 @@ function calculateGain(){
     numberGain = numberGain.div(softcap);
   }
 
+  if (supercap.neq(new Decimal(1))){
+    numberGain = numberGain.div(supercap);
+  }
+
   //CHALLENGE 2
   if (challengeModifier == 2){
     numberGain = numberGain.pow(new Decimal(1).div(decimalNumber.pow(new Decimal(0.06))));
@@ -1220,7 +1225,7 @@ function updateScreen(){
     nu2_cost_scale.textContent = "Purchased!";
   }
 
-  nu3_id_amt.textContent = "ID: NU3 || x" + nu3amt;
+  nu3_id_amt.textContent = "ID: NU3 || " + nu3amt + "/8";
   if (challengeModifier == 1){
     nu3_cost_scale.textContent = "Cost: " + nu3cost.toExponential(3) + " NP || Scaling: x" + nu3scaling.pow(new Decimal(2)).toString() + " (C1)";
   } else {
@@ -1367,8 +1372,17 @@ function updateSoftcaps(){
     softcap = new Decimal(1);
   }
 
+  if (decimalNumber.gte(new Decimal(1e13))){
+    supercap = decimalNumber.sub(new Decimal(1e13).sub(new Decimal(1))).pow(new Decimal(0.2));
+    supercap = supercap.add(nonillionthPoints.logarithm(new Decimal(10)).pow(new Decimal(0.99)));
+    supercap = supercap.add(octillionthPoints.logarithm(new Decimal(10)).pow(new Decimal(1.05)));
+  } else {
+    supercap = new Decimal(1);
+  }
+
   minicapDisplay.textContent = "Minicap (N gain) starts at 1e-30: /" + minicap.toExponential(3);
   softcapDisplay.textContent = "Softcap (N gain) starts at 1e-25: /" + softcap.toExponential(3);
+  supercapDisplay.textContent = "Supercap (N, NP, OP gain) starts at 1e-20: /" + supercap.toExponential(3);
 }
 
 //=========================================================================
@@ -1557,6 +1571,12 @@ function checkPendingNonillionth(){
   if (sxp_reset_boost_check){
     nppending = nppending.mul(new Decimal(10));
   }
+
+
+  
+  if (supercap.neq(new Decimal(1))){
+    nppending = nppending.div(supercap);
+  }
 }
 
 //=========================================================================
@@ -1596,7 +1616,7 @@ function nonillionthUpgrades(){
     nu2.disabled = true;
   }
 
-  if (nonillionthPoints.gte(nu3cost)) {
+  if (nonillionthPoints.gte(nu3cost) && !nu3amt.eq(new Decimal(8))) {
     nu3.disabled = false;
   } else {
     nu3.disabled = true;
@@ -1763,6 +1783,12 @@ function checkPendingOctillionth(){
 
   if (sxp_reset_boost_check){
     oppending = oppending.mul(new Decimal(10));
+  }
+
+
+
+  if (supercap.neq(new Decimal(1))){
+    nppending = nppending.div(supercap);
   }
 }
 
