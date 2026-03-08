@@ -1374,8 +1374,8 @@ function updateSoftcaps(){
 
   if (decimalNumber.gte(new Decimal(1e13))){
     supercap = decimalNumber.sub(new Decimal(1e13).sub(new Decimal(1))).pow(new Decimal(0.2));
-    supercap = supercap.add(nonillionthPoints.logarithm(new Decimal(10)).pow(new Decimal(0.99)));
-    supercap = supercap.add(octillionthPoints.logarithm(new Decimal(10)).pow(new Decimal(1.05)));
+    supercap = supercap.add(new Decimal(nonillionthPoints.logarithm(new Decimal(10))).pow(new Decimal(0.99)));
+    supercap = supercap.add(new Decimal(octillionthPoints.logarithm(new Decimal(10))).pow(new Decimal(1.05)));
   } else {
     supercap = new Decimal(1);
   }
@@ -1573,7 +1573,7 @@ function checkPendingNonillionth(){
   }
 
 
-  
+
   if (supercap.neq(new Decimal(1))){
     nppending = nppending.div(supercap);
   }
