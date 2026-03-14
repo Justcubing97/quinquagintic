@@ -3,7 +3,7 @@
 
 <head>
   <link rel="icon" type="image/png" href="quinquagintic.png">
-  <title>Quinquagintic (v0.4.1)</title>
+  <title>Quinquagintic (v0.4.2)</title>
   
   <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
 
   <div class="center" style="color: white; -webkit-text-stroke: 0.6px black;">
     <h1 class="title-gradient">Quinquagintic</h1>
-    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Version: 0.4.1 (Mar. 8 2026)</p>
+    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Version: 0.4.2 (Mar. 13 2026)</p>
     <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Game by Justcubing97</p>
   </div>
     
@@ -339,6 +339,9 @@
   <br>
 
   <div id="sextillionth-tab" class="center sextillionth" style="color: white; -webkit-text-stroke: 0.6px black; display: none;">
+
+    <svg id="lines-svg" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:-2;"></svg>
+
     <h1 class="sextillionth-section" style="margin: 0px;">Sextillionth Section</h1>
     
     <br>
@@ -362,7 +365,7 @@
     <div id="sextillionth-main-section" class="upgrade-grid-sxut" style="display: none;">
 
       <div class="standard-upgrade-tree">
-        <button id="respec-sxut" class="button sx-light" style="font-size: 60px;">Respec SXUT</button>
+        <button id="sxut-respec" class="button sx-light" style="font-size: 60px;">Respec SXUT</button>
       </div>
 
       <div class="standard-upgrade-tree">
@@ -377,6 +380,8 @@
         <button id="sxut-13" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT13</span><span>???</span><span style="font-size: 45px">??? SXP</span></button>
       </div>
 
+      
+
       <div class="standard-upgrade-tree">
         <button id="sxut-21" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT21</span><span>x100 Atoms</span><span style="font-size: 45px">50 CC</span></button>
       </div>
@@ -386,11 +391,47 @@
       </div>
 
       <div class="standard-upgrade-tree">
-        <button id="sxut-23" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT23</span><span>x2 Atoms' boost to N</span><span style="font-size: 45px">5 SXP</span></button>
+        <button id="sxut-23" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT23</span><span>x2 Atoms' boost to N</span><span style="font-size: 45px">6 SXP</span></button>
       </div>
 
       <div class="standard-upgrade-tree">
-        <button id="sxut-14" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT14</span><span>???</span><span style="font-size: 45px">??? SXP</span></button>
+        <button id="sxut-24" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT24</span><span>???</span><span style="font-size: 45px">??? SXP</span></button>
+      </div>
+
+      
+
+      <div class="standard-upgrade-tree">
+        <button id="sxut-31" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT31</span><span>Add two more AUs</span><span style="font-size: 45px">100 CC</span></button>
+      </div>
+
+      <div class="standard-upgrade-tree">
+        <button id="sxut-32" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT32</span><span>Double C4 Reward</span><span style="font-size: 45px">15 SXP</span></button>
+      </div>
+
+      <div class="standard-upgrade-tree">
+        <button id="sxut-33" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT33</span><span>xSXP Atoms</span><span style="font-size: 45px">25 SXP</span></button>
+      </div>
+
+      <div class="standard-upgrade-tree">
+        <button id="sxut-34" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT34</span><span>???</span><span style="font-size: 45px">??? SXP</span></button>
+      </div>
+      
+
+
+      <div class="standard-upgrade-tree">
+        <button id="sxut-41" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT41</span><span>x3 SXP</span><span style="font-size: 45px">50 SXP</span></button>
+      </div>
+
+      <div class="standard-upgrade-tree">
+        <button id="sxut-42" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT42</span><span>Unlock Challenge 5</span><span style="font-size: 45px">150  CC</span></button>
+      </div>
+
+      <div class="standard-upgrade-tree">
+        <button id="sxut-43" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT43</span><span>x10B Atoms</span><span style="font-size: 45px">10<sup>20</sup> Atoms</span></button>
+      </div>
+
+      <div class="standard-upgrade-tree">
+        <button id="sxut-44" class="button sx-dark" style="font-size: 60px;" disabled><span style="font-size: 35px">SXUT44</span><span>???</span><span style="font-size: 45px">??? SXP</span></button>
       </div>
     </div>
   </div>
