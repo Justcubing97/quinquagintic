@@ -56,7 +56,7 @@ var normalTickers = [
   "asdfasf",
   "The next update will be in a few days to a few months.",
   "TRANSCENDENT CAP IS TRANSCENDENT",
-  "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034... (these are all my digits)",
+  "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117... (these are all my digits)",
   "Is the answer to this question 'no'?",
   "THIS SENTENCE IS FALSE.",
   "Does a set of all sets contain itself?",
@@ -80,13 +80,33 @@ var normalTickers = [
   "HOLY HYPERCAP, IT'S A NUMBER!",
   "Hey, psst, it's a hint for the Integer Domain! I... forgor",
   "pneumonoultramicroscopicsilicovolcanoconiosis YES I GOT IT",
-  "\"\"'Need more quotes!' -Hevipelle\" -AD news ticker\" -AP news ticker (i wonder if anyone's gonna continue this chain)",
+  "\"\"'Need more quotes!' -Hevipelle\" -AD news ticker\" -AP news ticker",
   "BREAKING NEWS: Justcubing97 has suffered an unknown effect. Only his best friend knows about it, and no one knows his best friend. Investigations are ongoing to find out what has happened to Justcubing97. A friend of his suggested that \"Quinquagintification\" may have been a probable cause of his condition. Experts are currently researching this theory, but they have also suffered from this \"Quinquagtintification.\" We are working to solve this mysterious problem.",
   "BREAKING NEWS: \"Quinquagintification\" has now been processed and observed by enough people to form a reasonable conclusion. We suspect that it is a condition that rises from the victim playing a game called Quinquagintic for multiple hours without breaks. The experts have been dedicated at this game due to the unusual means of the game not being mainstream. Justcubing97, the first reported case of \"Quinquagtintification,\" most likely contracted this condition from developing the game for unhealthy periods of time. We are working to provide a cure.",
   "BREAKING NEWS: After extensive research, we have found a potential cure for \"Quinquagintification.\" We are currently testing it on volunteers, and we will provide updates on the progress of the cure. In the meantime, we suggest that people take breaks while playing Quinquagintic, and if you start to feel symptoms of \"Quinquagintification,\" such as excessive attachment to the game, emotional instability, or a desire to play the game for long periods of time without breaks, please seek help immediately. However, we have noticed that \"Quinquagtintification\" has spread outside of the suburbs that Justcubing97 resides in, as the game gets more and more popular. Please be careful.",
   "BREAKING NEWS: TH3R3 4R3 N0 N3W5. QU1NQUAG1NT1F1C4T10N 15 P3RM4N3NT. Y0U W1LL SUFF3R 1F Y0U PL4Y QU1NQUAG1NT1C. TH3 CURE W1LL N3V3R B3 F0UND. TH3 0NLY W4Y T0 4V01D QU1NQUAG1NT1F1C4T10N 15 TO N0T PL4Y QU1NQUAG1NT1C. TH3 S1NGULARITY 15 N3AR. N0 FUTUR3 UPD4T35 T0 TH15 51TU4T10N 0R TH3 G4M3 W1LL B3 M4D3. G00DBY3.",
   "WHAT DO YOU MEAN INSANITYCAP???",
   "derivative impresses integral by learning and speaking lagrange notation fluently",
+  "Fun fact: the softcaps used to affect multiple currencies, but after learning that it wasn't the right choice, all of the softcaps now affect only Number. This means that the last five softcaps, from ABSOLUTE to TRANSCENDENT, will work in the Integer Domain and still affect Number only. The other softcaps will do NOTHING in the Integer Domain!",
+  "Fun fact: the Integer Domain has 8 planned layers (including Number) and at least 7 more challenges! There's a tech theme to all of these layers, almost like how Algebraic Progression uses some sort of math milestones like quadratics, complex numbers, and integration, and Incremental Mass Rewritten is all physics and astronomy like with Supernovas, Quantum Foam, Big Rip, Atoms, Radiation, so on.",
+  "Fun fact: my favorite non-97 number is 727, which is the WYSI number. 3rd favorite has to be 73939133.",
+  "Fun fact: this is a fun fact because I said so.",
+  "Fun fact: I don't consider the different domains' reset layers collectively. Otherwise there would be more than 20.",
+  "Why do we have to use base 10? Why not base 16? Or binary, or octal? Or base e? Or base 7+3i?",
+  "If you remember that news message where she quinquagintillionth rooted a quinquagintic, yeah, that same one, I wanted to make her mentally implode with the plans of the Integer Domain. REVENGE!",
+  "There's three people in a room. One is you, playing Quinquagintic responsibly, one is me, sleeping, and the other one is a girl sitting in the corner doing absolutely nothing.",
+  "Why is 0! = 1?",
+  "SINCE WHEN DID I HAVE 1.79e308 BROWSER TABS????",
+  "WAIT, I just remembered something... never mind, I forgot.",
+  "Since the reset layers are only 3 orders of magnitude apart, won't the reset layers be close together? Nah, SOFTCAPS EXIST!",
+  "Reginald Gregory Alvenport III - quinquagintillionth rooter",
+  "Who knows what BAN is? Not me.",
+  "Justcubing97 says: if you know how to program, don't throw that skill away! You can do literally ANYTHING!",
+  "seven hundred twenty seven",
+  "five squaredth prime = 97",
+  "googolPLEX",
+  "googolDUplex",
+  "Why use subtractive RYB when additive RGB is better?",
 ];
 
 var specialTickers = [
@@ -114,11 +134,11 @@ var specialTickers = [
   "I know I can't be the only one in my situation... right?",
   "LOVE < ZERO - Justcubing97- wait why is this in the specialTickers list? Oh, right, the song title.",
   "atp i dont know if im ultra paranoid or if im doing something wrong AND NO ONE IS POINTING IT OUT",
+  "It's a stable friendship.",
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
 //Billionth: "BPM1-6 WILL reset at some point. Not now."
-//Sextillionth: "Fun fact! There are at most 2,147,483,647 rows of the SXUT!"
 
 var decimalNumber = new Decimal(1);
 var numberGain;
@@ -1026,7 +1046,7 @@ function calculateGain(){
       }
       atomGain = atomGain.add(au123boost);
       atomGain = atomGain.pow(new Decimal(2.5));
-      atomGain = atomGain.mul(au456boost);
+      atomGain = atomGain.mul(au456boost.pow(new Decimal(1.5)));
     } else {
       if (septillionthPoints.gte(new Decimal(1))){
         atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(3)));
@@ -1300,7 +1320,7 @@ function updateScreen(){
 
   if (challengeModifier == 4 && octillionthPoints.lt(new Decimal(1000000))){
     if (octillionthPoints.lt(new Decimal(1000000))){
-      op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + "+" + chal4completions.div(new Decimal(2)) + ", but Challenge 4 is active, so this is nullified.";
+      op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + " (+" + chal4completions.div(new Decimal(2)) + "), but Challenge 4 is active, so this is nullified.";
     } else {
       op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x1.000e+6 (HARDCAP), but Challenge 4 is active, so this is nullified.";
     }
@@ -1373,8 +1393,10 @@ function updateScreen(){
   sepBoostsDisplay.textContent = sepBoostsString;
 
   if (sxp_reset_boost_check){
-    atoms_formula.textContent = "((SXPx5)+AU1+AU2+AU3)^2.5) x (AU4+AU5+AU6) (Sextillionth: x5)";
-  } 
+    atoms_formula.textContent = "((SXPx5)+AU1+AU2+AU3)^2.5) x (AU4+AU5+AU6)^1.5 (Sextillionth: x5)";
+  } else {
+    atoms_formula.textContent = "((SXPx3)+AU1+AU2+AU3)^2) x (AU4+AU5+AU6)";
+  }
 
   atoms_display.textContent = "You have " + atoms.toExponential(3) + " atoms (A). (" + atomGain.toExponential(3) + " A/s)";
   atoms_boost_display.textContent = "Boost to N: " + atomsBoost.toExponential(3);
@@ -1437,9 +1459,9 @@ function updateSoftcaps(){
     supercap = new Decimal(1);
   }
 
-  minicapDisplay.textContent = "Minicap (N gain) starts at 1e-30: /" + minicap.toExponential(3);
-  softcapDisplay.textContent = "Softcap (N gain) starts at 1e-25: /" + softcap.toExponential(3);
-  supercapDisplay.textContent = "Supercap (N, NP, OP gain) starts at 1e-20: /" + supercap.toExponential(3);
+  minicapDisplay.textContent = "Minicap starts at 1e-30: /" + minicap.toExponential(3);
+  softcapDisplay.textContent = "Softcap starts at 1e-25: /" + softcap.toExponential(3);
+  supercapDisplay.textContent = "Supercap starts at 1e-20: /" + supercap.toExponential(3);
 }
 
 //=========================================================================
@@ -1519,6 +1541,12 @@ function specificTicker(){
       normalTickers.push("Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!");
     }
   }
+
+  if (sextillionth_unlocked){
+    if (!normalTickers.includes("Fun fact: if you're not at the Billionth Section, there's gonna be a fifth row of the SXUT! If you're wondering why some of the upgrades say \"???,\" then it's extensions...")){
+      normalTickers.push("Fun fact: if you're not at the Billionth Section, there's gonna be a fifth row of the SXUT! If you're wondering why some of the upgrades say \"???,\" then it's extensions...");
+    }
+  }
 }
 
 //=========================================================================
@@ -1564,7 +1592,7 @@ function updateConnections() {
   connectElementsTopBottom("sxut-31-42", "sxut-31", "sxut-42", "#FF8080", 5);
   connectElementsTopBottom("sxut-32-41", "sxut-32", "sxut-41", "#FF8080", 5);
   connectElementsTopBottom("sxut-33-42", "sxut-33", "sxut-42", "#FF8080", 5);
-  connectElementsTopBottom("sxut-33-43", "sxut-11", "sxut-23", "#FF8080", 5);
+  connectElementsTopBottom("sxut-33-43", "sxut-33", "sxut-43", "#FF8080", 5);
 }
 
 window.addEventListener("scroll", updateConnections);
@@ -1734,12 +1762,6 @@ function checkPendingNonillionth(){
 
   if (sxp_reset_boost_check){
     nppending = nppending.mul(new Decimal(10));
-  }
-
-
-
-  if (supercap.neq(new Decimal(1))){
-    nppending = nppending.div(supercap);
   }
 }
 
@@ -1949,12 +1971,6 @@ function checkPendingOctillionth(){
 
   if (sxp_reset_boost_check){
     oppending = oppending.mul(new Decimal(10));
-  }
-
-
-
-  if (supercap.neq(new Decimal(1))){
-    nppending = nppending.div(supercap);
   }
 }
 
