@@ -1602,43 +1602,31 @@ window.addEventListener("resize", updateConnections);
 //CHECK UNLOCKS
 
 function checkUnlocks(){
-  if (nonillionth_unlocked){
-    nonillionth_grid.style.display = "grid";
-    main_nonillionth_tab_button.style.display = "inline-block";
-  }
-  if (octillionth_unlocked){
-    octillionth_tab.style.display = "block";
-    octillionth_main_section.style.display = "grid";
-    main_octillionth_tab_button.style.display = "inline-block";
+  if (sextillionth_unlocked){
+    sextillionth_tab.style.display = "block";
+    sextillionth_main_section.style.display = "grid";
+    main_sextillionth_tab_button.style.display = "inline-block";
 
-    nonillionth_grid.style.display = "grid";
-    main_nonillionth_tab_button.style.display = "inline-block";
+    septillionth_unlocked = true;
+    octillionth_unlocked = true;
+    nonillionth_unlocked = true;
   }
   if (septillionth_unlocked){
     septillionth_tab.style.display = "block";
     septillionth_main_section.style.display = "grid";
     main_septillionth_tab_button.style.display = "inline-block";
 
-    octillionth_tab.style.display = "block";
-    octillionth_main_section.style.display = "grid";
-    main_octillionth_tab_button.style.display = "inline-block";
-
-    nonillionth_grid.style.display = "grid";
-    main_nonillionth_tab_button.style.display = "inline-block";
+    octillionth_unlocked = true;
+    nonillionth_unlocked = true;
   }
-  if (sextillionth_unlocked){
-    sextillionth_tab.style.display = "block";
-    sextillionth_main_section.style.display = "grid";
-    main_sextillionth_tab_button.style.display = "inline-block";
-
-    septillionth_tab.style.display = "block";
-    septillionth_main_section.style.display = "grid";
-    main_septillionth_tab_button.style.display = "inline-block";
-
+  if (octillionth_unlocked){
     octillionth_tab.style.display = "block";
     octillionth_main_section.style.display = "grid";
     main_octillionth_tab_button.style.display = "inline-block";
 
+    nonillionth_unlocked = true;
+  }
+  if (nonillionth_unlocked){
     nonillionth_grid.style.display = "grid";
     main_nonillionth_tab_button.style.display = "inline-block";
   }
