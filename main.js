@@ -1602,10 +1602,13 @@ window.addEventListener("resize", updateConnections);
 //CHECK UNLOCKS
 
 function checkUnlocks(){
+  console.log("checkUnlocks called");
   if (sextillionth_unlocked){
-    sextillionth_tab.style.display = "block";
-    sextillionth_main_section.style.display = "grid";
-    main_sextillionth_tab_button.style.display = "inline-block";
+    if (main_sextillionth_tab_button.classList.contains("sx-light")){
+      sextillionth_tab.style.display = "block";
+      sextillionth_main_section.style.display = "grid";
+      main_sextillionth_tab_button.style.display = "inline-block";
+    }
 
     septillionth_unlocked = true;
     octillionth_unlocked = true;
@@ -1620,6 +1623,7 @@ function checkUnlocks(){
     nonillionth_unlocked = true;
   }
   if (octillionth_unlocked){
+    console.log("octillionth unlocked, setting nonillionth");
     octillionth_tab.style.display = "block";
     octillionth_main_section.style.display = "grid";
     main_octillionth_tab_button.style.display = "inline-block";
@@ -1627,6 +1631,7 @@ function checkUnlocks(){
     nonillionth_unlocked = true;
   }
   if (nonillionth_unlocked){
+    console.log("nonillionth unlocked, setting display");
     nonillionth_grid.style.display = "grid";
     main_nonillionth_tab_button.style.display = "inline-block";
   }
@@ -2490,6 +2495,7 @@ function saveGame() {
 }
 
 function loadGame() {
+  console.log("loadGame called");
   const saved = localStorage.getItem("quinquaginticSave");
   if (!saved) return;
 
@@ -2582,6 +2588,7 @@ function loadGame() {
   sxp_reset_boost_check = data.sxp_reset_boost_check === 'true';
   sextillionth_unlocked = data.sextillionth_unlocked === 'true';
 
+  console.log("about to call checkUnlocks");
   checkUnlocks();
 }
 
