@@ -150,6 +150,7 @@ var boostsString = "";
 var nonBoostsString = "";
 var octBoostsString = "";
 var sepBoostsString = "";
+var atomsBoostsString = "";
 var sxpBoostsString = "";
 
 var challengeModifier = 0;
@@ -272,6 +273,22 @@ var sxppending = new Decimal(0);
 var sxpbase = new Decimal(0);
 
 var sextillionthPoints = new Decimal(0);
+
+var boughtSXUT11 = false;
+var boughtSXUT12 = false;
+var boughtSXUT13 = false;
+var boughtSXUT21 = false;
+var boughtSXUT22 = false;
+var boughtSXUT23 = false;
+var boughtSXUT24 = false;
+var boughtSXUT31 = false;
+var boughtSXUT32 = false;
+var boughtSXUT33 = false;
+var boughtSXUT34 = false;
+var boughtSXUT41 = false;
+var boughtSXUT42 = false;
+var boughtSXUT43 = false;
+var boughtSXUT44 = false;
 
 //=========================================================================
 //NON MAGIC CONSTS
@@ -483,6 +500,7 @@ const atoms_formula = document.getElementById("atoms-formula");
 
 const atoms_display = document.getElementById("atoms-display");
 const atoms_boost_display = document.getElementById("atoms-boost-display");
+const atoms_boosts = document.getElementById("atoms-boosts");
 
 const au1 = document.getElementById("au1");
 const au1_id_amt = document.getElementById("au1-id-amt");
@@ -860,6 +878,7 @@ setInterval(function(){
 
   checkSextillionthReset();
   checkPendingSextillionth();
+  checkSXUT();
 
   automation();
   updateConnections();
@@ -965,7 +984,11 @@ main_sextillionth_tab_button.addEventListener("click", function(){
   }
 });
 
-//=========================================================================
+//================================================================================================================
+//================================================================================================================
+//================================================================================================================
+//================================================================================================================
+//================================================================================================================
 //ACTUAL FUNCTIONS
 
 function calculateGain(){
@@ -1018,6 +1041,10 @@ function calculateGain(){
     numberGain = numberGain.mul(atomsBoost);
   }
 
+  if (boughtSXUT11){
+    numberGain = numberGain.mul(new Decimal(5));
+  }
+
   //SOFTCAPS
   if (minicap.neq(new Decimal(1))){
     numberGain = numberGain.div(minicap);
@@ -1063,8 +1090,20 @@ function calculateGain(){
       atomGain = atomGain.mul(new Decimal(5));
     }
 
+    if (boughtSXUT21){
+      atomGain = atomGain.mul(new Decimal(100));
+    }
+
+    if (boughtSXUT22 && chal3completions.gte(new Decimal(1))){
+      atomGain = atomGain.mul(chal3completions.div(new Decimal(2)).add(new Decimal(1)));
+    }
+
     atoms = atoms.add(atomGain.div(new Decimal(20)));
     atomsBoost = atomsBoost.add(atoms.log10());
+
+    if (atoms.lt(new Decimal(0))){
+      atoms = new Decimal(1);
+    }
   }
 }
 
@@ -1150,6 +1189,10 @@ function calculateBoostsStrings(){
     boostsString += "Atoms: x" + atomsBoost.toExponential(3) + ", ";
   }
 
+  if (boughtSXUT11){
+    boostsString += "SXUT11: x5, ";
+  }
+
   //=========================================================================
   //NONILLIONTHS
   nonBoostsString = "Boosts: ";
@@ -1199,6 +1242,20 @@ function calculateBoostsStrings(){
 
   if (sxp_reset_boost_check){
     sepBoostsString += "Sextillionth: x10, ";
+  }
+
+  atomsBoostsString = "Boosts: ";
+
+  if (sxp_reset_boost_check){
+    atomsBoostsString += "Sextillionth: x5 + formula change, ";
+  }
+
+  if (boughtSXUT21){
+    atomsBoostsString += "SXUT21: x100, ";
+  }
+
+  if (boughtSXUT22 && chal3completions.gte(1)){
+    atomsBoostsString += "C3: x" + chal3completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
   }
 
   //=========================================================================
@@ -1394,13 +1451,15 @@ function updateScreen(){
   sepBoostsDisplay.textContent = sepBoostsString;
 
   if (sxp_reset_boost_check){
-    atoms_formula.textContent = "((SXPx5)+AU1+AU2+AU3)^2.5) x (AU4+AU5+AU6)^1.5 (Sextillionth: x5)";
+    atoms_formula.textContent = "((SXPx5)+AU1+AU2+AU3)^2.5) x (AU4+AU5+AU6)^1.5";
   } else {
     atoms_formula.textContent = "((SXPx3)+AU1+AU2+AU3)^2) x (AU4+AU5+AU6)";
   }
 
   atoms_display.textContent = "You have " + atoms.toExponential(3) + " atoms (A). (" + atomGain.toExponential(3) + " A/s)";
   atoms_boost_display.textContent = "Boost to N: " + atomsBoost.toExponential(3);
+
+  atoms_boosts.textContent = atomsBoostsString;
 
   au1_id_amt.textContent = "ID: AU1 || x" + au1amt;
   au1_cost_scale.textContent = "Cost: " + au1cost.toExponential(3) + " A || Scaling: x" + au1scaling;
@@ -1637,6 +1696,7 @@ function checkUnlocks(){
     if (main_nonillionth_tab_button.classList.contains("non-light")){
       nonillionth_grid.style.display = "grid";
       main_nonillionth_tab_button.style.display = "inline-block";
+      nonillionth_grid.classList.remove("hidden");
     }
   }
 }
@@ -2388,6 +2448,74 @@ topSXP.addEventListener("click", function(){
 });
 
 //=========================================================================
+//CHECK AFFORD
+
+function checkSXUT(){
+  if (sextillionthPoints.gte(new Decimal(1)) && !boughtSXUT11) {
+    sxut_11.disabled = false;
+  } else {
+    sxut_11.disabled = true;
+  }
+
+  if (challengeCompletions.gte(50) && !boughtSXUT21 && boughtSXUT11) {
+    sxut_21.disabled = false;
+  } else {
+    sxut_21.disabled = true;
+  }
+
+  if (sextillionthPoints.gte(new Decimal(3)) && !boughtSXUT22 && boughtSXUT11) {
+    sxut_22.disabled = false;
+  } else {
+    sxut_22.disabled = true;
+  }
+}
+
+//=========================================================================
+//CLICKY CLICKY
+
+sxut_respec.addEventListener("click", function(){
+  if (boughtSXUT11 == true){
+    sextillionthPoints = sextillionthPoints.add(new Decimal(1));
+    sxut_11.classList.remove("sx-light");
+    sxut_11.classList.add("sx-dark");
+    boughtSXUT11 = false;
+  }
+
+  if (boughtSXUT21 == true){
+    sxut_21.classList.remove("sx-light");
+    sxut_21.classList.add("sx-dark");
+    boughtSXUT21 = false;
+  }
+
+  if (boughtSXUT22 == true){
+    sextillionthPoints = sextillionthPoints.add(new Decimal(3));
+    sxut_22.classList.remove("sx-light");
+    sxut_22.classList.add("sx-dark");
+    boughtSXUT22 = false;
+  }
+});
+
+sxut_11.addEventListener("click", function(){
+  sextillionthPoints = sextillionthPoints.sub(new Decimal(1));
+  sxut_11.classList.add("sx-light");
+  sxut_11.classList.remove("sx-dark");
+  boughtSXUT11 = true;
+});
+
+sxut_21.addEventListener("click", function(){
+  sxut_21.classList.add("sx-light");
+  sxut_21.classList.remove("sx-dark");
+  boughtSXUT21 = true;
+});
+
+sxut_22.addEventListener("click", function(){
+  sextillionthPoints = sextillionthPoints.sub(new Decimal(3));
+  sxut_22.classList.add("sx-light");
+  sxut_22.classList.remove("sx-dark");
+  boughtSXUT22 = true;
+});
+
+//=========================================================================
 
 //   ========         ==        ==          ==  ========
 //  ==               ====        ==        ==   ==
@@ -2621,7 +2749,10 @@ window.addEventListener("keydown", function(event) {
     updateScreen();
   }
   if (event.key === "L"){
-    chal3completions = chal3completions.add(new Decimal(20));
+    if (main_septillionth_tab_button.classList.contains("sep-light")){
+      septillionth_tab.style.display = "block";
+    }
+    main_septillionth_tab_button.style.display = "inline-block";
     decimalNumber = decimalNumber.mul(new Decimal.pow(10, 9)); //Skip to Septillionth.
     updateScreen();
   }
