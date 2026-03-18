@@ -313,7 +313,7 @@ var boughtSXUT43 = false;
 var boughtSXUT44 = false;
 
 var chal5completions = new Decimal(0);
-var chal5goal = new Decimal(500000000);
+var chal5goal = new Decimal.pow(10, 87);
 
 //=========================================================================
 //NON MAGIC CONSTS
@@ -402,6 +402,7 @@ const topSXP = document.getElementById("top-sxp");
 const bottomModifiers = document.getElementById("bottom-modifiers");
 const ticker = document.getElementById("news-ticker");
 const container = document.getElementById("news-ticker-container");
+const ulia = document.getElementById("useless-little-input-area");
 
 //=========================================================================
 //CAPS
@@ -938,6 +939,7 @@ setInterval(function(){
   checkPendingSextillionth();
   checkSXUT();
   chal5GoalChecking();
+  checkSXUTColors();
 
   automation();
   updateConnections();
@@ -1624,7 +1626,7 @@ function updateScreen(){
     chal5_title.textContent = "Challenge V";
   }
 
-  chal5_goal_scale.textContent = "Goal: " + chal5goal.div(decillionthDivision).toExponential(3);
+  chal5_goal_scale.textContent = "Goal: " + chal5goal.toExponential(3) + " Atoms";
   chal5_completions.textContent = chal5completions.toString() + "/1";
 }
 
@@ -2804,74 +2806,96 @@ sxut_respec.addEventListener("click", function(){
 //UPGS
 
 function checkSXUTColors(){
-  //note to self here: put the sxut_## classlist things in here with conditionals, AND PUT THIS IN THE GAME LOOP
+  if (boughtSXUT11){
+    sxut_11.classList.add("sx-light");
+    sxut_11.classList.remove("sx-dark");
+  }
+  
+  if (boughtSXUT21){
+    sxut_21.classList.add("sx-light");
+    sxut_21.classList.remove("sx-dark");
+  }
+  if (boughtSXUT22){
+    sxut_22.classList.add("sx-light");
+    sxut_22.classList.remove("sx-dark");
+  }
+  if (boughtSXUT23){
+    sxut_23.classList.add("sx-light");
+    sxut_23.classList.remove("sx-dark");
+  }
+
+  if (boughtSXUT31){
+    sxut_31.classList.add("sx-light");
+    sxut_31.classList.remove("sx-dark");
+  }
+  if (boughtSXUT32){
+    sxut_32.classList.add("sx-light");
+    sxut_32.classList.remove("sx-dark");
+  }
+  if (boughtSXUT33){
+    sxut_33.classList.add("sx-light");
+    sxut_33.classList.remove("sx-dark");
+  }
+
+  if (boughtSXUT41){
+    sxut_41.classList.add("sx-light");
+    sxut_41.classList.remove("sx-dark");
+  }
+  if (boughtSXUT42){
+    sxut_42.classList.add("sx-light");
+    sxut_42.classList.remove("sx-dark");
+  }
+  if (boughtSXUT43){
+    sxut_43.classList.add("sx-light");
+    sxut_43.classList.remove("sx-dark");
+  }
 }
 
 sxut_11.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(1));
-  sxut_11.classList.add("sx-light");
-  sxut_11.classList.remove("sx-dark");
   boughtSXUT11 = true;
 });
 
 sxut_21.addEventListener("click", function(){
-  sxut_21.classList.add("sx-light");
-  sxut_21.classList.remove("sx-dark");
   boughtSXUT21 = true;
 });
 
 sxut_22.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(3));
-  sxut_22.classList.add("sx-light");
-  sxut_22.classList.remove("sx-dark");
   boughtSXUT22 = true;
 });
 
 sxut_23.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(6));
-  sxut_23.classList.add("sx-light");
-  sxut_23.classList.remove("sx-dark");
   boughtSXUT23 = true;
 });
 
 sxut_31.addEventListener("click", function(){
-  sxut_31.classList.add("sx-light");
-  sxut_31.classList.remove("sx-dark");
   boughtSXUT31 = true;
 });
 
 sxut_32.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(15));
-  sxut_32.classList.add("sx-light");
-  sxut_32.classList.remove("sx-dark");
   boughtSXUT32 = true;
 });
 
 sxut_33.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(25));
-  sxut_33.classList.add("sx-light");
-  sxut_33.classList.remove("sx-dark");
   boughtSXUT33 = true;
 });
 
 sxut_41.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(50));
-  sxut_41.classList.add("sx-light");
-  sxut_41.classList.remove("sx-dark");
   boughtSXUT41 = true;
 });
 
 sxut_42.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(100));
-  sxut_42.classList.add("sx-light");
-  sxut_42.classList.remove("sx-dark");
   boughtSXUT42 = true;
 });
 
 sxut_43.addEventListener("click", function(){
   atoms = atoms.sub(new Decimal.pow(10, 30));
-  sxut_43.classList.add("sx-light");
-  sxut_43.classList.remove("sx-dark");
   boughtSXUT43 = true;
 });
 
@@ -2889,7 +2913,7 @@ chal5.addEventListener("click", function(){
 });
 
 function chal5GoalChecking(){
-  if (decimalNumber.gte(chal5goal) && challengeModifier == 5 && chal5completions.lt(new Decimal(1))){
+  if (atoms.gte(chal5goal) && challengeModifier == 5 && chal5completions.lt(new Decimal(1))){
     chal5completions = chal5completions.add(new Decimal(1));
   }
 }
@@ -3021,6 +3045,12 @@ function saveGame() {
 
     chal5completions: chal5completions.toString(),
     chal5goal: chal5goal.toString(),
+
+    au7amt: au7amt.toString(),
+    au7cost: au7cost.toString(),
+
+    au8amt: au8amt.toString(),
+    au8cost: au8cost.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -3139,6 +3169,12 @@ function loadGame() {
 
   chal5completions = new Decimal(data.chal5completions || "0");
   chal5goal = new Decimal(data.chal5goal || "50000000");
+
+  au7amt = new Decimal(data.au7amt || "0");
+  au7cost = new Decimal(data.au7cost || "1e+15");
+
+  au8amt = new Decimal(data.au8amt || "0");
+  au8cost = new Decimal(data.au8cost || "1e+21");
 }
 
 function backgroundColorChange() {
@@ -3165,11 +3201,15 @@ function backgroundColorChange() {
 //=========================================================================
 
 window.addEventListener("keydown", function(event) {
-  if (event.key === "J"){
+  if (event.key === "J" && ulia.value =="Ju5+cub-1ng5^2p"){
     decimalNumber = decimalNumber.mul(new Decimal(1000)); //Skip to Octillionth.
     updateScreen();
   }
-  if (event.key === "L"){
+  if (event.key === "K" && ulia.value =="Ju5+cub-1ng5^2p"){
+    atoms = atoms.mul(new Decimal.pow(10, 80)); //Skip Challenge 5.
+    updateScreen();
+  }
+  if (event.key === "L" && ulia.value =="Ju5+cub-1ng5^2p"){
     if (main_septillionth_tab_button.classList.contains("sep-light")){
       septillionth_tab.style.display = "block";
     }
@@ -3177,7 +3217,7 @@ window.addEventListener("keydown", function(event) {
     decimalNumber = decimalNumber.mul(new Decimal.pow(10, 9)); //Skip to Septillionth.
     updateScreen();
   }
-  if (event.key === ":"){
+  if (event.key === ":" && ulia.value =="Ju5+cub-1ng5^2p"){
     sextillionth_tab.style.display = "block";
     decimalNumber = decimalNumber.mul(new Decimal.pow(10, 12)); //Skip to Sextillionth.
     updateScreen();
