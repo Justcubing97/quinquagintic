@@ -56,7 +56,7 @@ var normalTickers = [
   "asdfasf",
   "The next update will be in a few days to a few months.",
   "TRANSCENDENT CAP IS TRANSCENDENT",
-  "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117... (these are all my digits)",
+  "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679... (these are all my digits) 100 DIGITS!!!",
   "Is the answer to this question 'no'?",
   "THIS SENTENCE IS FALSE.",
   "Does a set of all sets contain itself?",
@@ -64,15 +64,15 @@ var normalTickers = [
   "Check out my 2026 Math Clock. It's in Dr. Zye's VERY Hard clock stream, maybe around the middle (I was middle of the spreadsheet when he posted).",
   "Find the integral of cos(x^2).",
   "What's the difference between C, C+, C++, and C#?",
-  "If you have 0.999... of a cookie, do you have a whole cookie?",
+  "If you have 0.999 repeating of a cookie, do you have a whole cookie?",
   "WHY ARE ALL OF THE RESET LAYERS BASED ON A SINGLE CURRENCY???",
-  "If you've seen the message where my friend quinquagintillionth rooted a quinquagintic... yeah, I don't know if cares about my emotional state. Maybe she does. I don't know. I never will.",
+  "If you've seen the message where my friend quinquagintillionth rooted a quinquagintic... yeah, I don't know if she cares about my emotional state. Maybe she does. I don't know. I never will.",
   "If you SOMEHOW survive the final reset layer... good luck in the second Domain. You’ll need it. Especially for the 4th and 6th layers. And 7th while I'm at it. I'm insane. And no one cares.",
-  "Two people are trapped in a bedroom. There are no doors, no windows, only a standard household air conditioning vent and the basic bedroom amenities like a bed, bathroom, and bookshelf. The boy is an insane math prodigy, and the other is a psychopathic girl. The math prodigy attempts to calm her down using stunning fractal art, but she doesn't approve of it and attempts to harm the prodigy. He manages to slip away, performing some calculated movement around her and- IS THAT AN INTEGRAL AS A SWORD??? -uses an integral weapon to threaten her. The girl picks him up and throws him against the bed, stealing his integral in the process. She threatens her again, but then he says, \"STOP! I can use that integral to get us out of here!\" ...she doesn't care, so she decides to throw his integral away, and gets a 700-page AP World History: Modern textbook from the bookshelf in an attempt to hit him. The prodigy, however, calculates the time based on her perceived strength and manages to pull out a derivative- IS THAT A DERIVATIVE SHIELD??? -which blocks the book attack. Stay tuned for part 2!",
+  "[PART 1] Two people are trapped in a bedroom. There are no doors, no windows, only a standard household air conditioning vent and the basic bedroom amenities like a bed, bathroom, and bookshelf. The boy is an insane math prodigy, and the other is a psychopathic girl. The math prodigy attempts to calm her down using stunning fractal art, but she doesn't approve of it and attempts to harm the prodigy. He manages to slip away, performing some calculated movement around her and- IS THAT AN INTEGRAL AS A SWORD??? -uses an integral weapon to threaten her. The girl picks him up and throws him against the bed, stealing his integral in the process. She threatens her again, but then he says, \"STOP! I can use that integral to get us out of here!\" ...she doesn't care, so she decides to throw his integral away, and gets a 700-page AP World History: Modern textbook from the bookshelf in an attempt to hit him. The prodigy, however, calculates the time based on her perceived strength and manages to pull out a derivative- IS THAT A DERIVATIVE SHIELD??? -which blocks the book attack. Stay tuned for part 2!",
   "Wait... if you're stuck in a bedroom with a computer or laptop running Quinquagintic... does this imply the existence of other bedrooms with other events or people or games or activities? Do these imply clones of you, where they could be in relationships or be living a happier life?",
   "If there are 11 people and the teacher asks to pair up into twos... yeah, no, I'm being the odd one out.",
   "what the hell copilot DID YOU JUST TRY TO MAKE 102 MILESTONES IN ONE LAYER??? yeah no moving on to chatgpt!",
-  "Eventually the girl calms down and sulks in the opposite corner while the prodigy tries to recover what is left of his sanity and weapons. The integral is fractured, and the derivatives are separated into the different letters of Lagrange notation. The prodigy goes to sleep. However, in a turn of events, the girl decides to sleep as well next to him in the same bed, deciding that he's had enough trauma for one day. Or was it 20 minutes? Anyway, he wakes up at like 3 AM, only to see the girl peacefully sleeping like a delicate work of art. He just doesn't move, afraid that one single misplaced atom would disrupt her snooze. The next morning comes, and he's slept again while she wakes up. There's nothing to do other than human needs in the bathroom and read, so she decides to get the crumpled textbook and start reading about the Industrial Revolution from the APWH: Modern textbook. The prodigy (ok let's give them names I'm tired of this, how about Phi and Ava) is still sleeping when Ava gets to read about the various revolutions in 1750-1900. But Phi eventually wakes up and they lock eye contact again. Stay tuned for part 3!",
+  "[PART 2] Eventually the girl calms down and sulks in the opposite corner while the prodigy tries to recover what is left of his sanity and weapons. The integral is fractured, and the derivatives are separated into the different letters of Lagrange notation. The prodigy goes to sleep. However, in a turn of events, the girl decides to sleep as well next to him in the same bed, deciding that he's had enough trauma for one day. Or was it 20 minutes? Anyway, he wakes up at like 3 AM, only to see the girl peacefully sleeping like a delicate work of art. He just doesn't move, afraid that one single misplaced atom would disrupt her snooze. The next morning comes, and he's slept again while she wakes up. There's nothing to do other than human needs in the bathroom and read, so she decides to get the crumpled textbook and start reading about the Industrial Revolution from the APWH: Modern textbook. The prodigy (ok let's give them names I'm tired of this, how about Phi and Ava) is still sleeping when Ava gets to read about the various revolutions in 1750-1900. But Phi eventually wakes up and they lock eye contact again. Stay tuned for part 3!",
   "did i really make that one specific news message say top instead of bottom",
   "-THE SINGULARITY- - Justcubing97 vs. SUPiFiNiTY vs. 3435Phi",
   "I don't know who SUPiFiNiTY is nor 3435Phi. They're copycats of me, as far as I know.",
@@ -85,6 +85,7 @@ var normalTickers = [
   "BREAKING NEWS: \"Quinquagintification\" has now been processed and observed by enough people to form a reasonable conclusion. We suspect that it is a condition that rises from the victim playing a game called Quinquagintic for multiple hours without breaks. The experts have been dedicated at this game due to the unusual means of the game not being mainstream. Justcubing97, the first reported case of \"Quinquagtintification,\" most likely contracted this condition from developing the game for unhealthy periods of time. We are working to provide a cure.",
   "BREAKING NEWS: After extensive research, we have found a potential cure for \"Quinquagintification.\" We are currently testing it on volunteers, and we will provide updates on the progress of the cure. In the meantime, we suggest that people take breaks while playing Quinquagintic, and if you start to feel symptoms of \"Quinquagintification,\" such as excessive attachment to the game, emotional instability, or a desire to play the game for long periods of time without breaks, please seek help immediately. However, we have noticed that \"Quinquagtintification\" has spread outside of the suburbs that Justcubing97 resides in, as the game gets more and more popular. Please be careful.",
   "BREAKING NEWS: TH3R3 4R3 N0 N3W5. QU1NQUAG1NT1F1C4T10N 15 P3RM4N3NT. Y0U W1LL SUFF3R 1F Y0U PL4Y QU1NQUAG1NT1C. TH3 CURE W1LL N3V3R B3 F0UND. TH3 0NLY W4Y T0 4V01D QU1NQUAG1NT1F1C4T10N 15 TO N0T PL4Y QU1NQUAG1NT1C. TH3 S1NGULARITY 15 N3AR. N0 FUTUR3 UPD4T35 T0 TH15 51TU4T10N 0R TH3 G4M3 W1LL B3 M4D3. G00DBY3.",
+  "BREAKING NEWS: The corrupted messsage supposedly brought by a so-called \"entity\" in the Quinquagintic community. Some theories suggest that this entity may be the one causing Quinquagintification in the first place. However, the cure we develop seems to have succeeded in human trials and with live subjects, so Quinquagintification may or may not subside within the upcoming months.",
   "WHAT DO YOU MEAN INSANITYCAP???",
   "derivative impresses integral by learning and speaking lagrange notation fluently",
   "Fun fact: the softcaps used to affect multiple currencies, but after learning that it wasn't the right choice, all of the softcaps now affect only Number. This means that the last five softcaps, from ABSOLUTE to TRANSCENDENT, will work in the Integer Domain and still affect Number only. The other softcaps will do NOTHING in the Integer Domain!",
@@ -106,7 +107,18 @@ var normalTickers = [
   "five squaredth prime = 97",
   "googolPLEX",
   "googolDUplex",
+  "googolTRIplex",
   "Why use subtractive RYB when additive RGB is better?",
+  "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, YOU THOUGHT I WAS GONNA KEEP GOING HAHA NO MORE NUMBERS!",
+  "WHO MADE ROYGBIV??????",
+  "I LOVE incremental games. Check out some of my favorites like Road of Big Number Rewritten, Incremental Mass Rewritten, Algebraic Progression, The Point Tree, Pixelgrab, Shark Incremental, and Calculator Evolution!",
+  "[PART 3] They make eye contact. They don't speak. They don't move. They only stare into each others' eyes. Is it forming a silent friendship? Or perhaps the start of a deadly conflict? ... Phi eventually goes back to sleep, first gazing in another direction, perhaps seeing a figure on the wall, before laying back down. (gosh darn it, so anticlimatic!) Ava goes back to reading the textbook. Like 20 minutes later, Phi wakes up again, before heading to the bathroom to get ready for whatever could happen next. He sits in the opposite corner of the room. \"So... what do you think all of this is?\" Phi starts, waving his arms around to dictate the scope of the question: the whole room. \"Eh, I don't really care. As long as we're kept alive I'm fine.\" Ava responds, not bothering to look up from her textbook to see him. \"This textbook is, like, the single most entertaining thing. I could be doing right now. But... maybe a coloring book would be nice...\" Phi doesn't say anything; he's usually quiet or silent. Instead, he just leans back against the wall and starts doing random math in his head. Stay tuned for part 4! (No! You dork, it's not part 24... the exclamation mark is purely for linguistic purposes and is NOT the factorial!)",
+  "Spoiler: there are 10 Challenges in the Decimal Domain!",
+  "Spoiler: the Integer Domain layers are (in order): Number, Binary, Data, Energy, Glitch, Lines of Code, Array, Recursion!",
+  "Spoiler: there's going to be instances of one generator boosting a previous in a sequence, almost like- ANTIMATTER DIMENSIONS??? -IMR's star generators, but with an indefinite amount of generators.",
+  "Spoiler: BPM1-6 are not actually going to be reset!",
+  "News message made by Justcubing97.",
+  "Are you a male, female, trans, non-binary, Walmart shopping cart, attack helicopter, 1x2 Lego tile, second derivative of a rational function, an omega ordinal, a cube of paper, a tetrahedron made of metal, a lump of tungsten, a computer with Quinquagintic, a completed Muonic periodic table in IMR, a vermillion-colored fine-tip Sharpie, an AI made to check for mathematical syntax errors, a gaming headset, Camellia (the music artist), a MOVA globe, a water bottle filled EXACTLY 72.70097% with water, a copy of \"Unwind\" with chapter 24 missing, a Yamaha soprano recorder, an infinity cube, the Mandelbrot Set with a complex number exponent, a final star shard (IMR???), a CLP-330 electronic piano, a pitch of Bb6 at A4=452, a couch with torn cushions, or something else?",
 ];
 
 var specialTickers = [
@@ -135,6 +147,7 @@ var specialTickers = [
   "LOVE < ZERO - Justcubing97- wait why is this in the specialTickers list? Oh, right, the song title.",
   "atp i dont know if im ultra paranoid or if im doing something wrong AND NO ONE IS POINTING IT OUT",
   "It's a stable friendship.",
+  "Platonic love for the win!",
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
@@ -298,6 +311,9 @@ var boughtSXUT41 = false;
 var boughtSXUT42 = false;
 var boughtSXUT43 = false;
 var boughtSXUT44 = false;
+
+var chal5completions = new Decimal(0);
+var chal5goal = new Decimal(500000000);
 
 //=========================================================================
 //NON MAGIC CONSTS
@@ -585,6 +601,14 @@ const sxut_41 = document.getElementById("sxut-41");
 const sxut_42 = document.getElementById("sxut-42");
 const sxut_43 = document.getElementById("sxut-43");
 const sxut_44 = document.getElementById("sxut-44");
+
+const challenge5gate = document.getElementById("challenge5gate");
+
+const chal5 = document.getElementById("chal5");
+const chal5_title = document.getElementById("chal5-title");
+const chal5_goal_scale = document.getElementById("chal5-goal-scale");
+const chal5_reward = document.getElementById("chal5-reward");
+const chal5_completions = document.getElementById("chal5-completions");
 
 //=========================================================================
 
@@ -913,6 +937,7 @@ setInterval(function(){
   checkSextillionthReset();
   checkPendingSextillionth();
   checkSXUT();
+  chal5GoalChecking();
 
   automation();
   updateConnections();
@@ -1026,7 +1051,7 @@ main_sextillionth_tab_button.addEventListener("click", function(){
 //ACTUAL FUNCTIONS
 
 function calculateGain(){
-  challengeCompletions = chal1completions.add(chal2completions).add(chal3completions).add(chal4completions);
+  challengeCompletions = chal1completions.add(chal2completions).add(chal3completions).add(chal4completions).add(chal5completions);
 
   if (sxp_reset_boost_check){
     challengeCompletions = challengeCompletions.mul(new Decimal(2));
@@ -1139,6 +1164,12 @@ function calculateGain(){
     if (boughtSXUT33){
       atomGain = atomGain.mul(sextillionthPoints.add(new Decimal(1)));
     }
+
+    if (boughtSXUT43){
+      atomGain = atomGain.mul(new Decimal(10000000000));
+    }
+
+    //=====
 
     atoms = atoms.add(atomGain.div(new Decimal(20)));
     atomsBoost = atomsBoost.add(atoms.log10());
@@ -1312,9 +1343,17 @@ function calculateBoostsStrings(){
     atomsBoostsString += "SXUT33: x" + sextillionthPoints.add(new Decimal(1)) + ", ";
   }
 
+  if (boughtSXUT43){
+    atomsBoostsString += "SXUT43: x10B, "
+  }
+
   //=========================================================================
   //SEXTILLIONTHS
   sxpBoostsString = "Boosts: ";
+
+  if (boughtSXUT41){
+    sxpBoostsString += "SXUT41: x3, ";
+  }
 }
 
 //=========================================================================
@@ -1337,17 +1376,29 @@ function updateScreen(){
   if (challengeModifier == 3){
     topNP.textContent = "NP: DISABLED IN C3";
   } else {
-    topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
+    if (challengeModifier == 5){
+      topNP.textContent = "NP: DISABLED IN C5";
+    } else {
+      topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
+    }
   }
 
   if (octillionth_unlocked){
-    topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
+    if (challengeModifier == 5){
+      topOP.textContent = "OP: DISABLED IN C5";
+    } else {
+      topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
+    }
   } else {
     topOP.textContent = "";
   }
 
   if (septillionth_unlocked){
-    topSP.textContent = "SP: " + septillionthPoints.toExponential(3) + " (+" + sppending.toExponential(3) + ")";
+    if (challengeModifier == 5){
+      topSP.textContent = "SP: DISABLED IN C5";
+    } else {
+      topSP.textContent = "SP: " + septillionthPoints.toExponential(3) + " (+" + sppending.toExponential(3) + ")";
+    }
   } else {
     topSP.textContent = "";
   }
@@ -1424,7 +1475,11 @@ function updateScreen(){
 
   //=========================================================================
   //OCTILLIONTHS
-  op_point_pending.textContent = "+" + oppending.toExponential(3) + " OP";
+  if (challengeModifier == 5){
+    op_point_pending.textContent = "DISABLED IN C5";
+  } else {
+    op_point_pending.textContent = "+" + oppending.toExponential(3) + " OP";
+  }
   
   op_next_point.textContent = "(next OP at " + opthreshold.div(decillionthDivision).toExponential(3) + " N)";
 
@@ -1498,7 +1553,11 @@ function updateScreen(){
 
   //=========================================================================
   //SEPTILLIONTHS
-  sp_point_pending.textContent = "+" + sppending.toExponential(3) + " SP";
+  if (challengeModifier == 5){
+    sp_point_pending.textContent = "DISABLED IN C5";
+  } else {
+    sp_point_pending.textContent = "+" + sppending.toExponential(3) + " SP";
+  }
   
   sp_next_point.textContent = "(next SP at " + spthreshold.div(decillionthDivision).toExponential(3) + " N)";
 
@@ -1545,11 +1604,28 @@ function updateScreen(){
 
   //=========================================================================
   //SEXTILLIONTHS
-  sxp_point_pending.textContent = "+" + sxppending.toExponential(3) + " SXP";
+  if (challengeModifier == 5){
+    sxp_point_pending.textContent = "DISABLED IN C5";
+  } else {
+    sxp_point_pending.textContent = "+" + sxppending.toExponential(3) + " SXP";
+  }
   
   sxp_next_point.textContent = "(next SXP at " + sxpthreshold.div(decillionthDivision).toExponential(3) + " N)";
 
   sxpBoostsDisplay.textContent = sxpBoostsString;
+
+  if (challengeModifier == 5){
+    bottomModifiers.textContent = "Modifiers: Challenge 5";
+  }
+
+  if (challengeModifier == 5){
+    chal5_title.textContent = "Challenge V (ACTIVE)";
+  } else {
+    chal5_title.textContent = "Challenge V";
+  }
+
+  chal5_goal_scale.textContent = "Goal: " + chal5goal.div(decillionthDivision).toExponential(3);
+  chal5_completions.textContent = chal5completions.toString() + "/1";
 }
 
 //=========================================================================
@@ -2087,7 +2163,7 @@ oct_challenge_tab_button.addEventListener("click", function(){
 //=========================================================================
 //RESET DETECTION
 function checkOctillionthReset(){
-  if (decimalNumber.gte(new Decimal.pow(10, 6))) {
+  if (decimalNumber.gte(new Decimal.pow(10, 6)) && challengeModifier != 5) {
     oreset.disabled = false;
   } else {
     oreset.disabled = true;
@@ -2296,7 +2372,7 @@ sep_atom_tab_button.addEventListener("click", function(){
 //=========================================================================
 //RESET DETECTION
 function checkSeptillionthReset(){
-  if (decimalNumber.gte(new Decimal.pow(10, 9))) {
+  if (decimalNumber.gte(new Decimal.pow(10, 9)) && challengeModifier != 5) {
     spreset.disabled = false;
   } else {
     spreset.disabled = true;
@@ -2550,7 +2626,7 @@ au8.addEventListener("click", function(){
 //=========================================================================
 //RESET DETECTION
 function checkSextillionthReset(){
-  if (decimalNumber.gte(new Decimal.pow(10, 12))) {
+  if (decimalNumber.gte(new Decimal.pow(10, 12)) && challengeModifier != 5) {
     sxpreset.disabled = false;
   } else {
     sxpreset.disabled = true;
@@ -2568,6 +2644,10 @@ function checkPendingSextillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THR
   }
 
   sxppending = new Decimal(sxpbase);
+
+  if (boughtSXUT41){
+    sxppending = sxppending.mul(new Decimal(3));
+  }
 }
 
 //=========================================================================
@@ -2633,6 +2713,28 @@ function checkSXUT(){
   } else {
     sxut_33.disabled = true;
   }
+
+  if (sextillionthPoints.gte(new Decimal(50)) && !boughtSXUT41 && boughtSXUT32) {
+    sxut_41.disabled = false;
+  } else {
+    sxut_41.disabled = true;
+  }
+
+  if (sextillionthPoints.gte(new Decimal(100)) && !boughtSXUT42 && boughtSXUT31 && boughtSXUT33) {
+    sxut_42.disabled = false;
+  } else {
+    sxut_42.disabled = true;
+  }
+
+  if (atoms.gte(new Decimal.pow(10, 30)) && !boughtSXUT43 && boughtSXUT33) {
+    sxut_43.disabled = false;
+  } else {
+    sxut_43.disabled = true;
+  }
+
+  if (boughtSXUT42){
+    challenge5gate.style.display = "block";
+  }
 }
 
 //=========================================================================
@@ -2681,6 +2783,20 @@ sxut_respec.addEventListener("click", function(){
     sxut_33.classList.remove("sx-light");
     sxut_33.classList.add("sx-dark");
     boughtSXUT33 = false;
+  }
+
+  if (boughtSXUT41 == true){
+    sextillionthPoints = sextillionthPoints.add(new Decimal(50));
+    sxut_41.classList.remove("sx-light");
+    sxut_41.classList.add("sx-dark");
+    boughtSXUT41 = false;
+  }
+
+  if (boughtSXUT43 == true){
+    atoms = atoms.add(new Decimal.pow(10, 30));
+    sxut_43.classList.remove("sx-light");
+    sxut_43.classList.add("sx-dark");
+    boughtSXUT43 = false;
   }
 });
 
@@ -2733,6 +2849,46 @@ sxut_33.addEventListener("click", function(){
   sxut_33.classList.remove("sx-dark");
   boughtSXUT33 = true;
 });
+
+sxut_41.addEventListener("click", function(){
+  sextillionthPoints = sextillionthPoints.sub(new Decimal(50));
+  sxut_41.classList.add("sx-light");
+  sxut_41.classList.remove("sx-dark");
+  boughtSXUT41 = true;
+});
+
+sxut_42.addEventListener("click", function(){
+  sextillionthPoints = sextillionthPoints.sub(new Decimal(100));
+  sxut_42.classList.add("sx-light");
+  sxut_42.classList.remove("sx-dark");
+  boughtSXUT42 = true;
+});
+
+sxut_43.addEventListener("click", function(){
+  atoms = atoms.sub(new Decimal.pow(10, 30));
+  sxut_43.classList.add("sx-light");
+  sxut_43.classList.remove("sx-dark");
+  boughtSXUT43 = true;
+});
+
+//=========================================================================
+//CHALLENGE 5
+
+chal5.addEventListener("click", function(){
+  sextillionthResetInitiate();
+  
+  if (challengeModifier != 5){
+    challengeModifier = 5;
+  } else {
+    challengeModifier = 0;
+  }
+});
+
+function chal5GoalChecking(){
+  if (decimalNumber.gte(chal5goal) && challengeModifier == 5 && chal5completions.lt(new Decimal(1))){
+    chal5completions = chal5completions.add(new Decimal(1));
+  }
+}
 
 //=========================================================================
 
