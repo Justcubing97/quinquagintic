@@ -2803,6 +2803,10 @@ sxut_respec.addEventListener("click", function(){
 //=========================================================================
 //UPGS
 
+function checkSXUTColors(){
+  //note to self here: put the sxut_## classlist things in here with conditionals, AND PUT THIS IN THE GAME LOOP
+}
+
 sxut_11.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(1));
   sxut_11.classList.add("sx-light");
@@ -2998,6 +3002,25 @@ function saveGame() {
     sxpthreshold: sxpthreshold.toString(),
     sxp_reset_boost_check: sxp_reset_boost_check.toString(),
     sextillionth_unlocked: sextillionth_unlocked.toString(),
+
+    boughtSXUT11: boughtSXUT11.toString(),
+    boughtSXUT12: boughtSXUT12.toString(),
+    boughtSXUT13: boughtSXUT13.toString(),
+    boughtSXUT21: boughtSXUT21.toString(),
+    boughtSXUT22: boughtSXUT22.toString(),
+    boughtSXUT23: boughtSXUT23.toString(),
+    boughtSXUT24: boughtSXUT24.toString(),
+    boughtSXUT31: boughtSXUT31.toString(),
+    boughtSXUT32: boughtSXUT32.toString(),
+    boughtSXUT33: boughtSXUT33.toString(),
+    boughtSXUT34: boughtSXUT34.toString(),
+    boughtSXUT41: boughtSXUT41.toString(),
+    boughtSXUT42: boughtSXUT42.toString(),
+    boughtSXUT43: boughtSXUT43.toString(),
+    boughtSXUT44: boughtSXUT44.toString(),
+
+    chal5completions: chal5completions.toString(),
+    chal5goal: chal5goal.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -3097,6 +3120,25 @@ function loadGame() {
   sxpthreshold = new Decimal(data.sxpthreshold || "1000000000000");
   sxp_reset_boost_check = data.sxp_reset_boost_check === 'true';
   sextillionth_unlocked = data.sextillionth_unlocked === 'true';
+
+  boughtSXUT11 = data.boughtSXUT11 === 'true';
+  boughtSXUT12 = data.boughtSXUT12 === 'true';
+  boughtSXUT13 = data.boughtSXUT13 === 'true';
+  boughtSXUT21 = data.boughtSXUT21 === 'true';
+  boughtSXUT22 = data.boughtSXUT22 === 'true';
+  boughtSXUT23 = data.boughtSXUT23 === 'true';
+  boughtSXUT24 = data.boughtSXUT24 === 'true';
+  boughtSXUT31 = data.boughtSXUT31 === 'true';
+  boughtSXUT32 = data.boughtSXUT32 === 'true';
+  boughtSXUT33 = data.boughtSXUT33 === 'true';
+  boughtSXUT34 = data.boughtSXUT34 === 'true';
+  boughtSXUT41 = data.boughtSXUT41 === 'true';
+  boughtSXUT42 = data.boughtSXUT42 === 'true';
+  boughtSXUT43 = data.boughtSXUT43 === 'true';
+  boughtSXUT44 = data.boughtSXUT44 === 'true';
+
+  chal5completions = new Decimal(data.chal5completions || "0");
+  chal5goal = new Decimal(data.chal5goal || "50000000");
 }
 
 function backgroundColorChange() {
