@@ -23,7 +23,7 @@ If you're in the Octillionth Section, push your challenges and grind OP. For CCM
 
 If you're in the Septillionth Section, wait to get more AUs.
 
-If you're in the Sextillionth Section... SXUT31: C1x11, C2x15, C3x18, C4x6. SXUT21 should be easy to get. If you're in Challenge 5, MAKE SURE TO GET SXUT43 I am not kidding IT IS A LIFE SAVER.
+If you're in the Sextillionth Section... SXUT31: C1x11, C2x15, C3x18, C4x6. SXUT21 should be easy to get. If you're in Challenge 5, MAKE SURE TO GET SXUT43 I am not kidding IT IS A LIFE SAVER. Also get like 200-300 SXP for C5 beforehand to get the SXUT33 boost.
 
 # Give me a description of Quinquagintic (guide).
 Warning, there are spoilers ahead!
