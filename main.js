@@ -80,12 +80,18 @@ var normalTickers = [
   "HOLY HYPERCAP, IT'S A NUMBER!",
   "Hey, psst, it's a hint for the Integer Domain! I... forgor",
   "pneumonoultramicroscopicsilicovolcanoconiosis YES I GOT IT",
+  "hippoppotomonstrosesquippedaliophobia YES I GOT IT",
+  "supercalifragilisticexpialidocious YES I GOT IT",
+  "antidisestablishmentarianism YES I GOT IT",
+  "hexakosioihexekontahexaphobia YES I GOT IT",
+  "floccinaucinihilipilification YES I GOT IT",
   "\"\"'Need more quotes!' -Hevipelle\" -AD news ticker\" -AP news ticker",
   "BREAKING NEWS: Justcubing97 has suffered an unknown effect. Only his best friend knows about it, and no one knows his best friend. Investigations are ongoing to find out what has happened to Justcubing97. A friend of his suggested that \"Quinquagintification\" may have been a probable cause of his condition. Experts are currently researching this theory, but they have also suffered from this \"Quinquagtintification.\" We are working to solve this mysterious problem.",
   "BREAKING NEWS: \"Quinquagintification\" has now been processed and observed by enough people to form a reasonable conclusion. We suspect that it is a condition that rises from the victim playing a game called Quinquagintic for multiple hours without breaks. The experts have been dedicated at this game due to the unusual means of the game not being mainstream. Justcubing97, the first reported case of \"Quinquagtintification,\" most likely contracted this condition from developing the game for unhealthy periods of time. We are working to provide a cure.",
   "BREAKING NEWS: After extensive research, we have found a potential cure for \"Quinquagintification.\" We are currently testing it on volunteers, and we will provide updates on the progress of the cure. In the meantime, we suggest that people take breaks while playing Quinquagintic, and if you start to feel symptoms of \"Quinquagintification,\" such as excessive attachment to the game, emotional instability, or a desire to play the game for long periods of time without breaks, please seek help immediately. However, we have noticed that \"Quinquagtintification\" has spread outside of the suburbs that Justcubing97 resides in, as the game gets more and more popular. Please be careful.",
   "BREAKING NEWS: TH3R3 4R3 N0 N3W5. QU1NQUAG1NT1F1C4T10N 15 P3RM4N3NT. Y0U W1LL SUFF3R 1F Y0U PL4Y QU1NQUAG1NT1C. TH3 CURE W1LL N3V3R B3 F0UND. TH3 0NLY W4Y T0 4V01D QU1NQUAG1NT1F1C4T10N 15 TO N0T PL4Y QU1NQUAG1NT1C. TH3 S1NGULARITY 15 N3AR. N0 FUTUR3 UPD4T35 T0 TH15 51TU4T10N 0R TH3 G4M3 W1LL B3 M4D3. G00DBY3.",
   "BREAKING NEWS: The corrupted messsage supposedly brought by a so-called \"entity\" in the Quinquagintic community. Some theories suggest that this entity may be the one causing Quinquagintification in the first place. However, the cure we develop seems to have succeeded in human trials and with live subjects, so Quinquagintification may or may not subside within the upcoming months.",
+  "BREAKING NEWS: Quinquagintification now has less than 50 infected cases in the areas surrounding Justcubing97's home. Our cure, therapy sessions, seem to be working. However, an unrelated flu outbreak has also started in the area. We reckon that was caused by sickness being brought in from the outside. This flu is intense from observation, so if no updates come to the story or the game, the flu has taken over. In the meantime, stay safe, wear a mask, and enjoy Quinquagintic responsibly.",
   "WHAT DO YOU MEAN INSANITYCAP???",
   "derivative impresses integral by learning and speaking lagrange notation fluently",
   "Fun fact: the softcaps used to affect multiple currencies, but after learning that it wasn't the right choice, all of the softcaps now affect only Number. This means that the last five softcaps, from ABSOLUTE to TRANSCENDENT, will work in the Integer Domain and still affect Number only. The other softcaps will do NOTHING in the Integer Domain!",
@@ -93,6 +99,8 @@ var normalTickers = [
   "Fun fact: my favorite non-97 number is 727, which is the WYSI number. 3rd favorite has to be 73939133.",
   "Fun fact: this is a fun fact because I said so.",
   "Fun fact: I don't consider the different domains' reset layers collectively. Otherwise there would be more than 20.",
+  "Fun fact: magical, very magical world by Camellia is one of my favorite songs.",
+  "Fun fact: I love ANTINEUTRINO WITCHCRAFT. It's a song by Camellia at 242 BPM that runs for approximately 6 minutes 23 seconds and goes from D minor to F# minor. There are three beat drops, one at the very beginning, the second I love, and the third F# minor one.",
   "Why do we have to use base 10? Why not base 16? Or binary, or octal? Or base e? Or base 7+3i?",
   "If you remember that news message where she quinquagintillionth rooted a quinquagintic, yeah, that same one, I wanted to make her mentally implode with the plans of the Integer Domain. REVENGE!",
   "There's three people in a room. One is you, playing Quinquagintic responsibly, one is me, sleeping, and the other one is a girl sitting in the corner doing absolutely nothing.",
@@ -108,6 +116,13 @@ var normalTickers = [
   "googolPLEX",
   "googolDUplex",
   "googolTRIplex",
+  "googolQUARTIplex",
+  "googolQUINTIplex",
+  "googolHEXIplex",
+  "googolHEPTIplex",
+  "googolOCTIplex",
+  "googolNONAplex",
+  "googolDECAplex",
   "Why use subtractive RYB when additive RGB is better?",
   "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, YOU THOUGHT I WAS GONNA KEEP GOING HAHA NO MORE NUMBERS!",
   "WHO MADE ROYGBIV??????",
@@ -119,6 +134,13 @@ var normalTickers = [
   "Spoiler: BPM1-6 are not actually going to be reset!",
   "News message made by Justcubing97.",
   "Are you a male, female, trans, non-binary, Walmart shopping cart, attack helicopter, 1x2 Lego tile, second derivative of a rational function, an omega ordinal, a cube of paper, a tetrahedron made of metal, a lump of tungsten, a computer with Quinquagintic, a completed Muonic periodic table in IMR, a vermillion-colored fine-tip Sharpie, an AI made to check for mathematical syntax errors, a gaming headset, Camellia (the music artist), a MOVA globe, a water bottle filled EXACTLY 72.70097% with water, a copy of \"Unwind\" with chapter 24 missing, a Yamaha soprano recorder, an infinity cube, the Mandelbrot Set with a complex number exponent, a final star shard (IMR???), a CLP-330 electronic piano, a pitch of Bb6 at A4=452, a couch with torn cushions, or something else?",
+  "Aleph wants to say something: this game sucks",
+  "Gee, I get why Python is slow. An IDE struggles with the first two lines! And they're literally an input() for a variable!",
+  "ChatGPT is hallucinating and repeating again... onto Gemini...",
+  "Gemini isn't even responding to the correct message... onto- wait I GUESS I HAVE TO USE MYSELF AHH",
+  "If you love long incremental games, I recommend Algebraic Progression, Road of Big Number Rewritten, The Point Tree, and Incremental Mass Rewritten!",
+  "Keep going! Your number gain is great!",
+  "[PART 4] Phi is currently taking a nap while Ava is learning about the Taiping Rebellion. Not much else happens. That is, until Ava speaks again. \"Hey, how long do you think we're gonna be in here?\" Phi wakes up, almost by coincidence, and responds. \"Eh, no idea. Just as long as we're fed, we'll-\" A slight beat from outside. Then another. They're getting more powerful, and soon their room starts vibrating. A hammer makes it through the wall, cracks forming. No voice, just hammer swings and impacts. Ava gets her textbook and gets away, getting closer to Phi, while he stands in the corner. Eventually, the opening is large enough that someone steps through. \"Come on. Get out. They're gonna trap you here.\" The guy talks, and immediately, Ava obliges. \"Hold on. They may be evil.\" Phi speaks, beckoning her to come back. Ava responds. \"Huh? They're friendly! Are you blind?\" \"No, we don't know these people.\" Phi speaks again, still wary. The guy speaks again. \"If we were evil, we would've left you two.\" Phi considers their thinking and decides that it's good enough for now. \"Fine, we'll go. But I have integrals and derivatives in case things go south.\" Stay tuned for part 5."
 ];
 
 var specialTickers = [
@@ -148,6 +170,7 @@ var specialTickers = [
   "atp i dont know if im ultra paranoid or if im doing something wrong AND NO ONE IS POINTING IT OUT",
   "It's a stable friendship.",
   "Platonic love for the win!",
+  "Disregard all of those depressing tickers, they're old! I'M ALIVE! (thank you quinquagintillionth rooter)",
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
