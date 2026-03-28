@@ -99,6 +99,24 @@ h1 {
   display: inline-block;
 }
 
+.quintillionth-dark-section{
+  color: #dfc060;
+  background-image: linear-gradient(180deg, #AAAAAA, #dfc060);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.quadrillionth-dark-section{
+  color: #df60df;
+  background-image: linear-gradient(180deg, #AAAAAA, #df60df);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -267,6 +285,62 @@ h1 {
 .sx-light:disabled {
   cursor: not-allowed;
   background: linear-gradient(180deg, #AAAAAA, #ff8080);
+}
+
+/* ==================================================================================================== */
+
+.qui-dark {
+  background: linear-gradient(180deg, #888888, #dfc060);
+}
+
+.qui-dark:hover {
+  background: linear-gradient(180deg, #989898, #efd070);
+}
+
+.qui-dark:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #dfc060);
+}
+
+.qui-light {
+  background: linear-gradient(180deg, #AAAAAA, #ffe080);
+}
+
+.qui-light:hover {
+  background: linear-gradient(180deg, #BABABA, #fff090);
+}
+
+.qui-light:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #AAAAAA, #ffe080);
+}
+
+/* ==================================================================================================== */
+
+.qua-dark {
+  background: linear-gradient(180deg, #888888, #df60df);
+}
+
+.qua-dark:hover {
+  background: linear-gradient(180deg, #989898, #ef70ef);
+}
+
+.qua-dark:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #df60df);
+}
+
+.qua-light {
+  background: linear-gradient(180deg, #AAAAAA, #ff80ff);
+}
+
+.qua-light:hover {
+  background: linear-gradient(180deg, #BABABA, #ff90ff);
+}
+
+.qua-light:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #AAAAAA, #ff80ff);
 }
 
 /* ==================================================================================================== */
