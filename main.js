@@ -188,6 +188,7 @@ var octBoostsString = "";
 var sepBoostsString = "";
 var atomsBoostsString = "";
 var sxpBoostsString = "";
+var qpBoostsString = "";
 
 var challengeModifier = 0;
 
@@ -339,6 +340,15 @@ var chal5completions = new Decimal(0);
 var chal5goal = new Decimal.pow(10, 87);
 
 //=========================================================================
+//QUINTILLIONTH
+var qpscaling = new Decimal(3);
+var qpthreshold = new Decimal.pow(10, 15);
+var qppending = new Decimal(0);
+var qpbase = new Decimal(0);
+
+var quintillionthPoints = new Decimal(0);
+
+//=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
 const numberRounding = new Decimal(100);
@@ -351,6 +361,7 @@ var nonillionth_unlocked = false;
 var octillionth_unlocked = false;
 var septillionth_unlocked = false;
 var sextillionth_unlocked = false;
+var quintillionth_unlocked = false;
 
 //=========================================================================
 //RESET BOOSTS (these are for applying boosts)
@@ -358,6 +369,7 @@ var non_reset_boost_check = false;
 var oct_reset_boost_check = false;
 var sep_reset_boost_check = false;
 var sxp_reset_boost_check = false;
+var qui_reset_boost_check = false;
 
 //=========================================================================
 //SOFTCAP EFFECTS
@@ -393,6 +405,8 @@ const nonillionth_tab = document.getElementById("nonillionth-tab");
 const octillionth_tab = document.getElementById("octillionth-tab");
 const septillionth_tab = document.getElementById("septillionth-tab");
 const sextillionth_tab = document.getElementById("sextillionth-tab");
+const quintillionth_tab = document.getElementById("quintillionth-tab");
+
 const main_number_tab_button = document.getElementById("main-number-tab-button");
 const main_caps_tab_button = document.getElementById("main-caps-tab-button");
 const main_decillionth_tab_button = document.getElementById("main-decillionth-tab-button");
@@ -400,6 +414,7 @@ const main_nonillionth_tab_button = document.getElementById("main-nonillionth-ta
 const main_octillionth_tab_button = document.getElementById("main-octillionth-tab-button");
 const main_septillionth_tab_button = document.getElementById("main-septillionth-tab-button");
 const main_sextillionth_tab_button = document.getElementById("main-sextillionth-tab-button");
+const main_quintillionth_tab_button = document.getElementById("main-quintillionth-tab-button");
 
 const oct_infobox_tab = document.getElementById("oct-infobox-tab");
 const oct_challenge_tab = document.getElementById("oct-challenge-tab");
@@ -419,6 +434,7 @@ const topOP = document.getElementById("top-op");
 const topSP = document.getElementById("top-sp");
 const topAtoms = document.getElementById("top-atoms");
 const topSXP = document.getElementById("top-sxp");
+const topQP = document.getElementById("top-qp");
 
 //=========================================================================
 //BOTTOM
@@ -633,6 +649,18 @@ const chal5_title = document.getElementById("chal5-title");
 const chal5_goal_scale = document.getElementById("chal5-goal-scale");
 const chal5_reward = document.getElementById("chal5-reward");
 const chal5_completions = document.getElementById("chal5-completions");
+
+//=========================================================================
+//QUINTILLIONTH
+
+const qpreset = document.getElementById("qpreset");
+const qp_point_pending = document.getElementById("qp-point-pending");
+const qp_next_point = document.getElementById("qp-next-point");
+const qpBoostsDisplay = document.getElementById("qpBoostsDisplay");
+const quintillionth_main_section = document.getElementById("quintillionth-main-section");
+qpreset.disabled = true;
+
+const qp_effect = document.getElementById("qp-effect");
 
 //=========================================================================
 
@@ -920,6 +948,86 @@ function sextillionthResetInitiate(){
   everythingFromSRI();
 }
 
+function everythingFromSXI(){
+  sep_reset_boost_check = false;
+  spscaling = new Decimal(10);
+  spthreshold = new Decimal.pow(10, 9);
+  sppending = new Decimal(0);
+  spbase = new Decimal(0);
+
+  septillionthPoints = new Decimal(0);
+
+  atoms = new Decimal(0);
+  atomGain = new Decimal(0);
+
+  atomsBoost = new Decimal(1);
+
+  au123boost = new Decimal(0);
+  au456boost = new Decimal(1);
+
+  au1amt = new Decimal(0);
+  au1cost = new Decimal(10);
+  au1scaling = new Decimal(1.25);
+
+  au2amt = new Decimal(0);
+  au2cost = new Decimal(50);
+  au2scaling = new Decimal(1.8);
+
+  au3amt = new Decimal(0);
+  au3cost = new Decimal(300);
+  au3scaling = new Decimal(2.5);
+
+  au4amt = new Decimal(0);
+  au4cost = new Decimal(10000);
+  au4scaling = new Decimal(4);
+
+  au5amt = new Decimal(0);
+  au5cost = new Decimal.pow(10, 6);
+  au5scaling = new Decimal(7);
+
+  au6amt = new Decimal(0);
+  au6cost = new Decimal.pow(10, 10);
+  au6scaling = new Decimal(10);
+
+  everythingFromSRI();
+}
+
+function quintillionthResetInitiate(){
+  qpthreshold = new Decimal.pow(10, 15);
+  quintillionthPoints = sextillionthPoints.add(qppending);
+  qpbase = new Decimal(0);
+  qui_reset_boost_check = true;
+
+  sxp_reset_boost_check = false;
+  sxpscaling = new Decimal(10);
+  sxpthreshold = new Decimal.pow(10, 12);
+  sxppending = new Decimal(0);
+  sxpbase = new Decimal(0);
+
+  sextillionthPoints = new Decimal(0);
+
+  boughtSXUT11 = false;
+  boughtSXUT12 = false;
+  boughtSXUT13 = false;
+  boughtSXUT21 = false;
+  boughtSXUT22 = false;
+  boughtSXUT23 = false;
+  boughtSXUT24 = false;
+  boughtSXUT31 = false;
+  boughtSXUT32 = false;
+  boughtSXUT33 = false;
+  boughtSXUT34 = false;
+  boughtSXUT41 = false;
+  boughtSXUT42 = false;
+  boughtSXUT43 = false;
+  boughtSXUT44 = false;
+
+  chal5completions = new Decimal(0);
+  chal5goal = new Decimal.pow(10, 87);
+
+  everythingFromSXI();
+}
+
 //=========================================================================
 
 //  ==         ========    ========   ========
@@ -963,6 +1071,9 @@ setInterval(function(){
   checkSXUT();
   chal5GoalChecking();
   checkSXUTColors();
+
+  checkQuintillionthReset();
+  checkPendingQuintillionth();
 
   automation();
   updateConnections();
@@ -1068,6 +1179,18 @@ main_sextillionth_tab_button.addEventListener("click", function(){
   }
 });
 
+main_quintillionth_tab_button.addEventListener("click", function(){
+  if (main_quintillionth_tab_button.classList.contains("qui-dark")){
+    main_quintillionth_tab_button.classList.remove("qui-dark");
+    main_quintillionth_tab_button.classList.add("qui-light");
+    quintillionth_tab.style.display = "block";
+  } else {
+    main_quintillionth_tab_button.classList.add("qui-dark");
+    main_quintillionth_tab_button.classList.remove("qui-light");
+    quintillionth_tab.style.display = "none";
+  }
+});
+
 //================================================================================================================
 //================================================================================================================
 //================================================================================================================
@@ -1131,6 +1254,14 @@ function calculateGain(){
 
   if (boughtSXUT11){
     numberGain = numberGain.mul(new Decimal(5));
+  }
+
+  if (chal5completions.gte(new Decimal(1))){
+    numberGain = numberGain.mul(new Decimal(5));
+  }
+
+  if (quintillionth_unlocked){
+    numberGain = numberGain.mul(new Decimal(3));
   }
 
   //SOFTCAPS
@@ -1298,6 +1429,14 @@ function calculateBoostsStrings(){
     boostsString += "SXUT11: x5, ";
   }
 
+  if (chal5completions.gte(new Decimal(1))){
+    boostsString += "C5: x5, ";
+  }
+
+  if (quintillionth_unlocked){
+    boostsString += "Quintillionth: x3, ";
+  }
+
   //=========================================================================
   //NONILLIONTHS
   nonBoostsString = "Boosts: ";
@@ -1379,6 +1518,10 @@ function calculateBoostsStrings(){
   if (boughtSXUT41){
     sxpBoostsString += "SXUT41: x3, ";
   }
+
+  //=========================================================================
+  //QUINTILLIONTHS
+  qpBoostsString = "Boosts: ";
 }
 
 //=========================================================================
@@ -1408,7 +1551,7 @@ function updateScreen(){
     }
   }
 
-  if (octillionth_unlocked){
+  if (nonillionth_unlocked){
     if (challengeModifier == 5){
       topOP.textContent = "OP: DISABLED IN C5";
     } else {
@@ -1418,7 +1561,7 @@ function updateScreen(){
     topOP.textContent = "";
   }
 
-  if (septillionth_unlocked){
+  if (ccm3unlocked || septillionth_unlocked){
     if (challengeModifier == 5){
       topSP.textContent = "SP: DISABLED IN C5";
     } else {
@@ -1428,7 +1571,7 @@ function updateScreen(){
     topSP.textContent = "";
   }
 
-  if (atoms.gt(new Decimal(0))){
+  if (atoms.gt(new Decimal(0)) || septillionth_unlocked){
     topAtoms.textContent = "A: " + atoms.toExponential(3) + " (+" + atomGain.toExponential(3) + "/s)";
   } else {
     topAtoms.textContent = "";
@@ -1438,6 +1581,12 @@ function updateScreen(){
     topSXP.textContent = "SXP: " + sextillionthPoints.toExponential(3) + " (+" + sxppending.toExponential(3) + ")";
   } else {
     topSXP.textContent = "";
+  }
+
+  if (chal5completions.gte(new Decimal(1)) || quintillionth_unlocked){
+    topQP.textContent = "QP: " + quintillionthPoints.toExponential(3) + " (+" + qppending.toExponential(3) + ")";
+  } else {
+    topQP.textContent = "";
   }
   
   //=========================================================================
@@ -1651,6 +1800,14 @@ function updateScreen(){
 
   chal5_goal_scale.textContent = "Goal: " + chal5goal.toExponential(3) + " Atoms";
   chal5_completions.textContent = chal5completions.toString() + "/1";
+
+  //=========================================================================
+  //QUINTILLIONTHS
+  qp_point_pending.textContent = "+" + qppending.toExponential(3) + " QP";
+  
+  qp_next_point.textContent = "(next QP at " + qpthreshold.div(decillionthDivision).toExponential(3) + " N)";
+
+  qpBoostsDisplay.textContent = qpBoostsString;
 }
 
 //=========================================================================
@@ -1855,6 +2012,18 @@ window.addEventListener("resize", updateConnections);
 //CHECK UNLOCKS
 
 function checkUnlocks(){
+  if (quintillionth_unlocked){
+    if (main_quintillionth_tab_button.classList.contains("qui-light")){
+      quintillionth_tab.style.display = "block";
+      quintillionth_main_section.style.display = "grid";
+      main_quintillionth_tab_button.style.display = "inline-block";
+    }
+
+    sextillionth_unlocked = true;
+    septillionth_unlocked = true;
+    octillionth_unlocked = true;
+    nonillionth_unlocked = true;
+  }
   if (sextillionth_unlocked){
     if (main_sextillionth_tab_button.classList.contains("sx-light")){
       sextillionth_tab.style.display = "block";
@@ -1917,14 +2086,22 @@ function decillionthUpgrades(){
   
   if (decimalNumber.gte(du1cost)) {
     du1.disabled = false;
+    du1.classList.add("decillionth-button");
+    du1.classList.remove("decillionth-dark-button");
   } else {
     du1.disabled = true;
+    du1.classList.add("decillionth-dark-button");
+    du1.classList.remove("decillionth-button");
   }
 
   if (decimalNumber.gte(du2cost) && du2amt.lt(new Decimal(10))) {
     du2.disabled = false;
+    du2.classList.add("decillionth-button");
+    du2.classList.remove("decillionth-dark-button");
   } else {
     du2.disabled = true;
+    du2.classList.add("decillionth-dark-button");
+    du2.classList.remove("decillionth-button");
   }
 }
 
@@ -2021,7 +2198,7 @@ nreset.addEventListener("click", function(){
   nonillionthResetInitiate();
   nonillionth_grid.style.display = "grid";
   nonillionth_grid.classList.remove("hidden");
-  main_nonillionth_tab_button.style.display = "inline-block";
+  main_octillionth_tab_button.style.display = "inline-block";
   nonillionth_unlocked = true;
   octillionth_tab.style.display = "block";
   checkUnlocks();
@@ -2032,7 +2209,7 @@ topNP.addEventListener("click", function(){
     nonillionthResetInitiate();
     nonillionth_grid.style.display = "grid";
     nonillionth_grid.classList.remove("hidden");
-    main_nonillionth_tab_button.style.display = "inline-block";
+    main_octillionth_tab_button.style.display = "inline-block";
     nonillionth_unlocked = true;
     octillionth_tab.style.display = "block";
     checkUnlocks();
@@ -2044,26 +2221,42 @@ topNP.addEventListener("click", function(){
 function nonillionthUpgrades(){
   if (nonillionthPoints.gte(nu1cost)) {
     nu1.disabled = false;
+    nu1.classList.add("non-light");
+    nu1.classList.remove("non-dark");
   } else {
     nu1.disabled = true;
+    nu1.classList.add("non-dark");
+    nu1.classList.remove("non-light");
   }
   
   if (nonillionthPoints.gte(nu2cost) && !nu2amt.eq(new Decimal(1))) {
     nu2.disabled = false;
+    nu2.classList.add("non-light");
+    nu2.classList.remove("non-dark");
   } else {
     nu2.disabled = true;
+    nu2.classList.add("non-dark");
+    nu2.classList.remove("non-light");
   }
 
   if (nonillionthPoints.gte(nu3cost) && !nu3amt.eq(new Decimal(8))) {
     nu3.disabled = false;
+    nu3.classList.add("non-light");
+    nu3.classList.remove("non-dark");
   } else {
     nu3.disabled = true;
+    nu3.classList.add("non-dark");
+    nu3.classList.remove("non-light");
   }
 
   if (nonillionthPoints.gte(nu4cost) && !nu4amt.eq(new Decimal(1))) {
     nu4.disabled = false;
+    nu4.classList.add("non-light");
+    nu4.classList.remove("non-dark");
   } else {
     nu4.disabled = true;
+    nu4.classList.add("non-dark");
+    nu4.classList.remove("non-light");
   }
 }
 
@@ -2229,7 +2422,6 @@ function checkPendingOctillionth(){
 oreset.addEventListener("click", function(){
   octillionthResetInitiate();
   octillionth_main_section.style.display = "grid";
-  main_octillionth_tab_button.style.display = "inline-block";
   octillionth_unlocked = true;
   checkUnlocks();
 });
@@ -2238,7 +2430,6 @@ topOP.addEventListener("click", function(){
   if (oreset.disabled == false){
     octillionthResetInitiate();
     octillionth_main_section.style.display = "grid";
-    main_octillionth_tab_button.style.display = "inline-block";
     octillionth_unlocked = true;
     checkUnlocks();
   }
@@ -2699,62 +2890,102 @@ topSXP.addEventListener("click", function(){
 function checkSXUT(){
   if (sextillionthPoints.gte(new Decimal(1)) && !boughtSXUT11) {
     sxut_11.disabled = false;
+    sxut_11.classList.add("sx-light");
+    sxut_11.classList.remove("sx-dark");
   } else {
     sxut_11.disabled = true;
+    sxut_11.classList.add("sx-dark");
+    sxut_11.classList.remove("sx-light");
   }
 
   if (challengeCompletions.gte(50) && !boughtSXUT21 && boughtSXUT11) {
     sxut_21.disabled = false;
+    sxut_21.classList.add("sx-light");
+    sxut_21.classList.remove("sx-dark");
   } else {
     sxut_21.disabled = true;
+    sxut_21.classList.add("sx-dark");
+    sxut_21.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(3)) && !boughtSXUT22 && boughtSXUT11) {
     sxut_22.disabled = false;
+    sxut_22.classList.add("sx-light");
+    sxut_22.classList.remove("sx-dark");
   } else {
     sxut_22.disabled = true;
+    sxut_22.classList.add("sx-dark");
+    sxut_22.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(6)) && !boughtSXUT23 && boughtSXUT11) {
     sxut_23.disabled = false;
+    sxut_23.classList.add("sx-light");
+    sxut_23.classList.remove("sx-dark");
   } else {
     sxut_23.disabled = true;
+    sxut_23.classList.add("sx-dark");
+    sxut_23.classList.remove("sx-light");
   }
 
   if (challengeCompletions.gte(100) && !boughtSXUT31 && boughtSXUT21) {
     sxut_31.disabled = false;
+    sxut_31.classList.add("sx-light");
+    sxut_31.classList.remove("sx-dark");
   } else {
     sxut_31.disabled = true;
+    sxut_31.classList.add("sx-dark");
+    sxut_31.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(15)) && !boughtSXUT32 && boughtSXUT22) {
     sxut_32.disabled = false;
+    sxut_32.classList.add("sx-light");
+    sxut_32.classList.remove("sx-dark");
   } else {
     sxut_32.disabled = true;
+    sxut_32.classList.add("sx-dark");
+    sxut_32.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(25)) && !boughtSXUT33 && boughtSXUT22) {
     sxut_33.disabled = false;
+    sxut_33.classList.add("sx-light");
+    sxut_33.classList.remove("sx-dark");
   } else {
     sxut_33.disabled = true;
+    sxut_33.classList.add("sx-dark");
+    sxut_33.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(50)) && !boughtSXUT41 && boughtSXUT32) {
     sxut_41.disabled = false;
+    sxut_41.classList.add("sx-light");
+    sxut_41.classList.remove("sx-dark");
   } else {
     sxut_41.disabled = true;
+    sxut_41.classList.add("sx-dark");
+    sxut_41.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(100)) && !boughtSXUT42 && boughtSXUT31 && boughtSXUT33) {
     sxut_42.disabled = false;
+    sxut_42.classList.add("sx-light");
+    sxut_42.classList.remove("sx-dark");
   } else {
     sxut_42.disabled = true;
+    sxut_42.classList.add("sx-dark");
+    sxut_42.classList.remove("sx-light");
   }
 
   if (atoms.gte(new Decimal.pow(10, 30)) && !boughtSXUT43 && boughtSXUT33) {
     sxut_43.disabled = false;
+    sxut_43.classList.add("sx-light");
+    sxut_43.classList.remove("sx-dark");
   } else {
     sxut_43.disabled = true;
+    sxut_43.classList.add("sx-dark");
+    sxut_43.classList.remove("sx-light");
   }
 
   if (boughtSXUT42){
@@ -2939,7 +3170,67 @@ function chal5GoalChecking(){
   if (atoms.gte(chal5goal) && challengeModifier == 5 && chal5completions.lt(new Decimal(1))){
     chal5completions = chal5completions.add(new Decimal(1));
   }
+
+  if (chal5completions.gte(new Decimal(1)) || main_quintillionth_tab_button.style.display == "inline-block"){
+    if (main_quintillionth_tab_button.classList.contains("qui-light")){
+      quintillionth_tab.style.display = "block";
+    }
+    main_quintillionth_tab_button.style.display = "inline-block";
+  }
 }
+
+//=========================================================================
+
+//   ========   ==      ==  ========
+//  ==      ==  ==      ==     ==
+//  ==      ==  ==      ==     ==
+//  ==      ==  ==      ==     ==
+//  ==  ==  ==  ==      ==     ==
+//  ==   == ==  ==      ==     ==
+//   ===  ===    ========   ========
+
+//=========================================================================
+
+//=========================================================================
+//RESET DETECTION
+function checkQuintillionthReset(){
+  if (decimalNumber.gte(new Decimal.pow(10, 15))) {
+    qpreset.disabled = false;
+  } else {
+    qpreset.disabled = true;
+  }
+}
+
+//=========================================================================
+//PENDING
+function checkPendingQuintillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THRESHOLD AND THE .LOGARITHM IN BASE ARE THE SAME!!!!
+  if (decimalNumber.gte(new Decimal.pow(10, 15))){  //I RECOMMEND USING THE RESPECTIVE SCALING VARIABLE FOR POW_BASE!!!!
+    qpbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 15)).logarithm(3)).add(new Decimal(1)).floor();
+    qpthreshold = qpbase.ceil().pow_base(qpscaling).mul(new Decimal.pow(10, 15));
+  } else if (decimalNumber.lt(new Decimal.pow(10, 15))){
+    qpbase = new Decimal(0);
+  }
+
+  qppending = new Decimal(qpbase);
+}
+
+//=========================================================================
+//RESET CLICK
+qpreset.addEventListener("click", function(){
+  quintillionthResetInitiate();
+  quintillionth_unlocked = true;
+  quintillionth_main_section.style.display = "grid";
+  checkUnlocks();
+});
+
+topQP.addEventListener("click", function(){
+  if (qpreset.disabled == false){
+    quintillionthResetInitiate();
+    quintillionth_unlocked = true;
+    quintillionth_main_section.style.display = "grid";
+    checkUnlocks();
+  } 
+});
 
 //=========================================================================
 
@@ -3074,6 +3365,12 @@ function saveGame() {
 
     au8amt: au8amt.toString(),
     au8cost: au8cost.toString(),
+
+    quintillionthPoints: quintillionthPoints.toString(),
+    qpbase: qpbase.toString(),
+    qpthreshold: qpthreshold.toString(),
+    qp_reset_boost_check: qp_reset_boost_check.toString(),
+    quintillionth_unlocked: quintillionth_unlocked.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -3198,6 +3495,14 @@ function loadGame() {
 
   au8amt = new Decimal(data.au8amt || "0");
   au8cost = new Decimal(data.au8cost || "1e+21");
+
+  quintillionthPoints = new Decimal(data.quintillionthPoints || "0");
+  qpbase = new Decimal(data.qpbase || "0");
+  qpthreshold = new Decimal(data.qpthreshold || "1000000000000000");
+  qp_reset_boost_check = data.qp_reset_boost_check === 'true';
+  quintillionth_unlocked = data.quintillionth_unlocked === 'true';
+
+  checkUnlocks();
 }
 
 function backgroundColorChange() {

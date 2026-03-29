@@ -99,18 +99,18 @@ h1 {
   display: inline-block;
 }
 
-.quintillionth-dark-section{
-  color: #dfc060;
-  background-image: linear-gradient(180deg, #AAAAAA, #dfc060);
+.quintillionth-section{
+  color: #ffff80;
+  background-image: linear-gradient(180deg, #AAAAAA, #ffff80);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
-.quadrillionth-dark-section{
-  color: #df60df;
-  background-image: linear-gradient(180deg, #AAAAAA, #df60df);
+.quadrillionth-section{
+  color: #ff80ff;
+  background-image: linear-gradient(180deg, #AAAAAA, #ff80ff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -444,6 +444,24 @@ div.septillionth {
 
 div.sextillionth {
   outline-color: #ff8080;
+  outline-width: 4px;
+  outline-style: solid;
+  font-family: "Share Tech Mono", monospace;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+div.quintillionth {
+  outline-color: #ffff80;
+  outline-width: 4px;
+  outline-style: solid;
+  font-family: "Share Tech Mono", monospace;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+div.quadrillionth {
+  outline-color: #ff80ff;
   outline-width: 4px;
   outline-style: solid;
   font-family: "Share Tech Mono", monospace;

@@ -20,7 +20,7 @@
     <span id="top-sp" class="just-apply-font" style="font-size: 20px; color: #c880ff">SP: % (+%/s)</span>
     <span id="top-atoms" class="just-apply-font" style="font-size: 20px; color: #e8a0ff">A: % (+%/s)</span>
     <span id="top-sxp" class="just-apply-font" style="font-size: 20px; color: #ff8080">SXP: % (+%/s)</span>
-    <span id="top-qp" class="just-apply-font" style="font-size: 20px; color: #000000">QP: % (+%/s)</span>
+    <span id="top-qp" class="just-apply-font" style="font-size: 20px; color: #ffff80">QP: % (+%/s)</span>
     <span id="top-qap" class="just-apply-font" style="font-size: 20px; color: #000000">QAP: % (+%/s)</span>
     <span id="top-tp" class="just-apply-font" style="font-size: 20px; color: #000000">TP: % (+%/s)</span>
   </div>
@@ -45,7 +45,7 @@
   </div>
     
   <div class="standard-tabs" style="-webkit-text-stroke: 0.6px black;">
-    <button id="main-number-tab-button" class="button mil-light standard-tabs-button">Main</button><button id="main-decillionth-tab-button" class="button decillionth-button standard-tabs-button">Decillionth</button><button id="main-nonillionth-tab-button" class="button non-light standard-tabs-button" style="display: none;">Nonillionth</button><button id="main-octillionth-tab-button" class="button oct-light standard-tabs-button" style="display: none;">Octillionth</button><button id="main-septillionth-tab-button" class="button sep-light standard-tabs-button" style="display: none;">Septillionth</button><button id="main-sextillionth-tab-button" class="button sx-light standard-tabs-button" style="display: none;">Sextillionth</button><button id="main-caps-tab-button" class="button soft-light standard-tabs-button">Caps</button>
+    <button id="main-number-tab-button" class="button mil-light standard-tabs-button">Main</button><button id="main-decillionth-tab-button" class="button decillionth-button standard-tabs-button">Decillionth</button><button id="main-nonillionth-tab-button" class="button non-light standard-tabs-button">Nonillionth</button><button id="main-octillionth-tab-button" class="button oct-light standard-tabs-button" style="display: none;">Octillionth</button><button id="main-septillionth-tab-button" class="button sep-light standard-tabs-button" style="display: none;">Septillionth</button><button id="main-sextillionth-tab-button" class="button sx-light standard-tabs-button" style="display: none;">Sextillionth</button><button id="main-quintillionth-tab-button" class="button qui-light standard-tabs-button" style="display: none;">Quintillionth</button><button id="main-caps-tab-button" class="button soft-light standard-tabs-button">Caps</button>
   </div>
     
   <br>
@@ -79,13 +79,13 @@
 
       <div class="standard-upg">
         <p id="du1-id-amt" class="standard-upg">ID: DU1 || x0</p>
-        <button id="du1" class="button decillionth-button because-html-doesnt-do-js-newlines" style="font-size: 40px" disabled>Increase N multi<br>by +2</button>
+        <button id="du1" class="button decillionth-dark-button because-html-doesnt-do-js-newlines" style="font-size: 40px" disabled>Increase N multi<br>by +2</button>
         <p id="du1-cost-scale" class="standard-upg">Cost: 1e-32 || Scaling: x3</p>
       </div>
 
       <div class="standard-upg">
         <p id="du2-id-amt" class="standard-upg">ID: DU2 || 0/10</p>
-        <button id="du2" class="button decillionth-button because-html-doesnt-do-js-newlines" style="font-size: 40px" disabled>x1.4 N multi</button>
+        <button id="du2" class="button decillionth-dark-button because-html-doesnt-do-js-newlines" style="font-size: 40px" disabled>x1.4 N multi</button>
         <p id="du2-cost-scale" class="standard-upg">Cost: 2.5e-32 || Scaling: x4</p>
       </div>
     </div>
@@ -458,6 +458,41 @@
       <p id="chal5-reward" class="standard-upg" style="font-size: 35px">Reward: Unlock Quintillionth Reset and x5 Number (Beating this challenge is the endgame for 0.4.3.)</p>
       <p id="chal5-completions" class="standard-upg" style="font-size: 35px">0/1</p>
     </div>
+  </div>
+
+  <br>
+
+  <div id="quintillionth-tab" class="center quintillionth" style="color: white; -webkit-text-stroke: 0.6px black; display: none;">
+    <h1 class="quintillionth-section" style="margin: 0px;">Quintillionth Section</h1>
+
+    <br>
+    
+    <button id="qpreset" class="button qui-dark standard-reset" disabled>
+      Quintillionth Reset
+      <br>
+      <span style="font-size: 50px; margin: 0px;">Reset everything up to this point for Quintillionth Points (QP)!</span>
+      <br>
+      <span style="font-size: 50px; margin: 0px;">★ Automate AUs <br> ★ x3 N <br> ★ Keep SXT31</span>
+      <br>
+      <span id="qp-point-pending">+1 QP</span>
+      <br>
+      <span id="qp-next-point" style="font-size: 40px; margin: 0px;">(next QP at 3e-18)</span>
+    </button>
+
+    <p id="qpBoostsDisplay" class="numbergain" style="font-size: 45px;">Boosts:</p>
+    
+    <br>
+
+    <div id="quintillionth-main-section" class="upgrade-grid" style="display: none;">
+
+      <div class="standard-upg">
+        <p id="qfu1-id-amt" class="standard-upg">ID: QFU1 || x0</p>
+        <button id="qfu1" class="button non-light" style="font-size: 40px" disabled>+x1 SXP</button>
+        <p id="qfu1-cost-scale" class="standard-upg">Cost: 25 QF || Scaling: x1.7</p>
+      </div>
+      
+    </div>
+    
   </div>
 
   <br>
