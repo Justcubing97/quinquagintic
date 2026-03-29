@@ -23,7 +23,7 @@ If you're in the Octillionth Section, push your challenges and grind OP. For CCM
 
 If you're in the Septillionth Section, wait to get more AUs.
 
-If you're in the Sextillionth Section... SXUT31: C1x11, C2x15, C3x18, C4x6. SXUT21 should be easy to get. If you're in Challenge 5, MAKE SURE TO GET SXUT43 I am not kidding IT IS A LIFE SAVER. Also get like 200-300 SXP for C5 beforehand to get the SXUT33 boost.
+If you're in the Sextillionth Section... SXUT31: C1x11, C2x15, C3x18, C4x6. SXUT21 should be easy to get. If you're in Challenge 5, MAKE SURE TO GET SXUT43 BEFORE ENTERING I am not kidding IT IS A LIFE SAVER. Also get like 200-300 SXP for C5 beforehand to get the SXUT33 boost.
 
 # Give me a description of Quinquagintic (guide).
 Warning, there are spoilers ahead!
@@ -73,7 +73,12 @@ SXUT22 and SXUT33 are of the second type, varying boost. This means that the boo
 
 SXUT31 and SXUT42 are of the unlock type. These two... well... unlock stuff. SXUT31 unlocks two more AUs (AU7 and AU8, found in the Atoms tab) and keeps DU and NU upgrades, while SXUT42 unlocks Challenge 5.
 
-Challenge 5 sort of mirrors Challenge 3 in the sense that you cannot gain ANY POINT TYPES, but only SXP and the SXUT is kept as a Sextillionth Reset is forced upon entry and exit. The goal of C5 is to get... 1 octovigintillion atoms (1e+87). I'm done. JUST KIDDING! Use the Atoms incremental and MAKE SURE YOU HAVE SXUT43 BEFORE ENTRY. After that, there are a LOT of timewalls in this Challenge. I estimate 8-10 minutes, though I use an autoclicker. Beating this challenge will unlock the Quintillionth Reset and give a x5 boost to N. As of 0.4.3, completing this Challenge is the endgame.
+Challenge 5 sort of mirrors Challenge 3 in the sense that you cannot gain ANY POINT TYPES, but only SXP and the SXUT is kept as a Sextillionth Reset is forced upon entry and exit. The goal of C5 is to get... 1 octovigintillion atoms (1e+87). I'm done. JUST KIDDING! Use the Atoms incremental and MAKE SURE YOU HAVE SXUT43 BEFORE ENTRY. After that, there are a LOT of timewalls in this Challenge. I estimate 8-10 minutes, though I use an autoclicker. Beating this challenge will unlock the Quintillionth Reset and give a x5 boost to N. As of 0.4.3, completing this Challenge is the endgame. But it's not 0.4.3.
+
+## Quintillionth Section
+Welcome to the halfway point! Here, you have five layers ahead of you, and five behind you. It's time to Quintillionth Reset, which is sad, meaning YOU LOSE ALL OF YOUR PROGRESS NO! But in return, you get x3 Number gain, automated AUs, and... you can keep SXUT31? Yeah, that one allowed you to keep your upgrades AND AU7-8!
+
+Well, Quintillionth Points (QP) generates Quintillionth Fragments (QF), and getting 10 QF is the endgame for 0.5.
 
 # Inspirations
 

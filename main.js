@@ -347,6 +347,36 @@ var qppending = new Decimal(0);
 var qpbase = new Decimal(0);
 
 var quintillionthPoints = new Decimal(0);
+var quintillionthFragments = new Decimal(0);
+var qfgain = new Decimal(0);
+
+var qfu1amt = new Decimal(0);
+var qfu1cost = new Decimal(25);
+var qfu1scaling = new Decimal(1.3);
+var qfu1SXPboost = new Decimal(1);
+var qfu1QFboost = new Decimal(1);
+
+var qfu2amt = new Decimal(0);
+var qfu2cost = new Decimal(250);
+var boughtQFU2 = false;
+
+var qfu3amt = new Decimal(0);
+var qfu3cost = new Decimal(100);
+var qfu3scaling = new Decimal(1.5);
+var qfu3boost = new Decimal(1);
+
+var qfu4amt = new Decimal(0);
+var qfu4cost = new Decimal(10000);
+var boughtQFU4 = false;
+
+var qfu5amt = new Decimal(0);
+var qfu5cost = new Decimal(1000);
+var qfu5scaling = new Decimal(2);
+var qfu5boost = new Decimal(0);
+
+var qfu6amt = new Decimal(0);
+var qfu6cost = new Decimal(1000000);
+var boughtQFU6 = false;
 
 //=========================================================================
 //NON MAGIC CONSTS
@@ -661,6 +691,7 @@ const quintillionth_main_section = document.getElementById("quintillionth-main-s
 qpreset.disabled = true;
 
 const qp_effect = document.getElementById("qp-effect");
+const qf_display = document.getElementById("qf-display");
 
 //=========================================================================
 
@@ -994,7 +1025,7 @@ function everythingFromSXI(){
 
 function quintillionthResetInitiate(){
   qpthreshold = new Decimal.pow(10, 15);
-  quintillionthPoints = sextillionthPoints.add(qppending);
+  quintillionthPoints = quintillionthPoints.add(qppending);
   qpbase = new Decimal(0);
   qui_reset_boost_check = true;
 
@@ -1013,7 +1044,6 @@ function quintillionthResetInitiate(){
   boughtSXUT22 = false;
   boughtSXUT23 = false;
   boughtSXUT24 = false;
-  boughtSXUT31 = false;
   boughtSXUT32 = false;
   boughtSXUT33 = false;
   boughtSXUT34 = false;
@@ -1024,6 +1054,14 @@ function quintillionthResetInitiate(){
 
   chal5completions = new Decimal(0);
   chal5goal = new Decimal.pow(10, 87);
+
+  au7amt = new Decimal(0);
+  au7cost = new Decimal.pow(10, 15);
+  au7scaling = new Decimal(50);
+
+  au8amt = new Decimal(0);
+  au8cost = new Decimal.pow(10, 21);
+  au8scaling = new Decimal(1.25); //EXPONENT!
 
   everythingFromSXI();
 }
@@ -1336,6 +1374,14 @@ function calculateGain(){
     if (atoms.lt(new Decimal(0))){
       atoms = new Decimal(1);
     }
+  }
+
+  //=========================================================================
+  //ATOMS
+  if (quintillionth_unlocked){
+    qfgain = quintillionthPoints.div(new Decimal(5));
+
+    quintillionthFragments = quintillionthFragments.add(qfgain.div(new Decimal(20)));
   }
 }
 
@@ -1808,6 +1854,8 @@ function updateScreen(){
   qp_next_point.textContent = "(next QP at " + qpthreshold.div(decillionthDivision).toExponential(3) + " N)";
 
   qpBoostsDisplay.textContent = qpBoostsString;
+
+  qf_display.textContent = "You have " + quintillionthFragments.toExponential(3) + " Quintillionth Fragments (QF). (" + qfgain.toExponential(3) + " QF/s)";
 }
 
 //=========================================================================
@@ -1850,7 +1898,7 @@ function updateSoftcaps(){
 //AUTOMATION
 
 function automation(){
-  if (oct_reset_boost_check || septillionth_unlocked){
+  if (octillionth_unlocked){
     if (!du2.disabled){
       du2.click();
     }
@@ -1869,6 +1917,33 @@ function automation(){
     }
     if (!nu1.disabled && nonillionthPoints.gte(nu1cost)){
       nu1.click();
+    }
+  }
+
+  if (quintillionth_unlocked){
+    if (!au8.disabled && atoms.gte(au8cost)){
+      au8.click();
+    }
+    if (!au7.disabled && atoms.gte(au7cost)){
+      au7.click();
+    }
+    if (!au6.disabled && atoms.gte(au6cost)){
+      au6.click();
+    }
+    if (!au5.disabled && atoms.gte(au5cost)){
+      au5.click();
+    }
+    if (!au4.disabled && atoms.gte(au4cost)){
+      au4.click();
+    }
+    if (!au3.disabled && atoms.gte(au3cost)){
+      au3.click();
+    }
+    if (!au2.disabled && atoms.gte(au2cost)){
+      au2.click();
+    }
+    if (!au1.disabled && atoms.gte(au1cost)){
+      au1.click();
     }
   }
 }
@@ -1914,19 +1989,35 @@ function startTicker() {
 startTicker();
 
 function specificTicker(){
+  let sTChosen = ""
   if (octillionth_unlocked){
-    if (!normalTickers.includes("Apparently Challenge Completions are a currency now.")){
-      normalTickers.push("Apparently Challenge Completions are a currency now.");
+    sTChosen = "Apparently Challenge Completions are a currency now."
+    if (!normalTickers.includes(sTChosen)){
+      normalTickers.push(sTChosen);
     }
 
-    if (!normalTickers.includes("Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!")){
-      normalTickers.push("Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!");
+    sTChosen = "Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!";
+    if (!normalTickers.includes(sTChosen)){
+      normalTickers.push(sTChosen);
     }
   }
 
   if (sextillionth_unlocked){
-    if (!normalTickers.includes("Fun fact: if you're not at the Billionth Section, there's gonna be a fifth row of the SXUT! If you're wondering why some of the upgrades say \"???,\" then it's extensions...")){
-      normalTickers.push("Fun fact: if you're not at the Billionth Section, there's gonna be a fifth row of the SXUT! If you're wondering why some of the upgrades say \"???,\" then it's extensions...");
+    sTChosen = "Fun fact: if you're not at the Billionth Section, there's gonna be a fifth row of the SXUT! If you're wondering why some of the upgrades say \"???,\" then it's extensions...";
+    if (!normalTickers.includes(sTChosen)){
+      normalTickers.push(sTChosen);
+    }
+  }
+
+  if (quintillionth_unlocked){
+    sTChosen = "(not to be confused with IMR's Quantum Foam)";
+    if (!normalTickers.includes(sTChosen)){
+      normalTickers.push(sTChosen);
+    }
+
+    sTChosen = "I let you keep SXUT31. You're welcome. Next time, though, don't expect me to spoil you.";
+    if (!normalTickers.includes(sTChosen)){
+      normalTickers.push(sTChosen);
     }
   }
 }
@@ -3209,6 +3300,7 @@ function checkPendingQuintillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN TH
     qpthreshold = qpbase.ceil().pow_base(qpscaling).mul(new Decimal.pow(10, 15));
   } else if (decimalNumber.lt(new Decimal.pow(10, 15))){
     qpbase = new Decimal(0);
+    qpthreshold = Decimal.pow(10, 15);
   }
 
   qppending = new Decimal(qpbase);
@@ -3220,7 +3312,6 @@ qpreset.addEventListener("click", function(){
   quintillionthResetInitiate();
   quintillionth_unlocked = true;
   quintillionth_main_section.style.display = "grid";
-  checkUnlocks();
 });
 
 topQP.addEventListener("click", function(){
@@ -3228,7 +3319,6 @@ topQP.addEventListener("click", function(){
     quintillionthResetInitiate();
     quintillionth_unlocked = true;
     quintillionth_main_section.style.display = "grid";
-    checkUnlocks();
   } 
 });
 
@@ -3369,7 +3459,7 @@ function saveGame() {
     quintillionthPoints: quintillionthPoints.toString(),
     qpbase: qpbase.toString(),
     qpthreshold: qpthreshold.toString(),
-    qp_reset_boost_check: qp_reset_boost_check.toString(),
+    qui_reset_boost_check: qui_reset_boost_check.toString(),
     quintillionth_unlocked: quintillionth_unlocked.toString(),
   };
   
@@ -3499,7 +3589,7 @@ function loadGame() {
   quintillionthPoints = new Decimal(data.quintillionthPoints || "0");
   qpbase = new Decimal(data.qpbase || "0");
   qpthreshold = new Decimal(data.qpthreshold || "1000000000000000");
-  qp_reset_boost_check = data.qp_reset_boost_check === 'true';
+  qui_reset_boost_check = data.qui_reset_boost_check === 'true';
   quintillionth_unlocked = data.quintillionth_unlocked === 'true';
 
   checkUnlocks();
@@ -3534,6 +3624,16 @@ window.addEventListener("keydown", function(event) {
     updateScreen();
   }
   if (event.key === "K" && ulia.value =="Ju5+cub-1ng5^2p"){
+    boughtSXUT11 = true;
+    boughtSXUT21 = true;
+    boughtSXUT22 = true;
+    boughtSXUT23 = true;
+    boughtSXUT31 = true;
+    boughtSXUT32 = true;
+    boughtSXUT33 = true;
+    boughtSXUT41 = true;
+    boughtSXUT42 = true;
+    boughtSXUT43 = true;
     atoms = atoms.mul(new Decimal.pow(10, 80)); //Skip Challenge 5.
     updateScreen();
   }
@@ -3548,6 +3648,11 @@ window.addEventListener("keydown", function(event) {
   if (event.key === ":" && ulia.value =="Ju5+cub-1ng5^2p"){
     sextillionth_tab.style.display = "block";
     decimalNumber = decimalNumber.mul(new Decimal.pow(10, 12)); //Skip to Sextillionth.
+    updateScreen();
+  }
+  if (event.key === "{" && ulia.value =="Ju5+cub-1ng5^2p"){
+    quintillionth_tab.style.display = "block";
+    decimalNumber = decimalNumber.mul(new Decimal.pow(10, 15)); //Skip to Quintillionth.
     updateScreen();
   }
 });

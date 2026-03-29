@@ -3,7 +3,7 @@
 
 <head>
   <link rel="icon" type="image/png" href="quinquagintic.png">
-  <title>Quinquagintic (v0.4.3.1)</title>
+  <title>Quinquagintic (v0.5)</title>
   
   <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,8 +40,9 @@
 
   <div class="center" style="color: white; -webkit-text-stroke: 0.6px black;">
     <h1 class="title-gradient">Quinquagintic</h1>
-    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Version: 0.4.3.1 (Mar. 19 2026)</p>
+    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Version: 0.5 (Mar. 29 2026)</p>
     <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Game by Justcubing97</p>
+    <p class="just-apply-font"style="font-size: 40px; -webkit-text-stroke: 0.6px black;">Endgame: 10 QF</p>
   </div>
     
   <div class="standard-tabs" style="-webkit-text-stroke: 0.6px black;">
@@ -455,7 +456,7 @@
       <p id="chal5-title" class="standard-upg">Challenge V</p>
       <button id="chal5" class="button sx-dark" style="font-size: 40px"><span class="sextillionth-dark-section">Final of Sextillionths</span><br><span>Force SXP reset with gain<br>You cannot gain NP, OP,<br>SP, nor SXP. Only<br>the SXUT and Atoms can<br>help you.</span></button>
       <p id="chal5-goal-scale" class="standard-upg" style="font-size: 35px">Goal: 1e+87 Atoms</p>
-      <p id="chal5-reward" class="standard-upg" style="font-size: 35px">Reward: Unlock Quintillionth Reset and x5 Number (Beating this challenge is the endgame for 0.4.3.)</p>
+      <p id="chal5-reward" class="standard-upg" style="font-size: 35px">Reward: Unlock Quintillionth Reset and x5 Number</p>
       <p id="chal5-completions" class="standard-upg" style="font-size: 35px">0/1</p>
     </div>
   </div>
@@ -483,12 +484,48 @@
     
     <br>
 
-    <div id="quintillionth-main-section" class="upgrade-grid" style="display: none;">
+    <div id="quintillionth-main-section" style="display: none;">
 
-      <div class="standard-upg">
-        <p id="qfu1-id-amt" class="standard-upg">ID: QFU1 || x0</p>
-        <button id="qfu1" class="button non-light" style="font-size: 40px" disabled>+x1 SXP</button>
-        <p id="qfu1-cost-scale" class="standard-upg">Cost: 25 QF || Scaling: x1.7</p>
+      <p id="qf-display" class="numbergain" style="font-size: 60px;">You have % Quintillionth Fragments (+%/s).</p>
+
+      <br>
+
+      <div class="upgrade-grid">
+        <div class="standard-upg">
+          <p id="qfu1-id-amt" class="standard-upg">ID: QFU1 || x0</p>
+          <button id="qfu1" class="button qui-dark" style="font-size: 40px" disabled>+x1 SXP and <br>x2 QF gain</button>
+          <p id="qfu1-cost-scale" class="standard-upg">Cost: 25 QF || Scaling: x1.3</p>
+        </div>
+        
+        <div class="standard-upg">
+          <p id="qfu2-id-amt" class="standard-upg">ID: QFU2 || 0/1</p>
+          <button id="qfu2" class="button qui-dark" style="font-size: 40px" disabled>Keep AU1, AU2,<br>and AU3</button>
+          <p id="qfu2-cost-scale" class="standard-upg">Cost: 250 QF</p>
+        </div>
+        
+        <div class="standard-upg">
+          <p id="qfu3-id-amt" class="standard-upg">ID: QFU3 || x0</p>
+          <button id="qfu3" class="button qui-dark" style="font-size: 40px" disabled>x1.2 SP and QP</button>
+          <p id="qfu3-cost-scale" class="standard-upg">Cost: 100 QF || Scaling: x1.5</p>
+        </div>
+        
+        <div class="standard-upg">
+          <p id="qfu4-id-amt" class="standard-upg">ID: QFU4 || 0/1</p>
+          <button id="qfu4" class="button qui-dark" style="font-size: 40px" disabled>Keep C5 completion<br>on Quintillionth Reset</button>
+          <p id="qfu4-cost-scale" class="standard-upg">Cost: 10k QF</p>
+        </div>
+        
+        <div class="standard-upg">
+          <p id="qfu5-id-amt" class="standard-upg">ID: QFU5 || x0</p>
+          <button id="qfu5" class="button qui-dark" style="font-size: 40px" disabled>+25 CC<br>(before multi)</button>
+          <p id="qfu5-cost-scale" class="standard-upg">Cost: 1k QF || Scaling: x2</p>
+        </div>
+        
+        <div class="standard-upg">
+          <p id="qfu6-id-amt" class="standard-upg">ID: QFU6 || 0/1</p>
+          <button id="qfu6" class="button qui-dark" style="font-size: 40px" disabled>Square A and QF gain</button>
+          <p id="qfu6-cost-scale" class="standard-upg">Cost: 1M QF</p>
+        </div>
       </div>
       
     </div>
