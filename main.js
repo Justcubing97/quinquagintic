@@ -185,6 +185,7 @@ var numberStringFinal = "";
 var boostsString = "";
 var nonBoostsString = "";
 var octBoostsString = "";
+var chalBoostsString = "";
 var sepBoostsString = "";
 var atomsBoostsString = "";
 var sxpBoostsString = "";
@@ -352,13 +353,12 @@ var qfgain = new Decimal(0);
 
 var qfu1amt = new Decimal(0);
 var qfu1cost = new Decimal(25);
-var qfu1scaling = new Decimal(1.3);
+var qfu1scaling = new Decimal(1.5);
 var qfu1SXPboost = new Decimal(1);
 var qfu1QFboost = new Decimal(1);
 
 var qfu2amt = new Decimal(0);
 var qfu2cost = new Decimal(250);
-var boughtQFU2 = false;
 
 var qfu3amt = new Decimal(0);
 var qfu3cost = new Decimal(100);
@@ -367,7 +367,6 @@ var qfu3boost = new Decimal(1);
 
 var qfu4amt = new Decimal(0);
 var qfu4cost = new Decimal(10000);
-var boughtQFU4 = false;
 
 var qfu5amt = new Decimal(0);
 var qfu5cost = new Decimal(1000);
@@ -376,7 +375,6 @@ var qfu5boost = new Decimal(0);
 
 var qfu6amt = new Decimal(0);
 var qfu6cost = new Decimal(1000000);
-var boughtQFU6 = false;
 
 //=========================================================================
 //NON MAGIC CONSTS
@@ -465,6 +463,7 @@ const topSP = document.getElementById("top-sp");
 const topAtoms = document.getElementById("top-atoms");
 const topSXP = document.getElementById("top-sxp");
 const topQP = document.getElementById("top-qp");
+const topQF = document.getElementById("top-qf");
 
 //=========================================================================
 //BOTTOM
@@ -574,6 +573,7 @@ const chal4_reward = document.getElementById("chal4-reward");
 const chal4_completions = document.getElementById("chal4-completions");
 
 const cc_display = document.getElementById("cc-display");
+const cc_boost_display = document.getElementById("cc-boost-display");
 
 const ccm1 = document.getElementById("ccm-1");
 const ccm2 = document.getElementById("ccm-2");
@@ -692,6 +692,36 @@ qpreset.disabled = true;
 
 const qp_effect = document.getElementById("qp-effect");
 const qf_display = document.getElementById("qf-display");
+
+const qfu1 = document.getElementById("qfu1");
+const qfu1_id_amt = document.getElementById("qfu1-id-amt");
+const qfu1_cost_scale = document.getElementById("qfu1-cost-scale");
+qfu1.disabled = true;
+
+const qfu2 = document.getElementById("qfu2");
+const qfu2_id_amt = document.getElementById("qfu2-id-amt");
+const qfu2_cost_scale = document.getElementById("qfu2-cost-scale");
+qfu2.disabled = true;
+
+const qfu3 = document.getElementById("qfu3");
+const qfu3_id_amt = document.getElementById("qfu3-id-amt");
+const qfu3_cost_scale = document.getElementById("qfu3-cost-scale");
+qfu3.disabled = true;
+
+const qfu4 = document.getElementById("qfu4");
+const qfu4_id_amt = document.getElementById("qfu4-id-amt");
+const qfu4_cost_scale = document.getElementById("qfu4-cost-scale");
+qfu4.disabled = true;
+
+const qfu5 = document.getElementById("qfu5");
+const qfu5_id_amt = document.getElementById("qfu5-id-amt");
+const qfu5_cost_scale = document.getElementById("qfu5-cost-scale");
+qfu5.disabled = true;
+
+const qfu6 = document.getElementById("qfu6");
+const qfu6_id_amt = document.getElementById("qfu6-id-amt");
+const qfu6_cost_scale = document.getElementById("qfu6-cost-scale");
+qfu6.disabled = true;
 
 //=========================================================================
 
@@ -993,20 +1023,24 @@ function everythingFromSXI(){
 
   atomsBoost = new Decimal(1);
 
-  au123boost = new Decimal(0);
+  if (!qfu2amt.gte(new Decimal(1))){
+    au123boost = new Decimal(0);
+  }
   au456boost = new Decimal(1);
 
-  au1amt = new Decimal(0);
-  au1cost = new Decimal(10);
-  au1scaling = new Decimal(1.25);
+  if (!qfu2amt.gte(new Decimal(1))){
+    au1amt = new Decimal(0);
+    au1cost = new Decimal(10);
+    au1scaling = new Decimal(1.25);
 
-  au2amt = new Decimal(0);
-  au2cost = new Decimal(50);
-  au2scaling = new Decimal(1.8);
+    au2amt = new Decimal(0);
+    au2cost = new Decimal(50);
+    au2scaling = new Decimal(1.8);
 
-  au3amt = new Decimal(0);
-  au3cost = new Decimal(300);
-  au3scaling = new Decimal(2.5);
+    au3amt = new Decimal(0);
+    au3cost = new Decimal(300);
+    au3scaling = new Decimal(2.5);
+  }
 
   au4amt = new Decimal(0);
   au4cost = new Decimal(10000);
@@ -1038,19 +1072,17 @@ function quintillionthResetInitiate(){
   sextillionthPoints = new Decimal(0);
 
   boughtSXUT11 = false;
-  boughtSXUT12 = false;
-  boughtSXUT13 = false;
   boughtSXUT21 = false;
   boughtSXUT22 = false;
   boughtSXUT23 = false;
-  boughtSXUT24 = false;
   boughtSXUT32 = false;
   boughtSXUT33 = false;
-  boughtSXUT34 = false;
   boughtSXUT41 = false;
   boughtSXUT42 = false;
-  boughtSXUT43 = false;
-  boughtSXUT44 = false;
+
+  if (!qfu4amt.gte(new Decimal(1))){
+    boughtSXUT43 = false;
+  }
 
   chal5completions = new Decimal(0);
   chal5goal = new Decimal.pow(10, 87);
@@ -1112,6 +1144,7 @@ setInterval(function(){
 
   checkQuintillionthReset();
   checkPendingQuintillionth();
+  quintillionthUpgrades();
 
   automation();
   updateConnections();
@@ -1239,6 +1272,10 @@ main_quintillionth_tab_button.addEventListener("click", function(){
 function calculateGain(){
   challengeCompletions = chal1completions.add(chal2completions).add(chal3completions).add(chal4completions).add(chal5completions);
 
+  if (qfu5amt.gte(new Decimal(1))){
+    challengeCompletions = challengeCompletions.add(qfu5boost);
+  }
+
   if (sxp_reset_boost_check){
     challengeCompletions = challengeCompletions.mul(new Decimal(2));
   }
@@ -1363,6 +1400,10 @@ function calculateGain(){
       atomGain = atomGain.mul(new Decimal(10000000000));
     }
 
+    if (qfu6amt.gte(new Decimal(1))){
+      atomGain = atomGain.pow(new Decimal(2));
+    }
+
     //=====
 
     atoms = atoms.add(atomGain.div(new Decimal(20)));
@@ -1380,6 +1421,14 @@ function calculateGain(){
   //ATOMS
   if (quintillionth_unlocked){
     qfgain = quintillionthPoints.div(new Decimal(5));
+
+    if (qfu1amt.gte(new Decimal(1))){
+      qfgain = qfgain.mul(qfu1QFboost);
+    }
+
+    if (qfu6amt.gte(new Decimal(1))){
+      qfgain = qfgain.pow(new Decimal(2));
+    }
 
     quintillionthFragments = quintillionthFragments.add(qfgain.div(new Decimal(20)));
   }
@@ -1526,12 +1575,26 @@ function calculateBoostsStrings(){
     octBoostsString += "Sextillionth: x10, ";
   }
 
+  chalBoostsString = "Boosts: ";
+
+  if (sxp_reset_boost_check){
+    chalBoostsString += "Sextillionth: x2, ";
+  }
+
+  if (qfu5amt.gte(new Decimal(1))){
+    chalBoostsString += "QFU5: +" + qfu5boost.toExponential(3) + " (before multis), ";
+  }
+
   //=========================================================================
   //SEPTILLIONTHS
   sepBoostsString = "Boosts: ";
 
   if (sxp_reset_boost_check){
     sepBoostsString += "Sextillionth: x10, ";
+  }
+
+  if (qfu3amt.gte(new Decimal(1))){
+    sepBoostsString += "QFU3: x" + qfu3boost.toExponential(3) + " to SP, ";
   }
 
   atomsBoostsString = "Boosts: ";
@@ -1543,7 +1606,6 @@ function calculateBoostsStrings(){
   if (boughtSXUT21){
     atomsBoostsString += "SXUT21: x100, ";
   }
-
 
   if (boughtSXUT22 && chal3completions.gte(1)){
     atomsBoostsString += "C3: x" + chal3completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
@@ -1557,6 +1619,10 @@ function calculateBoostsStrings(){
     atomsBoostsString += "SXUT43: x10B, "
   }
 
+  if (qfu6amt.gte(new Decimal(1))){
+    atomsBoostsString += "QFU6: ^2, ";
+  }
+
   //=========================================================================
   //SEXTILLIONTHS
   sxpBoostsString = "Boosts: ";
@@ -1565,9 +1631,25 @@ function calculateBoostsStrings(){
     sxpBoostsString += "SXUT41: x3, ";
   }
 
+  if (qfu1amt.gte(new Decimal(1))){
+    sxpBoostsString += "QFU1: x" + qfu1SXPboost.toExponential(3) + ", ";
+  }
+
   //=========================================================================
   //QUINTILLIONTHS
   qpBoostsString = "Boosts: ";
+
+  if (qfu1amt.gte(new Decimal(1))){
+    qpBoostsString += "QFU1: x" + qfu1QFboost.toExponential(3) + " to QF, ";
+  }
+
+  if (qfu3amt.gte(new Decimal(1))){
+    qpBoostsString += "QFU3: x" + qfu3boost.toExponential(3) + " to QP, ";
+  }
+
+  if (qfu6amt.gte(new Decimal(1))){
+    qpBoostsString += "QFU6: ^2, ";
+  }
 }
 
 //=========================================================================
@@ -1633,6 +1715,12 @@ function updateScreen(){
     topQP.textContent = "QP: " + quintillionthPoints.toExponential(3) + " (+" + qppending.toExponential(3) + ")";
   } else {
     topQP.textContent = "";
+  }
+
+  if (quintillionth_unlocked){
+    topQF.textContent = "QF: " + quintillionthFragments.toExponential(3) + " (+" + qfgain.toExponential(3) + ")";
+  } else {
+    topQF.textContent = "";
   }
   
   //=========================================================================
@@ -1719,11 +1807,9 @@ function updateScreen(){
   
   bottomModifiers.textContent = "Modifiers: None";
 
-  if (sxp_reset_boost_check){
-    cc_display.textContent = "You have " + challengeCompletions + " Challenge Completions (CC). (Sextillionth: x2)";
-  } else {
-    cc_display.textContent = "You have " + challengeCompletions + " Challenge Completions (CC).";
-  }
+  cc_display.textContent = "You have " + challengeCompletions + " Challenge Completions (CC).";
+
+  cc_boost_display.textContent = chalBoostsString;
 
   if (challengeModifier == 1){
     bottomModifiers.textContent = "Modifiers: Challenge 1";
@@ -1856,6 +1942,25 @@ function updateScreen(){
   qpBoostsDisplay.textContent = qpBoostsString;
 
   qf_display.textContent = "You have " + quintillionthFragments.toExponential(3) + " Quintillionth Fragments (QF). (" + qfgain.toExponential(3) + " QF/s)";
+
+  qfu1_id_amt.textContent = "ID: QFU1 || x" + qfu1amt;
+  qfu1_cost_scale.textContent = "Cost: " + qfu1cost.toExponential(3) + " QF || Scaling: x" + qfu1scaling;
+
+  qfu2_id_amt.textContent = "ID: QFU2 || " + qfu2amt + "/1";
+  qfu2_cost_scale.textContent = "Cost: " + qfu2cost.toExponential(3) + " QF";
+
+  qfu3_id_amt.textContent = "ID: QFU3 || x" + qfu3amt;
+  qfu3_cost_scale.textContent = "Cost: " + qfu3cost.toExponential(3) + " QF || Scaling: x" + qfu3scaling;
+
+  qfu4_id_amt.textContent = "ID: QFU4 || " + qfu4amt + "/1";
+  qfu4_cost_scale.textContent = "Cost: " + qfu4cost.toExponential(3) + " QF";
+
+  qfu5_id_amt.textContent = "ID: QFU5 || x" + qfu5amt;
+  qfu5_cost_scale.textContent = "Cost: " + qfu5cost.toExponential(3) + " QF || Scaling: x" + qfu5scaling;
+
+  qfu6_id_amt.textContent = "ID: QFU6 || " + qfu6amt + "/1";
+  qfu6_cost_scale.textContent = "Cost: " + qfu6cost.toExponential(3) + " QF";
+
 }
 
 //=========================================================================
@@ -2706,6 +2811,10 @@ function checkPendingSeptillionth(){
   if (sxp_reset_boost_check){
     sppending = sppending.mul(new Decimal(10));
   }
+
+  if (qfu3amt.gte(new Decimal(1))){
+    sppending = sppending.mul(new Decimal(qfu3boost));
+  }
 }
 
 //=========================================================================
@@ -2954,6 +3063,10 @@ function checkPendingSextillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THR
 
   if (boughtSXUT41){
     sxppending = sxppending.mul(new Decimal(3));
+  }
+
+  if (qfu1amt.gte(new Decimal(1))){
+    sxppending = sxppending.mul(new Decimal(qfu1SXPboost));
   }
 }
 
@@ -3304,6 +3417,10 @@ function checkPendingQuintillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN TH
   }
 
   qppending = new Decimal(qpbase);
+
+  if (qfu3amt.gte(new Decimal(1))){
+    qppending = qppending.mul(new Decimal(qfu3boost));
+  }
 }
 
 //=========================================================================
@@ -3320,6 +3437,110 @@ topQP.addEventListener("click", function(){
     quintillionth_unlocked = true;
     quintillionth_main_section.style.display = "grid";
   } 
+});
+
+//=========================================================================
+//CHECK AFFORD
+
+function quintillionthUpgrades(){
+  if (quintillionthFragments.gte(new Decimal(qfu1cost))){
+    qfu1.disabled = false;
+    qfu1.classList.add("qui-light");
+    qfu1.classList.remove("qui-dark");
+  } else {
+    qfu1.disabled = true;
+    qfu1.classList.add("qui-dark");
+    qfu1.classList.remove("qui-light");
+  }
+
+  if (quintillionthFragments.gte(new Decimal(qfu3cost))){
+    qfu3.disabled = false;
+    qfu3.classList.add("qui-light");
+    qfu3.classList.remove("qui-dark");
+  } else {
+    qfu3.disabled = true;
+    qfu3.classList.add("qui-dark");
+    qfu3.classList.remove("qui-light");
+  }
+
+  if (quintillionthFragments.gte(new Decimal(qfu5cost))){
+    qfu5.disabled = false;
+    qfu5.classList.add("qui-light");
+    qfu5.classList.remove("qui-dark");
+  } else {
+    qfu5.disabled = true;
+    qfu5.classList.add("qui-dark");
+    qfu5.classList.remove("qui-light");
+  }
+
+  if (quintillionthFragments.gte(new Decimal(qfu2cost)) && !qfu2amt.gte(new Decimal(1))){
+    qfu2.disabled = false;
+    qfu2.classList.add("qui-light");
+    qfu2.classList.remove("qui-dark");
+  } else {
+    qfu2.disabled = true;
+    qfu2.classList.add("qui-dark");
+    qfu2.classList.remove("qui-light");
+  }
+
+  if (quintillionthFragments.gte(new Decimal(qfu4cost)) && !qfu4amt.gte(new Decimal(1))){
+    qfu4.disabled = false;
+    qfu4.classList.add("qui-light");
+    qfu4.classList.remove("qui-dark");
+  } else {
+    qfu4.disabled = true;
+    qfu4.classList.add("qui-dark");
+    qfu4.classList.remove("qui-light");
+  }
+
+  if (quintillionthFragments.gte(new Decimal(qfu6cost)) && !qfu6amt.gte(new Decimal(1))){
+    qfu6.disabled = false;
+    qfu6.classList.add("qui-light");
+    qfu6.classList.remove("qui-dark");
+  } else {
+    qfu6.disabled = true;
+    qfu6.classList.add("qui-dark");
+    qfu6.classList.remove("qui-light");
+  }
+}
+
+//=========================================================================
+//CLICKIFICATION
+qfu1.addEventListener("click", function(){
+  quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu1cost));
+  qfu1amt = qfu1amt.add(new Decimal(1));
+  qfu1SXPboost = qfu1SXPboost.add(new Decimal(1));
+  qfu1QFboost = qfu1QFboost.mul(new Decimal(1.2));
+  qfu1cost = qfu1cost.mul(new Decimal(1.5));
+});
+
+qfu2.addEventListener("click", function(){
+  quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu2cost));
+  qfu2amt = qfu2amt.add(new Decimal(1));
+});
+
+qfu3.addEventListener("click", function(){
+  quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu3cost));
+  qfu3amt = qfu3amt.add(new Decimal(1));
+  qfu3boost = qfu3boost.mul(new Decimal(1.2));
+  qfu3cost = qfu3cost.mul(new Decimal(1.5));
+});
+
+qfu4.addEventListener("click", function(){
+  quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu4cost));
+  qfu4amt = qfu4amt.add(new Decimal(1));
+});
+
+qfu5.addEventListener("click", function(){
+  quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu5cost));
+  qfu5amt = qfu5amt.add(new Decimal(1));
+  qfu5boost = qfu5boost.add(new Decimal(25));
+  qfu5cost = qfu5cost.mul(new Decimal(2));
+});
+
+qfu6.addEventListener("click", function(){
+  quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu6cost));
+  qfu6amt = qfu6amt.add(new Decimal(1));
 });
 
 //=========================================================================

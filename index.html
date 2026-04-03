@@ -21,6 +21,7 @@
     <span id="top-atoms" class="just-apply-font" style="font-size: 20px; color: #e8a0ff">A: % (+%/s)</span>
     <span id="top-sxp" class="just-apply-font" style="font-size: 20px; color: #ff8080">SXP: % (+%/s)</span>
     <span id="top-qp" class="just-apply-font" style="font-size: 20px; color: #ffff80">QP: % (+%/s)</span>
+    <span id="top-qf" class="just-apply-font" style="font-size: 20px; color: #ffffb0">QF: % (+%/s)</span>
     <span id="top-qap" class="just-apply-font" style="font-size: 20px; color: #000000">QAP: % (+%/s)</span>
     <span id="top-tp" class="just-apply-font" style="font-size: 20px; color: #000000">TP: % (+%/s)</span>
   </div>
@@ -208,7 +209,7 @@
 
         <div class="standard-upg">
           <p id="chal3-title" class="standard-upg">Challenge III</p>
-          <button id="chal3" class="button oct-dark" style="font-size: 40px"><span class="octillionth-dark-section">No Nonillionths</span><br><span>You cannot reset for NP<br>(N can be reset for OP<br>at an increased cost).</span></button>
+          <button id="chal3" class="button oct-dark" style="font-size: 40px"><span class="octillionth-dark-section">No Nonillionths</span><br><span>You cannot reset for NP<br>(N can be reset for OP,<br> however).</span></button>
           <p id="chal3-goal-scale" class="standard-upg" style="font-size: 35px">Goal: 1e-30 || Scaling: x2.8</p>
           <p id="chal3-reward" class="standard-upg" style="font-size: 35px">Reward: +x0.5 NP gain per completion</p>
           <p id="chal3-completions" class="standard-upg" style="font-size: 35px">0/100</p>
@@ -227,7 +228,11 @@
 
       <p id="cc-display" class="numbergain" style="font-size: 45px;">You have % Challenge Completions (CC).</p>
 
-      <div id="ccm-1" class="standard-milestone oct-dark" style="-webkit-text-stroke: 0.6px black;">
+      <br>
+
+      <p id="cc-boost-display" class="numbergain" style="font-size: 45px;">Boosts:</p>
+
+      <div id="ccm-1" class="standard-milestone oct-dark">
         <p>CCM1: 3 CC<br>+x0.5 OP per CC</p>
       </div>
 
@@ -493,7 +498,7 @@
       <div class="upgrade-grid">
         <div class="standard-upg">
           <p id="qfu1-id-amt" class="standard-upg">ID: QFU1 || x0</p>
-          <button id="qfu1" class="button qui-dark" style="font-size: 40px" disabled>+x1 SXP and <br>x2 QF gain</button>
+          <button id="qfu1" class="button qui-dark" style="font-size: 40px" disabled>+x1 SXP and <br>x1.2 QF gain</button>
           <p id="qfu1-cost-scale" class="standard-upg">Cost: 25 QF || Scaling: x1.3</p>
         </div>
         
@@ -511,7 +516,7 @@
         
         <div class="standard-upg">
           <p id="qfu4-id-amt" class="standard-upg">ID: QFU4 || 0/1</p>
-          <button id="qfu4" class="button qui-dark" style="font-size: 40px" disabled>Keep C5 completion<br>on Quintillionth Reset</button>
+          <button id="qfu4" class="button qui-dark" style="font-size: 40px" disabled>Keep SXUT43<br>on Quintillionth Reset</button>
           <p id="qfu4-cost-scale" class="standard-upg">Cost: 10k QF</p>
         </div>
         
@@ -526,6 +531,33 @@
           <button id="qfu6" class="button qui-dark" style="font-size: 40px" disabled>Square A and QF gain</button>
           <p id="qfu6-cost-scale" class="standard-upg">Cost: 1M QF</p>
         </div>
+      </div>
+
+      <br>
+
+      <div id="qfm-1" class="standard-milestone qui-dark">
+        <p>QFM1: 10 QF<br>Double QP and OP gain</p>
+      </div>
+
+      <div id="qfm-2" class="standard-milestone qui-dark">
+        <p>QFM2: 500 QF<br>Keep rows 1-2 of SXUT</p>
+      </div>
+
+      <div id="qfm-3" class="standard-milestone qui-dark">
+        <p>QFM3: 25k QF<br>x15 NP and SP</p>
+      </div>
+
+      <div id="qfm-4" class="standard-milestone qui-dark">
+        <p>QFM4: 1M QF<br>Number boosts QF:</p>
+        <p id="qfm-4-effect">x%</p>
+      </div>
+
+      <div id="qfm-5" class="standard-milestone qui-dark">
+        <p>QFM5: 100M QF<br>Keep rows 3-4 of SXUT</p>
+      </div>
+
+      <div id="qfm-6" class="standard-milestone qui-dark">
+        <p>QFM6: 25B QF<br>Extend SXUT (this is not kept by QFM2 nor QFM5)</p>
       </div>
       
     </div>
