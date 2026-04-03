@@ -376,6 +376,14 @@ var qfu5boost = new Decimal(0);
 var qfu6amt = new Decimal(0);
 var qfu6cost = new Decimal(1000000);
 
+var qfm1unlocked = false;
+var qfm2unlocked = false;
+var qfm3unlocked = false;
+var qfm4unlocked = false;
+var qfm4effect = new Decimal(1);
+var qfm5unlocked = false;
+var qfm6unlocked = false;
+
 //=========================================================================
 //NON MAGIC CONSTS
 const numberTickspeedDivisor = new Decimal(20);
@@ -722,6 +730,14 @@ const qfu6 = document.getElementById("qfu6");
 const qfu6_id_amt = document.getElementById("qfu6-id-amt");
 const qfu6_cost_scale = document.getElementById("qfu6-cost-scale");
 qfu6.disabled = true;
+
+const qfm1 = document.getElementById("qfm-1");
+const qfm2 = document.getElementById("qfm-2");
+const qfm3 = document.getElementById("qfm-3");
+const qfm4 = document.getElementById("qfm-4");
+const qfm4_effect = document.getElementById("qfm-4-effect");
+const qfm5 = document.getElementById("qfm-5");
+const qfm6 = document.getElementById("qfm-6");
 
 //=========================================================================
 
@@ -3542,6 +3558,15 @@ qfu6.addEventListener("click", function(){
   quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu6cost));
   qfu6amt = qfu6amt.add(new Decimal(1));
 });
+
+//=========================================================================
+//MILLY MILESTONES (OR IS IT QUINTILLY?)
+function checkQFM(){
+  if (quintillionthFragments.gte(new Decimal(10))){
+    qfm1.classList.add("qui-light");
+    qfm1.classList.remove("qui-dark");
+  }
+}
 
 //=========================================================================
 
