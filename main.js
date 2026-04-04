@@ -306,11 +306,11 @@ var au6scaling = new Decimal(10);
 
 var au7amt = new Decimal(0);
 var au7cost = new Decimal.pow(10, 15);
-var au7scaling = new Decimal(1.12); //EXPONENT!
+var au7scaling = new Decimal(1.05); //EXPONENT!
 
 var au8amt = new Decimal(0);
 var au8cost = new Decimal.pow(10, 21);
-var au8scaling = new Decimal(1.25); //EXPONENT!
+var au8scaling = new Decimal(1.18); //EXPONENT!
 
 //=========================================================================
 //SEXTILLIONTH
@@ -353,7 +353,7 @@ var qfgain = new Decimal(0);
 
 var qfu1amt = new Decimal(0);
 var qfu1cost = new Decimal(25);
-var qfu1scaling = new Decimal(1.25);
+var qfu1scaling = new Decimal(1.1);
 var qfu1SXPboost = new Decimal(1);
 var qfu1QFboost = new Decimal(1);
 
@@ -362,7 +362,7 @@ var qfu2cost = new Decimal(250);
 
 var qfu3amt = new Decimal(0);
 var qfu3cost = new Decimal(100);
-var qfu3scaling = new Decimal(1.3);
+var qfu3scaling = new Decimal(1.25);
 var qfu3boost = new Decimal(1);
 
 var qfu4amt = new Decimal(0);
@@ -370,7 +370,7 @@ var qfu4cost = new Decimal(10000);
 
 var qfu5amt = new Decimal(0);
 var qfu5cost = new Decimal(1000);
-var qfu5scaling = new Decimal(1.7);
+var qfu5scaling = new Decimal(1.5);
 var qfu5boost = new Decimal(0);
 
 var qfu6amt = new Decimal(0);
@@ -1453,8 +1453,12 @@ function calculateGain(){
       qfgain = qfgain.mul(qfu1QFboost);
     }
 
+    if (qfm1unlocked){
+      qfgain = qfgain.mul(new Decimal(new Decimal(atoms.logarithm(new Decimal(10))).add(new Decimal(1))));
+    }
+
     if (qfm4unlocked){
-      qfgain = qfgain.mul(decimalNumber.sqrt());
+      qfgain = qfgain.mul(new Decimal(decimalNumber.sqrt()));
     }
 
     if (qfu6amt.gte(new Decimal(1))){
@@ -1530,7 +1534,7 @@ function calculateBoostsStrings(){
   if (challengeModifier == 4 && octillionthPoints.gte(new Decimal(1)) && octillionthPoints.lt(new Decimal(1000000))){
     boostsString += "OP: NULLIFIED IN C4, ";
   } else if (octillionthPoints.gte(new Decimal(1)) && octillionthPoints.lt(new Decimal(1000000))){
-    boostsString += "OP: x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + "+" + chal1completions.div(new Decimal(2)).toExponential(3) + ", ";
+    boostsString += "OP: x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + " (+" + chal1completions.div(new Decimal(2)).toExponential(3) + "), ";
   } else if (octillionthPoints.gte(new Decimal(1000000))){
     boostsString += "OP: x1.000e+6 (HARDCAP), ";
   }
@@ -1608,10 +1612,6 @@ function calculateBoostsStrings(){
 
   if (sxp_reset_boost_check){
     octBoostsString += "Sextillionth: x10, ";
-  }
-
-  if (qfm1unlocked){
-    octBoostsString += "QFM1: x2, ";
   }
 
   chalBoostsString = "Boosts: ";
@@ -1694,8 +1694,12 @@ function calculateBoostsStrings(){
     qpBoostsString += "QFU6: ^2, ";
   }
 
+  if (qfm1unlocked){
+    qpBoostsString += "QFM1: x" + new Decimal(new Decimal(atoms.logarithm(new Decimal(10))).add(new Decimal(1))).toExponential(3) + " to QF, ";
+  }
+
   if (qfm4unlocked){
-    qpBoostsString += "QFM4: x" + decimalNumber.sqrt().toExponential(3) + " to QF, ";
+    qpBoostsString += "QFM4: x" + new Decimal(decimalNumber.sqrt()).toExponential(3) + " to QF, ";
   }
 }
 
@@ -2663,10 +2667,6 @@ function checkPendingOctillionth(){
   if (sxp_reset_boost_check){
     oppending = oppending.mul(new Decimal(10));
   }
-
-  if (qfm1unlocked){
-    oppending = oppending.mul(new Decimal(2));
-  }
 }
 
 //=========================================================================
@@ -3252,7 +3252,7 @@ function checkSXUT(){
     sxut_43.classList.remove("sx-light");
   }
 
-  if (boughtSXUT42){
+  if (boughtSXUT42 || quintillionth_unlocked){
     challenge5gate.style.display = "block";
   }
 }
@@ -3481,10 +3481,6 @@ function checkPendingQuintillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN TH
   if (qfu3amt.gte(new Decimal(1))){
     qppending = qppending.mul(new Decimal(qfu3boost));
   }
-
-  if (qfm1unlocked){
-    qppending = qppending.mul(new Decimal(2));
-  }
 }
 
 //=========================================================================
@@ -3610,13 +3606,13 @@ qfu6.addEventListener("click", function(){
 //=========================================================================
 //MILLY MILESTONES (OR IS IT QUINTILLY?)
 function checkQFM(){
-  if (quintillionthFragments.gte(new Decimal(10))){
+  if (quintillionthFragments.gte(new Decimal(25))){
     qfm1.classList.add("qui-light");
     qfm1.classList.remove("qui-dark");
     qfm1unlocked = true;
   }
 
-  if (quintillionthFragments.gte(new Decimal(500))){
+  if (quintillionthFragments.gte(new Decimal(1000))){
     qfm2.classList.add("qui-light");
     qfm2.classList.remove("qui-dark");
     qfm2unlocked = true;

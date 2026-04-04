@@ -78,7 +78,11 @@ Challenge 5 sort of mirrors Challenge 3 in the sense that you cannot gain ANY PO
 ## Quintillionth Section
 Welcome to the halfway point! Here, you have five layers ahead of you, and five behind you. It's time to Quintillionth Reset, which is sad, meaning YOU LOSE ALL OF YOUR PROGRESS NO! But in return, you get x3 Number gain, automated AUs, and... you can keep SXUT31? Yeah, that one allowed you to keep your upgrades AND AU7-8!
 
-Well, Quintillionth Points (QP) generates Quintillionth Fragments (QF), and getting 10 QF is the endgame for 0.5.
+Well, Quintillionth Points (QP) generates Quintillionth Fragments (QF), and getting 10 QF is the endgame for 0.5. Welcome to timewall era. Let's see here: 6 upgrades and 6 milestones.
+
+QFU1, 3, and 5 are the infinite buyables, just like NU1 and the AUs. They boost different aspects of the game, but only get 1 of QFU5 for the game. QFU2, 4, and 6 are the one-times buyables. 2 and 4 are QoL features of the game, while 6 is crucial for progression. Next, the milestones. They each require QF, and are either currency boosts or QoL features, with the exception of QFM6, which is essential for progression.
+
+What I usually do in this section is to get a considerable amount of QP, I'll say around 13-14, use a little quirk with C5 to get >e195 A, and push Challenges. Once your gain is around +1.6e3/s, push for QFU6. After that, it should be easy to get QFM4 (1e10 QF), and then push for QFM5 and 6.
 
 # Inspirations
 
