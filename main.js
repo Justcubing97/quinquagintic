@@ -306,7 +306,7 @@ var au6scaling = new Decimal(10);
 
 var au7amt = new Decimal(0);
 var au7cost = new Decimal.pow(10, 15);
-var au7scaling = new Decimal(50);
+var au7scaling = new Decimal(1.12); //EXPONENT!
 
 var au8amt = new Decimal(0);
 var au8cost = new Decimal.pow(10, 21);
@@ -353,7 +353,7 @@ var qfgain = new Decimal(0);
 
 var qfu1amt = new Decimal(0);
 var qfu1cost = new Decimal(25);
-var qfu1scaling = new Decimal(1.5);
+var qfu1scaling = new Decimal(1.25);
 var qfu1SXPboost = new Decimal(1);
 var qfu1QFboost = new Decimal(1);
 
@@ -362,7 +362,7 @@ var qfu2cost = new Decimal(250);
 
 var qfu3amt = new Decimal(0);
 var qfu3cost = new Decimal(100);
-var qfu3scaling = new Decimal(1.5);
+var qfu3scaling = new Decimal(1.3);
 var qfu3boost = new Decimal(1);
 
 var qfu4amt = new Decimal(0);
@@ -370,7 +370,7 @@ var qfu4cost = new Decimal(10000);
 
 var qfu5amt = new Decimal(0);
 var qfu5cost = new Decimal(1000);
-var qfu5scaling = new Decimal(2);
+var qfu5scaling = new Decimal(1.7);
 var qfu5boost = new Decimal(0);
 
 var qfu6amt = new Decimal(0);
@@ -380,7 +380,6 @@ var qfm1unlocked = false;
 var qfm2unlocked = false;
 var qfm3unlocked = false;
 var qfm4unlocked = false;
-var qfm4effect = new Decimal(1);
 var qfm5unlocked = false;
 var qfm6unlocked = false;
 
@@ -995,20 +994,24 @@ function sextillionthResetInitiate(){
 
   atomsBoost = new Decimal(1);
 
-  au123boost = new Decimal(0);
+  if (!qfu2amt.gte(new Decimal(1))){
+    au123boost = new Decimal(0);
+  }
   au456boost = new Decimal(1);
 
-  au1amt = new Decimal(0);
-  au1cost = new Decimal(10);
-  au1scaling = new Decimal(1.25);
+  if (!qfu2amt.gte(new Decimal(1))){
+    au1amt = new Decimal(0);
+    au1cost = new Decimal(10);
+    au1scaling = new Decimal(1.25);
 
-  au2amt = new Decimal(0);
-  au2cost = new Decimal(50);
-  au2scaling = new Decimal(1.8);
+    au2amt = new Decimal(0);
+    au2cost = new Decimal(50);
+    au2scaling = new Decimal(1.8);
 
-  au3amt = new Decimal(0);
-  au3cost = new Decimal(300);
-  au3scaling = new Decimal(2.5);
+    au3amt = new Decimal(0);
+    au3cost = new Decimal(300);
+    au3scaling = new Decimal(2.5);
+  }
 
   au4amt = new Decimal(0);
   au4cost = new Decimal(10000);
@@ -1087,17 +1090,24 @@ function quintillionthResetInitiate(){
 
   sextillionthPoints = new Decimal(0);
 
-  boughtSXUT11 = false;
-  boughtSXUT21 = false;
-  boughtSXUT22 = false;
-  boughtSXUT23 = false;
-  boughtSXUT32 = false;
-  boughtSXUT33 = false;
-  boughtSXUT41 = false;
-  boughtSXUT42 = false;
+  if (!qfm2unlocked){
+    boughtSXUT11 = false;
+    boughtSXUT21 = false;
+    boughtSXUT22 = false;
+    boughtSXUT23 = false;
+  }
 
-  if (!qfu4amt.gte(new Decimal(1))){
-    boughtSXUT43 = false;
+  console.log(qfu4amt.toString());
+  console.log(qfu4amt.gte(new Decimal(1)));
+
+  if (!qfm5unlocked){
+    boughtSXUT32 = false;
+    boughtSXUT33 = false;
+    boughtSXUT41 = false;
+    boughtSXUT42 = false;
+    if (!qfu4amt.gte(new Decimal(1))){
+      boughtSXUT43 = false;
+    }
   }
 
   chal5completions = new Decimal(0);
@@ -1105,7 +1115,7 @@ function quintillionthResetInitiate(){
 
   au7amt = new Decimal(0);
   au7cost = new Decimal.pow(10, 15);
-  au7scaling = new Decimal(50);
+  au7scaling = new Decimal(1.12);
 
   au8amt = new Decimal(0);
   au8cost = new Decimal.pow(10, 21);
@@ -1161,6 +1171,7 @@ setInterval(function(){
   checkQuintillionthReset();
   checkPendingQuintillionth();
   quintillionthUpgrades();
+  checkQFM();
 
   automation();
   updateConnections();
@@ -1442,6 +1453,10 @@ function calculateGain(){
       qfgain = qfgain.mul(qfu1QFboost);
     }
 
+    if (qfm4unlocked){
+      qfgain = qfgain.mul(decimalNumber.sqrt());
+    }
+
     if (qfu6amt.gte(new Decimal(1))){
       qfgain = qfgain.pow(new Decimal(2));
     }
@@ -1571,6 +1586,10 @@ function calculateBoostsStrings(){
     nonBoostsString += "Sextillionth: x10, ";
   }
 
+  if (qfm3unlocked){
+    nonBoostsString += "QFM3: x15, ";
+  }
+
   //=========================================================================
   //OCTILLIONTHS
   octBoostsString = "Boosts: ";
@@ -1589,6 +1608,10 @@ function calculateBoostsStrings(){
 
   if (sxp_reset_boost_check){
     octBoostsString += "Sextillionth: x10, ";
+  }
+
+  if (qfm1unlocked){
+    octBoostsString += "QFM1: x2, ";
   }
 
   chalBoostsString = "Boosts: ";
@@ -1611,6 +1634,10 @@ function calculateBoostsStrings(){
 
   if (qfu3amt.gte(new Decimal(1))){
     sepBoostsString += "QFU3: x" + qfu3boost.toExponential(3) + " to SP, ";
+  }
+
+  if (qfm3unlocked){
+    sepBoostsString += "QFM3: x15, ";
   }
 
   atomsBoostsString = "Boosts: ";
@@ -1665,6 +1692,10 @@ function calculateBoostsStrings(){
 
   if (qfu6amt.gte(new Decimal(1))){
     qpBoostsString += "QFU6: ^2, ";
+  }
+
+  if (qfm4unlocked){
+    qpBoostsString += "QFM4: x" + decimalNumber.sqrt().toExponential(3) + " to QF, ";
   }
 }
 
@@ -1734,7 +1765,7 @@ function updateScreen(){
   }
 
   if (quintillionth_unlocked){
-    topQF.textContent = "QF: " + quintillionthFragments.toExponential(3) + " (+" + qfgain.toExponential(3) + ")";
+    topQF.textContent = "QF: " + quintillionthFragments.toExponential(3) + " (+" + qfgain.toExponential(3) + "/s)";
   } else {
     topQF.textContent = "";
   }
@@ -1919,7 +1950,7 @@ function updateScreen(){
   au6_cost_scale.textContent = "Cost: " + au6cost.toExponential(3) + " A || Scaling: x" + au6scaling;
 
   au7_id_amt.textContent = "ID: AU7 || x" + au7amt;
-  au7_cost_scale.textContent = "Cost: " + au7cost.toExponential(3) + " A || Scaling: x" + au7scaling;
+  au7_cost_scale.textContent = "Cost: " + au7cost.toExponential(3) + " A || Scaling: ^" + au7scaling;
 
   au8_id_amt.textContent = "ID: AU8 || x" + au8amt;
   au8_cost_scale.textContent = "Cost: " + au8cost.toExponential(3) + " A || Scaling: ^" + au8scaling;
@@ -1960,23 +1991,24 @@ function updateScreen(){
   qf_display.textContent = "You have " + quintillionthFragments.toExponential(3) + " Quintillionth Fragments (QF). (" + qfgain.toExponential(3) + " QF/s)";
 
   qfu1_id_amt.textContent = "ID: QFU1 || x" + qfu1amt;
-  qfu1_cost_scale.textContent = "Cost: " + qfu1cost.toExponential(3) + " QF || Scaling: x" + qfu1scaling;
+  qfu1_cost_scale.textContent = "Cost: " + qfu1cost.toExponential(3) + " QF || Scaling: ^" + qfu1scaling;
 
   qfu2_id_amt.textContent = "ID: QFU2 || " + qfu2amt + "/1";
   qfu2_cost_scale.textContent = "Cost: " + qfu2cost.toExponential(3) + " QF";
 
   qfu3_id_amt.textContent = "ID: QFU3 || x" + qfu3amt;
-  qfu3_cost_scale.textContent = "Cost: " + qfu3cost.toExponential(3) + " QF || Scaling: x" + qfu3scaling;
+  qfu3_cost_scale.textContent = "Cost: " + qfu3cost.toExponential(3) + " QF || Scaling: ^" + qfu3scaling;
 
   qfu4_id_amt.textContent = "ID: QFU4 || " + qfu4amt + "/1";
   qfu4_cost_scale.textContent = "Cost: " + qfu4cost.toExponential(3) + " QF";
 
   qfu5_id_amt.textContent = "ID: QFU5 || x" + qfu5amt;
-  qfu5_cost_scale.textContent = "Cost: " + qfu5cost.toExponential(3) + " QF || Scaling: x" + qfu5scaling;
+  qfu5_cost_scale.textContent = "Cost: " + qfu5cost.toExponential(3) + " QF || Scaling: ^" + qfu5scaling;
 
   qfu6_id_amt.textContent = "ID: QFU6 || " + qfu6amt + "/1";
   qfu6_cost_scale.textContent = "Cost: " + qfu6cost.toExponential(3) + " QF";
 
+  qfm4_effect.textContent = "x" + new Decimal(decimalNumber.sqrt()).toExponential(3);
 }
 
 //=========================================================================
@@ -2402,6 +2434,10 @@ function checkPendingNonillionth(){
   if (sxp_reset_boost_check){
     nppending = nppending.mul(new Decimal(10));
   }
+
+  if (qfm3unlocked){
+    nppending = nppending.mul(new Decimal(15));
+  }
 }
 
 //=========================================================================
@@ -2627,6 +2663,10 @@ function checkPendingOctillionth(){
   if (sxp_reset_boost_check){
     oppending = oppending.mul(new Decimal(10));
   }
+
+  if (qfm1unlocked){
+    oppending = oppending.mul(new Decimal(2));
+  }
 }
 
 //=========================================================================
@@ -2831,6 +2871,10 @@ function checkPendingSeptillionth(){
   if (qfu3amt.gte(new Decimal(1))){
     sppending = sppending.mul(new Decimal(qfu3boost));
   }
+
+  if (qfm3unlocked){
+    sppending = sppending.mul(new Decimal(15));
+  }
 }
 
 //=========================================================================
@@ -3031,7 +3075,7 @@ au7.addEventListener("click", function(){
   atoms = atoms.sub(au7cost);
   au7amt = au7amt.add(new Decimal(1));
   
-  au7cost = au7cost.mul(au7scaling);
+  au7cost = au7cost.pow(au7scaling);
   au789boost = au789boost.add(new Decimal(0.1));
 });
 
@@ -3437,6 +3481,10 @@ function checkPendingQuintillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN TH
   if (qfu3amt.gte(new Decimal(1))){
     qppending = qppending.mul(new Decimal(qfu3boost));
   }
+
+  if (qfm1unlocked){
+    qppending = qppending.mul(new Decimal(2));
+  }
 }
 
 //=========================================================================
@@ -3527,7 +3575,7 @@ qfu1.addEventListener("click", function(){
   qfu1amt = qfu1amt.add(new Decimal(1));
   qfu1SXPboost = qfu1SXPboost.add(new Decimal(1));
   qfu1QFboost = qfu1QFboost.mul(new Decimal(1.2));
-  qfu1cost = qfu1cost.mul(new Decimal(1.5));
+  qfu1cost = qfu1cost.pow(new Decimal(qfu1scaling));
 });
 
 qfu2.addEventListener("click", function(){
@@ -3539,7 +3587,7 @@ qfu3.addEventListener("click", function(){
   quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu3cost));
   qfu3amt = qfu3amt.add(new Decimal(1));
   qfu3boost = qfu3boost.mul(new Decimal(1.2));
-  qfu3cost = qfu3cost.mul(new Decimal(1.5));
+  qfu3cost = qfu3cost.pow(new Decimal(qfu3scaling));
 });
 
 qfu4.addEventListener("click", function(){
@@ -3551,7 +3599,7 @@ qfu5.addEventListener("click", function(){
   quintillionthFragments = quintillionthFragments.sub(new Decimal(qfu5cost));
   qfu5amt = qfu5amt.add(new Decimal(1));
   qfu5boost = qfu5boost.add(new Decimal(25));
-  qfu5cost = qfu5cost.mul(new Decimal(2));
+  qfu5cost = qfu5cost.pow(new Decimal(qfu5scaling));
 });
 
 qfu6.addEventListener("click", function(){
@@ -3565,6 +3613,37 @@ function checkQFM(){
   if (quintillionthFragments.gte(new Decimal(10))){
     qfm1.classList.add("qui-light");
     qfm1.classList.remove("qui-dark");
+    qfm1unlocked = true;
+  }
+
+  if (quintillionthFragments.gte(new Decimal(500))){
+    qfm2.classList.add("qui-light");
+    qfm2.classList.remove("qui-dark");
+    qfm2unlocked = true;
+  }
+
+  if (quintillionthFragments.gte(new Decimal(25000))){
+    qfm3.classList.add("qui-light");
+    qfm3.classList.remove("qui-dark");
+    qfm3unlocked = true;
+  }
+
+  if (quintillionthFragments.gte(new Decimal.pow(10, 10))){
+    qfm4.classList.add("qui-light");
+    qfm4.classList.remove("qui-dark");
+    qfm4unlocked = true;
+  }
+
+  if (quintillionthFragments.gte(new Decimal.pow(10, 24))){
+    qfm5.classList.add("qui-light");
+    qfm5.classList.remove("qui-dark");
+    qfm5unlocked = true;
+  }
+
+  if (quintillionthFragments.gte(new Decimal.pow(10, 30))){
+    qfm6.classList.add("qui-light");
+    qfm6.classList.remove("qui-dark");
+    qfm6unlocked = true;
   }
 }
 
@@ -3899,6 +3978,11 @@ window.addEventListener("keydown", function(event) {
   if (event.key === "{" && ulia.value =="Ju5+cub-1ng5^2p"){
     quintillionth_tab.style.display = "block";
     decimalNumber = decimalNumber.mul(new Decimal.pow(10, 15)); //Skip to Quintillionth.
+    updateScreen();
+  }
+  if (event.key === "}" && ulia.value =="Ju5+cub-1ng5^2p"){
+    quintillionth_tab.style.display = "block";
+    quintillionthFragments = quintillionthFragments.mul(new Decimal.pow(10, 4)); //Skip to QFU4.
     updateScreen();
   }
 });
