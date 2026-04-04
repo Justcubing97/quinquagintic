@@ -1466,6 +1466,10 @@ function calculateGain(){
     }
 
     quintillionthFragments = quintillionthFragments.add(qfgain.div(new Decimal(20)));
+
+    if (quintillionthFragments.lt(new Decimal(0))){
+      quintillionthFragments = new Decimal(1);
+    }
   }
 }
 
