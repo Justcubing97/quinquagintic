@@ -92,6 +92,7 @@ var normalTickers = [
   "BREAKING NEWS: TH3R3 4R3 N0 N3W5. QU1NQUAG1NT1F1C4T10N 15 P3RM4N3NT. Y0U W1LL SUFF3R 1F Y0U PL4Y QU1NQUAG1NT1C. TH3 CURE W1LL N3V3R B3 F0UND. TH3 0NLY W4Y T0 4V01D QU1NQUAG1NT1F1C4T10N 15 TO N0T PL4Y QU1NQUAG1NT1C. TH3 S1NGULARITY 15 N3AR. N0 FUTUR3 UPD4T35 T0 TH15 51TU4T10N 0R TH3 G4M3 W1LL B3 M4D3. G00DBY3.",
   "BREAKING NEWS: The corrupted messsage supposedly brought by a so-called \"entity\" in the Quinquagintic community. Some theories suggest that this entity may be the one causing Quinquagintification in the first place. However, the cure we develop seems to have succeeded in human trials and with live subjects, so Quinquagintification may or may not subside within the upcoming months.",
   "BREAKING NEWS: Quinquagintification now has less than 50 infected cases in the areas surrounding Justcubing97's home. Our cure, therapy sessions, seem to be working. However, an unrelated flu outbreak has also started in the area. We reckon that was caused by sickness being brought in from the outside. This flu is intense from observation, so if no updates come to the story or the game, the flu has taken over. In the meantime, stay safe, wear a mask, and enjoy Quinquagintic responsibly.",
+  "BREAKING NEWS: There are no more instances of Quinquagintification in the surrounding areas. The flu outbreak has also subsided. We are currently working to make the cure more widely available, and we are also researching the cause of Quinquagintification. We will provide updates on our research as we find out more information. In the meantime, we suggest that people take breaks while playing Quinquagintic, and if you start to feel symptoms of \"Quinquagintification,\" such as excessive attachment to the game, emotional instability, or a desire to play the game for long periods of time without breaks, please seek help immediately as this condition seems to be perpetual.",
   "WHAT DO YOU MEAN INSANITYCAP???",
   "derivative impresses integral by learning and speaking lagrange notation fluently",
   "Fun fact: the softcaps used to affect multiple currencies, but after learning that it wasn't the right choice, all of the softcaps now affect only Number. This means that the last five softcaps, from ABSOLUTE to TRANSCENDENT, will work in the Integer Domain and still affect Number only. The other softcaps will do NOTHING in the Integer Domain!",
@@ -101,6 +102,7 @@ var normalTickers = [
   "Fun fact: I don't consider the different domains' reset layers collectively. Otherwise there would be more than 20.",
   "Fun fact: magical, very magical world by Camellia is one of my favorite songs.",
   "Fun fact: I love ANTINEUTRINO WITCHCRAFT. It's a song by Camellia at 242 BPM that runs for approximately 6 minutes 23 seconds and goes from D minor to F# minor. There are three beat drops, one at the very beginning, the second I love, and the third F# minor one.",
+  "Fun fact: Some tickers are only unlocked through progression. For example, if you're not at the Quintillionth Section, there will be a new specific ticker added to the giant lists.",
   "Why do we have to use base 10? Why not base 16? Or binary, or octal? Or base e? Or base 7+3i?",
   "If you remember that news message where she quinquagintillionth rooted a quinquagintic, yeah, that same one, I wanted to make her mentally implode with the plans of the Integer Domain. REVENGE!",
   "There's three people in a room. One is you, playing Quinquagintic responsibly, one is me, sleeping, and the other one is a girl sitting in the corner doing absolutely nothing.",
@@ -123,6 +125,9 @@ var normalTickers = [
   "googolOCTIplex",
   "googolNONAplex",
   "googolDECAplex",
+  "googolUNDECAplex",
+  "googolDUODECAplex",
+  "googolTREDECAplex",
   "Why use subtractive RYB when additive RGB is better?",
   "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, YOU THOUGHT I WAS GONNA KEEP GOING HAHA NO MORE NUMBERS!",
   "WHO MADE ROYGBIV??????",
@@ -132,6 +137,7 @@ var normalTickers = [
   "Spoiler: the Integer Domain layers are (in order): Number, Binary, Data, Energy, Glitch, Lines of Code, Array, Recursion!",
   "Spoiler: there's going to be instances of one generator boosting a previous in a sequence, almost like- ANTIMATTER DIMENSIONS??? -IMR's star generators, but with an indefinite amount of generators.",
   "Spoiler: BPM1-6 are not actually going to be reset!",
+  "Spoiler: the Recursion section of the Integer Domain is going to be a nightmare. I swear, there are like 2147483647 mini-stages in that one layer alone. AT TIME OF WRITING THIS, I'M ONLY AT THE DATA EXTENSION! AND MY PEN DIED!",
   "News message made by Justcubing97.",
   "Are you a male, female, trans, non-binary, Walmart shopping cart, attack helicopter, 1x2 Lego tile, second derivative of a rational function, an omega ordinal, a cube of paper, a tetrahedron made of metal, a lump of tungsten, a computer with Quinquagintic, a completed Muonic periodic table in IMR, a vermillion-colored fine-tip Sharpie, an AI made to check for mathematical syntax errors, a gaming headset, Camellia (the music artist), a MOVA globe, a water bottle filled EXACTLY 72.70097% with water, a copy of \"Unwind\" with chapter 24 missing, a Yamaha soprano recorder, an infinity cube, the Mandelbrot Set with a complex number exponent, a final star shard (IMR???), a CLP-330 electronic piano, a pitch of Bb6 at A4=452, a couch with torn cushions, or something else?",
   "Aleph wants to say something: this game sucks",
@@ -140,7 +146,44 @@ var normalTickers = [
   "Gemini isn't even responding to the correct message... onto- wait I GUESS I HAVE TO USE MYSELF AHH",
   "If you love long incremental games, I recommend Algebraic Progression, Road of Big Number Rewritten, The Point Tree, and Incremental Mass Rewritten!",
   "Keep going! Your number gain is great!",
-  "[PART 4] Phi is currently taking a nap while Ava is learning about the Taiping Rebellion. Not much else happens. That is, until Ava speaks again. \"Hey, how long do you think we're gonna be in here?\" Phi wakes up, almost by coincidence, and responds. \"Eh, no idea. Just as long as we're fed, we'll-\" A slight beat from outside. Then another. They're getting more powerful, and soon their room starts vibrating. A hammer makes it through the wall, cracks forming. No voice, just hammer swings and impacts. Ava gets her textbook and gets away, getting closer to Phi, while he stands in the corner. Eventually, the opening is large enough that someone steps through. \"Come on. Get out. They're gonna trap you here.\" The guy talks, and immediately, Ava obliges. \"Hold on. They may be evil.\" Phi speaks, beckoning her to come back. Ava responds. \"Huh? They're friendly! Are you blind?\" \"No, we don't know these people.\" Phi speaks again, still wary. The guy speaks again. \"If we were evil, we would've left you two.\" Phi considers their thinking and decides that it's good enough for now. \"Fine, we'll go. But I have integrals and derivatives in case things go south.\" Stay tuned for part 5."
+  "[PART 4] Phi is currently taking a nap while Ava is learning about the Taiping Rebellion. Not much else happens. That is, until Ava speaks again. \"Hey, how long do you think we're gonna be in here?\" Phi wakes up, almost by coincidence, and responds. \"Eh, no idea. Just as long as we're fed, we'll-\" A slight beat from outside. Then another. They're getting more powerful, and soon their room starts vibrating. A hammer makes it through the wall, cracks forming. No voice, just hammer swings and impacts. Ava gets her textbook and gets away, getting closer to Phi, while he stands in the corner. Eventually, the opening is large enough that someone steps through. \"Come on. Get out. They're gonna trap you here.\" The guy talks, and immediately, Ava obliges. \"Hold on. They may be evil.\" Phi speaks, beckoning her to come back. Ava responds. \"Huh? They're friendly! Are you blind?\" \"No, we don't know these people.\" Phi speaks again, still wary. The guy speaks again. \"If we were evil, we would've left you two.\" Phi considers their thinking and decides that it's good enough for now. \"Fine, we'll go. But I have integrals and derivatives in case things go south.\" Stay tuned for part 5.",
+  "\"bbe bib b\" - Remly",
+  "Definition of recursion: do you know what recursion is? If so, you're done. If not, refer to the definition of recursion.",
+  "Fractals are fun. I personally love the Mandelbrot Set and the corresponding Julia Sets. Koch Snowflake's also pretty cool.",
+  "Let k = 0.999... then create a number 10k = 9.999... and then perform the operation 10k - k, which is 9k. With the actual numbers, this will be 9.999... - 0.999..., which is just 9 since all of the decimals cancel. Finally, divide by 9 on both sides to get k = 1. But hold on! k is also 0.999..., meaning by the transitive property, 0.999... = 1. SO I DO HAVE A WHOLE COOKIE!",
+  "If I cut a cake into 9 slices, each being 0.111... in area relative to the whole cake. Where did the rest of it go? The remaining 0.0...01 will be on the knife you used to cut the cake.",
+  "Let [O]{x} = (x^x)!{(x^x)!}(x^x)!. The only sane natural number input is 1 as 1^1 = 1. With 2, you get... uhh... WHAT THE HELL???",
+  "WHEN YOU SEE IT- oh wait wrong game MY BAD-",
+  "var infinity = hyperIterate(hyperIterate(10, 10), hyperIterate(10, 10)); function hyperIterate(input, repeat){ if (repeat == 0) return Math.pow(input, input); else return hyperIterate(Math.pow(input, input), repeat - 1); }",
+  "1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961, 1024, 1089, 1156, 1225, 1296, 1369, 1444, 1521, 1600, 1681, 1764, 1849, 1936, 2025, 2116, 2209, 2304, 2401, 2500, 2601, 2704, 2809, 2916, 3025, 3136, 3249, 3364, 3481, 3600, 3721, 3844, 3969, 4096, 4225, 4356, 4489, 4624, 4761, 4900, 5041, 5184, 5329, 5476, 5625, 5776, 5929, 6084, 6241, 6400, 6561, 6724, 6889, 7056, 7225, 7396, 7569, 7744, 7921, 8100, 8281, 8464, 8649, 8836, 9025, 9216, 9409, 9604, 9801, 10000...",
+  "1, 8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197, 2744, 3375, 4096, 4913, 5832, 6859, 8000, 9261, 10648, 12167, 13824, 15625, 17576, 19683, 21952, 24389, 27000, 29791, 32768, 35937, 39304, 42875, 46656, 50653, 54872, 59319, 64000, 68921, 74088, 79507, 85184, 91125, 97336, 103823, 110592, 117649, 125000, 132651, 140608, 148877, 157464, 166375, 175616, 185193, 195112, 205379, 216000, 226981, 238328, 250047, 262144, 274625, 287496, 300763, 314432, 328509, 343000, 357911, 373248, 389017, 405224, 421875, 438976, 456533, 474552, 493039, 512000, 531441, 550368, 571787, 592704, 614125, 636056, 658503, 681472, 704969, 729000, 753571, 778688, 804357, 830584, 857375, 884736, 912673, 941192, 970299, 1000000...",
+  "1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, 120, 136, 153, 171, 190, 210, 231, 253, 276, 300, 325, 351, 378, 406, 435, 465, 496, 528, 561, 595, 630, 666, 703, 741, 780, 820, 861, 903, 946, 990, 1035, 1081, 1128, 1176, 1225, 1275, 1326, 1378, 1431, 1485, 1540, 1596, 1653, 1711, 1770, 1830, 1891, 1953, 2016, 2080, 2145, 2211, 2278, 2346, 2415, 2485, 2556, 2628, 2701, 2775, 2850, 2926, 3003, 3081, 3160, 3240, 3321, 3403, 3486, 3570, 3655, 3741, 3828, 3916, 4005, 4095, 4186, 4278, 4371, 4465, 4560, 4656, 4753, 4851, 4950, 5050...",
+  "Q: List the songs of Camellia's album \"Tera I/O.\" A: uhh what the hell is that?? A squared: Body F10ating in the Zero Gravity Space, 1nput This 2 Y0ur Spine, Dance with Silence, Compute It With Some Devilish Alcoholic Steampunk Engines, Fly Wit Me, +ERABY+E C0NNEC+10N, Tera I/O, M1LLI0N PP, Flamewall, BAD ACCESS (FROM A MOE MAID). A cubed: camellia nerd bro",
+  "Night of Knights (Camellia's \"Once Upon A [K]night\" Remix) [Hyper-Extended Mix] (Justcubing97 Inversion) {REMASTERED} (Reloaded) (2026 Version) (SUPiFiNiTY's Mid(k)night Extratone Remix) [Extended] (Full ver.) (Uncut) {Touhou edition} v2 (3435Phi's Hardstyle Addition) [Extended] [Extended More] [Superextended] (Knightly lengthening) {Quadruple remix} [Justcubing97's Bootleg] {Reloaded} (Uncut ver.)",
+  "Hot take: golden Oreos are better than regular Oreos.",
+  "Hot take: this game is better than IMR.",
+  "Hot take: the previous and next news messages are lying.",
+  "Hot take: Python is better than JavaScript.",
+  "Hot take: schools shouldn't ban phones.",
+  "Hot take: breakcore is better than speedcore.",
+  "Hot take: BPM sucks. BPS and BPH are better.",
+  "Hot take: the next hot take message that appears is definitely true.",
+  "Hot take: girls are unpredictable. Men will always be dudes.",
+  "Hot take: the next hot take message that appears is definitely false.",
+  "Hot take: base 10 sucks.",
+  "Hot take: instead of unicode, just put all the symbols on a keyboard.",
+  "Hot take: Burning Ship fractal is better than the Mandelbrot Set.",
+  "Hot take: hot takes suck.",
+  "Hot take: Camellia sucks. Kobaryo wins!",
+  "2026 SUCKS!",
+  "Break Over - K-forest",
+  "You! Wanna read a newspaper for magicians?",
+  "Here's a VR headset with Beat Saber. Good luck on Spin Eternally Expert+!",
+  "I started playing Grace. It's fun!",
+  "I started playing Muse Dash. It's fun, maybe without all of the anime girls.",
+  "NOOOOOOO- THE ANGEL ISN'T THE LONGEST SONG IN MY MUSIC LIBRARY ANYMORE- screw you t+pazolite YOU DID THIS WITH \"Burning Desires (t+pazolite Remix)\" IT WAS A TWO-MINUTE SONG!",
+  "Here's a space: ",
+  "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 157, 155, 156, 154, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, YOU THOUGHT I WAS GONNA KEEP GOING HAHA NO MORE NUMBERS! (oh wait I forgot 97...)",
 ];
 
 var specialTickers = [
@@ -171,6 +214,7 @@ var specialTickers = [
   "It's a stable friendship.",
   "Platonic love for the win!",
   "Disregard all of those depressing tickers, they're old! I'M ALIVE! (thank you quinquagintillionth rooter)",
+  "i miss you quinquagintillionth rooter",
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
@@ -2157,6 +2201,11 @@ function specificTicker(){
       normalTickers.push(sTChosen);
     }
 
+    sTChosen = "Wait... boosts for CC? I THOUGHT THEY WERE GAINED FROM COMPLETING CHALLENGES!"
+    if (!normalTickers.includes(sTChosen)){
+      normalTickers.push(sTChosen);
+    }
+
     sTChosen = "Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!";
     if (!normalTickers.includes(sTChosen)){
       normalTickers.push(sTChosen);
@@ -2165,6 +2214,11 @@ function specificTicker(){
 
   if (sextillionth_unlocked){
     sTChosen = "Fun fact: if you're not at the Billionth Section, there's gonna be a fifth row of the SXUT! If you're wondering why some of the upgrades say \"???,\" then it's extensions...";
+    if (!normalTickers.includes(sTChosen)){
+      normalTickers.push(sTChosen);
+    }
+
+    sTChosen = "when the upgrade says \"???\"";
     if (!normalTickers.includes(sTChosen)){
       normalTickers.push(sTChosen);
     }
@@ -2177,6 +2231,11 @@ function specificTicker(){
     }
 
     sTChosen = "I let you keep SXUT31. You're welcome. Next time, though, don't expect me to spoil you.";
+    if (!normalTickers.includes(sTChosen)){
+      normalTickers.push(sTChosen);
+    }
+
+    sTChosen = "yo what??? free CC???";
     if (!normalTickers.includes(sTChosen)){
       normalTickers.push(sTChosen);
     }
@@ -3786,6 +3845,38 @@ function saveGame() {
     qpthreshold: qpthreshold.toString(),
     qui_reset_boost_check: qui_reset_boost_check.toString(),
     quintillionth_unlocked: quintillionth_unlocked.toString(),
+
+    qfu1amt: qfu1amt.toString(),
+    qfu1cost: qfu1cost.toString(),
+    qfu1scaling: qfu1scaling.toString(),
+    qfu1SXPboost: qfu1SXPboost.toString(),
+    qfu1QFboost: qfu1QFboost.toString(),
+
+    qfu2amt: qfu2amt.toString(),
+    qfu2cost: qfu2cost.toString(),
+
+    qfu3amt: qfu3amt.toString(),
+    qfu3cost: qfu3cost.toString(),
+    qfu3scaling: qfu3scaling.toString(),
+    qfu3boost: qfu3boost.toString(),
+
+    qfu4amt: qfu4amt.toString(),
+    qfu4cost: qfu4cost.toString(),
+
+    qfu5amt: qfu5amt.toString(),
+    qfu5cost: qfu5cost.toString(),
+    qfu5scaling: qfu5scaling.toString(),
+    qfu5boost: qfu5boost.toString(),
+
+    qfu6amt: qfu6amt.toString(),
+    qfu6cost: qfu6cost.toString(),
+
+    qfm1unlocked: qfm1unlocked.toString(),
+    qfm2unlocked: qfm2unlocked.toString(),
+    qfm3unlocked: qfm3unlocked.toString(),
+    qfm4unlocked: qfm4unlocked.toString(),
+    qfm5unlocked: qfm5unlocked.toString(),
+    qfm6unlocked: qfm6unlocked.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -3916,6 +4007,38 @@ function loadGame() {
   qpthreshold = new Decimal(data.qpthreshold || "1000000000000000");
   qui_reset_boost_check = data.qui_reset_boost_check === 'true';
   quintillionth_unlocked = data.quintillionth_unlocked === 'true';
+
+  qfu1amt = new Decimal(data.qfu1amt || "0");
+  qfu1cost = new Decimal(data.qfu1cost || "25");
+  qfu1scaling = new Decimal(data.qfu1scaling || "1.1");
+  qfu1SXPboost = new Decimal(data.qfu1SXPboost || "1");
+  qfu1QFboost = new Decimal(data.qfu1QFboost || "1");
+
+  qfu2amt = new Decimal(data.qfu2amt || "0");
+  qfu2cost = new Decimal(data.qfu2cost || "250");
+
+  qfu3amt = new Decimal(data.qfu3amt || "0");
+  qfu3cost = new Decimal(data.qfu3cost || "100");
+  qfu3scaling = new Decimal(data.qfu3scaling || "1.25");
+  qfu3boost = new Decimal(data.qfu3boost || "1");
+
+  qfu4amt = new Decimal(data.qfu4amt || "0");
+  qfu4cost = new Decimal(data.qfu4cost || "10000");
+
+  qfu5amt = new Decimal(data.qfu5amt || "0");
+  qfu5cost = new Decimal(data.qfu5cost || "1000");
+  qfu5scaling = new Decimal(data.qfu5scaling || "1.5");
+  qfu5boost = new Decimal(data.qfu5boost || "0");
+
+  qfu6amt = new Decimal(data.qfu6amt || "0");
+  qfu6cost = new Decimal(data.qfu6cost || "1000000");
+
+  qfm1unlocked = data.qfm1unlocked === 'true';
+  qfm2unlocked = data.qfm2unlocked === 'true';
+  qfm3unlocked = data.qfm3unlocked === 'true';
+  qfm4unlocked = data.qfm4unlocked === 'true';
+  qfm5unlocked = data.qfm5unlocked === 'true';
+  qfm6unlocked = data.qfm6unlocked === 'true';
 
   checkUnlocks();
 }
