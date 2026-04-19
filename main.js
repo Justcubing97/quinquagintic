@@ -745,6 +745,11 @@ const sxut_42 = document.getElementById("sxut-42");
 const sxut_43 = document.getElementById("sxut-43");
 const sxut_44 = document.getElementById("sxut-44");
 
+const sxut_51 = document.getElementById("sxut-51");
+const sxut_52 = document.getElementById("sxut-52");
+const sxut_53 = document.getElementById("sxut-53");
+const sxut_54 = document.getElementById("sxut-54");
+
 const challenge5gate = document.getElementById("challenge5gate");
 
 const chal5 = document.getElementById("chal5");
@@ -1238,6 +1243,7 @@ setInterval(function(){
   checkPendingQuintillionth();
   quintillionthUpgrades();
   checkQFM();
+  quintillionthSXUT();
 
   automation();
   updateConnections();
@@ -2277,10 +2283,37 @@ function connectElementsTopBottom(id, fromId, toId, color="white", width=2) {
   const from = document.getElementById(fromId).getBoundingClientRect();
   const to = document.getElementById(toId).getBoundingClientRect();
 
-  const x1 = from.left + from.width/2
-  const y1 = from.top + from.height
-  const x2 = to.left + to.width/2
-  const y2 = to.top
+  const x1 = from.left + from.width/2;
+  const y1 = from.top + from.height;
+  const x2 = to.left + to.width/2;
+  const y2 = to.top;
+
+  const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  line.setAttribute("id", id);
+  line.setAttribute("x1", x1);
+  line.setAttribute("y1", y1);
+  line.setAttribute("x2", x2);
+  line.setAttribute("y2", y2);
+  line.setAttribute("stroke", color);
+  line.setAttribute("stroke-width", width);
+
+  svg.appendChild(line);
+}
+
+function connectElementsLeftRight(id, fromId, toId, color="white", width=2) {
+  const svg = document.getElementById("lines-svg");
+  if (!svg) return;
+
+  const old = document.getElementById(id);
+  if (old) svg.removeChild(old);
+
+  const from = document.getElementById(fromId).getBoundingClientRect();
+  const to = document.getElementById(toId).getBoundingClientRect();
+
+  const x1 = from.left + from.width;
+  const y1 = from.top + from.height/2;
+  const x2 = to.left;
+  const y2 = to.top + to.height/2;
 
   const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
   line.setAttribute("id", id);
@@ -2335,6 +2368,26 @@ function updateConnections() {
   } else {
     connectElementsTopBottom("sxut-33-42", "sxut-33", "sxut-42", "#800000", 5);
     connectElementsTopBottom("sxut-33-43", "sxut-33", "sxut-43", "#800000", 5);
+  }
+
+  if (qfm6unlocked){
+    if (boughtSXUT11){
+      connectElementsLeftRight("sxut-11-12", "sxut-11", "sxut-12", "#FF8080", 5);
+    } else {
+      connectElementsLeftRight("sxut-11-12", "sxut-11", "sxut-12", "#800000", 5);
+    }
+
+    if (boughtSXUT12){
+      connectElementsLeftRight("sxut-12-13", "sxut-12", "sxut-13", "#FFE080", 5);
+    } else {
+      connectElementsLeftRight("sxut-12-13", "sxut-12", "sxut-13", "#806000", 5);
+    }
+
+    if (boughtSXUT43){
+      connectElementsLeftRight("sxut-43-44", "sxut-43", "sxut-44", "#FF8080", 5);
+    } else {
+      connectElementsLeftRight("sxut-43-44", "sxut-43", "sxut-44", "#800000", 5);
+    }
   }
 }
 
@@ -3730,6 +3783,16 @@ function checkQFM(){
 
 //=========================================================================
 //SXUT EXTENSION
+
+function quintillionthSXUT(){
+  if (qfm6unlocked){
+    sxut_12.style.display = "grid";
+    sxut_13.style.display = "grid";
+    sxut_24.style.display = "grid";
+    sxut_34.style.display = "grid";
+    sxut_44.style.display = "grid";
+  }
+}
 
 //=========================================================================
 
