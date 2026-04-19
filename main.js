@@ -184,6 +184,27 @@ var normalTickers = [
   "NOOOOOOO- THE ANGEL ISN'T THE LONGEST SONG IN MY MUSIC LIBRARY ANYMORE- screw you t+pazolite YOU DID THIS WITH \"Burning Desires (t+pazolite Remix)\" IT WAS A TWO-MINUTE SONG!",
   "Here's a space: ",
   "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 157, 155, 156, 154, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, YOU THOUGHT I WAS GONNA KEEP GOING HAHA NO MORE NUMBERS! (oh wait I forgot 97...)",
+  "So I made a thing called Justcubing97's Omeganization System. It's basically a way to create giant numbers in a way that an amateur googologist (that has an understanding of the basic hyperoperators and small systems like Conway's up-arrow notation) could understand. It genuinely gets super unhinged AND IT CAN GET LARGER THAN FAMOUS LARGE NUMBERS LIKE GRAHAM'S NUMBER. I'M NOT KIDDING.",
+  "What's the chance of getting this particular news message?",
+  "f(x) = 1^x",
+  "Redefine the square root function to output real numbers for negative inputs WITHOUT using absolute value.",
+  "What would a trigonometic function look like that raised one function to its reciprocal? For example, sin(x)^csc(x) could be something like sinv(x). I don't know why \"v.\" I love that letter.",
+  "sin^2(x) + cos^2(x) = 1 is literally just the Pythagorean Theorem.",
+  "What if there were trigonometric functions for a 3rd Dimensional sphere? Then we could get cool identities like sin^2(x) + cos^2(x) + trs^2(x) = 1 where trs(x) is the Z-coordinate. Wait, how would you even measure an angle in 3rd Dimensional space?",
+  "At what point does it stop being geometric dimensions and turns into antimatter dimensions- WAIT ANTIMATTER DIMENSIONS???",
+  "v4.0: Eternity Domain update.",
+  "When did I eat 27 orange slices? I only ate at most 15 at a time...",
+  "Scrap that we got Cb now in contrast to C#. While I'm here I also found D, E, F, G, A, and B. And C7. Yeah this is a whole music joke.",
+  "Finger the chord A minor on guitar. Wait, I'm missing the G string.",
+  "Why does a piano have 88 keys in the first place? Go all the way up to C10! WAIT NO- *dies of factorial*",
+  "666 - RoughSketch is now playing.",
+  "The Angel - Cacola is now playing.",
+  "ANTINEUTRINO WITCHCRAFT - Camellia is now playing.",
+  "magical, very magical world - Camellia is now playing.",
+  "Unlimited Hyperlink - Kobaryo is now playing.",
+  "[PART 5] The guy leads Phi and Ava to the outside world, which is perfectly normal. However, two men in lab coats approach them. Without hesitation, the scientists capture Ava with a blindfold her and handcuff her, taking her back to the white room. Phi, petrified by the act, attempts to save her, but the mysterious savior beckons him not to. Still, he saves Ava anyway by unbinding the handcuffs using one of his derivatives. Ava senses this and manages to punch one of the scientists before shoving the other onto the concrete. \"Well... uhh... this is awkward...\" Ava mumbles, still dazed from the whole scientist encounter. \"Not gonna thank me?\" Phi asks, adrenaline still pumping but reduced. \"Oh, right. Thank you, weird math man... I guess...\" she finally responds. The mysterious man has seemingly disappeared during the short exchange. However, another scientist, this one a girl, chases them, and flings an almost ALL-METAL microscope at Phi, wanting to take him out. Well crap, he didn't see it and he gets hit pretty badly. Not dead, but weak in his current condition. With Phi down, it's all up to Ava to defend herself, and apparently Phi's life as well. Stay tuned for part 6.",
+  "when izana",
+  "when will there be a space dilation",
 ];
 
 var specialTickers = [
@@ -215,6 +236,7 @@ var specialTickers = [
   "Platonic love for the win!",
   "Disregard all of those depressing tickers, they're old! I'M ALIVE! (thank you quinquagintillionth rooter)",
   "i miss you quinquagintillionth rooter",
+  "I WANNA HUG YOU EVERYDAY PLEASE-",
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
@@ -3707,6 +3729,9 @@ function checkQFM(){
 }
 
 //=========================================================================
+//SXUT EXTENSION
+
+//=========================================================================
 
 //   ========         ==        ==          ==  ========
 //  ==               ====        ==        ==   ==
@@ -3841,6 +3866,7 @@ function saveGame() {
     au8cost: au8cost.toString(),
 
     quintillionthPoints: quintillionthPoints.toString(),
+    quintillionthFragments: quintillionthFragments.toString(),
     qpbase: qpbase.toString(),
     qpthreshold: qpthreshold.toString(),
     qui_reset_boost_check: qui_reset_boost_check.toString(),
@@ -4003,6 +4029,7 @@ function loadGame() {
   au8cost = new Decimal(data.au8cost || "1e+21");
 
   quintillionthPoints = new Decimal(data.quintillionthPoints || "0");
+  quintillionthFragments = new Decimal(data.quintillionthFragments || "0");
   qpbase = new Decimal(data.qpbase || "0");
   qpthreshold = new Decimal(data.qpthreshold || "1000000000000000");
   qui_reset_boost_check = data.qui_reset_boost_check === 'true';
