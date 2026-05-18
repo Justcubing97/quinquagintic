@@ -496,6 +496,13 @@ div.quadrillionth {
   text-align: center;
 }
 
+.number-container {
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
 p.numberp {
   font-family: "Share Tech Mono", monospace;
   font-size: 5rem;
