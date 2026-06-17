@@ -570,10 +570,8 @@ p.individ-softcaps {
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-.standard-infobox-octillionth {
-  outline: 0.4rem solid #ffa45a;
+.standard-infobox {
   width: 140rem;
-  background-color: #8b5a32;
   font-family: 'Share Tech Mono', monospace;
   font-size: 3rem;
   overflow: hidden;
@@ -581,37 +579,24 @@ p.individ-softcaps {
   margin: 2rem auto 0;
 }
 
-.standard-infobox-header-octillionth {
-  background-color: #df843a;
+@media (max-width: 768px) {
+  .standard-infobox {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .standard-infobox {
+    width: 60vw;
+  }
+}
+
+.standard-infobox-header {
   color: #000000;
   padding: 0.8rem 1.2rem;
   font-weight: bold;
   font-size: 4rem;
   text-align: center;
-  border-bottom: 0.4rem solid #ffa45a;
-}
-
-/* ==================================================================================================== */
-
-.standard-infobox-septillionth {
-  outline: 0.4rem solid #c880ff;
-  width: 140rem;
-  background-color: #8840c0;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 3rem;
-  overflow: hidden;
-  z-index: 999;
-  margin: 2rem auto 0;
-}
-
-.standard-infobox-header-septillionth {
-  background-color: #a860e0;
-  color: #000000;
-  padding: 0.8rem 1.2rem;
-  font-weight: bold;
-  font-size: 4rem;
-  text-align: center;
-  border-bottom: 0.4rem solid #c880ff;
 }
 
 /* ==================================================================================================== */
@@ -674,7 +659,6 @@ body {
 .standard-milestone {
   outline: 0.2rem solid black;
   width: 140rem;
-  background-color: #8b5a32;
   font-family: 'Share Tech Mono', monospace;
   font-size: 4.5rem;
   overflow: hidden;
@@ -682,6 +666,18 @@ body {
   margin: 2rem auto 0;
   line-height: 1;
   -webkit-text-stroke: 0.15rem black;
+}
+
+@media (max-width: 768px) {
+  .standard-milestone {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .standard-milestone {
+    width: 60vw;
+  }
 }
 
 .bottom-bar {
