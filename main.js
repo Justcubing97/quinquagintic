@@ -26,6 +26,8 @@ var normalTickers = [
   "What's not a color, but is associated with a few? I... don't know. I don't experience it, so I can't tell.",
   "i speak in lowercase.",
   "I SPEAK IN UPPERCASE.",
+  "ispeakinnospaces.",
+  "\"                      \" (Translation: I speak in all spaces.)",
   "128√e980",
   "I wonder if I can drink liquid astatine...",
   "WHAT THE HELL IS UNOBTAINIUM??? WHAT IS ITS ELEMENT NUMBER???",
@@ -56,7 +58,7 @@ var normalTickers = [
   "asdfasf",
   "The next update will be in a few days to a few months.",
   "TRANSCENDENT CAP IS TRANSCENDENT",
-  "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679... (these are all my digits) 100 DIGITS!!!",
+  "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480... (these are all my digits) 100 DIGITS!!!",
   "Is the answer to this question 'no'?",
   "THIS SENTENCE IS FALSE.",
   "Does a set of all sets contain itself?",
@@ -175,6 +177,10 @@ var normalTickers = [
   "Hot take: Burning Ship fractal is better than the Mandelbrot Set.",
   "Hot take: hot takes suck.",
   "Hot take: Camellia sucks. Kobaryo wins!",
+  "Hot take: speedcore is the worstest genre ever made.",
+  "Hot take: Hot take: Hot take: Hot take: Hot take: Hot take: Hot take: Hot take: Hot take: Hot take: Hot take: Hot take: Hot take:",
+  "Hot take: albums shouldn't exist.",
+  "Hot take: 114.57 is the best BPM.",
   "2026 SUCKS!",
   "Break Over - K-forest",
   "You! Wanna read a newspaper for magicians?",
@@ -183,6 +189,7 @@ var normalTickers = [
   "I started playing Muse Dash. It's fun, maybe without all of the anime girls.",
   "NOOOOOOO- THE ANGEL ISN'T THE LONGEST SONG IN MY MUSIC LIBRARY ANYMORE- screw you t+pazolite YOU DID THIS WITH \"Burning Desires (t+pazolite Remix)\" IT WAS A TWO-MINUTE SONG!",
   "Here's a space: ",
+  "Here's a newlin-",
   "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 157, 155, 156, 154, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, YOU THOUGHT I WAS GONNA KEEP GOING HAHA NO MORE NUMBERS! (oh wait I forgot 97...)",
   "So I made a thing called Justcubing97's Omeganization System. It's basically a way to create giant numbers in a way that an amateur googologist (that has an understanding of the basic hyperoperators and small systems like Conway's up-arrow notation) could understand. It genuinely gets super unhinged AND IT CAN GET LARGER THAN FAMOUS LARGE NUMBERS LIKE GRAHAM'S NUMBER. I'M NOT KIDDING.",
   "What's the chance of getting this particular news message?",
@@ -193,6 +200,9 @@ var normalTickers = [
   "What if there were trigonometric functions for a 3rd Dimensional sphere? Then we could get cool identities like sin^2(x) + cos^2(x) + trs^2(x) = 1 where trs(x) is the Z-coordinate. Wait, how would you even measure an angle in 3rd Dimensional space?",
   "At what point does it stop being geometric dimensions and turns into antimatter dimensions- WAIT ANTIMATTER DIMENSIONS???",
   "v4.0: Eternity Domain update.",
+  "v5.0: Endless Domain update.",
+  "v6.0: Beyond Domain update.",
+  "v7.0: Transcendent Domain update.",
   "When did I eat 27 orange slices? I only ate at most 15 at a time...",
   "Scrap that we got Cb now in contrast to C#. While I'm here I also found D, E, F, G, A, and B. And C7. Yeah this is a whole music joke.",
   "Finger the chord A minor on guitar. Wait, I'm missing the G string.",
@@ -202,9 +212,26 @@ var normalTickers = [
   "ANTINEUTRINO WITCHCRAFT - Camellia is now playing.",
   "magical, very magical world - Camellia is now playing.",
   "Unlimited Hyperlink - Kobaryo is now playing.",
+  "give me the thorn letter symbol so i can write this song name",
+  "ÞULE - Camellia is now playing.",
+  "HALL - Frums is now playing.",
+  "KillerToy - Camellia is now playing.",
+  "Circles of Death - Camellia is now playing.",
+  "Intraquantum Logarithmic Unsuperscalable Metadata - Justcubin97 is not playing.",
   "[PART 5] The guy leads Phi and Ava to the outside world, which is perfectly normal. However, two men in lab coats approach them. Without hesitation, the scientists capture Ava with a blindfold her and handcuff her, taking her back to the white room. Phi, petrified by the act, attempts to save her, but the mysterious savior beckons him not to. Still, he saves Ava anyway by unbinding the handcuffs using one of his derivatives. Ava senses this and manages to punch one of the scientists before shoving the other onto the concrete. \"Well... uhh... this is awkward...\" Ava mumbles, still dazed from the whole scientist encounter. \"Not gonna thank me?\" Phi asks, adrenaline still pumping but reduced. \"Oh, right. Thank you, weird math man... I guess...\" she finally responds. The mysterious man has seemingly disappeared during the short exchange. However, another scientist, this one a girl, chases them, and flings an almost ALL-METAL microscope at Phi, wanting to take him out. Well crap, he didn't see it and he gets hit pretty badly. Not dead, but weak in his current condition. With Phi down, it's all up to Ava to defend herself, and apparently Phi's life as well. Stay tuned for part 6.",
   "when izana",
   "when will there be a space dilation",
+  "i love portal 2",
+  "SCREW YOU WHEATLEY",
+  "i love gd cologne",
+  "Someone once told me that x^50 is gonna roll me. I ain't the sharpest function in the shed. WELL, the graphs start coming and they don't stop coming...",
+  "NO! I will not fix the layout bug.",
+  "Tempestissimo BYD 11 be like:",
+  "Distorted Fate AT Lv. 17 be like:",
+  "who is shiroko",
+  "who is hoshino",
+  "Quinquagintic NG+ when????",
+  "You know what pisses me off? Cenuntillion and Centretillion. Uncentillion was already okay to begin with, because the 1st Centillion is just Centillion! Trecentillion (10^312) and Trecentillion (10^903) need to be distinguished, however. So I suggest Tricentillion to be 10^903. Tre- is already commonly used for 3, as in Tredecillion, Trequadraginsesentillion, so on. In fact, I see it as [unit prefix][tens prefix][hundreds prefix][OoM prefix], so Centretillion breaks the pattern. Tri-, on the other hand, I see as duplicating something, as in Triangle: three angles, so Tricentillion makes sense as it's just three Centillions.",
 ];
 
 var specialTickers = [
@@ -237,6 +264,8 @@ var specialTickers = [
   "Disregard all of those depressing tickers, they're old! I'M ALIVE! (thank you quinquagintillionth rooter)",
   "i miss you quinquagintillionth rooter",
   "I WANNA HUG YOU EVERYDAY PLEASE-",
+  "DROPPING ALL ROMANCE IN 3... 2... 1...",
+  "this game is my love now",
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
@@ -498,6 +527,8 @@ var sliderPos = 45;
 //=========================================================================
 //TABS
 const reset_button = document.getElementById("reset-button");
+const export_button = document.getElementById("export-clipboard");
+const import_button = document.getElementById("import-input");
 
 const main_tab = document.getElementById("main-tab");
 const caps_tab = document.getElementById("caps-tab");
@@ -2895,7 +2926,6 @@ function chal4GoalChecking(){
     chal4goal = chal4goal.mul(chal4scaling);
     chal4completions = chal4completions.add(new Decimal(1));
   }
-  console.log(window.innerWidth + "/" + screen.width);
 }
 
 //=========================================================================
@@ -3807,15 +3837,15 @@ function quintillionthSXUT(){
 
 //=========================================================================
 setInterval(function(){
-  saveGame();
+  saveGame(false);
   backgroundColorChange();
 }, 10000);
 
 window.onload = function(){
-  loadGame();
+  loadGame(false, "");
 }
 
-function saveGame() {
+function saveGame(exporting) {
   const saveData = {
     sliderPos: sliderPos.toString(),
     challengeModifier: challengeModifier.toString(),
@@ -3970,16 +4000,19 @@ function saveGame() {
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
+
+  if (exporting) return btoa(JSON.stringify(saveData))
 }
 
-function loadGame() {
-  const saved = localStorage.getItem("quinquaginticSave");
-  if (!saved) return;
+function loadGame(importing, string) {
+  var saved = localStorage.getItem("quinquaginticSave");
+  if (!saved && !importing) return;
 
-  const data = JSON.parse(saved);
+  if (importing) saved = atob(string)
+
+  var data = JSON.parse(saved);
 
   sliderPos = data.sliderPos;
-  slider.value = sliderPos;
   numberDisplay.style.fontSize = sliderPos + "px";
   challengeModifier = Number(data.challengeModifier);
 
@@ -4205,16 +4238,21 @@ window.addEventListener("keydown", function(event) {
 //localStorage.removeItem("quinquaginticSave");
 
 //=========================================================================
-//SLIDER
-slider.addEventListener("input", () => {
-  sliderPos = slider.value;
-  numberDisplay.style.fontSize = sliderPos + "px";
-});
-
-//=========================================================================
 //RESET BUTTON
 const reset_activation = document.getElementById("reset-activation");
 reset_button.addEventListener("click", function(){
   localStorage.removeItem("quinquaginticSave");
   reset_activation.textContent = "Status: RESET INITIATED. REFRESH TO FULLY RESET. WAIT UNTIL SAVE TO CANCEL RESET."
+});
+
+export_button.addEventListener("click", function(){
+  let SAVE = saveGame(true);
+  navigator.clipboard.writeText(SAVE);
+  reset_activation.textContent = "Status: Copied save to clipboard!"
+});
+
+import_button.addEventListener("click", function(){
+  let INPUT = window.prompt("Input save from clipboard/paste:")
+  console.log(INPUT)
+  loadGame(true, INPUT)
 });
