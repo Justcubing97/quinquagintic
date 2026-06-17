@@ -563,7 +563,7 @@ p.individ-softcaps {
   font-weight:666;
   margin: 0;
   margin-bottom: 1rem;
-  padding: 1rem 20rem;
+  padding: 1rem clamp(0rem, 4vw, 10rem);
 }
 
 /* ==================================================================================================== */
@@ -571,24 +571,12 @@ p.individ-softcaps {
 /* ==================================================================================================== */
 
 .standard-infobox {
-  width: 140rem;
+  width: clamp(0rem, 100vw, 140rem);
   font-family: 'Share Tech Mono', monospace;
   font-size: 3rem;
   overflow: hidden;
   z-index: 999;
   margin: 2rem auto 0;
-}
-
-@media (max-width: 768px) {
-  .standard-infobox {
-    width: 80vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .standard-infobox {
-    width: 60vw;
-  }
 }
 
 .standard-infobox-header {
@@ -658,7 +646,7 @@ body {
 
 .standard-milestone {
   outline: 0.2rem solid black;
-  width: 140rem;
+  width: clamp(0rem, 100vw, 140rem);
   font-family: 'Share Tech Mono', monospace;
   font-size: 4.5rem;
   overflow: hidden;
@@ -666,18 +654,6 @@ body {
   margin: 2rem auto 0;
   line-height: 1;
   -webkit-text-stroke: 0.15rem black;
-}
-
-@media (max-width: 768px) {
-  .standard-milestone {
-    width: 80vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .standard-milestone {
-    width: 60vw;
-  }
 }
 
 .bottom-bar {

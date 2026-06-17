@@ -2895,6 +2895,7 @@ function chal4GoalChecking(){
     chal4goal = chal4goal.mul(chal4scaling);
     chal4completions = chal4completions.add(new Decimal(1));
   }
+  console.log(window.innerWidth + "/" + screen.width);
 }
 
 //=========================================================================
