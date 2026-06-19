@@ -431,6 +431,10 @@ var boughtSXUT41 = false;
 var boughtSXUT42 = false;
 var boughtSXUT43 = false;
 var boughtSXUT44 = false;
+var boughtSXUT51 = false;
+var boughtSXUT52 = false;
+var boughtSXUT53 = false;
+var boughtSXUT54 = false;
 
 var chal5completions = new Decimal(0);
 var chal5goal = new Decimal.pow(10, 87);
@@ -1548,7 +1552,7 @@ function calculateGain(){
   }
 
   //=========================================================================
-  //ATOMS
+  //QF
   if (quintillionth_unlocked){
     qfgain = quintillionthPoints.div(new Decimal(5));
 
@@ -1561,7 +1565,8 @@ function calculateGain(){
     }
 
     if (qfm4unlocked){
-      qfgain = qfgain.mul(new Decimal(decimalNumber.sqrt()));
+      if (boughtSXUT44) qfgain = qfgain.mul(new Decimal(decimalNumber.pow(0.7)));
+      else qfgain = qfgain.mul(new Decimal(decimalNumber.sqrt()));
     }
 
     if (qfu6amt.gte(new Decimal(1))){
@@ -1785,6 +1790,10 @@ function calculateBoostsStrings(){
     sxpBoostsString += "QFU1: x" + qfu1SXPboost.toExponential(3) + ", ";
   }
 
+  if (boughtSXUT44){
+    sxpBoostsString += "SXUT44: x5";
+  }
+
   //=========================================================================
   //QUINTILLIONTHS
   qpBoostsString = "Boosts: ";
@@ -1806,7 +1815,8 @@ function calculateBoostsStrings(){
   }
 
   if (qfm4unlocked){
-    qpBoostsString += "QFM4: x" + new Decimal(decimalNumber.sqrt()).toExponential(3) + " to QF, ";
+    if (boughtSXUT44) qpBoostsString += "QFM4: x" + new Decimal(decimalNumber.pow(0.7)).toExponential(3) + " to QF, ";
+    else qpBoostsString += "QFM4: x" + new Decimal(decimalNumber.sqrt()).toExponential(3) + " to QF, ";
   }
 }
 
@@ -2119,7 +2129,8 @@ function updateScreen(){
   qfu6_id_amt.textContent = "ID: QFU6 || " + qfu6amt + "/1";
   qfu6_cost_scale.textContent = "Cost: " + qfu6cost.toExponential(3) + " QF";
 
-  qfm4_effect.textContent = "x" + new Decimal(decimalNumber.sqrt()).toExponential(3);
+  if (boughtSXUT44) qfm4_effect.textContent = "x" + new Decimal(decimalNumber.pow(0.7)).toExponential(3);
+  else qfm4_effect.textContent = "x" + new Decimal(decimalNumber.sqrt()).toExponential(3);
 }
 
 //=========================================================================
@@ -3297,6 +3308,10 @@ function checkPendingSextillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THR
   if (qfu1amt.gte(new Decimal(1))){
     sxppending = sxppending.mul(new Decimal(qfu1SXPboost));
   }
+
+  if (boughtSXUT44){
+    sxppending = sxppending.mul(new Decimal(5));
+  }
 }
 
 //=========================================================================
@@ -3323,107 +3338,71 @@ topSXP.addEventListener("click", function(){
 function checkSXUT(){
   if (sextillionthPoints.gte(new Decimal(1)) && !boughtSXUT11) {
     sxut_11.disabled = false;
-    sxut_11.classList.add("sx-light");
-    sxut_11.classList.remove("sx-dark");
   } else {
     sxut_11.disabled = true;
-    sxut_11.classList.add("sx-dark");
-    sxut_11.classList.remove("sx-light");
   }
 
   if (challengeCompletions.gte(50) && !boughtSXUT21 && boughtSXUT11) {
     sxut_21.disabled = false;
-    sxut_21.classList.add("sx-light");
-    sxut_21.classList.remove("sx-dark");
   } else {
     sxut_21.disabled = true;
-    sxut_21.classList.add("sx-dark");
-    sxut_21.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(3)) && !boughtSXUT22 && boughtSXUT11) {
     sxut_22.disabled = false;
-    sxut_22.classList.add("sx-light");
-    sxut_22.classList.remove("sx-dark");
   } else {
     sxut_22.disabled = true;
-    sxut_22.classList.add("sx-dark");
-    sxut_22.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(6)) && !boughtSXUT23 && boughtSXUT11) {
     sxut_23.disabled = false;
-    sxut_23.classList.add("sx-light");
-    sxut_23.classList.remove("sx-dark");
   } else {
     sxut_23.disabled = true;
-    sxut_23.classList.add("sx-dark");
-    sxut_23.classList.remove("sx-light");
   }
 
   if (challengeCompletions.gte(100) && !boughtSXUT31 && boughtSXUT21) {
     sxut_31.disabled = false;
-    sxut_31.classList.add("sx-light");
-    sxut_31.classList.remove("sx-dark");
   } else {
     sxut_31.disabled = true;
-    sxut_31.classList.add("sx-dark");
-    sxut_31.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(15)) && !boughtSXUT32 && boughtSXUT22) {
     sxut_32.disabled = false;
-    sxut_32.classList.add("sx-light");
-    sxut_32.classList.remove("sx-dark");
   } else {
     sxut_32.disabled = true;
-    sxut_32.classList.add("sx-dark");
-    sxut_32.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(25)) && !boughtSXUT33 && boughtSXUT22) {
     sxut_33.disabled = false;
-    sxut_33.classList.add("sx-light");
-    sxut_33.classList.remove("sx-dark");
   } else {
     sxut_33.disabled = true;
-    sxut_33.classList.add("sx-dark");
-    sxut_33.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(50)) && !boughtSXUT41 && boughtSXUT32) {
     sxut_41.disabled = false;
-    sxut_41.classList.add("sx-light");
-    sxut_41.classList.remove("sx-dark");
   } else {
     sxut_41.disabled = true;
-    sxut_41.classList.add("sx-dark");
-    sxut_41.classList.remove("sx-light");
   }
 
   if (sextillionthPoints.gte(new Decimal(100)) && !boughtSXUT42 && boughtSXUT31 && boughtSXUT33) {
     sxut_42.disabled = false;
-    sxut_42.classList.add("sx-light");
-    sxut_42.classList.remove("sx-dark");
   } else {
     sxut_42.disabled = true;
-    sxut_42.classList.add("sx-dark");
-    sxut_42.classList.remove("sx-light");
   }
 
   if (atoms.gte(new Decimal.pow(10, 30)) && !boughtSXUT43 && boughtSXUT33) {
     sxut_43.disabled = false;
-    sxut_43.classList.add("sx-light");
-    sxut_43.classList.remove("sx-dark");
   } else {
     sxut_43.disabled = true;
-    sxut_43.classList.add("sx-dark");
-    sxut_43.classList.remove("sx-light");
   }
 
-  if (boughtSXUT42 || quintillionth_unlocked){
-    challenge5gate.style.display = "block";
+  if (quintillionthFragments.gte(new Decimal.pow(10, 30)) && !boughtSXUT44 && boughtSXUT43) {
+    sxut_44.disabled = false;
+  } else {
+    sxut_44.disabled = true;
   }
+
+  if (boughtSXUT42 || quintillionth_unlocked) challenge5gate.style.display = "block";
 }
 
 //=========================================================================
@@ -3435,57 +3414,46 @@ function checkSXUT(){
 sxut_respec.addEventListener("click", function(){
   if (boughtSXUT11 == true){
     sextillionthPoints = sextillionthPoints.add(new Decimal(1));
-    sxut_11.classList.remove("sx-light");
-    sxut_11.classList.add("sx-dark");
     boughtSXUT11 = false;
   }
 
   if (boughtSXUT21 == true){
-    sxut_21.classList.remove("sx-light");
-    sxut_21.classList.add("sx-dark");
     boughtSXUT21 = false;
   }
 
   if (boughtSXUT22 == true){
     sextillionthPoints = sextillionthPoints.add(new Decimal(3));
-    sxut_22.classList.remove("sx-light");
-    sxut_22.classList.add("sx-dark");
     boughtSXUT22 = false;
   }
 
   if (boughtSXUT23 == true){
     sextillionthPoints = sextillionthPoints.add(new Decimal(6));
-    sxut_23.classList.remove("sx-light");
-    sxut_23.classList.add("sx-dark");
     boughtSXUT23 = false;
   }
 
   if (boughtSXUT32 == true){
     sextillionthPoints = sextillionthPoints.add(new Decimal(15));
-    sxut_32.classList.remove("sx-light");
-    sxut_32.classList.add("sx-dark");
     boughtSXUT32 = false;
   }
 
   if (boughtSXUT33 == true){
     sextillionthPoints = sextillionthPoints.add(new Decimal(25));
-    sxut_33.classList.remove("sx-light");
-    sxut_33.classList.add("sx-dark");
     boughtSXUT33 = false;
   }
 
   if (boughtSXUT41 == true){
     sextillionthPoints = sextillionthPoints.add(new Decimal(50));
-    sxut_41.classList.remove("sx-light");
-    sxut_41.classList.add("sx-dark");
     boughtSXUT41 = false;
   }
 
   if (boughtSXUT43 == true){
     atoms = atoms.add(new Decimal.pow(10, 30));
-    sxut_43.classList.remove("sx-light");
-    sxut_43.classList.add("sx-dark");
     boughtSXUT43 = false;
+  }
+
+  if (boughtSXUT44 == true){
+    quintillionthFragments = quintillionthFragments.add(new Decimal.pow(10, 30));
+    boughtSXUT44 = false;
   }
 });
 
@@ -3493,49 +3461,31 @@ sxut_respec.addEventListener("click", function(){
 //UPGS
 
 function checkSXUTColors(){
-  if (boughtSXUT11){
-    sxut_11.classList.add("sx-light");
-    sxut_11.classList.remove("sx-dark");
-  }
+  if (boughtSXUT11) {sxut_11.classList.add("sx-light"); sxut_11.classList.remove("sx-dark");}
+  else {sxut_11.classList.add("sx-dark"); sxut_11.classList.remove("sx-light");}
   
-  if (boughtSXUT21){
-    sxut_21.classList.add("sx-light");
-    sxut_21.classList.remove("sx-dark");
-  }
-  if (boughtSXUT22){
-    sxut_22.classList.add("sx-light");
-    sxut_22.classList.remove("sx-dark");
-  }
-  if (boughtSXUT23){
-    sxut_23.classList.add("sx-light");
-    sxut_23.classList.remove("sx-dark");
-  }
+  if (boughtSXUT21) {sxut_21.classList.add("sx-light"); sxut_21.classList.remove("sx-dark");}
+  else {sxut_21.classList.add("sx-dark"); sxut_21.classList.remove("sx-light");}
+  if (boughtSXUT22) {sxut_22.classList.add("sx-light"); sxut_22.classList.remove("sx-dark");}
+  else {sxut_22.classList.add("sx-dark"); sxut_22.classList.remove("sx-light");}
+  if (boughtSXUT23) {sxut_23.classList.add("sx-light"); sxut_23.classList.remove("sx-dark");}
+  else {sxut_23.classList.add("sx-dark"); sxut_23.classList.remove("sx-light");}
 
-  if (boughtSXUT31){
-    sxut_31.classList.add("sx-light");
-    sxut_31.classList.remove("sx-dark");
-  }
-  if (boughtSXUT32){
-    sxut_32.classList.add("sx-light");
-    sxut_32.classList.remove("sx-dark");
-  }
-  if (boughtSXUT33){
-    sxut_33.classList.add("sx-light");
-    sxut_33.classList.remove("sx-dark");
-  }
+  if (boughtSXUT31) {sxut_31.classList.add("sx-light"); sxut_31.classList.remove("sx-dark");}
+  else {sxut_31.classList.add("sx-dark"); sxut_31.classList.remove("sx-light");}
+  if (boughtSXUT32) {sxut_32.classList.add("sx-light"); sxut_32.classList.remove("sx-dark");}
+  else {sxut_32.classList.add("sx-dark"); sxut_32.classList.remove("sx-light");}
+  if (boughtSXUT33) {sxut_33.classList.add("sx-light"); sxut_33.classList.remove("sx-dark");}
+  else {sxut_33.classList.add("sx-dark"); sxut_33.classList.remove("sx-light");}
 
-  if (boughtSXUT41){
-    sxut_41.classList.add("sx-light");
-    sxut_41.classList.remove("sx-dark");
-  }
-  if (boughtSXUT42){
-    sxut_42.classList.add("sx-light");
-    sxut_42.classList.remove("sx-dark");
-  }
-  if (boughtSXUT43){
-    sxut_43.classList.add("sx-light");
-    sxut_43.classList.remove("sx-dark");
-  }
+  if (boughtSXUT41) {sxut_41.classList.add("sx-light"); sxut_41.classList.remove("sx-dark");}
+  else {sxut_41.classList.add("sx-dark"); sxut_41.classList.remove("sx-light");}
+  if (boughtSXUT42) {sxut_42.classList.add("sx-light"); sxut_42.classList.remove("sx-dark");}
+  else {sxut_42.classList.add("sx-dark"); sxut_42.classList.remove("sx-light");}
+  if (boughtSXUT43) {sxut_43.classList.add("sx-light"); sxut_43.classList.remove("sx-dark");}
+  else {sxut_43.classList.add("sx-dark"); sxut_43.classList.remove("sx-light");}
+  if (boughtSXUT44) {sxut_44.classList.add("qui-light"); sxut_44.classList.remove("qui-dark");}
+  else {sxut_44.classList.add("qui-dark"); sxut_44.classList.remove("qui-light");}
 }
 
 sxut_11.addEventListener("click", function(){
@@ -3584,6 +3534,11 @@ sxut_42.addEventListener("click", function(){
 sxut_43.addEventListener("click", function(){
   atoms = atoms.sub(new Decimal.pow(10, 30));
   boughtSXUT43 = true;
+});
+
+sxut_44.addEventListener("click", function(){
+  quintillionthFragments = quintillionthFragments.sub(new Decimal.pow(10, 30));
+  boughtSXUT44 = true;
 });
 
 //=========================================================================
