@@ -190,7 +190,7 @@ var normalTickers = [
   "NOOOOOOO- THE ANGEL ISN'T THE LONGEST SONG IN MY MUSIC LIBRARY ANYMORE- screw you t+pazolite YOU DID THIS WITH \"Burning Desires (t+pazolite Remix)\" IT WAS A TWO-MINUTE SONG!",
   "Here's a space: ",
   "Here's a newlin-",
-  "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 157, 155, 156, 154, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, YOU THOUGHT I WAS GONNA KEEP GOING HAHA NO MORE NUMBERS! (oh wait I forgot 97...)",
+  "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 1I8, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 157, 155, 156, 154, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, YOU THOUGHT I WAS GONNA KEEP GOING HAHA NO MORE NUMBERS! (oh wait I forgot 97...)",
   "So I made a thing called Justcubing97's Omeganization System. It's basically a way to create giant numbers in a way that an amateur googologist (that has an understanding of the basic hyperoperators and small systems like Conway's up-arrow notation) could understand. It genuinely gets super unhinged AND IT CAN GET LARGER THAN FAMOUS LARGE NUMBERS LIKE GRAHAM'S NUMBER. I'M NOT KIDDING.",
   "What's the chance of getting this particular news message?",
   "f(x) = 1^x",
@@ -220,7 +220,7 @@ var normalTickers = [
   "Intraquantum Logarithmic Unsuperscalable Metadata - Justcubin97 is not playing.",
   "[PART 5] The guy leads Phi and Ava to the outside world, which is perfectly normal. However, two men in lab coats approach them. Without hesitation, the scientists capture Ava with a blindfold her and handcuff her, taking her back to the white room. Phi, petrified by the act, attempts to save her, but the mysterious savior beckons him not to. Still, he saves Ava anyway by unbinding the handcuffs using one of his derivatives. Ava senses this and manages to punch one of the scientists before shoving the other onto the concrete. \"Well... uhh... this is awkward...\" Ava mumbles, still dazed from the whole scientist encounter. \"Not gonna thank me?\" Phi asks, adrenaline still pumping but reduced. \"Oh, right. Thank you, weird math man... I guess...\" she finally responds. The mysterious man has seemingly disappeared during the short exchange. However, another scientist, this one a girl, chases them, and flings an almost ALL-METAL microscope at Phi, wanting to take him out. Well crap, he didn't see it and he gets hit pretty badly. Not dead, but weak in his current condition. With Phi down, it's all up to Ava to defend herself, and apparently Phi's life as well. Stay tuned for part 6.",
   "when izana",
-  "when will there be a space dilation",
+  "when will there be a time dilation",
   "i love portal 2",
   "SCREW YOU WHEATLEY",
   "i love gd cologne",
@@ -232,22 +232,39 @@ var normalTickers = [
   "who is hoshino",
   "Quinquagintic NG+ when????",
   "You know what pisses me off? Cenuntillion and Centretillion. Uncentillion was already okay to begin with, because the 1st Centillion is just Centillion! Trecentillion (10^312) and Trecentillion (10^903) need to be distinguished, however. So I suggest Tricentillion to be 10^903. Tre- is already commonly used for 3, as in Tredecillion, Trequadraginsesentillion, so on. In fact, I see it as [unit prefix][tens prefix][hundreds prefix][OoM prefix], so Centretillion breaks the pattern. Tri-, on the other hand, I see as duplicating something, as in Triangle: three angles, so Tricentillion makes sense as it's just three Centillions.",
+  "i might make a tmt version of this",
+  "The coding corner! Featuring: Python, Lua, Luau, JavaScript, TypeScript, Java, X86 Assembly, Go, Rust, SQL, Swift, Kotlin, C, C+, C++, C#, D, Csus, B, Cbb, C7, C9, C-, C5, C--, Cmaj7, Cmaj9, C11, c, C#b, C#+, C##+, Cb+, Cbb+, C-+, C--+, C#++, C##++, Cb++, Cbb++, C-++, C--++, and See. (Also includes: Sea, Cea, Cee, C^e, +C, x+C, x-C, C&, C&&, C(&), [C], [O]{C}, C$, C$$, C$$$, C$$$$, C$$$$$, C$$$$$$, Centillion, C!, C*, C**, C***, C/C, C/C+, etC)",
+  "Can you escape the escape symbol? Let me try. \\ ",
+  "Quinquagintic has crashed itself.",
+  "Justcubing97 has left the chat.",
+  "STILL ALIVE.",
+  "I used pi to play this game. 1 is scroll up, 2 is scroll down, and 3-0 click 8 separate regions. Because pi has infinite digits as far as we know, it can always beat the game.",
+  "Quinquagintic any% WR in 0:15:61:394",
+  "1F Y0u'23 234d1ng th15, h3 15 3v1l. 1 kn0w h15 pl4n5. L34v3 th3 g4m3 b3f023 1t'5 t00 l4t3.",
+  "You're making great progress so far, player. That entity is either dreaming or schizophrenic. (Don't worry, I'm totally NOT schizophrenic!)",
+  "Wait, it's all softcapped? \"Always has been.\"",
+  "This news ticker is sentient. If you look at me, I will look back at you.",
+  "Why are semicolons used in JavaScript?; Like, you don't even NEED to use them!;",
+  "Currently compressing code...",
+  "Look me in the eye, let's incremental just for tonight!",
+  "Oh I think I'm addicted, I'm addicted to softcaps!",
+  "I identify as a compiler for Malbolge.",
+  "SIX SEVEN SIX SEVEN SIX SEVEN SIX SEVEN SIX SEVEN SIX SEVEN- bro shut up you're actually six or seven years old -SIX SEVENNNN!!!! *Justcubing97 pulls out the ICBM*",
+  "So there was this game. It had a grey background, with slightly lighter gray strips at the top and bottom. In the middle, there were outlines of areas, one white, one green, one blue, one red, and one white. Wait... this seems familiar...",
+  "me when i can listen to three whole albums in a row:"
 ];
 
 var specialTickers = [
-  "It's been 347 days... I just wanna see her again...",
-  "I, Justcubing97, am lonely again...",
   "Sometimes I play IMR. Other times I’m not. 50% I’m sleeping, 30% I’m in school, 20% I’m stuck doing DeltaMath, 0% I’m with a girl.",
   "Today I asked out an incremental-game-lover girl, but she said her love gain is softcapped. Is that good?",
   "A girl loved me at one point. Not anymore.",
   "If you're reading this, I'm still alive. Maybe not emotionally, oh, no. I've lost my ability to feel emotions.",
-  "If you know me, then you know I’m not like most boys. Instead of recklessness and random meme mentions, I try to grasp what’s happening and stay focused, along with trying to get EVERYONE ELSE to stop saying “67.”",
+  "If you know me, then you know I’m not like most boys. Instead of recklessness and random meme mentions, I try to grasp what’s happening and stay focused, along with trying to get EVERYONE ELSE to stop saying \"67.\"",
   "Every time I see a couple, it makes me kinda sad. They have someone that cares about them (which is true most of the time), but I don’t. Maybe… uhh… you could probably indirectly care about me by playing this game?",
   "...I just want a girl to hug me. The next best thing is to hold something soft in bed, but it’s not as good as what I could be getting.",
   "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. it just… feels empty....................................................................................I ate 27 orange slices.",
   "and this is why i sit at my computer 12 hours a day. i want to be doing something else, but nothing feels right without a companion. anyway, back to trying to solve the collatz conjecture.",
   "This group chat decided to expose everything I did... I hope my crush doesn't hate me. Or do I? *vsauce music plays*",
-  "help me...",
   "atp i dont know if shes ignoring me on purpose, hope not, but hey, being single means i can work on this",
   "Am I getting friendzoned?",
   "touch deprivation is real and its making me crazy",
@@ -266,6 +283,10 @@ var specialTickers = [
   "I WANNA HUG YOU EVERYDAY PLEASE-",
   "DROPPING ALL ROMANCE IN 3... 2... 1...",
   "this game is my love now",
+  "Never gonna give you up, never gonna let you down, never gonna run around, and desert you! Never gonna make you cry, never gonna say goodbye, never gonna tell a lie, and hurt you!",
+  "Can Quinquagintic run Bad Apple!!?",
+  "is it polyamorous if i love all of my games?",
+  "II STAAY UUP TOO COODEE QUUIINQUUAAGIINTIIC-",
 ];
 
 //Thousandth: "Take it slow! Love is like the Thousandth Section: start slow, but keep progressing slowly and eventually you win!" "THPM18 now exists: Pentate ALL D.D. currencies to 97! Cost: 1e9.7e200 THP";
@@ -273,6 +294,7 @@ var specialTickers = [
 
 var decimalNumber = new Decimal(1);
 var numberGain;
+var isResetting = false;
 
 var numberString = "";
 var numberStringFinal = "";
@@ -285,6 +307,8 @@ var sepBoostsString = "";
 var atomsBoostsString = "";
 var sxpBoostsString = "";
 var qpBoostsString = "";
+var qfBoostsString = "";
+var qapBoostsString = "";
 
 var challengeModifier = 0;
 
@@ -356,7 +380,6 @@ var challengeCompletions = new Decimal(0);
 var ccm1unlocked = false;
 var ccm2unlocked = false;
 var ccm3unlocked = false;
-
 //=========================================================================
 //SEPTILLIONTH
 var spscaling = new Decimal(10);
@@ -437,7 +460,7 @@ var boughtSXUT53 = false;
 var boughtSXUT54 = false;
 
 var chal5completions = new Decimal(0);
-var chal5goal = new Decimal.pow(10, 87);
+var chal5goal = new Decimal.pow(10, 63);
 
 //=========================================================================
 //QUINTILLIONTH
@@ -481,6 +504,16 @@ var qfm3unlocked = false;
 var qfm4unlocked = false;
 var qfm5unlocked = false;
 var qfm6unlocked = false;
+var qfm7unlocked = false;
+
+//=========================================================================
+//QUADRILLIONTH
+var qapscaling = new Decimal(5);
+var qapthreshold = new Decimal.pow(10, 18);
+var qappending = new Decimal(0);
+var qapbase = new Decimal(0);
+
+var quadrillionthPoints = new Decimal(0);
 
 //=========================================================================
 //NON MAGIC CONSTS
@@ -496,6 +529,7 @@ var octillionth_unlocked = false;
 var septillionth_unlocked = false;
 var sextillionth_unlocked = false;
 var quintillionth_unlocked = false;
+var quadrillionth_unlocked = false;
 
 //=========================================================================
 //RESET BOOSTS (these are for applying boosts)
@@ -504,12 +538,14 @@ var oct_reset_boost_check = false;
 var sep_reset_boost_check = false;
 var sxp_reset_boost_check = false;
 var qui_reset_boost_check = false;
+var qua_reset_boost_check = false;
 
 //=========================================================================
 //SOFTCAP EFFECTS
 var minicap = new Decimal(1);
 var softcap = new Decimal(1);
 var supercap = new Decimal(1);
+var hypercap = new Decimal(1)
 
 //=========================================================================
 //OTHER
@@ -536,21 +572,29 @@ const import_button = document.getElementById("import-input");
 
 const main_tab = document.getElementById("main-tab");
 const caps_tab = document.getElementById("caps-tab");
+const settings_tab = document.getElementById("settings-tab")
 const decillionth_tab = document.getElementById("decillionth-tab");
 const nonillionth_tab = document.getElementById("nonillionth-tab");
 const octillionth_tab = document.getElementById("octillionth-tab");
 const septillionth_tab = document.getElementById("septillionth-tab");
 const sextillionth_tab = document.getElementById("sextillionth-tab");
 const quintillionth_tab = document.getElementById("quintillionth-tab");
+const quadrillionth_tab = document.getElementById("quadrillionth-tab");
 
 const main_number_tab_button = document.getElementById("main-number-tab-button");
 const main_caps_tab_button = document.getElementById("main-caps-tab-button");
+const main_settings_tab_button = document.getElementById("main-settings-tab-button");
 const main_decillionth_tab_button = document.getElementById("main-decillionth-tab-button");
 const main_nonillionth_tab_button = document.getElementById("main-nonillionth-tab-button");
 const main_octillionth_tab_button = document.getElementById("main-octillionth-tab-button");
 const main_septillionth_tab_button = document.getElementById("main-septillionth-tab-button");
 const main_sextillionth_tab_button = document.getElementById("main-sextillionth-tab-button");
 const main_quintillionth_tab_button = document.getElementById("main-quintillionth-tab-button");
+const main_quadrillionth_tab_button = document.getElementById("main-quadrillionth-tab-button");
+const main_trillionth_tab_button = document.getElementById("main-trillionth-tab-button");
+const main_billionth_tab_button = document.getElementById("main-billionth-tab-button");
+const main_millionth_tab_button = document.getElementById("main-millionth-tab-button");
+const main_thousandth_tab_button = document.getElementById("main-thousandth-tab-button");
 
 const oct_infobox_tab = document.getElementById("oct-infobox-tab");
 const oct_challenge_tab = document.getElementById("oct-challenge-tab");
@@ -572,6 +616,11 @@ const topAtoms = document.getElementById("top-atoms");
 const topSXP = document.getElementById("top-sxp");
 const topQP = document.getElementById("top-qp");
 const topQF = document.getElementById("top-qf");
+const topQAP = document.getElementById("top-qap");
+const topTP = document.getElementById("top-tp");
+const topBP = document.getElementById("top-bp");
+const topMP = document.getElementById("top-mp");
+const topTHP = document.getElementById("top-thp");
 
 //=========================================================================
 //BOTTOM
@@ -805,6 +854,7 @@ qpreset.disabled = true;
 
 const qp_effect = document.getElementById("qp-effect");
 const qf_display = document.getElementById("qf-display");
+const qf_boosts_display = document.getElementById("qf-boosts-display");
 
 const qfu1 = document.getElementById("qfu1");
 const qfu1_id_amt = document.getElementById("qfu1-id-amt");
@@ -843,6 +893,18 @@ const qfm4 = document.getElementById("qfm-4");
 const qfm4_effect = document.getElementById("qfm-4-effect");
 const qfm5 = document.getElementById("qfm-5");
 const qfm6 = document.getElementById("qfm-6");
+const qfm7 = document.getElementById("qfm-7");
+
+//=========================================================================
+//QUADRILLIONTH
+
+const qapreset = document.getElementById("qapreset");
+const qap_point_pending = document.getElementById("qap-point-pending");
+const qap_next_point = document.getElementById("qap-next-point");
+const qapBoostsDisplay = document.getElementById("qapBoostsDisplay");
+const quadrillionth_ebs = document.getElementById("quadrillionth-ebs");
+
+const qap_effect = document.getElementById("qap-effect");
 
 //=========================================================================
 
@@ -856,6 +918,7 @@ const qfm6 = document.getElementById("qfm-6");
 
 //=========================================================================
 function nonillionthResetInitiate(){
+  isResetting = true;
   opthreshold = new Decimal.pow(10, 6);
   opbase = new Decimal(0);
 
@@ -875,15 +938,12 @@ function nonillionthResetInitiate(){
     du2cost = new Decimal(25);
     du2scaling = new Decimal(4);
   }
-
-  decimalNumber = new Decimal(1);
   
-  if (nu2amt.eq(new Decimal(1)) && !boughtSXUT31){
-    du1cost = new Decimal(8);
-  }
+  if (nu2amt.eq(new Decimal(1)) && !boughtSXUT31) du1cost = new Decimal(8);
 }
 
 function octillionthResetInitiate(){
+  isResetting = true;
   opthreshold = new Decimal.pow(10, 6);
   octillionthPoints = octillionthPoints.add(oppending);
   opbase = new Decimal(0);
@@ -926,81 +986,6 @@ function octillionthResetInitiate(){
     du2cost = new Decimal(25);
     du2scaling = new Decimal(4);
   }
-
-  decimalNumber = new Decimal(1);
-}
-
-function everythingFromSRI(){
-  oct_reset_boost_check = false;
-  opscaling = new Decimal(3);
-  opthreshold = new Decimal.pow(10, 6);
-  oppending = new Decimal(0);
-  opbase = new Decimal(0);
- 
-  octillionthPoints = new Decimal(0);
- 
-  if (!sxp_reset_boost_check){
-    chal1completions = new Decimal(0);
-    chal1scaling = new Decimal(1.15); //EXPONENT!
-    chal1goal = new Decimal(1000);
- 
-    chal2completions = new Decimal(0);
-    chal2scaling = new Decimal(3);
-    chal2goal = new Decimal(5000);
- 
-    chal3completions = new Decimal(0);
-    chal3scaling = new Decimal(2.8);
-    chal3goal = new Decimal(10000);
- 
-    chal4completions = new Decimal(0);
-    chal4scaling = new Decimal(5);
-    chal4goal = new Decimal(10000000);
- 
-    challengeCompletions = new Decimal(0);
-    ccm1unlocked = false;
-    ccm2unlocked = false;
-    ccm3unlocked = false;
-  }
-  
-  npscaling = new Decimal(2);
-  npthreshold = new Decimal(1000);
-  nppending = new Decimal(0);
-  npbase = new Decimal(0);
-
-  nonillionthPoints = new Decimal(0);
-  non_reset_boost_check = false;
-
-  if (!boughtSXUT31){
-    nu1boost = new Decimal(1);
-    nu1amt = new Decimal(0);
-    nu1cost = new Decimal(1);
-    nu1scaling = new Decimal(5);
-
-    nu2amt = new Decimal(0);
-    nu2cost = new Decimal(3);
-    nu2_cost_scale.textContent = "Cost: 3 NP";
-    
-    nu3boost = new Decimal(1);
-    nu3amt = new Decimal(0);
-    nu3cost = new Decimal(10);
-    nu3scaling = new Decimal(10);
-  
-    nu4amt = new Decimal(0);
-    nu4cost = new Decimal(25);
-    nu4_cost_scale.textContent = "Cost: 25 NP";
-  
-    du1boost = new Decimal(0);
-    du1amt = new Decimal(0);
-    du1cost = new Decimal(10);
-    du1scaling = new Decimal(3); 
-
-    du2boost = new Decimal(1);
-    du2amt = new Decimal(0);
-    du2cost = new Decimal(25);
-    du2scaling = new Decimal(4);
-  }
-
-  decimalNumber = new Decimal(1);
 }
 
 function septillionthResetInitiate(){
@@ -1008,77 +993,7 @@ function septillionthResetInitiate(){
   septillionthPoints = septillionthPoints.add(sppending);
   spbase = new Decimal(0);
   sep_reset_boost_check = true;
-
-  oct_reset_boost_check = false;
-  opscaling = new Decimal(3);
-  opthreshold = new Decimal.pow(10, 6);
-  oppending = new Decimal(0);
-  opbase = new Decimal(0);
- 
-  octillionthPoints = new Decimal(0);
- 
-  if (!sxp_reset_boost_check){
-    chal1completions = new Decimal(0);
-    chal1scaling = new Decimal(1.15); //EXPONENT!
-    chal1goal = new Decimal(1000);
- 
-    chal2completions = new Decimal(0);
-    chal2scaling = new Decimal(3);
-    chal2goal = new Decimal(5000);
- 
-    chal3completions = new Decimal(0);
-    chal3scaling = new Decimal(2.8);
-    chal3goal = new Decimal(10000);
- 
-    chal4completions = new Decimal(0);
-    chal4scaling = new Decimal(5);
-    chal4goal = new Decimal(10000000);
- 
-    challengeCompletions = new Decimal(0);
-    ccm1unlocked = false;
-    ccm2unlocked = false;
-    ccm3unlocked = false;
-  }
-  
-  npscaling = new Decimal(2);
-  npthreshold = new Decimal(1000);
-  nppending = new Decimal(0);
-  npbase = new Decimal(0);
-
-  nonillionthPoints = new Decimal(0);
-  non_reset_boost_check = false;
-
-  if (!boughtSXUT31){
-    nu1boost = new Decimal(1);
-    nu1amt = new Decimal(0);
-    nu1cost = new Decimal(1);
-    nu1scaling = new Decimal(5);
-
-    nu2amt = new Decimal(0);
-    nu2cost = new Decimal(3);
-    nu2_cost_scale.textContent = "Cost: 3 NP";
-    
-    nu3boost = new Decimal(1);
-    nu3amt = new Decimal(0);
-    nu3cost = new Decimal(10);
-    nu3scaling = new Decimal(10);
-  
-    nu4amt = new Decimal(0);
-    nu4cost = new Decimal(25);
-    nu4_cost_scale.textContent = "Cost: 25 NP";
-  
-    du1boost = new Decimal(0);
-    du1amt = new Decimal(0);
-    du1cost = new Decimal(10);
-    du1scaling = new Decimal(3); 
-
-    du2boost = new Decimal(1);
-    du2amt = new Decimal(0);
-    du2cost = new Decimal(25);
-    du2scaling = new Decimal(4);
-  }
-
-  decimalNumber = new Decimal(1);
+  everythingFromSRI();
 }
 
 function sextillionthResetInitiate(){
@@ -1086,52 +1001,110 @@ function sextillionthResetInitiate(){
   sextillionthPoints = sextillionthPoints.add(sxppending);
   sxpbase = new Decimal(0);
   sxp_reset_boost_check = true;
+  everythingFromSXI();
+}
 
-  sep_reset_boost_check = false;
-  spscaling = new Decimal(10);
-  spthreshold = new Decimal.pow(10, 9);
-  sppending = new Decimal(0);
-  spbase = new Decimal(0);
+function quintillionthResetInitiate(){
+  qpthreshold = new Decimal.pow(10, 15);
+  quintillionthPoints = quintillionthPoints.add(qppending);
+  qpbase = new Decimal(0);
+  qui_reset_boost_check = true;
+  everythingFromQRI();
+}
 
-  septillionthPoints = new Decimal(0);
+function quadrillionthResetInitiate(){
+  qapthreshold = new Decimal.pow(10, 15);
+  quadrillionthPoints = quadrillionthPoints.add(qappending);
+  qapbase = new Decimal(0);
+  qua_reset_boost_check = true;
+  everythingFromQAI();
+}
 
-  atoms = new Decimal(0);
-  atomGain = new Decimal(0);
+function everythingFromQAI(){
+  qui_reset_boost_check = false;
+  qpscaling = new Decimal(3);
+  qpthreshold = new Decimal.pow(10, 15);
+  qppending = new Decimal(0);
+  qpbase = new Decimal(0);
 
-  atomsBoost = new Decimal(1);
+  quintillionthPoints = new Decimal(0);
+  quintillionthFragments = new Decimal(0);
+  qfgain = new Decimal(0);
 
-  if (!qfu2amt.gte(new Decimal(1))){
-    au123boost = new Decimal(0);
+  qfu1amt = new Decimal(0);
+  qfu1cost = new Decimal(25);
+  qfu1scaling = new Decimal(1.1);
+  qfu1SXPboost = new Decimal(1);
+  qfu1QFboost = new Decimal(1);
+
+  qfu2amt = new Decimal(0);
+  qfu2cost = new Decimal(250);
+
+  qfu3amt = new Decimal(0);
+  qfu3cost = new Decimal(100);
+  qfu3scaling = new Decimal(1.25);
+  qfu3boost = new Decimal(1);
+
+  qfu4amt = new Decimal(0);
+  qfu4cost = new Decimal(10000);
+
+  qfu5amt = new Decimal(0);
+  qfu5cost = new Decimal(1000);
+  qfu5scaling = new Decimal(1.5);
+  qfu5boost = new Decimal(0);
+
+  qfu6amt = new Decimal(0);
+  qfu6cost = new Decimal(1000000);
+
+  qfm1unlocked = false;
+  qfm2unlocked = false;
+  qfm3unlocked = false;
+  qfm4unlocked = false;
+  qfm5unlocked = false;
+  qfm6unlocked = false;
+  qfm7unlocked = false;
+
+  everythingFromQRI();
+}
+
+function everythingFromQRI(){
+  sxp_reset_boost_check = false;
+  sxpscaling = new Decimal(10);
+  sxpthreshold = new Decimal.pow(10, 12);
+  sxppending = new Decimal(0);
+  sxpbase = new Decimal(0);
+
+  sextillionthPoints = new Decimal(0);
+
+  if (!qfm2unlocked){
+    boughtSXUT11 = false;
+    boughtSXUT21 = false;
+    boughtSXUT22 = false;
+    boughtSXUT23 = false;
   }
-  au456boost = new Decimal(1);
 
-  if (!qfu2amt.gte(new Decimal(1))){
-    au1amt = new Decimal(0);
-    au1cost = new Decimal(10);
-    au1scaling = new Decimal(1.25);
-
-    au2amt = new Decimal(0);
-    au2cost = new Decimal(50);
-    au2scaling = new Decimal(1.8);
-
-    au3amt = new Decimal(0);
-    au3cost = new Decimal(300);
-    au3scaling = new Decimal(2.5);
+  if (!qfm5unlocked){
+    boughtSXUT32 = false;
+    boughtSXUT33 = false;
+    boughtSXUT41 = false;
+    boughtSXUT42 = false;
+    if (!qfu4amt.gte(new Decimal(1))) boughtSXUT43 = false;
   }
 
-  au4amt = new Decimal(0);
-  au4cost = new Decimal(10000);
-  au4scaling = new Decimal(4);
+  chal5completions = new Decimal(0);
+  chal5goal = new Decimal.pow(10, 63);
 
-  au5amt = new Decimal(0);
-  au5cost = new Decimal.pow(10, 6);
-  au5scaling = new Decimal(7);
+  au7amt = new Decimal(0);
+  au7cost = new Decimal.pow(10, 15);
+  au7scaling = new Decimal(1.12);
 
-  au6amt = new Decimal(0);
-  au6cost = new Decimal.pow(10, 10);
-  au6scaling = new Decimal(10);
+  au8amt = new Decimal(0);
+  au8cost = new Decimal.pow(10, 21);
+  au8scaling = new Decimal(1.25); //EXPONENT!
 
-  everythingFromSRI();
+  au789boost = new Decimal(0);
+
+  everythingFromSXI();
 }
 
 function everythingFromSXI(){
@@ -1148,9 +1121,7 @@ function everythingFromSXI(){
 
   atomsBoost = new Decimal(1);
 
-  if (!qfu2amt.gte(new Decimal(1))){
-    au123boost = new Decimal(0);
-  }
+  if (!qfu2amt.gte(new Decimal(1))) au123boost = new Decimal(0);
   au456boost = new Decimal(1);
 
   if (!qfu2amt.gte(new Decimal(1))){
@@ -1182,52 +1153,76 @@ function everythingFromSXI(){
   everythingFromSRI();
 }
 
-function quintillionthResetInitiate(){
-  qpthreshold = new Decimal.pow(10, 15);
-  quintillionthPoints = quintillionthPoints.add(qppending);
-  qpbase = new Decimal(0);
-  qui_reset_boost_check = true;
-
-  sxp_reset_boost_check = false;
-  sxpscaling = new Decimal(10);
-  sxpthreshold = new Decimal.pow(10, 12);
-  sxppending = new Decimal(0);
-  sxpbase = new Decimal(0);
-
-  sextillionthPoints = new Decimal(0);
-
-  if (!qfm2unlocked){
-    boughtSXUT11 = false;
-    boughtSXUT21 = false;
-    boughtSXUT22 = false;
-    boughtSXUT23 = false;
+function everythingFromSRI(){
+  isResetting = true;
+  oct_reset_boost_check = false;
+  opscaling = new Decimal(3);
+  opthreshold = new Decimal.pow(10, 6);
+  oppending = new Decimal(0);
+  opbase = new Decimal(0);
+ 
+  octillionthPoints = new Decimal(0);
+ 
+  if (!sxp_reset_boost_check){
+    chal1completions = new Decimal(0);
+    chal1scaling = new Decimal(1.15); //EXPONENT!
+    chal1goal = new Decimal(1000);
+ 
+    chal2completions = new Decimal(0);
+    chal2scaling = new Decimal(3);
+    chal2goal = new Decimal(5000);
+ 
+    chal3completions = new Decimal(0);
+    chal3scaling = new Decimal(2.8);
+    chal3goal = new Decimal(10000);
+ 
+    chal4completions = new Decimal(0);
+    chal4scaling = new Decimal(5);
+    chal4goal = new Decimal(10000000);
+ 
+    challengeCompletions = new Decimal(0);
+    ccm1unlocked = false;
+    ccm2unlocked = false;
+    ccm3unlocked = false;
   }
+  
+  npscaling = new Decimal(2);
+  npthreshold = new Decimal(1000);
+  nppending = new Decimal(0);
+  npbase = new Decimal(0);
 
-  console.log(qfu4amt.toString());
-  console.log(qfu4amt.gte(new Decimal(1)));
+  nonillionthPoints = new Decimal(0);
+  non_reset_boost_check = false;
 
-  if (!qfm5unlocked){
-    boughtSXUT32 = false;
-    boughtSXUT33 = false;
-    boughtSXUT41 = false;
-    boughtSXUT42 = false;
-    if (!qfu4amt.gte(new Decimal(1))){
-      boughtSXUT43 = false;
-    }
+  if (!boughtSXUT31){
+    nu1boost = new Decimal(1);
+    nu1amt = new Decimal(0);
+    nu1cost = new Decimal(1);
+    nu1scaling = new Decimal(5);
+
+    nu2amt = new Decimal(0);
+    nu2cost = new Decimal(3);
+    nu2_cost_scale.textContent = "Cost: 3 NP";
+    
+    nu3boost = new Decimal(1);
+    nu3amt = new Decimal(0);
+    nu3cost = new Decimal(10);
+    nu3scaling = new Decimal(10);
+  
+    nu4amt = new Decimal(0);
+    nu4cost = new Decimal(25);
+    nu4_cost_scale.textContent = "Cost: 25 NP";
+  
+    du1boost = new Decimal(0);
+    du1amt = new Decimal(0);
+    du1cost = new Decimal(10);
+    du1scaling = new Decimal(3); 
+
+    du2boost = new Decimal(1);
+    du2amt = new Decimal(0);
+    du2cost = new Decimal(25);
+    du2scaling = new Decimal(4);
   }
-
-  chal5completions = new Decimal(0);
-  chal5goal = new Decimal.pow(10, 87);
-
-  au7amt = new Decimal(0);
-  au7cost = new Decimal.pow(10, 15);
-  au7scaling = new Decimal(1.12);
-
-  au8amt = new Decimal(0);
-  au8cost = new Decimal.pow(10, 21);
-  au8scaling = new Decimal(1.25); //EXPONENT!
-
-  everythingFromSXI();
 }
 
 //=========================================================================
@@ -1248,7 +1243,6 @@ setInterval(function(){
   formatNumber();
   calculateBoostsStrings();
   updateScreen();
-  updateSoftcaps();
   
   decillionthUpgrades();
   
@@ -1279,6 +1273,9 @@ setInterval(function(){
   quintillionthUpgrades();
   checkQFM();
   quintillionthSXUT();
+
+  checkQuadrillionthReset();
+  checkPendingQuadrillionth();
 
   automation();
   updateConnections();
@@ -1321,6 +1318,18 @@ main_caps_tab_button.addEventListener("click", function(){
     main_caps_tab_button.classList.add("soft-dark");
     main_caps_tab_button.classList.remove("soft-light");
     caps_tab.style.display = "none";
+  }
+});
+
+main_settings_tab_button.addEventListener("click", function(){
+  if (main_settings_tab_button.classList.contains("mil-dark")){
+    main_settings_tab_button.classList.remove("mil-dark");
+    main_settings_tab_button.classList.add("mil-light");
+    settings_tab.style.display = "block";
+  } else {
+    main_settings_tab_button.classList.add("mil-dark");
+    main_settings_tab_button.classList.remove("mil-light");
+    settings_tab.style.display = "none";
   }
 });
 
@@ -1396,6 +1405,18 @@ main_quintillionth_tab_button.addEventListener("click", function(){
   }
 });
 
+main_quadrillionth_tab_button.addEventListener("click", function(){
+  if (main_quadrillionth_tab_button.classList.contains("qap-dark")){
+    main_quadrillionth_tab_button.classList.remove("qap-dark");
+    main_quadrillionth_tab_button.classList.add("qap-light");
+    quadrillionth_tab.style.display = "block";
+  } else {
+    main_quadrillionth_tab_button.classList.add("qap-dark");
+    main_quadrillionth_tab_button.classList.remove("qap-light");
+    quadrillionth_tab.style.display = "none";
+  }
+});
+
 //================================================================================================================
 //================================================================================================================
 //================================================================================================================
@@ -1405,150 +1426,86 @@ main_quintillionth_tab_button.addEventListener("click", function(){
 
 function calculateGain(){
   challengeCompletions = chal1completions.add(chal2completions).add(chal3completions).add(chal4completions).add(chal5completions);
-
-  if (qfu5amt.gte(new Decimal(1))){
-    challengeCompletions = challengeCompletions.add(qfu5boost);
-  }
-
-  if (sxp_reset_boost_check){
-    challengeCompletions = challengeCompletions.mul(new Decimal(2));
-  }
+  if (qfu5amt.gte(new Decimal(1))) challengeCompletions = challengeCompletions.add(qfu5boost);
+  if (sxp_reset_boost_check) challengeCompletions = challengeCompletions.mul(new Decimal(2));
 
   numberGain = new Decimal(1);
 
-  //BASE CALCULATIONS
-  if (boughtSXUT32){
-    numberGain = numberGain.add(chal4completions.div(new Decimal(2)));
-  } else {
-    numberGain = numberGain.add(chal4completions.div(new Decimal(20)));
-  }
-
-  //ADDITIONS
+  //BASE CALCULATIONS / ADDITIONS
+  if (boughtSXUT32) numberGain = numberGain.add(chal4completions.div(new Decimal(2)));
+  else numberGain = numberGain.add(chal4completions.div(new Decimal(20)));
   
   //MULTIPLICATIONS
-  if (du1amt.gte(new Decimal(1))){
-    numberGain = numberGain.mul(du1boost);
-  }
-  if (du2amt.gte(new Decimal(1))){
-    numberGain = numberGain.mul(du2boost);
-  }
+  if (du1amt.gte(new Decimal(1))) numberGain = numberGain.mul(du1boost);
+  if (du2amt.gte(new Decimal(1))) numberGain = numberGain.mul(du2boost);
   
-  if (non_reset_boost_check){
-    numberGain = numberGain.mul(new Decimal(5));
-  }
+  if (non_reset_boost_check) numberGain = numberGain.mul(new Decimal(5));
+  if (nu3amt.gte(new Decimal(1))) numberGain = numberGain.mul(nu3boost);
 
-  if (nu3amt.gte(new Decimal(1))){
-    numberGain = numberGain.mul(nu3boost);
-  }
-  
-  if (octillionthPoints.gte(new Decimal(1)) && challengeModifier != 4){
-    if (octillionthPoints.lt(new Decimal(1000000))){
-      if (chal1completions.gte(new Decimal(1))){
-        numberGain = numberGain.mul(octillionthPoints.add(new Decimal(1))).add(chal1completions.div(new Decimal(2)));
-      } else {
-        numberGain = numberGain.mul(octillionthPoints.add(new Decimal(1)));
-      }
-    } else {
-      numberGain = numberGain.mul(new Decimal(1000000));
-    }
-  }
+  if (challengeModifier == 4) numberGain = numberGain
+  else if (octillionthPoints.gte(new Decimal(1000000))) numberGain = numberGain.mul(new Decimal(1000000));
+  else if (chal1completions.gte(new Decimal(1))) numberGain = numberGain.mul(octillionthPoints.add(new Decimal(1))).mul(new Decimal(1.1).pow(chal1completions));
+  else numberGain = numberGain.mul(octillionthPoints.add(new Decimal(1)));
+  if (ccm2unlocked) numberGain = numberGain.mul(challengeCompletions.div(new Decimal(4)).add(new Decimal(1)));
 
-  if (ccm2unlocked){
-    numberGain = numberGain.mul(challengeCompletions.div(new Decimal(4)).add(new Decimal(1)));
-  }
+  if (!atoms.eq(new Decimal(0))) numberGain = numberGain.mul(atomsBoost);
 
-  if (!atoms.eq(new Decimal(0))){
-    numberGain = numberGain.mul(atomsBoost);
-  }
+  if (boughtSXUT11) numberGain = numberGain.mul(new Decimal(5));
+  if (chal5completions.gte(new Decimal(1))) numberGain = numberGain.mul(new Decimal(5)); 
 
-  if (boughtSXUT11){
-    numberGain = numberGain.mul(new Decimal(5));
-  }
-
-  if (chal5completions.gte(new Decimal(1))){
-    numberGain = numberGain.mul(new Decimal(5));
-  }
-
-  if (quintillionth_unlocked){
-    numberGain = numberGain.mul(new Decimal(3));
-  }
+  if (quintillionth_unlocked) numberGain = numberGain.mul(new Decimal(3)); 
+  if (qfm7unlocked) numberGain = numberGain.mul(new Decimal(25))
 
   //SOFTCAPS
-  if (minicap.neq(new Decimal(1))){
-    numberGain = numberGain.div(minicap);
-  }
-
-  if (softcap.neq(new Decimal(1))){
-    numberGain = numberGain.div(softcap);
-  }
-
-  if (supercap.neq(new Decimal(1))){
-    numberGain = numberGain.div(supercap);
-  }
+  updateSoftcaps();
+  if (minicap.neq(new Decimal(1))) numberGain = numberGain.div(minicap);
+  if (softcap.neq(new Decimal(1))) numberGain = numberGain.div(softcap);
+  if (supercap.neq(new Decimal(1))) numberGain = numberGain.div(supercap);
+  if (hypercap.neq(new Decimal(1))) numberGain = numberGain.div(hypercap);
 
   //CHALLENGE 2
-  if (challengeModifier == 2){
-    numberGain = numberGain.pow(new Decimal(1).div(decimalNumber.pow(new Decimal(0.06))));
-  }
+  if (challengeModifier == 2) numberGain = numberGain.pow(new Decimal(1).div(decimalNumber.pow(new Decimal(0.06))));
 
   //=========================================================================
   //ATOMS
   if (septillionth_unlocked){
     atomGain = new Decimal(1);
-
-    if (sxp_reset_boost_check){
-      if (septillionthPoints.gte(new Decimal(1))){
-        atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(5)));
-      }
-      atomGain = atomGain.add(au123boost);
-      atomGain = atomGain.pow(new Decimal(2.5).add(au789boost));
-      atomGain = atomGain.mul(au456boost.pow(new Decimal(1.5).add(au789boost)));
-    } else {
-      if (septillionthPoints.gte(new Decimal(1))){
-        atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(3)));
-      }
-      atomGain = atomGain.add(au123boost);
-      atomGain = atomGain.pow(new Decimal(2));
-      atomGain = atomGain.mul(au456boost);
-    }
-
     atomsBoost = new Decimal(1);
-
-    if (sxp_reset_boost_check){
-      atomGain = atomGain.mul(new Decimal(5));
+    
+    //FORMULA
+    if (septillionthPoints.gte(new Decimal(1))){
+      if (sxp_reset_boost_check) atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(5)));
+      else atomGain = atomGain.mul(septillionthPoints.mul(new Decimal(3)));
     }
 
-    if (boughtSXUT21){
-      atomGain = atomGain.mul(new Decimal(100));
+    atomGain = atomGain.add(au123boost);
+    if (sxp_reset_boost_check) atomGain = atomGain.pow(new Decimal(2.5).add(au789boost));
+    else atomGain = atomGain.pow(new Decimal(2));
+    if (sxp_reset_boost_check) atomGain.mul(au456boost.pow(new Decimal(1.5).add(au789boost)));
+    else atomGain = atomGain.mul(au456boost);
+
+    //EXTERNAL BOOSTS
+    if (sxp_reset_boost_check) atomGain = atomGain.mul(new Decimal(5));
+    if (boughtSXUT21) atomGain = atomGain.mul(new Decimal(100));
+    if (boughtSXUT22 && chal3completions.gte(new Decimal(1))) atomGain = atomGain.mul(chal3completions.div(new Decimal(2)).add(new Decimal(1)));
+    if (boughtSXUT33) atomGain = atomGain.mul(sextillionthPoints.add(new Decimal(1)));
+    if (boughtSXUT43) atomGain = atomGain.mul(new Decimal("1e10"));
+
+    if (qfu6amt.gte(new Decimal(1))) atomGain = atomGain.pow(new Decimal(2));
+    if (boughtSXUT13){
+      atomGain = atomGain.pow(new Decimal(1.2));
     }
 
-    if (boughtSXUT22 && chal3completions.gte(new Decimal(1))){
-      atomGain = atomGain.mul(chal3completions.div(new Decimal(2)).add(new Decimal(1)));
-    }
-
-    if (boughtSXUT33){
-      atomGain = atomGain.mul(sextillionthPoints.add(new Decimal(1)));
-    }
-
-    if (boughtSXUT43){
-      atomGain = atomGain.mul(new Decimal(10000000000));
-    }
-
-    if (qfu6amt.gte(new Decimal(1))){
-      atomGain = atomGain.pow(new Decimal(2));
-    }
-
-    //=====
-
+    //SOFTCAP
+    if (hypercap.neq(new Decimal(1))) atomGain = atomGain.div(hypercap);
+    
+    //VALUE CHANGE + BOOSTS
     atoms = atoms.add(atomGain.div(new Decimal(20)));
     atomsBoost = atomsBoost.add(atoms.log10());
-    if (boughtSXUT23){
-      atomsBoost = atomsBoost.mul(new Decimal(2));
-    }
+    if (boughtSXUT23) atomsBoost = atomsBoost.mul(new Decimal(2));
 
-    if (atoms.lt(new Decimal(0))){
-      atoms = new Decimal(1);
-    }
+    //FALLBACK
+    if (atoms.lt(new Decimal(0))) atoms = new Decimal(1);
   }
 
   //=========================================================================
@@ -1556,28 +1513,23 @@ function calculateGain(){
   if (quintillionth_unlocked){
     qfgain = quintillionthPoints.div(new Decimal(5));
 
-    if (qfu1amt.gte(new Decimal(1))){
-      qfgain = qfgain.mul(qfu1QFboost);
-    }
-
-    if (qfm1unlocked){
-      qfgain = qfgain.mul(new Decimal(new Decimal(atoms.logarithm(new Decimal(10))).add(new Decimal(1))));
-    }
-
+    //EXTERNAL BOOSTS
+    if (qfu1amt.gte(new Decimal(1))) qfgain = qfgain.mul(qfu1QFboost);
+    if (qfm1unlocked) qfgain = qfgain.mul(new Decimal(new Decimal(atoms.logarithm(new Decimal(10))).add(new Decimal(1))));
     if (qfm4unlocked){
       if (boughtSXUT44) qfgain = qfgain.mul(new Decimal(decimalNumber.pow(0.7)));
       else qfgain = qfgain.mul(new Decimal(decimalNumber.sqrt()));
     }
+    if (boughtSXUT12) qfgain = qfgain.mul(new Decimal(50));
+    if (boughtSXUT24) qfgain = qfgain.mul(nonillionthPoints.pow(new Decimal(0.4)).add(1));
+    
+    if (qfu6amt.gte(new Decimal(1))) qfgain = qfgain.pow(new Decimal(2));
 
-    if (qfu6amt.gte(new Decimal(1))){
-      qfgain = qfgain.pow(new Decimal(2));
-    }
-
+    //VALUE CHANGE
     quintillionthFragments = quintillionthFragments.add(qfgain.div(new Decimal(20)));
 
-    if (quintillionthFragments.lt(new Decimal(0))){
-      quintillionthFragments = new Decimal(1);
-    }
+    //FALLBACK
+    if (quintillionthFragments.lt(new Decimal(0))) quintillionthFragments = new Decimal(1);
   }
 }
 
@@ -1585,6 +1537,8 @@ function updateCurrencies(){
   //=========================================================================
   //NUMBER
   decimalNumber = decimalNumber.add(numberGain.div(numberTickspeedDivisor)); //CHANGE THIS BACK TO 20
+  if (isResetting) decimalNumber = new Decimal(1); isResetting = false;
+
   decimalNumber = decimalNumber.mul(numberRounding);
   decimalNumber = decimalNumber.round();
   decimalNumber = decimalNumber.div(numberRounding);
@@ -1628,196 +1582,118 @@ function calculateBoostsStrings(){
   //=========================================================================
   //NUMBER
   boostsString = "Boosts: ";
-  if (du1amt.gte(1)){
-    boostsString += "DU1: x" + du1boost + ", ";
-  }
-  if (du2amt.gte(1)){
-    boostsString += "DU2: x" + du2boost.toExponential(3) + ", ";
-  }
+  if (du1amt.gte(1)) boostsString += "DU1: x" + du1boost + ", ";
+  if (du2amt.gte(1)) boostsString += "DU2: x" + du2boost.toExponential(3) + ", "; 
   
-  if (non_reset_boost_check){
-    boostsString += "Nonillionth: x5, ";
-  }
-
-  if (nu3amt.gte(1)){
-    boostsString += "NU3: x" + nu3boost.toExponential(3) + ", ";
-  }
+  if (non_reset_boost_check) boostsString += "Nonillionth: x5, "; 
+  if (nu3amt.gte(1)) boostsString += "NU3: x" + nu3boost.toExponential(3) + ", "; 
   
-  if (challengeModifier == 4 && octillionthPoints.gte(new Decimal(1)) && octillionthPoints.lt(new Decimal(1000000))){
-    boostsString += "OP: NULLIFIED IN C4, ";
-  } else if (octillionthPoints.gte(new Decimal(1)) && octillionthPoints.lt(new Decimal(1000000))){
-    boostsString += "OP: x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + " (+" + chal1completions.div(new Decimal(2)).toExponential(3) + "), ";
-  } else if (octillionthPoints.gte(new Decimal(1000000))){
-    boostsString += "OP: x1.000e+6 (HARDCAP), ";
-  }
-
+  if (challengeModifier == 4 && octillionthPoints.gte(new Decimal(1)) && octillionthPoints.mul(new Decimal(1.1).pow(chal1completions)).lt(new Decimal(1000000))) boostsString += "OP: NULLIFIED IN C4, ";
+  else if (octillionthPoints.gte(new Decimal(1)) && octillionthPoints.mul(new Decimal(1.1).pow(chal1completions)).lt(new Decimal(1000000))) boostsString += "OP: x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + " (x" + new Decimal(1.1).pow(chal1completions).toExponential(3) + "), ";
+  else if (octillionthPoints.mul(new Decimal(1.1).pow(chal1completions)).gte(new Decimal(1000000))) boostsString += "OP: x1.000e+6 (HARDCAP), ";
   if (chal4completions.gte(new Decimal(1))){
-    if (boughtSXUT32){
-      boostsString += "C4: +" + chal4completions.div(new Decimal(2)).toExponential(3) + " to base (SXUT32), ";
-    } else {
-      boostsString += "C4: +" + chal4completions.div(new Decimal(20)).toExponential(3) + " to base, ";
-    }
+    if (boughtSXUT32) boostsString += "C4: +" + chal4completions.div(new Decimal(2)).toExponential(3) + " to base (SXUT32), ";
+    else boostsString += "C4: +" + chal4completions.div(new Decimal(20)).toExponential(3) + " to base, ";
   }
+  if (ccm2unlocked) boostsString += "CCM2: x" + challengeCompletions.div(new Decimal(4)).add(new Decimal(1)) + ", ";
 
-  if (ccm2unlocked){
-    boostsString += "CCM2: x" + challengeCompletions.div(new Decimal(4)).add(new Decimal(1)) + ", ";
-  }
+  if (!atoms.eq(new Decimal(0))) boostsString += "Atoms: x" + atomsBoost.toExponential(3) + ", "; 
 
-  if (!atoms.eq(new Decimal(0))){
-    boostsString += "Atoms: x" + atomsBoost.toExponential(3) + ", ";
-  }
+  if (boughtSXUT11) boostsString += "SXUT11: x5, ";
+  if (chal5completions.gte(new Decimal(1))) boostsString += "C5: x5, ";
 
-  if (boughtSXUT11){
-    boostsString += "SXUT11: x5, ";
-  }
-
-  if (chal5completions.gte(new Decimal(1))){
-    boostsString += "C5: x5, ";
-  }
-
-  if (quintillionth_unlocked){
-    boostsString += "Quintillionth: x3, ";
-  }
+  if (quintillionth_unlocked) boostsString += "Quintillionth: x3, ";
+  if (qfm7unlocked) boostsString += "QFM7: x25, ";
 
   //=========================================================================
   //NONILLIONTHS
   nonBoostsString = "Boosts: ";
-  if (nu1amt.gte(1)){
-    nonBoostsString += "NU1: x" + nu1boost.toExponential(3) + ", ";
-  }
+  if (nu1amt.gte(1)) nonBoostsString += "NU1: x" + nu1boost.toExponential(3) + ", ";
 
-  if (oct_reset_boost_check){
-    nonBoostsString += "Octillionth: x4, ";
-  }
+  if (oct_reset_boost_check) nonBoostsString += "Octillionth: x4, ";
+  if (chal3completions.gte(1)) nonBoostsString += "C3: x" + chal3completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
 
-  if (chal3completions.gte(1)){
-    nonBoostsString += "C3: x" + chal3completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
-  }
+  if (sep_reset_boost_check) nonBoostsString += "Septillionth: x2, ";
 
-  if (sep_reset_boost_check){
-    nonBoostsString += "Septillionth: x2, ";
-  }
+  if (sxp_reset_boost_check) nonBoostsString += "Sextillionth: x10, ";
 
-  if (sxp_reset_boost_check){
-    nonBoostsString += "Sextillionth: x10, ";
-  }
-
-  if (qfm3unlocked){
-    nonBoostsString += "QFM3: x15, ";
-  }
+  if (qfm3unlocked) nonBoostsString += "QFM3: x15, ";
 
   //=========================================================================
   //OCTILLIONTHS
   octBoostsString = "Boosts: ";
 
-  if (chal2completions.gte(1)){
-    octBoostsString += "C2: x" + chal2completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
-  }
+  if (chal2completions.gte(1)) octBoostsString += "C2: x" + chal2completions.div(new Decimal(2)).add(new Decimal(1)).toExponential(3) + ", "; 
+  if (ccm1unlocked) octBoostsString += "CCM1: x" + challengeCompletions.div(new Decimal(2)).add(new Decimal(1)).toExponential(3) + ", "; 
 
-  if (ccm1unlocked){
-    octBoostsString += "CCM1: x" + challengeCompletions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
-  }
+  if (sep_reset_boost_check) octBoostsString += "Septillionth: x2, "; 
 
-  if (sep_reset_boost_check){
-    octBoostsString += "Septillionth: x2, ";
-  }
-
-  if (sxp_reset_boost_check){
-    octBoostsString += "Sextillionth: x10, ";
-  }
+  if (sxp_reset_boost_check) octBoostsString += "Sextillionth: x10, "; 
 
   chalBoostsString = "Boosts: ";
 
-  if (sxp_reset_boost_check){
-    chalBoostsString += "Sextillionth: x2, ";
-  }
+  if (sxp_reset_boost_check) chalBoostsString += "Sextillionth: x2, "; 
 
-  if (qfu5amt.gte(new Decimal(1))){
-    chalBoostsString += "QFU5: +" + qfu5boost.toExponential(3) + " (before multis), ";
-  }
+  if (qfu5amt.gte(new Decimal(1))) chalBoostsString += "QFU5: +" + qfu5boost.toExponential(3) + " (before multis), "; 
 
   //=========================================================================
   //SEPTILLIONTHS
   sepBoostsString = "Boosts: ";
 
-  if (sxp_reset_boost_check){
-    sepBoostsString += "Sextillionth: x10, ";
-  }
+  if (sxp_reset_boost_check) sepBoostsString += "Sextillionth: x10, ";
 
-  if (qfu3amt.gte(new Decimal(1))){
-    sepBoostsString += "QFU3: x" + qfu3boost.toExponential(3) + " to SP, ";
-  }
-
-  if (qfm3unlocked){
-    sepBoostsString += "QFM3: x15, ";
-  }
+  if (qfu3amt.gte(new Decimal(1))) sepBoostsString += "QFU3: x" + qfu3boost.toExponential(3) + " to SP, ";
+  if (qfm3unlocked) sepBoostsString += "QFM3: x15, ";
 
   atomsBoostsString = "Boosts: ";
 
-  if (sxp_reset_boost_check){
-    atomsBoostsString += "Sextillionth: x5 + formula change, ";
-  }
+  if (sxp_reset_boost_check) atomsBoostsString += "Sextillionth: x5 + formula change, ";
+  if (boughtSXUT21) atomsBoostsString += "SXUT21: x100, ";
+  if (boughtSXUT22 && chal3completions.gte(1)) atomsBoostsString += "C3: x" + chal3completions.div(new Decimal(2)).add(new Decimal(1)).toExponential(3) + ", ";
+  if (boughtSXUT33) atomsBoostsString += "SXUT33: x" + sextillionthPoints.add(new Decimal(1)).toExponential(3) + ", ";
+  if (boughtSXUT43) atomsBoostsString += "SXUT43: x10B, "
 
-  if (boughtSXUT21){
-    atomsBoostsString += "SXUT21: x100, ";
-  }
-
-  if (boughtSXUT22 && chal3completions.gte(1)){
-    atomsBoostsString += "C3: x" + chal3completions.div(new Decimal(2)).add(new Decimal(1)) + ", ";
-  }
-
-  if (boughtSXUT33){
-    atomsBoostsString += "SXUT33: x" + sextillionthPoints.add(new Decimal(1)) + ", ";
-  }
-
-  if (boughtSXUT43){
-    atomsBoostsString += "SXUT43: x10B, "
-  }
-
-  if (qfu6amt.gte(new Decimal(1))){
-    atomsBoostsString += "QFU6: ^2, ";
-  }
+  if (qfu6amt.gte(new Decimal(1))) atomsBoostsString += "QFU6: ^2, ";
+  if (boughtSXUT13) atomsBoostsString += "SXUT13: ^1.05, ";
 
   //=========================================================================
   //SEXTILLIONTHS
   sxpBoostsString = "Boosts: ";
 
-  if (boughtSXUT41){
-    sxpBoostsString += "SXUT41: x3, ";
-  }
+  if (boughtSXUT41)sxpBoostsString += "SXUT41: x3, ";
 
-  if (qfu1amt.gte(new Decimal(1))){
-    sxpBoostsString += "QFU1: x" + qfu1SXPboost.toExponential(3) + ", ";
-  }
+  if (qfu1amt.gte(new Decimal(1)))sxpBoostsString += "QFU1: x" + qfu1SXPboost.toExponential(3) + ", ";
 
-  if (boughtSXUT44){
-    sxpBoostsString += "SXUT44: x5";
-  }
+  if (boughtSXUT44)sxpBoostsString += "SXUT44: x5, ";
+
+  if (boughtSXUT12)sxpBoostsString += "SXUT12: x15, ";
 
   //=========================================================================
   //QUINTILLIONTHS
   qpBoostsString = "Boosts: ";
 
-  if (qfu1amt.gte(new Decimal(1))){
-    qpBoostsString += "QFU1: x" + qfu1QFboost.toExponential(3) + " to QF, ";
-  }
+  if (qfu3amt.gte(new Decimal(1))) qpBoostsString += "QFU3: x" + qfu3boost.toExponential(3) + ", ";
 
-  if (qfu3amt.gte(new Decimal(1))){
-    qpBoostsString += "QFU3: x" + qfu3boost.toExponential(3) + " to QP, ";
-  }
+  if (boughtSXUT13) qpBoostsString += "SXUT13: x25, ";
 
-  if (qfu6amt.gte(new Decimal(1))){
-    qpBoostsString += "QFU6: ^2, ";
-  }
+  qfBoostsString = "Boosts: ";
 
-  if (qfm1unlocked){
-    qpBoostsString += "QFM1: x" + new Decimal(new Decimal(atoms.logarithm(new Decimal(10))).add(new Decimal(1))).toExponential(3) + " to QF, ";
-  }
+  if (qfu1amt.gte(new Decimal(1))) qfBoostsString += "QFU1: x" + qfu1QFboost.toExponential(3) + ", ";
 
-  if (qfm4unlocked){
-    if (boughtSXUT44) qpBoostsString += "QFM4: x" + new Decimal(decimalNumber.pow(0.7)).toExponential(3) + " to QF, ";
-    else qpBoostsString += "QFM4: x" + new Decimal(decimalNumber.sqrt()).toExponential(3) + " to QF, ";
-  }
+  if (qfu6amt.gte(new Decimal(1))) qfBoostsString += "QFU6: ^2, ";
+
+  if (qfm1unlocked) qfBoostsString += "QFM1: x" + new Decimal(new Decimal(atoms.logarithm(new Decimal(10))).add(new Decimal(1))).toExponential(3) + ", ";
+
+  if (qfm4unlocked && boughtSXUT44) qfBoostsString += "QFM4: x" + new Decimal(decimalNumber.pow(0.7)).toExponential(3) + ", ";
+  else if (qfm4unlocked) qfBoostsString += "QFM4: x" + new Decimal(decimalNumber.sqrt()).toExponential(3) + ", ";
+
+  if (boughtSXUT12) qfBoostsString += "SXUT12: x50, ";
+
+  if (boughtSXUT24) qfBoostsString += "SXUT24: x" + nonillionthPoints.pow(new Decimal(0.4)).add(1).toExponential(3) + ",";
+
+  //=========================================================================
+  //QUADRILLIONTHS
+  qapBoostsString = "Boosts: ";
 }
 
 //=========================================================================
@@ -1838,10 +1714,10 @@ function updateScreen(){
   topNumber.textContent = "N: " + decimalNumber.div(decillionthDivision).toExponential(3) + " (+" + numberGain.div(decillionthDivision).toExponential(3) + "/s)";
 
   if (challengeModifier == 3){
-    topNP.textContent = "NP: DISABLED IN C3";
+    topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (CANNOT GAIN - C3)";
   } else {
     if (challengeModifier == 5){
-      topNP.textContent = "NP: DISABLED IN C5";
+      topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (CANNOT GAIN - C5)";
     } else {
       topNP.textContent = "NP: " + nonillionthPoints.toExponential(3) + " (+" + nppending.toExponential(3) + ")";
     }
@@ -1849,7 +1725,7 @@ function updateScreen(){
 
   if (nonillionth_unlocked){
     if (challengeModifier == 5){
-      topOP.textContent = "OP: DISABLED IN C5";
+      topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (CANNOT GAIN - C5)";
     } else {
       topOP.textContent = "OP: " + octillionthPoints.toExponential(3) + " (+" + oppending.toExponential(3) + ")";
     }
@@ -1858,11 +1734,7 @@ function updateScreen(){
   }
 
   if (ccm3unlocked || septillionth_unlocked){
-    if (challengeModifier == 5){
-      topSP.textContent = "SP: DISABLED IN C5";
-    } else {
-      topSP.textContent = "SP: " + septillionthPoints.toExponential(3) + " (+" + sppending.toExponential(3) + ")";
-    }
+    topSP.textContent = "SP: " + septillionthPoints.toExponential(3) + " (+" + sppending.toExponential(3) + ")";
   } else {
     topSP.textContent = "";
   }
@@ -1874,7 +1746,11 @@ function updateScreen(){
   }
 
   if (sextillionth_unlocked){
-    topSXP.textContent = "SXP: " + sextillionthPoints.toExponential(3) + " (+" + sxppending.toExponential(3) + ")";
+    if (challengeModifier == 5){
+      topSXP.textContent = "SXP: " + sextillionthPoints.toExponential(3) + " (CANNOT GAIN - C5)";
+    } else {
+      topSXP.textContent = "SXP: " + sextillionthPoints.toExponential(3) + " (+" + sxppending.toExponential(3) + ")";
+    }
   } else {
     topSXP.textContent = "";
   }
@@ -1890,11 +1766,18 @@ function updateScreen(){
   } else {
     topQF.textContent = "";
   }
+
+  if (quadrillionth_unlocked){
+    topQAP.textContent = "QAP: " + quadrillionthPoints.toExponential(3) + " (+" + qappending.toExponential(3) + "/s)";
+  } else {
+    topQAP.textContent = "";
+  }
   
   //=========================================================================
   //NUMBER
   numberDisplay.textContent = numberStringFinal;
   numberGainDisplay.textContent = "Number gain is +" + numberGain.div(decillionthDivision).toExponential(3) + "/s";
+  if (challengeModifier == 2) numberGainDisplay.textContent += "\n" + "!!! Challenge 2 is raising Number gain to ^" + new Decimal(1).div(decimalNumber.pow(new Decimal(0.06))).toFixed(3) + " !!!"
   boostsDisplay.textContent = boostsString;
   
   //=========================================================================
@@ -1906,7 +1789,8 @@ function updateScreen(){
     du1_cost_scale.textContent = "Require: " + du1cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du1scaling.toString();
   }
 
-  du2_id_amt.textContent = "ID: DU2 || " + du2amt + "/10";
+  if (boughtSXUT24) du2_id_amt.textContent = "ID: DU2 || " + du2amt + "/20";
+  else du2_id_amt.textContent = "ID: DU2 || " + du2amt + "/10";
   if (challengeModifier == 1){
     du2_cost_scale.textContent = "Cost: " + du2cost.div(decillionthDivision).toExponential(3) + " || Scaling: x" + du2scaling.pow(new Decimal(2)).toString() + " (C1)";
   } else {
@@ -1961,32 +1845,35 @@ function updateScreen(){
 
   octBoostsDisplay.textContent = octBoostsString;
 
-  if (challengeModifier == 4 && octillionthPoints.lt(new Decimal(1000000))){
-    if (octillionthPoints.lt(new Decimal(1000000))){
-      op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + " (+" + chal4completions.div(new Decimal(2)) + "), but Challenge 4 is active, so this is nullified.";
-    } else {
-      op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x1.000e+6 (HARDCAP), but Challenge 4 is active, so this is nullified.";
-    }
-  } else if (octillionthPoints.lt(new Decimal(1000000))){
-    op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + " (+" + chal1completions.div(new Decimal(2)) + ")";
+  if (octillionthPoints.mul(new Decimal(1.1).pow(chal1completions)).lt(new Decimal(1000000))){
+    op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x" + octillionthPoints.add(new Decimal(1)).toExponential(3) + " (x" + new Decimal(1.1).pow(chal1completions).toExponential(3) + ")";
   } else {
     op_effect.textContent = "Your " + octillionthPoints.toExponential(3) + " OP is boosting Number gain by x1.000e+6 (HARDCAP)";
   }
-  
-  bottomModifiers.textContent = "Modifiers: None";
+
+  if (challengeModifier == 4) op_effect.textContent += ", but Challenge 4 is active, so this is nullified."
 
   cc_display.textContent = "You have " + challengeCompletions + " Challenge Completions (CC).";
 
   cc_boost_display.textContent = chalBoostsString;
 
-  if (challengeModifier == 1){
-    bottomModifiers.textContent = "Modifiers: Challenge 1";
-  } else if (challengeModifier == 2){
-    bottomModifiers.textContent = "Modifiers: Challenge 2";
-  } else if (challengeModifier == 3){
-    bottomModifiers.textContent = "Modifiers: Challenge 3";
-  } else if (challengeModifier == 4){
-    bottomModifiers.textContent = "Modifiers: Challenge 4";
+  switch(challengeModifier){
+    case 1: bottomModifiers.textContent = "Modifiers: Challenge 1";
+      chal1_title.textContent = "Challenge I (ACTIVE)"; break;
+    case 2: bottomModifiers.textContent = "Modifiers: Challenge 2";
+      chal2_title.textContent = "Challenge II (ACTIVE)"; break;
+    case 3: bottomModifiers.textContent = "Modifiers: Challenge 3";
+      chal3_title.textContent = "Challenge III (ACTIVE)"; break;
+    case 4: bottomModifiers.textContent = "Modifiers: Challenge 4";
+      chal4_title.textContent = "Challenge IV (ACTIVE)"; break;
+    case 5: bottomModifiers.textContent = "Modifiers: Challenge 5";
+      chal5_title.textContent = "Challenge V (ACTIVE)"; break;
+    default: bottomModifiers.textContent = "Modifiers: None";
+      chal1_title.textContent = "Challenge I";
+      chal2_title.textContent = "Challenge II";
+      chal3_title.textContent = "Challenge III";
+      chal4_title.textContent = "Challenge IV";
+      chal5_title.textContent = "Challenge V";
   }
   
   chal1_goal_scale.textContent = "Goal: " + chal1goal.div(decillionthDivision).toExponential(3) + "|| Scaling: ^" + chal1scaling;
@@ -2001,37 +1888,9 @@ function updateScreen(){
   chal4_goal_scale.textContent = "Goal: " + chal4goal.div(decillionthDivision).toExponential(3) + "|| Scaling: x" + chal4scaling;
   chal4_completions.textContent = chal4completions.toString() + "/100";
 
-  if (challengeModifier == 1){
-    chal1_title.textContent = "Challenge I (ACTIVE)";
-  } else {
-    chal1_title.textContent = "Challenge I";
-  }
-
-  if (challengeModifier == 2){
-    chal2_title.textContent = "Challenge II (ACTIVE)";
-  } else {
-    chal2_title.textContent = "Challenge II";
-  }
-
-  if (challengeModifier == 3){
-    chal3_title.textContent = "Challenge III (ACTIVE)";
-  } else {
-    chal3_title.textContent = "Challenge III";
-  }
-
-  if (challengeModifier == 4){
-    chal4_title.textContent = "Challenge IV (ACTIVE)";
-  } else {
-    chal4_title.textContent = "Challenge IV";
-  }
-
   //=========================================================================
   //SEPTILLIONTHS
-  if (challengeModifier == 5){
-    sp_point_pending.textContent = "DISABLED IN C5";
-  } else {
-    sp_point_pending.textContent = "+" + sppending.toExponential(3) + " SP";
-  }
+  sp_point_pending.textContent = "+" + sppending.toExponential(3) + " SP";
   
   sp_next_point.textContent = "(next SP at " + spthreshold.div(decillionthDivision).toExponential(3) + " N)";
 
@@ -2048,7 +1907,7 @@ function updateScreen(){
   }
 
   atoms_display.textContent = "You have " + atoms.toExponential(3) + " atoms (A). (" + atomGain.toExponential(3) + " A/s)";
-  atoms_boost_display.textContent = "Boost to N: " + atomsBoost.toExponential(3);
+  atoms_boost_display.textContent = "Boost to N: x" + atomsBoost.toExponential(3);
 
   atoms_boosts.textContent = atomsBoostsString;
 
@@ -2088,16 +1947,6 @@ function updateScreen(){
 
   sxpBoostsDisplay.textContent = sxpBoostsString;
 
-  if (challengeModifier == 5){
-    bottomModifiers.textContent = "Modifiers: Challenge 5";
-  }
-
-  if (challengeModifier == 5){
-    chal5_title.textContent = "Challenge V (ACTIVE)";
-  } else {
-    chal5_title.textContent = "Challenge V";
-  }
-
   chal5_goal_scale.textContent = "Goal: " + chal5goal.toExponential(3) + " Atoms";
   chal5_completions.textContent = chal5completions.toString() + "/1";
 
@@ -2110,6 +1959,8 @@ function updateScreen(){
   qpBoostsDisplay.textContent = qpBoostsString;
 
   qf_display.textContent = "You have " + quintillionthFragments.toExponential(3) + " Quintillionth Fragments (QF). (" + qfgain.toExponential(3) + " QF/s)";
+
+  qf_boosts_display.textContent = qfBoostsString
 
   qfu1_id_amt.textContent = "ID: QFU1 || x" + qfu1amt;
   qfu1_cost_scale.textContent = "Cost: " + qfu1cost.toExponential(3) + " QF || Scaling: ^" + qfu1scaling;
@@ -2131,6 +1982,14 @@ function updateScreen(){
 
   if (boughtSXUT44) qfm4_effect.textContent = "x" + new Decimal(decimalNumber.pow(0.7)).toExponential(3);
   else qfm4_effect.textContent = "x" + new Decimal(decimalNumber.sqrt()).toExponential(3);
+
+  //=========================================================================
+  //QUADRILLIONTHS
+  qap_point_pending.textContent = "+" + qappending.toExponential(3) + " QAP";
+  
+  qap_next_point.textContent = "(next QP at " + qapthreshold.div(decillionthDivision).toExponential(3) + " N)";
+
+  qapBoostsDisplay.textContent = qapBoostsString;
 }
 
 //=========================================================================
@@ -2146,27 +2005,34 @@ function updateScreen(){
 //=========================================================================
 
 function updateSoftcaps(){
-  if (decimalNumber.gte(new Decimal(1e3))){
-    minicap = decimalNumber.sub(new Decimal(1e3).sub(new Decimal(1))).pow(new Decimal(0.08));
+  if (decimalNumber.gte(new Decimal("1e3"))){
+    minicap = numberGain.pow(new Decimal(0.1)).add(new Decimal(1));
   } else {
     minicap = new Decimal(1);
   }
 
-  if (decimalNumber.gte(new Decimal(1e8))){
-    softcap = decimalNumber.sub(new Decimal(1e8).sub(new Decimal(1))).pow(new Decimal(0.16));
+  if (decimalNumber.gte(new Decimal("1e8"))){
+    softcap = numberGain.pow(new Decimal(0.2)).add(new Decimal(1));
   } else {
     softcap = new Decimal(1);
   }
 
-  if (decimalNumber.gte(new Decimal(1e13))){
-    supercap = decimalNumber.sub(new Decimal(1e13).sub(new Decimal(1))).pow(new Decimal(0.24));
+  if (decimalNumber.gte(new Decimal("1e13"))){
+    supercap = numberGain.pow(new Decimal(0.3)).add(new Decimal(1));
   } else {
     supercap = new Decimal(1);
+  }
+
+  if (decimalNumber.gte(new Decimal("1e18"))){
+    hypercap = numberGain.pow(new Decimal(0.4)).add(new Decimal(1));
+  } else {
+    hypercap = new Decimal(1);
   }
 
   minicapDisplay.textContent = "Minicap starts at 1e-30: /" + minicap.toExponential(3);
   softcapDisplay.textContent = "Softcap starts at 1e-25: /" + softcap.toExponential(3);
   supercapDisplay.textContent = "Supercap starts at 1e-20: /" + supercap.toExponential(3);
+  hypercapDisplay.textContent = "Hypercap starts at 1e-15 (Atoms affected from here!): /" + hypercap.toExponential(3);
 }
 
 //=========================================================================
@@ -2263,52 +2129,43 @@ function startTicker() {
 
 startTicker();
 
+function specificTickerCheckingFunction(input){
+  if (!normalTickers.includes(input)){
+    normalTickers.push(input);
+  }
+}
+
 function specificTicker(){
-  let sTChosen = ""
   if (octillionth_unlocked){
-    sTChosen = "Apparently Challenge Completions are a currency now."
-    if (!normalTickers.includes(sTChosen)){
-      normalTickers.push(sTChosen);
-    }
+    specificTickerCheckingFunction("Apparently Challenge Completions are a currency now.");
+    specificTickerCheckingFunction("Wait... boosts for CC? I THOUGHT THEY WERE GAINED FROM COMPLETING CHALLENGES!");
+    specificTickerCheckingFunction("Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!");
+    specificTickerCheckingFunction("i just realized that to fully complete challenge 1 you need a number around 2e3522940. yeah no, what the hell.");
+    specificTickerCheckingFunction("Let's call specificTickerCheckingFunction 1.79e308 times!");
+  }
 
-    sTChosen = "Wait... boosts for CC? I THOUGHT THEY WERE GAINED FROM COMPLETING CHALLENGES!"
-    if (!normalTickers.includes(sTChosen)){
-      normalTickers.push(sTChosen);
-    }
-
-    sTChosen = "Introducing CCM5: x1 ALL CURRENCIES and +0 CC at the cost of 1e727 CC!";
-    if (!normalTickers.includes(sTChosen)){
-      normalTickers.push(sTChosen);
-    }
+  if (septillionth_unlocked){
+    specificTickerCheckingFunction("Building Universe Simulator");
+    specificTickerCheckingFunction("wait i should add molecule reset layer to atom incremental");
+    specificTickerCheckingFunction("wait i should add dna reset layer to atom incremental");
+    specificTickerCheckingFunction("wait i should add cell reset layer to atom incremental");
+    specificTickerCheckingFunction("wait i should add life reset layer to atom incremental");
+    specificTickerCheckingFunction("Atom Challenges: we purposely destroy your universes for personal gain");
   }
 
   if (sextillionth_unlocked){
-    sTChosen = "Fun fact: if you're not at the Billionth Section, there's gonna be a fifth row of the SXUT! If you're wondering why some of the upgrades say \"???,\" then it's extensions...";
-    if (!normalTickers.includes(sTChosen)){
-      normalTickers.push(sTChosen);
-    }
-
-    sTChosen = "when the upgrade says \"???\"";
-    if (!normalTickers.includes(sTChosen)){
-      normalTickers.push(sTChosen);
-    }
+    specificTickerCheckingFunction("Fun fact: if you're not at the Billionth Section, there's gonna be a fifth row of the SXUT! If you're wondering why some of the upgrades say \"???,\" then it's extensions... or you're hallucinating.");
+    specificTickerCheckingFunction("when the upgrade says \"???\"");
+    specificTickerCheckingFunction("i love upgrade tree");
+    specificTickerCheckingFunction("Challenge 5 requires you to build millions of universes.");
   }
 
   if (quintillionth_unlocked){
-    sTChosen = "(not to be confused with IMR's Quantum Foam)";
-    if (!normalTickers.includes(sTChosen)){
-      normalTickers.push(sTChosen);
-    }
-
-    sTChosen = "I let you keep SXUT31. You're welcome. Next time, though, don't expect me to spoil you.";
-    if (!normalTickers.includes(sTChosen)){
-      normalTickers.push(sTChosen);
-    }
-
-    sTChosen = "yo what??? free CC???";
-    if (!normalTickers.includes(sTChosen)){
-      normalTickers.push(sTChosen);
-    }
+    specificTickerCheckingFunction("(not to be confused with IMR's Quantum Foam)");
+    specificTickerCheckingFunction("I let you keep SXUT31. You're welcome. Next time, though, don't expect me to spoil you.");
+    specificTickerCheckingFunction("yo what??? free CC???");
+    specificTickerCheckingFunction("WHY DOES THE TREE HAVE YELLOW UPGRADES NOW-");
+    specificTickerCheckingFunction("Introducing: timewalls!");
   }
 }
 
@@ -2412,7 +2269,7 @@ function updateConnections() {
     connectElementsTopBottom("sxut-33-43", "sxut-33", "sxut-43", "#800000", 5);
   }
 
-  if (qfm6unlocked){
+  if (qfm6unlocked || quadrillionth_unlocked){
     if (boughtSXUT11){
       connectElementsLeftRight("sxut-11-12", "sxut-11", "sxut-12", "#FF8080", 5);
     } else {
@@ -2430,6 +2287,24 @@ function updateConnections() {
     } else {
       connectElementsLeftRight("sxut-43-44", "sxut-43", "sxut-44", "#800000", 5);
     }
+
+    if (boughtSXUT13){
+      connectElementsTopBottom("sxut-13-24", "sxut-13", "sxut-24", "#FFE080", 5);
+    } else {
+      connectElementsTopBottom("sxut-13-24", "sxut-13", "sxut-24", "#806000", 5);
+    }
+
+    if (boughtSXUT24){
+      connectElementsTopBottom("sxut-24-34", "sxut-24", "sxut-34", "#FFE080", 5);
+    } else {
+      connectElementsTopBottom("sxut-24-34", "sxut-24", "sxut-34", "#806000", 5);
+    }
+
+    if (boughtSXUT44){
+      connectElementsTopBottom("sxut-44-34", "sxut-44", "sxut-34", "#FFE080", 5);
+    } else {
+      connectElementsTopBottom("sxut-44-34", "sxut-44", "sxut-34", "#806000", 5);
+    }
   }
 }
 
@@ -2440,6 +2315,19 @@ window.addEventListener("resize", updateConnections);
 //CHECK UNLOCKS
 
 function checkUnlocks(){
+  if (quadrillionth_unlocked){
+    if (main_quadrillionth_tab_button.classList.contains("qap-light")){
+      quadrillionth_tab.style.display = "block";
+      quadrillionth_ebs.style.display = "block";
+      main_quadrillionth_tab_button.style.display = "inline-block";
+    }
+
+    quintillionth_unlocked = true;
+    sextillionth_unlocked = true;
+    septillionth_unlocked = true;
+    octillionth_unlocked = true;
+    nonillionth_unlocked = true;
+  }
   if (quintillionth_unlocked){
     if (main_quintillionth_tab_button.classList.contains("qui-light")){
       quintillionth_tab.style.display = "block";
@@ -2468,6 +2356,9 @@ function checkUnlocks(){
       septillionth_tab.style.display = "block";
       septillionth_main_section.style.display = "grid";
       main_septillionth_tab_button.style.display = "inline-block";
+
+      sextillionth_tab.style.display = "block";
+      main_sextillionth_tab_button.style.display = "inline-block";
     }
 
     octillionth_unlocked = true;
@@ -2522,7 +2413,9 @@ function decillionthUpgrades(){
     du1.classList.remove("decillionth-button");
   }
 
-  if (decimalNumber.gte(du2cost) && du2amt.lt(new Decimal(10))) {
+  let cap = new Decimal(10)
+  if (boughtSXUT24) cap = cap.add(10)
+  if (decimalNumber.gte(du2cost) && du2amt.lt(cap)) {
     du2.disabled = false;
     du2.classList.add("decillionth-button");
     du2.classList.remove("decillionth-dark-button");
@@ -2551,7 +2444,9 @@ du1.addEventListener("click", function(){
 });
 
 du2.addEventListener("click", function(){
-  if (du2amt.lt(new Decimal(10))){
+  let cap = new Decimal(10)
+  if (boughtSXUT24) cap = cap.add(10)
+  if (du2amt.lt(cap)){
     du2boost = du2boost.mul(new Decimal(1.4));
     du2amt = du2amt.add(new Decimal(1));
     decimalNumber = decimalNumber.sub(du2cost);
@@ -2590,13 +2485,10 @@ function checkNonillionthReset(){
 //PENDING
 function checkPendingNonillionth(){
   if (decimalNumber.gte(new Decimal(1000)) && challengeModifier != 3){
-    if (challengeModifier == 1){
-      npbase = new Decimal(decimalNumber.div(new Decimal(1000)).logarithm(4)).add(new Decimal(1)).floor();
-      npthreshold = npbase.ceil().pow_base(new Decimal(4)).mul(new Decimal(1000));
-    } else {
-      npbase = new Decimal(decimalNumber.div(new Decimal(1000)).logarithm(2)).add(new Decimal(1)).floor();
-      npthreshold = npbase.ceil().pow_base(npscaling).mul(new Decimal(1000));
-    }
+    let c1Nerf = new Decimal(1)
+    if (challengeModifier == 1) c1Nerf = c1Nerf.add(new Decimal(1))
+    npbase = new Decimal(decimalNumber.div(new Decimal(1000)).logarithm(npscaling.pow(c1Nerf))).add(new Decimal(1)).floor();
+    npthreshold = npbase.ceil().pow_base(npscaling.pow(c1Nerf)).mul(new Decimal(1000));
   } else if (decimalNumber.lt(new Decimal(1000))){
     npbase = new Decimal(0);
   }
@@ -2824,7 +2716,7 @@ function checkOctillionthReset(){
 //PENDING
 function checkPendingOctillionth(){ 
   if (decimalNumber.gte(new Decimal.pow(10, 6))){
-    opbase = new Decimal(decimalNumber.div(new Decimal(1000000)).logarithm(3)).add(new Decimal(1)).floor();
+    opbase = new Decimal(decimalNumber.div(new Decimal(1000000)).logarithm(opscaling)).add(new Decimal(1)).floor();
     opthreshold = opbase.ceil().pow_base(opscaling).mul(new Decimal.pow(10, 6));
   } else if (decimalNumber.lt(new Decimal.pow(10, 6))){
     opbase = new Decimal(0);
@@ -3020,7 +2912,7 @@ sep_atom_tab_button.addEventListener("click", function(){
 //=========================================================================
 //RESET DETECTION
 function checkSeptillionthReset(){
-  if (decimalNumber.gte(new Decimal.pow(10, 9)) && challengeModifier != 5) {
+  if (decimalNumber.gte(new Decimal.pow(10, 9))) {
     spreset.disabled = false;
   } else {
     spreset.disabled = true;
@@ -3031,13 +2923,10 @@ function checkSeptillionthReset(){
 //PENDING
 function checkPendingSeptillionth(){ 
   if (decimalNumber.gte(new Decimal.pow(10, 9))){
-    if (sxp_reset_boost_check){
-      spbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 9)).logarithm(4)).add(new Decimal(1)).floor();
-      spthreshold = spbase.ceil().pow_base(new Decimal(4)).mul(new Decimal.pow(10, 9));
-    } else {
-      spbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 9)).logarithm(10)).add(new Decimal(1)).floor();
-      spthreshold = spbase.ceil().pow_base(spscaling).mul(new Decimal.pow(10, 9));
-    }
+    let sxpBuff = new Decimal(0)
+    if (sxp_reset_boost_check) sxpBuff = sxpBuff.add(new Decimal(4))
+    spbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 9)).logarithm(spscaling.sub(sxpBuff))).add(new Decimal(1)).floor();
+    spthreshold = spbase.ceil().pow_base(spscaling.sub(sxpBuff)).mul(new Decimal.pow(10, 9));
   } else if (decimalNumber.lt(new Decimal.pow(10, 9))){
     spbase = new Decimal(0);
   }
@@ -3293,7 +3182,7 @@ function checkSextillionthReset(){
 //PENDING
 function checkPendingSextillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THRESHOLD AND THE .LOGARITHM IN BASE ARE THE SAME!!!!
   if (decimalNumber.gte(new Decimal.pow(10, 12))){  //I RECOMMEND USING THE RESPECTIVE SCALING VARIABLE FOR POW_BASE!!!!
-    sxpbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 12)).logarithm(2)).add(new Decimal(1)).floor();
+    sxpbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 12)).logarithm(sxpscaling)).add(new Decimal(1)).floor();
     sxpthreshold = sxpbase.ceil().pow_base(sxpscaling).mul(new Decimal.pow(10, 12));
   } else if (decimalNumber.lt(new Decimal.pow(10, 12))){
     sxpbase = new Decimal(0);
@@ -3311,6 +3200,10 @@ function checkPendingSextillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THR
 
   if (boughtSXUT44){
     sxppending = sxppending.mul(new Decimal(5));
+  }
+
+  if (boughtSXUT12){
+    sxppending = sxppending.mul(new Decimal(15));
   }
 }
 
@@ -3342,6 +3235,18 @@ function checkSXUT(){
     sxut_11.disabled = true;
   }
 
+  if (quintillionthFragments.gte(new Decimal.pow(10, 35)) && !boughtSXUT12 && boughtSXUT11) {
+    sxut_12.disabled = false;
+  } else {
+    sxut_12.disabled = true;
+  }
+
+  if (challengeCompletions.gte(500) && !boughtSXUT13 && boughtSXUT12) {
+    sxut_13.disabled = false;
+  } else {
+    sxut_13.disabled = true;
+  }
+
   if (challengeCompletions.gte(50) && !boughtSXUT21 && boughtSXUT11) {
     sxut_21.disabled = false;
   } else {
@@ -3360,6 +3265,12 @@ function checkSXUT(){
     sxut_23.disabled = true;
   }
 
+  if (sextillionthPoints.gte(new Decimal("1e6")) && !boughtSXUT24 && boughtSXUT13) {
+    sxut_24.disabled = false;
+  } else {
+    sxut_24.disabled = true;
+  }
+
   if (challengeCompletions.gte(100) && !boughtSXUT31 && boughtSXUT21) {
     sxut_31.disabled = false;
   } else {
@@ -3376,6 +3287,12 @@ function checkSXUT(){
     sxut_33.disabled = false;
   } else {
     sxut_33.disabled = true;
+  }
+
+  if (challengeCompletions.gte(628) && !boughtSXUT34 && boughtSXUT24 && boughtSXUT44) {
+    sxut_34.disabled = false;
+  } else {
+    sxut_34.disabled = true;
   }
 
   if (sextillionthPoints.gte(new Decimal(50)) && !boughtSXUT41 && boughtSXUT32) {
@@ -3417,6 +3334,15 @@ sxut_respec.addEventListener("click", function(){
     boughtSXUT11 = false;
   }
 
+  if (boughtSXUT12 == true){
+    quintillionthFragments = quintillionthFragments.add(new Decimal.pow(10, 35));
+    boughtSXUT12 = false;
+  }
+  
+  if (boughtSXUT13 == true){
+    boughtSXUT13 = false;
+  }
+
   if (boughtSXUT21 == true){
     boughtSXUT21 = false;
   }
@@ -3429,6 +3355,11 @@ sxut_respec.addEventListener("click", function(){
   if (boughtSXUT23 == true){
     sextillionthPoints = sextillionthPoints.add(new Decimal(6));
     boughtSXUT23 = false;
+  }
+
+  if (boughtSXUT24 == true){
+    sextillionthPoints = sextillionthPoints.add(new Decimal("1e6"));
+    boughtSXUT24 = false;
   }
 
   if (boughtSXUT32 == true){
@@ -3463,6 +3394,10 @@ sxut_respec.addEventListener("click", function(){
 function checkSXUTColors(){
   if (boughtSXUT11) {sxut_11.classList.add("sx-light"); sxut_11.classList.remove("sx-dark");}
   else {sxut_11.classList.add("sx-dark"); sxut_11.classList.remove("sx-light");}
+  if (boughtSXUT12) {sxut_12.classList.add("qui-light"); sxut_12.classList.remove("qui-dark");}
+  else {sxut_12.classList.add("qui-dark"); sxut_12.classList.remove("qui-light");}
+  if (boughtSXUT13) {sxut_13.classList.add("qui-light"); sxut_13.classList.remove("qui-dark");}
+  else {sxut_13.classList.add("qui-dark"); sxut_13.classList.remove("qui-light");}
   
   if (boughtSXUT21) {sxut_21.classList.add("sx-light"); sxut_21.classList.remove("sx-dark");}
   else {sxut_21.classList.add("sx-dark"); sxut_21.classList.remove("sx-light");}
@@ -3470,6 +3405,8 @@ function checkSXUTColors(){
   else {sxut_22.classList.add("sx-dark"); sxut_22.classList.remove("sx-light");}
   if (boughtSXUT23) {sxut_23.classList.add("sx-light"); sxut_23.classList.remove("sx-dark");}
   else {sxut_23.classList.add("sx-dark"); sxut_23.classList.remove("sx-light");}
+  if (boughtSXUT24) {sxut_24.classList.add("qui-light"); sxut_24.classList.remove("qui-dark");}
+  else {sxut_24.classList.add("qui-dark"); sxut_24.classList.remove("qui-light");}
 
   if (boughtSXUT31) {sxut_31.classList.add("sx-light"); sxut_31.classList.remove("sx-dark");}
   else {sxut_31.classList.add("sx-dark"); sxut_31.classList.remove("sx-light");}
@@ -3477,6 +3414,8 @@ function checkSXUTColors(){
   else {sxut_32.classList.add("sx-dark"); sxut_32.classList.remove("sx-light");}
   if (boughtSXUT33) {sxut_33.classList.add("sx-light"); sxut_33.classList.remove("sx-dark");}
   else {sxut_33.classList.add("sx-dark"); sxut_33.classList.remove("sx-light");}
+  if (boughtSXUT34) {sxut_34.classList.add("qui-light"); sxut_34.classList.remove("qui-dark");}
+  else {sxut_34.classList.add("qui-dark"); sxut_34.classList.remove("qui-light");}
 
   if (boughtSXUT41) {sxut_41.classList.add("sx-light"); sxut_41.classList.remove("sx-dark");}
   else {sxut_41.classList.add("sx-dark"); sxut_41.classList.remove("sx-light");}
@@ -3493,6 +3432,15 @@ sxut_11.addEventListener("click", function(){
   boughtSXUT11 = true;
 });
 
+sxut_12.addEventListener("click", function(){
+  quintillionthFragments = quintillionthFragments.sub(new Decimal.pow(10, 35));
+  boughtSXUT12 = true;
+});
+
+sxut_13.addEventListener("click", function(){
+  boughtSXUT13 = true;
+});
+
 sxut_21.addEventListener("click", function(){
   boughtSXUT21 = true;
 });
@@ -3507,6 +3455,11 @@ sxut_23.addEventListener("click", function(){
   boughtSXUT23 = true;
 });
 
+sxut_24.addEventListener("click", function(){
+  sextillionthPoints = sextillionthPoints.sub(new Decimal("1e6"));
+  boughtSXUT24 = true;
+});
+
 sxut_31.addEventListener("click", function(){
   boughtSXUT31 = true;
 });
@@ -3519,6 +3472,10 @@ sxut_32.addEventListener("click", function(){
 sxut_33.addEventListener("click", function(){
   sextillionthPoints = sextillionthPoints.sub(new Decimal(25));
   boughtSXUT33 = true;
+});
+
+sxut_34.addEventListener("click", function(){
+  boughtSXUT34 = true;
 });
 
 sxut_41.addEventListener("click", function(){
@@ -3593,7 +3550,7 @@ function checkQuintillionthReset(){
 //PENDING
 function checkPendingQuintillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THRESHOLD AND THE .LOGARITHM IN BASE ARE THE SAME!!!!
   if (decimalNumber.gte(new Decimal.pow(10, 15))){  //I RECOMMEND USING THE RESPECTIVE SCALING VARIABLE FOR POW_BASE!!!!
-    qpbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 15)).logarithm(3)).add(new Decimal(1)).floor();
+    qpbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 15)).logarithm(qpscaling)).add(new Decimal(1)).floor();
     qpthreshold = qpbase.ceil().pow_base(qpscaling).mul(new Decimal.pow(10, 15));
   } else if (decimalNumber.lt(new Decimal.pow(10, 15))){
     qpbase = new Decimal(0);
@@ -3604,6 +3561,10 @@ function checkPendingQuintillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN TH
 
   if (qfu3amt.gte(new Decimal(1))){
     qppending = qppending.mul(new Decimal(qfu3boost));
+  }
+
+  if (boughtSXUT13){
+    qppending = qppending.mul(new Decimal(25));
   }
 }
 
@@ -3765,6 +3726,12 @@ function checkQFM(){
     qfm6.classList.remove("qui-dark");
     qfm6unlocked = true;
   }
+
+  if (quintillionthFragments.gte(new Decimal.pow(10, 63))){
+    qfm7.classList.add("qui-light");
+    qfm7.classList.remove("qui-dark");
+    qfm7unlocked = true;
+  }
 }
 
 //=========================================================================
@@ -3778,7 +3745,61 @@ function quintillionthSXUT(){
     sxut_34.style.display = "grid";
     sxut_44.style.display = "grid";
   }
+
+  if (boughtSXUT34) if (main_quadrillionth_tab_button.classList.contains("qap-light")) {quadrillionth_tab.style.display = "block";} main_quadrillionth_tab_button.style.display = "inline-block";
 }
+
+//=========================================================================
+
+//   ========   ==      ==        ==
+//  ==      ==  ==      ==       ====
+//  ==      ==  ==      ==      ==  ==
+//  ==      ==  ==      ==     ==    ==
+//  ==  ==  ==  ==      ==    ==========
+//  ==   == ==  ==      ==   ==        ==
+//   ===  ===    ========   ==          ==
+
+//=========================================================================
+
+//=========================================================================
+//RESET DETECTION
+function checkQuadrillionthReset(){
+  if (decimalNumber.gte(new Decimal.pow(10, 18))) {
+    qapreset.disabled = false;
+  } else {
+    qapreset.disabled = true;
+  }
+}
+
+//=========================================================================
+//PENDING
+function checkPendingQuadrillionth(){  //MAKE SURE THE NUMBERS IN POW_BASE IN THRESHOLD AND THE .LOGARITHM IN BASE ARE THE SAME!!!!
+  if (decimalNumber.gte(new Decimal.pow(10, 18))){  //I RECOMMEND USING THE RESPECTIVE SCALING VARIABLE FOR POW_BASE!!!!
+    qapbase = new Decimal(decimalNumber.div(new Decimal.pow(10, 18)).logarithm(qapscaling)).add(new Decimal(1)).floor();
+    qapthreshold = qpbase.ceil().pow_base(qapscaling).mul(new Decimal.pow(10, 18));
+  } else if (decimalNumber.lt(new Decimal.pow(10, 18))){
+    qapbase = new Decimal(0);
+    qapthreshold = Decimal.pow(10, 18);
+  }
+
+  qappending = new Decimal(qapbase);
+}
+
+//=========================================================================
+//RESET CLICK
+qapreset.addEventListener("click", function(){
+  quadrillionthResetInitiate();
+  quadrillionth_unlocked = true;
+  quadrillionth_ebs.style.display = "block";
+});
+
+topQAP.addEventListener("click", function(){
+  if (qapreset.disabled == false){
+    quadrillionthResetInitiate();
+    quadrillionth_unlocked = true;
+    quadrillionth_ebs.style.display = "block";
+  } 
+});
 
 //=========================================================================
 
@@ -3861,6 +3882,7 @@ function saveGame(exporting) {
 
     au123boost: au123boost.toString(),
     au456boost: au456boost.toString(),
+    au789boost: au789boost.toString(),
 
     au1amt: au1amt.toString(),
     au1cost: au1cost.toString(),
@@ -3952,6 +3974,12 @@ function saveGame(exporting) {
     qfm4unlocked: qfm4unlocked.toString(),
     qfm5unlocked: qfm5unlocked.toString(),
     qfm6unlocked: qfm6unlocked.toString(),
+
+    quadrillionthPoints: quadrillionthPoints.toString(),
+    qapbase: qapbase.toString(),
+    qapthreshold: qapthreshold.toString(),
+    qua_reset_boost_check: qua_reset_boost_check.toString(),
+    quadrillionth_unlocked: quadrillionth_unlocked.toString(),
   };
   
   localStorage.setItem("quinquaginticSave", JSON.stringify(saveData));
@@ -4027,6 +4055,7 @@ function loadGame(importing, string) {
 
   au123boost = new Decimal(data.au123boost || "0");
   au456boost = new Decimal(data.au456boost || "1");
+  au789boost = new Decimal(data.au789boost || "0");
 
   au1amt = new Decimal(data.au1amt || "0");
   au1cost = new Decimal(data.au1cost || "10");
@@ -4072,7 +4101,7 @@ function loadGame(importing, string) {
   boughtSXUT44 = data.boughtSXUT44 === 'true';
 
   chal5completions = new Decimal(data.chal5completions || "0");
-  chal5goal = new Decimal(data.chal5goal || "50000000");
+  chal5goal = new Decimal("1e63");
 
   au7amt = new Decimal(data.au7amt || "0");
   au7cost = new Decimal(data.au7cost || "1e+15");
@@ -4118,6 +4147,12 @@ function loadGame(importing, string) {
   qfm4unlocked = data.qfm4unlocked === 'true';
   qfm5unlocked = data.qfm5unlocked === 'true';
   qfm6unlocked = data.qfm6unlocked === 'true';
+
+  quadrillionthPoints = new Decimal(data.quadrillionthPoints || "0");
+  qapbase: new Decimal(data.qapbase || "0");
+  qapthreshold: new Decimal(data.qapthreshold || "1e18");
+  qua_reset_boost_check: data.qua_reset_boost_check === 'true';
+  quadrillionth_unlocked: data.quadrillionth_unlocked === 'true';
 
   checkUnlocks();
 }

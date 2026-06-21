@@ -30,115 +30,88 @@ h1 {
 /* ==================================================================================================== */
 /* TITLE GRADIENTS */
 
-.title-gradient {
-  color: #FFC800;
-  background-image: linear-gradient(90deg, #8000D0, #FF0000, #FFFF00);
+.title-gradient, .softcap-gradient, .decillionth-section, .nonillionth-section, .octillionth-section,
+.septillionth-section, .quintillionth-section, .quadrillionth-section, .trillionth-section, .billionth-section,
+.millionth-section, .thousandth-section, .sextillionth-section, .sextillionth-dark-section, .octillionth-dark-section {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+}
+
+.title-gradient {
+  color: #FFC800;
+  background-image: linear-gradient(90deg, #8000D0, #FF0000, #FFFF00);
 }
 
 .softcap-gradient {
   color: #FF0000;
   background-image: linear-gradient(180deg, #800000, #FF0000);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .decillionth-section {
   color: #00E000;
   background-image: linear-gradient(180deg, #AAAAAA, #00D000);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .nonillionth-section {
   color: #80D0FF;
   background-image: linear-gradient(180deg, #AAAAAA, #80D0FF);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .octillionth-section {
   color: #ffa45a;
   background-image: linear-gradient(180deg, #AAAAAA, #ffa45a);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .octillionth-dark-section {
   color: #df843a;
   background-image: linear-gradient(180deg, #888888, #df843a);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .septillionth-section {
   color: #c880ff;
   background-image: linear-gradient(180deg, #AAAAAA, #c880ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .sextillionth-section{
   color: #ff8080;
   background-image: linear-gradient(180deg, #AAAAAA, #ff8080);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .sextillionth-dark-section{
   color: #df6060;
   background-image: linear-gradient(180deg, #AAAAAA, #df6060);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .quintillionth-section{
   color: #ffff80;
   background-image: linear-gradient(180deg, #AAAAAA, #ffff80);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 .quadrillionth-section{
   color: #ff80ff;
   background-image: linear-gradient(180deg, #AAAAAA, #ff80ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-/* BUTTONS */
+.trillionth-section{
+  color: #308010;
+  background-image: linear-gradient(180deg, #AAAAAA, #308010);
+}
 
-.button {
-  font-family: "Share Tech Mono", monospace;;
-  color: white;
-  font-weight: 666;
-  border: 0.2rem solid black;
+.billionth-section{
+  color: #40ffff;
+  background-image: linear-gradient(180deg, #AAAAAA, #40ffff);
+}
+
+.millionth-section{
+  color: #dddddd;
+  background-image: linear-gradient(180deg, #AAAAAA, #dddddd);
+}
+
+.thousandth-section{
+  color: #1000ff;
+  background-image: linear-gradient(180deg, #AAAAAA, #1000ff);
 }
 
 /* ==================================================================================================== */
@@ -329,30 +302,86 @@ h1 {
 
 /* ==================================================================================================== */
 
-.qua-dark {
+.qap-dark {
   background: linear-gradient(180deg, #888888, #df60df);
 }
 
-.qua-dark:hover {
+.qap-dark:hover {
   background: linear-gradient(180deg, #989898, #ef70ef);
 }
 
-.qua-dark:disabled {
+.qap-dark:disabled {
   cursor: not-allowed;
   background: linear-gradient(180deg, #888888, #df60df);
 }
 
-.qua-light {
+.qap-light {
   background: linear-gradient(180deg, #AAAAAA, #ff80ff);
 }
 
-.qua-light:hover {
+.qap-light:hover {
   background: linear-gradient(180deg, #BABABA, #ff90ff);
 }
 
-.qua-light:disabled {
+.qap-light:disabled {
   cursor: not-allowed;
   background: linear-gradient(180deg, #AAAAAA, #ff80ff);
+}
+
+/* ==================================================================================================== */
+
+.tri-dark {
+  background: linear-gradient(180deg, #888888, #106000);
+}
+
+.tri-dark:hover {
+  background: linear-gradient(180deg, #989898, #207000);
+}
+
+.tri-dark:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #106000);
+}
+
+.tri-light {
+  background: linear-gradient(180deg, #AAAAAA, #308010);
+}
+
+.tri-light:hover {
+  background: linear-gradient(180deg, #BABABA, #409020);
+}
+
+.tri-light:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #AAAAAA, #308010);
+}
+
+/* ==================================================================================================== */
+
+.bil-dark {
+  background: linear-gradient(180deg, #888888, #00c0c0);
+}
+
+.bil-dark:hover {
+  background: linear-gradient(180deg, #989898, #20e0e0);
+}
+
+.bil-dark:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #00c0c0);
+}
+
+.bil-light {
+  background: linear-gradient(180deg, #AAAAAA, #40ffff);
+}
+
+.bil-light:hover {
+  background: linear-gradient(180deg, #BABABA, #60ffff);
+}
+
+.bil-light:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #AAAAAA, #40ffff);
 }
 
 /* ==================================================================================================== */
@@ -384,6 +413,134 @@ h1 {
 }
 
 /* ==================================================================================================== */
+
+.thou-dark {
+  background: linear-gradient(180deg, #888888, #0000e0);
+}
+
+.thou-dark:hover {
+  background: linear-gradient(180deg, #989898, #0000f0);
+}
+
+.thou-dark:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #888888, #0000e0);
+}
+
+.thou-light {
+  background: linear-gradient(180deg, #AAAAAA, #1000ff);
+}
+
+.thou-light:hover {
+  background: linear-gradient(180deg, #BABABA, #2010ff);
+}
+
+.thou-light:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #AAAAAA, #1000ff);
+}
+
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* OUTLINES */
+
+div.number1, div.softcaps, div.decillionth, div.nonillionth, 
+div.octillionth, div.septillionth, div.sextillionth, div.quintillionth, 
+div.quadrillionth, div.trillionth, div.billionth, div.millionth, div.thousandth {
+  outline-width: 0.4rem;
+  outline-style: solid;
+  font-family: "Share Tech Mono", monospace;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+div.number1       { outline-color: #FFFFFF; }
+div.softcaps      { outline-color: #FF0000; }
+div.decillionth   { outline-color: #70FF70; }
+div.nonillionth   { outline-color: #80D0FF; }
+div.octillionth   { outline-color: #FFA45A; }
+div.septillionth  { outline-color: #C880FF; }
+div.sextillionth  { outline-color: #FF8080; }
+div.quintillionth { outline-color: #FFFF80; }
+div.quadrillionth { outline-color: #FF80FF; }
+div.trillionth    { outline-color: #308010; }
+div.billionth     { outline-color: #40FFFF; }
+div.millionth     { outline-color: #DDDDDD; }
+div.thousandth    { outline-color: #1000FF; }
+
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* GENERAL ELEMENTS */
+
+.button {
+  font-family: "Share Tech Mono", monospace;;
+  color: white;
+  font-weight: 666;
+  border: 0.2rem solid black;
+}
+
+.standard-upg {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 4rem;
+  font-weight:666;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.standard-upgrade-tree{
+  font-family: "Share Tech Mono", monospace;
+  font-size: 4rem;
+  font-weight: 666;
+  margin-bottom: 5rem;
+  box-sizing: border-box;
+}
+.standard-upgrade-tree button{
+  width: 90%;
+  height: 100%;
+  font-size: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.standard-reset {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 7rem;
+  font-weight:666;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 1rem clamp(0rem, 4vw, 10rem);
+}
+
+.standard-milestone {
+  outline: 0.2rem solid black;
+  width: clamp(0rem, 100vw, 140rem);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 4.5rem;
+  overflow: hidden;
+  z-index: 999;
+  margin: 2rem auto 0;
+  line-height: 1;
+  -webkit-text-stroke: 0.15rem black;
+}
+
+.standard-tabs button {
+  margin: 0;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.standard-tabs-button {
+  font-size: 3rem;
+  width: 25rem;
+}
+
+/* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* MULTI-ROW BUTTONS */
@@ -401,84 +558,6 @@ h1 {
 .upgrade-grid-sxut {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-/* OUTLINES */
-
-div.number1 {
-  outline-color: #FFFFFF;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-}
-
-div.softcaps {
-  outline-color: #FF0000;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-}
-
-div.decillionth {
-  outline-color: #70FF70;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-}
-
-div.nonillionth {
-  outline-color: #80D0FF;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-}
-
-div.octillionth {
-  outline-color: #ffa45a;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-  position: relative;
-  padding-bottom: 2rem;
-}
-
-div.septillionth {
-  outline-color: #c880ff;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-  position: relative;
-  padding-bottom: 2rem;
-}
-
-div.sextillionth {
-  outline-color: #ff8080;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-  position: relative;
-  padding-bottom: 2rem;
-}
-
-div.quintillionth {
-  outline-color: #ffff80;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-  position: relative;
-  padding-bottom: 2rem;
-}
-
-div.quadrillionth {
-  outline-color: #ff80ff;
-  outline-width: 0.4rem;
-  outline-style: solid;
-  font-family: "Share Tech Mono", monospace;
-  position: relative;
-  padding-bottom: 2rem;
 }
 
 /* ==================================================================================================== */
@@ -528,42 +607,6 @@ p.individ-softcaps {
   text-align:center;
   font-size:4rem;
   margin: 0
-}
-
-.standard-upg {
-  font-family: "Share Tech Mono", monospace;
-  font-size: 4rem;
-  font-weight:666;
-  margin: 0;
-  margin-bottom: 1rem;
-}
-
-.standard-upgrade-tree{
-  font-family: "Share Tech Mono", monospace;
-  font-size: 4rem;
-  font-weight: 666;
-  margin-bottom: 5rem;
-  box-sizing: border-box;
-}
-.standard-upgrade-tree button{
-  width: 90%;
-  height: 100%;
-  font-size: 60px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.standard-reset {
-  font-family: "Share Tech Mono", monospace;
-  font-size: 7rem;
-  font-weight:666;
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 1rem clamp(0rem, 4vw, 10rem);
 }
 
 /* ==================================================================================================== */
@@ -629,31 +672,8 @@ body {
   white-space: pre-line;
 }
 
-.standard-tabs button {
-  margin: 0;
-  padding: 1rem;
-  display: inline-block;
-}
-
-.standard-tabs-button {
-  font-size: 3rem;
-  width: 25rem;
-}
-
 .oct-challenge-tab {
   display: none;
-}
-
-.standard-milestone {
-  outline: 0.2rem solid black;
-  width: clamp(0rem, 100vw, 140rem);
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 4.5rem;
-  overflow: hidden;
-  z-index: 999;
-  margin: 2rem auto 0;
-  line-height: 1;
-  -webkit-text-stroke: 0.15rem black;
 }
 
 .bottom-bar {

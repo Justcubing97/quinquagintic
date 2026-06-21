@@ -3,7 +3,7 @@
 
 <head>
   <link rel="icon" type="image/png" href="quinquagintic.png">
-  <title>Quinquagintic (v0.5.3)</title>
+  <title>Quinquagintic (v0.6)</title>
   
   <script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2"></script>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +22,11 @@
     <span id="top-sxp" class="just-apply-font" style="font-size: 2rem; color: #ff8080">SXP: % (+%/s)</span>
     <span id="top-qp" class="just-apply-font" style="font-size: 2rem; color: #ffff80">QP: % (+%/s)</span>
     <span id="top-qf" class="just-apply-font" style="font-size: 2rem; color: #ffffb0">QF: % (+%/s)</span>
-    <span id="top-qap" class="just-apply-font" style="font-size: 2rem; color: #000000">QAP: % (+%/s)</span>
+    <span id="top-qap" class="just-apply-font" style="font-size: 2rem; color: #FF80FF">QAP: % (+%/s)</span>
     <span id="top-tp" class="just-apply-font" style="font-size: 2rem; color: #000000">TP: % (+%/s)</span>
+    <span id="top-bp" class="just-apply-font" style="font-size: 2rem; color: #000000">BP: % (+%/s)</span>
+    <span id="top-mp" class="just-apply-font" style="font-size: 2rem; color: #000000">MP: % (+%/s)</span>
+    <span id="top-thp" class="just-apply-font" style="font-size: 2rem; color: #000000">THP: % (+%/s)</span>
   </div>
     
   <div class="bottom-bar">
@@ -41,14 +44,27 @@
 
   <div class="center" style="color: white; -webkit-text-stroke: 0.06rem black;">
     <h1 class="title-gradient">Quinquagintic</h1>
-    <p class="just-apply-font"style="font-size: 4rem; -webkit-text-stroke: 0.06rem black;">Version: 0.5.3 (Jun. 17 2026)</p>
+    <p class="just-apply-font"style="font-size: 4rem; -webkit-text-stroke: 0.06rem black;">Version: 0.6 (Jun. 20 2026)</p>
     <p class="just-apply-font"style="font-size: 4rem; -webkit-text-stroke: 0.06rem black;">Game by Justcubing97</p>
-    <p class="just-apply-font"style="font-size: 4rem; -webkit-text-stroke: 0.06rem black;">Endgame: Unlock QFM6</p>
-    <p class="just-apply-font"style="font-size: 4rem; -webkit-text-stroke: 0.06rem black;">Next: hopefully quadrillionth? i am sorry for no new content, but i did add export and import and fixed some ui issues</p>
+    <p class="just-apply-font"style="font-size: 4rem; -webkit-text-stroke: 0.06rem black;">Endgame: 1 QAP</p>
+    <p class="just-apply-font"style="font-size: 4rem; -webkit-text-stroke: 0.06rem black;">Next: currently, all of the quadrillionth features dont work or are not implemented yet. i'll get everything but the energy bars next update because those are gonna be hell (this game is actually starting to bore me, sorry, but there are too many things wrong with my game that i just cannot figure out.)</p>
   </div>
     
   <div class="standard-tabs" style="-webkit-text-stroke: 0.06rem black;">
-    <button id="main-number-tab-button" class="button mil-light standard-tabs-button">Main</button><button id="main-decillionth-tab-button" class="button decillionth-button standard-tabs-button">Decillionth</button><button id="main-nonillionth-tab-button" class="button non-light standard-tabs-button">Nonillionth</button><button id="main-octillionth-tab-button" class="button oct-light standard-tabs-button" style="display: none;">Octillionth</button><button id="main-septillionth-tab-button" class="button sep-light standard-tabs-button" style="display: none;">Septillionth</button><button id="main-sextillionth-tab-button" class="button sx-light standard-tabs-button" style="display: none;">Sextillionth</button><button id="main-quintillionth-tab-button" class="button qui-light standard-tabs-button" style="display: none;">Quintillionth</button><button id="main-caps-tab-button" class="button soft-light standard-tabs-button">Caps</button>
+    <button id="main-number-tab-button" class="button mil-light standard-tabs-button">Main</button>
+    <button id="main-decillionth-tab-button" class="button decillionth-button standard-tabs-button">Decillionth</button>
+    <button id="main-nonillionth-tab-button" class="button non-light standard-tabs-button">Nonillionth</button>
+    <button id="main-octillionth-tab-button" class="button oct-light standard-tabs-button" style="display: none;">Octillionth</button>
+    <button id="main-septillionth-tab-button" class="button sep-light standard-tabs-button" style="display: none;">Septillionth</button>
+    <button id="main-sextillionth-tab-button" class="button sx-light standard-tabs-button" style="display: none;">Sextillionth</button>
+    <button id="main-quintillionth-tab-button" class="button qui-light standard-tabs-button" style="display: none;">Quintillionth</button>
+    <button id="main-quadrillionth-tab-button" class="button qap-light standard-tabs-button" style="display: none;">Quadrilliionth</button>
+    <button id="main-trillionth-tab-button" class="button tri-light standard-tabs-button" style="display: none;">Trillionth</button>
+    <button id="main-billionth-tab-button" class="button bil-light standard-tabs-button" style="display: none;">Billionth</button>
+    <button id="main-millionth-tab-button" class="button mil-light standard-tabs-button" style="display: none;">Millionth</button>
+    <button id="main-thousandth-tab-button" class="button thou-light standard-tabs-button" style="display: none;">Thousandth</button>
+    <button id="main-caps-tab-button" class="button soft-light standard-tabs-button">Caps</button>
+    <button id="main-settings-tab-button" class="button mil-light standard-tabs-button" style="display: inline-block;">Settings</button>
   </div>
     
   <br>
@@ -58,7 +74,7 @@
     <div class="number-container">
       <p id="numberDisplay" class="numberp">0.000,000,000,000,000,000,000,000,000,000,000,000</p>
     </div>
-    <p id="numberGainDisplay" class="numbergain" style="font-size: 5.5rem;">Number gain is +1/s</p>
+    <p id="numberGainDisplay" class="numbergain because-html-doesnt-do-js-newlines" style="font-size: 5.5rem;">Number gain is +1/s</p>
     <p class="numbergain" style="font-size: 3.5rem;">Boost application order: Additions, Multiplications, then Exponents.</p>
     <p id="boostsDisplay" class="numbergain" style="font-size: 4.5rem;">Boosts:</p>
   </div>
@@ -188,7 +204,7 @@
           <p id="chal1-title" class="standard-upg">Challenge I</p>
           <button id="chal1" class="button oct-dark" style="font-size: 4rem"><span class="octillionth-dark-section">Hyperinflation</span><br><span>ALL scalings are squared<br>(and I mean EVERY scaling, <br>BUT below Octillionth).<br><span style="font-size: 2rem">Challenge scalings are NOT squared!</span></span></button>
           <p id="chal1-goal-scale" class="standard-upg" style="font-size: 3.5rem">Goal: 1e-28 || Scaling: ^1.15</p>
-          <p id="chal1-reward" class="standard-upg" style="font-size: 3.5rem">Reward: +0.5 to OP's boost per completion</p>
+          <p id="chal1-reward" class="standard-upg" style="font-size: 3.5rem">Reward: x1.1 to OP's boost per completion</p>
           <p id="chal1-completions" class="standard-upg" style="font-size: 3.5rem">0/100</p>
         </div>
 
@@ -392,7 +408,7 @@
       </div>
 
       <div class="standard-upgrade-tree">
-        <button id="sxut-13" class="button qui-dark" style="font-size: 6rem; display: none" disabled><span style="font-size: 3.5rem">SXUT13</span><span>x100 C3's boost to A</span><span style="font-size: 4.5rem">450 CC</span></button>
+        <button id="sxut-13" class="button qui-dark" style="font-size: 6rem; display: none" disabled><span style="font-size: 3.5rem">SXUT13</span><span>^1.2 Atoms and x25 QP</span><span style="font-size: 4.5rem">500 CC</span></button>
       </div>
 
       
@@ -410,7 +426,7 @@
       </div>
 
       <div class="standard-upgrade-tree">
-        <button id="sxut-24" class="button qui-dark" style="font-size: 6rem; display: none" disabled><span style="font-size: 3.5rem">SXUT24</span><span>x15 QF</span><span style="font-size: 4.5rem">2.500e+4 SXP</span></button>
+        <button id="sxut-24" class="button qui-dark" style="font-size: 6rem; display: none" disabled><span style="font-size: 3.5rem">SXUT24</span><span>NP boosts QF, +10 to DU2's cap</span><span style="font-size: 4.5rem">1.000e+6 SXP</span></button>
       </div>
 
       
@@ -428,7 +444,7 @@
       </div>
 
       <div class="standard-upgrade-tree">
-        <button id="sxut-34" class="button qui-dark" style="font-size: 6rem; display: none" disabled><span style="font-size: 3.5rem">SXUT34</span><span>Unlock Quadrillionth Reset</span><span style="font-size: 4.5rem">500 CC</span></button>
+        <button id="sxut-34" class="button qui-dark" style="font-size: 6rem; display: none" disabled><span style="font-size: 3.5rem">SXUT34</span><span>Unlock Quadrillionth Reset</span><span style="font-size: 4.5rem">628 CC</span></button>
       </div>
       
 
@@ -470,7 +486,7 @@
 
     <div id="challenge5gate" class="standard-upg" style="display: none">
       <p id="chal5-title" class="standard-upg">Challenge V</p>
-      <button id="chal5" class="button sx-dark" style="font-size: 5rem"><span class="sextillionth-dark-section">Final of Sextillionths</span><br><span>Force SXP reset with gain<br>You cannot gain NP, OP,<br>SP, nor SXP. Only<br>the SXUT and Atoms can<br>help you.</span></button>
+      <button id="chal5" class="button sx-dark" style="font-size: 5rem"><span class="sextillionth-dark-section">Final of Sextillionths</span><br><span>Force SXP reset with gain<br>You cannot gain NP, OP,<br>nor SXP. Only<br>the SXUT, SP, and Atoms can<br>help you.</span></button>
       <p id="chal5-goal-scale" class="standard-upg" style="font-size: 3.5rem">Goal: 1e+87 Atoms</p>
       <p id="chal5-reward" class="standard-upg" style="font-size: 3.5rem">Reward: Unlock Quintillionth Reset and x5 Number</p>
       <p id="chal5-completions" class="standard-upg" style="font-size: 3.5rem">0/1</p>
@@ -503,6 +519,7 @@
     <div id="quintillionth-main-section" style="display: none;">
 
       <p id="qf-display" class="numbergain" style="font-size: 6rem;">You have % Quintillionth Fragments (+%/s).</p>
+      <p id="qf-boosts-display" class="numbergain" style="font-size: 4.5rem;">Boosts:</p>
 
       <br>
 
@@ -571,8 +588,39 @@
         <p>QFM6: 1.000e+30 QF<br>Extend SXUT (the extensions are kept)</p>
       </div>
       
+      <div id="qfm-7" class="standard-milestone qui-dark">
+        <p>QFM7: 1.000e+63 QF<br>x25 N</p>
+      </div>
+      
     </div>
     
+  </div>
+
+  <br>
+
+  <div id="quadrillionth-tab" class="center quadrillionth" style="color: white; -webkit-text-stroke: 0.06rem black; display: none;">
+    <h1 class="quadrillionth-section" style="margin: 0px;">Quadrillionth Section</h1>
+
+    <br>
+    
+    <button id="qapreset" class="button qap-dark standard-reset" disabled>
+      Quadrillionth Reset
+      <br>
+      <span style="font-size: 5rem; margin: 0px;">Reset everything up to this point for Quadrillionth Points (QAP)!</span>
+      <br>
+      <span style="font-size: 5rem; margin: 0px;">★ x1.000e25 A <br> ★ Nerf scalings of C1-4 <br> ★ QFU2 extends to AU4-6 <br> ★ x3 NP-QP <br> ★ Unlock AU9 <br> ★ Unlock Atom Milestones <br> ★ Unlock Energy Bars</span>
+      <br>
+      <span id="qap-point-pending">+1 QAP</span>
+      <br>
+      <span id="qap-next-point" style="font-size: 4.5rem; margin: 0px;">(next QAP at 5e-15)</span>
+    </button>
+    
+    <p id="qapBoostsDisplay" class="numbergain" style="font-size: 4.5rem;">Boosts:</p>
+    
+    <div id="quadrillionth-ebs" class="hidden">
+      <p id="placeholderinqua" class="numbergain" style="font-size: 4.5rem;">You've reached the Endgame!</p>
+    </div>
+
   </div>
 
   <br>
@@ -595,7 +643,7 @@
 
   <br>
   
-  <div class="center number1" style="padding: 20px">
+  <div id="settings-tab" class="center number1" style="padding: 20px">
     <h1 class="title-gradient" style="-webkit-text-stroke: 0.06rem black">Settings + Dangerous Buttons</h1>
     <button id="reset-button" class="soft-dark button standard-upg" style="display: block; margin: 0 auto;">RESET ALL DATA<br>(NO GOING BACK)</button>
     <button id="export-clipboard" class="decillionth-dark-button button standard-upg" style="display: block; margin: 0 auto;">Export current data to clipboard</button>

@@ -9,21 +9,27 @@ Infinity: Mechanics and progression are confusing; only a few layers (3-5?)
 
 HOWEVER, this game, as of writing, is only in the Decimal Domain.
 
+Update: I have shifted the plans. The Integer and Infinity Domains will be TMT mods due to their simplicity, and the Decimal Domain will remain as a standalone game.
+
 # Tips for QoL! (and some notations!)
 
 - Clicking any point label on the top (NP, OP, SP, etc.) will reset if possible.
 - To understand some notations, #U% means #-type Upgrade % (selecting a specific one), #U%-% means #-type Upgrade %-% (selecting from a range), #U%, % means #-type Upgrade %, % (selecting two or more), and #U# / #Us means all #-type Upgrades. If there is no specification after an upgrade type, assume all.
+- #U%x& means having & of #-type Upgrade %.
+- #M% is similar, meaning milestone instead of upgrade.
 - For Challenge Notations, C# means Challenge # and C#x% means % completions of Challenge #.
 
 # I'M STUCK!
 
-If you're in the Nonillionth Section, get NU2 and NU4 as fast as possible, and get 5-6 of NU3 to progress.
+If you're in the Nonillionth Section, get NU2 and NU4 as fast as possible, and get 3 of NU3 to progress (albeit with a timewall; grind for NU3x4 if you hate waiting).
 
 If you're in the Octillionth Section, push your challenges and grind OP. For CCM1, do C1x3. For CCM2, do C1x6, C2x2, and C3x2 (not necessarily in that order, you may have to go back and forth). For CCM3, do C1x8, C2x6, and C3x6 (timewalls!). Around 300 OP should be enough.
 
-If you're in the Septillionth Section, wait to get more AUs.
+If you're in the Septillionth Section, wait to get more AUs. This section is actually really easy if you know what to do.
 
 If you're in the Sextillionth Section... SXUT31: C1x11, C2x15, C3x18, C4x6. SXUT21 should be easy to get. If you're in Challenge 5, MAKE SURE TO GET SXUT43 BEFORE ENTERING I am not kidding IT IS A LIFE SAVER. Also get like 200-300 SXP for C5 beforehand to get the SXUT33 boost.
+
+Okay, but who am I to tell you what you can or can't do? Do whatever! Get your CC differently! This game does not have one distinct path!
 
 # Give me a description of Quinquagintic (guide).
 Warning, there are spoilers ahead!
@@ -43,13 +49,13 @@ After Octillionth Resetting, you can gain Octillionth Points (OP) in exchange fo
 
 Now you get to play with Challenges! Upon first reset, you get to automate DU# and NU#, so now you can close those sections. There's also an x4 boost to NP upon first reset. HOWEVER, get at least 5 Octillionth Points before attempting any challenge, not even C4. You also get to see the two sides of the lore of this game, Justcubing97 (me!) and "The Entity."
 
-Challenge 1, Hyperinflation, squares all scalings, so that the difficult x10 scaling of NU3 is jacked up to an x100! (No, silly, not 100 factorial, the exclamation mark is purely for effect.) However, every C1 completion adds 0.5 to OP's boost to N! Fun!
+Challenge 1, Hyperinflation, squares all scalings, so that the difficult x10 scaling of NU3 is jacked up to an x100! (No, silly, not 100 factorial, the exclamation mark is purely for effect.) However, every C1 completion multiplies OP's boost to N by 1.1! Fun!
 
 Challenge 2, Self-destruction, makes Number reduce its own gain. Eventually, it will slow down enough to cause a minuscule difference. But in return, every completion will add 0.5 to the OP gain multiplier!
 
 Challenge 3, No Nonillionths, is pretty self-explanatory. NP is disabled, and that text that says "at an increased cost" just means that it will NOT cost the initial value of NP to get OP. Because it affects NP, like C2, it will add 0.5 to the NP gain this time, per completion.
 
-Finally, Challenge 4, Not so OP now (haha funny pun, OP = overpowered and Octillionth Points), nullifies the OP boost to N. You probably wouldn't get to 1e-26 without OP's boost, so I recommended that you not touch ANY of these challenges until 5 OP, and DEFINITELY NOT C4 until you get enough completions of C3 (C1 and C2's reward are useless in C4). However, each C4 completion adds 0.05 to N's base. You don't actually need to complete C4 to get to the next section
+Finally, Challenge 4, Not so OP now (haha funny pun, OP = overpowered and Octillionth Points), nullifies the OP boost to N. You probably wouldn't get to 1e-26 without OP's boost, so I recommended that you not touch ANY of these challenges until 5 OP, and DEFINITELY NOT C4 until you get enough completions of C3 (C1 and C2's reward are useless in C4). However, each C4 completion adds 0.05 to N's base. You don't actually need to complete C4 to get to the next section.
 
 Finally, Challenge Completions (CC) are just the total number of challenges completed. CC Milestones (CCM) are unlocked at 3, 10, and 20 CC. After CCM1, each CC gives 0.5 to the multiplier of OP, after CCM2, each CC will give 0.25 to N's multiplier, and CCM3 unlocks the next section.
 
@@ -82,12 +88,12 @@ Well, Quintillionth Points (QP) generates Quintillionth Fragments (QF), and gett
 
 QFU1, 3, and 5 are the infinite buyables, just like NU1 and the AUs. They boost different aspects of the game, but only get 1 of QFU5 for the game. QFU2, 4, and 6 are the one-times buyables. 2 and 4 are QoL features of the game, while 6 is crucial for progression. Next, the milestones. They each require QF, and are either currency boosts or QoL features, with the exception of QFM6, which is essential for progression.
 
-What I usually do in this section is to get a considerable amount of QP, I'll say around 13-14, use a little quirk with C5 to get >e195 A, and push Challenges. Once your gain is around +1.6e3/s, push for QFU6. After that, it should be easy to get QFM4 (1e10 QF), and then push for QFM5 and 6.
+What I usually do in this section is to get a considerable amount of QP, I'll say around 13-14, use a little quirk with C5 to get >e195 A, and push Challenges. Once your gain is around +1.6e3 QF/s, push for QFU6. After that, it should be easy to get QFM4 (1e10 QF), and then push for QFM5 and 6.
 
 # Inspirations
 
 - Time Layers (scrolling layers)
-- Incremental Mass Rewritten (Challenges)
+- Incremental Mass Rewritten (Challenges and softcaps)
 - Milestone Incremental (Atoms incremental in Septillionth and Bismuth incremental in Trillionth)
 - Roblox upgrade tree games (SXUT)
 - Algebraic Progression (that one news ticker message)
